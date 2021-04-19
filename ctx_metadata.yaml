@@ -1,0 +1,10 @@
+owner: kriteshs
+pipeline:
+  citool: Jenkins
+  releaseBranch: master
+  sonarqube: NA
+productionUse: CustomerCurrent
+repoType: Library
+reporting:
+  product: Networking
+  teamname: config
