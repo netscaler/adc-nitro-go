@@ -26,121 +26,121 @@ type Lsndslitestats struct {
 	/**
 	* Total number of LSN DS-Lite rx pkts.
 	*/
-	Lsndsliterxpktsrate int32 `json:"lsndsliterxpktsrate,omitempty"`
+	Lsndsliterxpktsrate float64 `json:"lsndsliterxpktsrate,omitempty"`
 	Lsntotdsliterxbytes uint64 `json:"lsntotdsliterxbytes,omitempty"`
 	/**
 	* Total number of LSN DS-Lite rx bytes.
 	*/
-	Lsndsliterxbytesrate int32 `json:"lsndsliterxbytesrate,omitempty"`
+	Lsndsliterxbytesrate float64 `json:"lsndsliterxbytesrate,omitempty"`
 	Lsntotdslitetxpkts uint64 `json:"lsntotdslitetxpkts,omitempty"`
 	/**
 	* Total number of LSN DS-Lite tx pkts.
 	*/
-	Lsndslitetxpktsrate int32 `json:"lsndslitetxpktsrate,omitempty"`
+	Lsndslitetxpktsrate float64 `json:"lsndslitetxpktsrate,omitempty"`
 	Lsntotdslitetxbytes uint64 `json:"lsntotdslitetxbytes,omitempty"`
 	/**
 	* Total number of LSN DS-Lite tx bytes.
 	*/
-	Lsndslitetxbytesrate int32 `json:"lsndslitetxbytesrate,omitempty"`
+	Lsndslitetxbytesrate float64 `json:"lsndslitetxbytesrate,omitempty"`
 	Lsntotdslitetcprxpkts uint64 `json:"lsntotdslitetcprxpkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite TCP Received packets.
 	*/
-	Lsndslitetcprxpktsrate int32 `json:"lsndslitetcprxpktsrate,omitempty"`
+	Lsndslitetcprxpktsrate float64 `json:"lsndslitetcprxpktsrate,omitempty"`
 	Lsntotdslitetcprxbytes uint64 `json:"lsntotdslitetcprxbytes,omitempty"`
 	/**
 	* Number of LSN DS-Lite TCP Received bytes.
 	*/
-	Lsndslitetcprxbytesrate int32 `json:"lsndslitetcprxbytesrate,omitempty"`
+	Lsndslitetcprxbytesrate float64 `json:"lsndslitetcprxbytesrate,omitempty"`
 	Lsntotdslitetcptxpkts uint64 `json:"lsntotdslitetcptxpkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite TCP Transmitted packets.
 	*/
-	Lsndslitetcptxpktsrate int32 `json:"lsndslitetcptxpktsrate,omitempty"`
+	Lsndslitetcptxpktsrate float64 `json:"lsndslitetcptxpktsrate,omitempty"`
 	Lsntotdslitetcptxbytes uint64 `json:"lsntotdslitetcptxbytes,omitempty"`
 	/**
 	* Number of LSN DS-Lite TCP Transmitted bytes.
 	*/
-	Lsndslitetcptxbytesrate int32 `json:"lsndslitetcptxbytesrate,omitempty"`
+	Lsndslitetcptxbytesrate float64 `json:"lsndslitetcptxbytesrate,omitempty"`
 	Lsntotdslitetcpdrppkts uint64 `json:"lsntotdslitetcpdrppkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite TCP Dropped packets.
 	*/
-	Lsndslitetcpdrppktsrate int32 `json:"lsndslitetcpdrppktsrate,omitempty"`
+	Lsndslitetcpdrppktsrate float64 `json:"lsndslitetcpdrppktsrate,omitempty"`
 	Lsncurdslitetcpsessions uint64 `json:"lsncurdslitetcpsessions,omitempty"`
 	/**
 	* Number of LSN DS-Lite TCP Current Sessions.
 	*/
-	Lsncurdslitetcpsessionsrate int32 `json:"lsncurdslitetcpsessionsrate,omitempty"`
+	Lsncurdslitetcpsessionsrate float64 `json:"lsncurdslitetcpsessionsrate,omitempty"`
 	Lsntotdsliteudprxpkts uint64 `json:"lsntotdsliteudprxpkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite UDP Received packets.
 	*/
-	Lsndsliteudprxpktsrate int32 `json:"lsndsliteudprxpktsrate,omitempty"`
+	Lsndsliteudprxpktsrate float64 `json:"lsndsliteudprxpktsrate,omitempty"`
 	Lsntotdsliteudprxbytes uint64 `json:"lsntotdsliteudprxbytes,omitempty"`
 	/**
 	* Number of LSN DS-Lite UDP Received bytes.
 	*/
-	Lsndsliteudprxbytesrate int32 `json:"lsndsliteudprxbytesrate,omitempty"`
+	Lsndsliteudprxbytesrate float64 `json:"lsndsliteudprxbytesrate,omitempty"`
 	Lsntotdsliteudptxpkts uint64 `json:"lsntotdsliteudptxpkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite UDP Transmitted packets.
 	*/
-	Lsndsliteudptxpktsrate int32 `json:"lsndsliteudptxpktsrate,omitempty"`
+	Lsndsliteudptxpktsrate float64 `json:"lsndsliteudptxpktsrate,omitempty"`
 	Lsntotdsliteudptxbytes uint64 `json:"lsntotdsliteudptxbytes,omitempty"`
 	/**
 	* Number of LSN DS-Lite UDP Transmitted bytes.
 	*/
-	Lsndsliteudptxbytesrate int32 `json:"lsndsliteudptxbytesrate,omitempty"`
+	Lsndsliteudptxbytesrate float64 `json:"lsndsliteudptxbytesrate,omitempty"`
 	Lsntotdsliteudpdrppkts uint64 `json:"lsntotdsliteudpdrppkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite UDP Dropped packets.
 	*/
-	Lsndsliteudpdrppktsrate int32 `json:"lsndsliteudpdrppktsrate,omitempty"`
+	Lsndsliteudpdrppktsrate float64 `json:"lsndsliteudpdrppktsrate,omitempty"`
 	Lsncurdsliteudpsessions uint64 `json:"lsncurdsliteudpsessions,omitempty"`
 	/**
 	* Number of LSN DS-Lite UDP Current Sessions.
 	*/
-	Lsncurdsliteudpsessionsrate int32 `json:"lsncurdsliteudpsessionsrate,omitempty"`
+	Lsncurdsliteudpsessionsrate float64 `json:"lsncurdsliteudpsessionsrate,omitempty"`
 	Lsntotdsliteicmprxpkts uint64 `json:"lsntotdsliteicmprxpkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite ICMP Received packets.
 	*/
-	Lsndsliteicmprxpktsrate int32 `json:"lsndsliteicmprxpktsrate,omitempty"`
+	Lsndsliteicmprxpktsrate float64 `json:"lsndsliteicmprxpktsrate,omitempty"`
 	Lsntotdsliteicmprxbytes uint64 `json:"lsntotdsliteicmprxbytes,omitempty"`
 	/**
 	* Number of LSN DS-Lite ICMP Received bytes.
 	*/
-	Lsndsliteicmprxbytesrate int32 `json:"lsndsliteicmprxbytesrate,omitempty"`
+	Lsndsliteicmprxbytesrate float64 `json:"lsndsliteicmprxbytesrate,omitempty"`
 	Lsntotdsliteicmptxpkts uint64 `json:"lsntotdsliteicmptxpkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite ICMP Transmitted packets.
 	*/
-	Lsndsliteicmptxpktsrate int32 `json:"lsndsliteicmptxpktsrate,omitempty"`
+	Lsndsliteicmptxpktsrate float64 `json:"lsndsliteicmptxpktsrate,omitempty"`
 	Lsntotdsliteicmptxbytes uint64 `json:"lsntotdsliteicmptxbytes,omitempty"`
 	/**
 	* Number of LSN DS-Lite ICMP Transmitted bytes.
 	*/
-	Lsndsliteicmptxbytesrate int32 `json:"lsndsliteicmptxbytesrate,omitempty"`
+	Lsndsliteicmptxbytesrate float64 `json:"lsndsliteicmptxbytesrate,omitempty"`
 	Lsntotdsliteicmpdrppkts uint64 `json:"lsntotdsliteicmpdrppkts,omitempty"`
 	/**
 	* Number of LSN DS-Lite ICMP Dropped packets.
 	*/
-	Lsndsliteicmpdrppktsrate int32 `json:"lsndsliteicmpdrppktsrate,omitempty"`
+	Lsndsliteicmpdrppktsrate float64 `json:"lsndsliteicmpdrppktsrate,omitempty"`
 	Lsncurdsliteicmpsessions uint64 `json:"lsncurdsliteicmpsessions,omitempty"`
 	/**
 	* Number of LSN DS-Lite ICMP Current Sessions.
 	*/
-	Lsncurdsliteicmpsessionsrate int32 `json:"lsncurdsliteicmpsessionsrate,omitempty"`
+	Lsncurdsliteicmpsessionsrate float64 `json:"lsncurdsliteicmpsessionsrate,omitempty"`
 	Lsncurdslitesessions uint64 `json:"lsncurdslitesessions,omitempty"`
 	/**
 	* Current number of LSN DS-Lite sessions.
 	*/
-	Lsncurdslitesessionsrate int32 `json:"lsncurdslitesessionsrate,omitempty"`
+	Lsncurdslitesessionsrate float64 `json:"lsncurdslitesessionsrate,omitempty"`
 	Lsndslitecursubscribers uint64 `json:"lsndslitecursubscribers,omitempty"`
 	/**
 	* Current number of LSN DS-Lite subscribers.
 	*/
-	Lsndslitecursubscribersrate int32 `json:"lsndslitecursubscribersrate,omitempty"`
+	Lsndslitecursubscribersrate float64 `json:"lsndslitecursubscribersrate,omitempty"`
 
 }

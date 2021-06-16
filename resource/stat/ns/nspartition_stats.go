@@ -39,16 +39,16 @@ type Nspartitionstats struct {
 	/**
 	* Total packet drops for the partition.
 	*/
-	Dropsrate int32 `json:"dropsrate,omitempty"`
+	Dropsrate float64 `json:"dropsrate,omitempty"`
 	Totaltokendrops uint32 `json:"totaltokendrops,omitempty"`
 	/**
 	* Total drops(KB) for the partition.
 	*/
-	Tokendropsrate int32 `json:"tokendropsrate,omitempty"`
+	Tokendropsrate float64 `json:"tokendropsrate,omitempty"`
 	Totalconnectiondrops uint32 `json:"totalconnectiondrops,omitempty"`
 	/**
 	* Total connection drops for the partition.
 	*/
-	Connectiondropsrate int32 `json:"connectiondropsrate,omitempty"`
+	Connectiondropsrate float64 `json:"connectiondropsrate,omitempty"`
 
 }

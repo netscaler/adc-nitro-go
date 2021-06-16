@@ -33,31 +33,31 @@ type Nspbrstats struct {
 	/**
 	* Total packets that matched the PBR (Policy-Based Routes) with action ALLOW 
 	*/
-	Pbrpktsallowedrate int32 `json:"pbrpktsallowedrate,omitempty"`
+	Pbrpktsallowedrate float64 `json:"pbrpktsallowedrate,omitempty"`
 	Pbrtotpktsdenied uint64 `json:"pbrtotpktsdenied,omitempty"`
 	/**
 	* Total packets that matched the PBR with action DENY 
 	*/
-	Pbrpktsdeniedrate int32 `json:"pbrpktsdeniedrate,omitempty"`
+	Pbrpktsdeniedrate float64 `json:"pbrpktsdeniedrate,omitempty"`
 	Pbrtothits uint64 `json:"pbrtothits,omitempty"`
 	/**
 	* Total packets that matched one of the configured PBR
 	*/
-	Pbrhitsrate int32 `json:"pbrhitsrate,omitempty"`
+	Pbrhitsrate float64 `json:"pbrhitsrate,omitempty"`
 	Pbrtotmisses uint64 `json:"pbrtotmisses,omitempty"`
 	/**
 	* Total packets that did not match any PBR
 	*/
-	Pbrmissesrate int32 `json:"pbrmissesrate,omitempty"`
+	Pbrmissesrate float64 `json:"pbrmissesrate,omitempty"`
 	Pbrtotnulldrop uint64 `json:"pbrtotnulldrop,omitempty"`
 	/**
 	* Total packets that are dropped due to null nexthop
 	*/
-	Pbrnulldroprate int32 `json:"pbrnulldroprate,omitempty"`
+	Pbrnulldroprate float64 `json:"pbrnulldroprate,omitempty"`
 	Pbrperhits uint64 `json:"pbrperhits,omitempty"`
 	/**
 	* Number of times the pbr was hit
 	*/
-	Pbrperhitsrate int32 `json:"pbrperhitsrate,omitempty"`
+	Pbrperhitsrate float64 `json:"pbrperhitsrate,omitempty"`
 
 }

@@ -42,62 +42,62 @@ type Interfacestats struct {
 	/**
 	* Number of bytes received by an interface since the Citrix ADC was started or the interface statistics were cleared.
 	*/
-	Rxbytesrate int32 `json:"rxbytesrate,omitempty"`
+	Rxbytesrate float64 `json:"rxbytesrate,omitempty"`
 	Tottxbytes uint64 `json:"tottxbytes,omitempty"`
 	/**
 	* Number of bytes transmitted by an interface since the Citrix ADC was started or the interface statistics were cleared.
 	*/
-	Txbytesrate int32 `json:"txbytesrate,omitempty"`
+	Txbytesrate float64 `json:"txbytesrate,omitempty"`
 	Totrxpkts uint64 `json:"totrxpkts,omitempty"`
 	/**
 	* Number of packets received by an interface since the Citrix ADC was started or the interface statistics were cleared.
 	*/
-	Rxpktsrate int32 `json:"rxpktsrate,omitempty"`
+	Rxpktsrate float64 `json:"rxpktsrate,omitempty"`
 	Tottxpkts uint64 `json:"tottxpkts,omitempty"`
 	/**
 	* Number of packets transmitted by an interface since the Citrix ADC was started or the interface statistics were cleared.
 	*/
-	Txpktsrate int32 `json:"txpktsrate,omitempty"`
+	Txpktsrate float64 `json:"txpktsrate,omitempty"`
 	Jumbopktsreceived uint64 `json:"jumbopktsreceived,omitempty"`
 	/**
 	* Number of Jumbo Packets received on this interface.
 	*/
-	Jumbopktsreceivedrate int32 `json:"jumbopktsreceivedrate,omitempty"`
+	Jumbopktsreceivedrate float64 `json:"jumbopktsreceivedrate,omitempty"`
 	Jumbopktstransmitted uint64 `json:"jumbopktstransmitted,omitempty"`
 	/**
 	* Number of Jumbo packets transmitted on this interface by upper layer, with TSO enabled actual trasmission size could be non Jumbo.
 	*/
-	Jumbopktstransmittedrate int32 `json:"jumbopktstransmittedrate,omitempty"`
+	Jumbopktstransmittedrate float64 `json:"jumbopktstransmittedrate,omitempty"`
 	Trunkpktsreceived uint64 `json:"trunkpktsreceived,omitempty"`
 	/**
 	* Number of Tagged Packets received on this Trunk interface through Allowed VLan List.
 	*/
-	Trunkpktsreceivedrate int32 `json:"trunkpktsreceivedrate,omitempty"`
+	Trunkpktsreceivedrate float64 `json:"trunkpktsreceivedrate,omitempty"`
 	Trunkpktstransmitted uint64 `json:"trunkpktstransmitted,omitempty"`
 	/**
 	* Number of Tagged Packets transmitted on this Trunk interface through Allowed VLan List.
 	*/
-	Trunkpktstransmittedrate int32 `json:"trunkpktstransmittedrate,omitempty"`
+	Trunkpktstransmittedrate float64 `json:"trunkpktstransmittedrate,omitempty"`
 	Nictotmulticastpkts uint64 `json:"nictotmulticastpkts,omitempty"`
 	/**
 	* Number of multicast packets received by the specified interface since the Citrix ADC was started or the interface statistics were cleared.
 	*/
-	Nicmulticastpktsrate int32 `json:"nicmulticastpktsrate,omitempty"`
+	Nicmulticastpktsrate float64 `json:"nicmulticastpktsrate,omitempty"`
 	Totnetscalerpkts uint64 `json:"totnetscalerpkts,omitempty"`
 	/**
 	* Number of packets, destined to the Citrix ADC, received by an interface since the Citrix ADC was started or the interface statistics were cleared. The packets destined to Citrix ADC are those that have the same MAC address as that of an interface or a VMAC address owned by the Citrix ADC.
 	*/
-	Netscalerpktsrate int32 `json:"netscalerpktsrate,omitempty"`
+	Netscalerpktsrate float64 `json:"netscalerpktsrate,omitempty"`
 	Rxlacpdu uint64 `json:"rxlacpdu,omitempty"`
 	/**
 	* Number of Link Aggregation Control Protocol Data Units(LACPDUs) received by the specified interface since the Citrix ADC was started or the interface statistics were cleared.
 	*/
-	Rxlacpdurate int32 `json:"rxlacpdurate,omitempty"`
+	Rxlacpdurate float64 `json:"rxlacpdurate,omitempty"`
 	Txlacpdu uint64 `json:"txlacpdu,omitempty"`
 	/**
 	* Number of Link Aggregation Control Protocol Data Units(LACPDUs) transmitted by the specified interface since the Citrix ADC was started or the interface statistics were cleared.
 	*/
-	Txlacpdurate int32 `json:"txlacpdurate,omitempty"`
+	Txlacpdurate float64 `json:"txlacpdurate,omitempty"`
 	Errpktrx uint64 `json:"errpktrx,omitempty"`
 	/**
 	* Number of inbound packets dropped by the hardware on a specified interface once the Citrix ADC starts or the interface statistics are cleared. This happens due to following reasons:
@@ -112,7 +112,7 @@ type Interfacestats struct {
 		9)	The specified interface discards error-free inbound packets because of insufficient resources. For example: NIC buffers.
 		10)	Packets are missed because of collision detection, link lost, physical decoding error, or MAC abort.
 	*/
-	Errpktrxrate int32 `json:"errpktrxrate,omitempty"`
+	Errpktrxrate float64 `json:"errpktrxrate,omitempty"`
 	Errpkttx uint64 `json:"errpkttx,omitempty"`
 	/**
 	* Number of outbound packets dropped by the hardware on a specified interface since the Citrix ADC was started or the interface statistics were cleared. This could happen due to length (undersize or oversize) errors and lack of resources. This statistic is available only for: 
@@ -120,24 +120,24 @@ type Interfacestats struct {
 		(2) All data ports on the Citrix ADC 12000 platform.
 		(3) Management ports on the MPX 15000 and 17000 platforms.
 	*/
-	Errpkttxrate int32 `json:"errpkttxrate,omitempty"`
+	Errpkttxrate float64 `json:"errpkttxrate,omitempty"`
 	Errifindiscards uint64 `json:"errifindiscards,omitempty"`
 	/**
 	* Number of error-free inbound packets discarded by the specified interface due to a lack of resources, for example, insufficient receive buffers.
 	*/
-	Errifindiscardsrate int32 `json:"errifindiscardsrate,omitempty"`
+	Errifindiscardsrate float64 `json:"errifindiscardsrate,omitempty"`
 	Nicerrifoutdiscards uint64 `json:"nicerrifoutdiscards,omitempty"`
 	/**
 	* Number of error-free outbound packets discarded by the specified interface due to a lack of resources. This statistic is not available on:
 		(1) 10G ports of Citrix ADC MPX 12500/12500/15500-10G  platforms. 
 		(2) 10G data ports on Citrix ADC MPX 17500/19500/21500 platforms.
 	*/
-	Nicerrifoutdiscardsrate int32 `json:"nicerrifoutdiscardsrate,omitempty"`
+	Nicerrifoutdiscardsrate float64 `json:"nicerrifoutdiscardsrate,omitempty"`
 	Errdroppedrxpkts uint64 `json:"errdroppedrxpkts,omitempty"`
 	/**
 	* Number of inbound packets dropped by the specified interface. Commonly dropped packets are multicast frames, spanning tree BPDUs, packets destined to a MAC not owned by the Citrix ADC when L2 mode is disabled, or packets tagged for a VLAN that is not bound to the interface.  This statistic will increment in most healthy networks at a steady rate regardless of traffic load.  If a sharp spike in dropped packets occurs, it generally indicates an issue with connected L2 switches, such as a forwarding database overflow resulting in packets being broadcast on all ports.
 	*/
-	Errdroppedrxpktsrate int32 `json:"errdroppedrxpktsrate,omitempty"`
+	Errdroppedrxpktsrate float64 `json:"errdroppedrxpktsrate,omitempty"`
 	Errdroppedtxpkts uint64 `json:"errdroppedtxpkts,omitempty"`
 	/**
 	* Number of packets dropped in transmission by the specified interface due to one of the following reasons.
@@ -146,7 +146,7 @@ type Interfacestats struct {
 		(3) Interface congestion.  
 		(4) Loopback packets sent on non loop back interface.
 	*/
-	Errdroppedtxpktsrate int32 `json:"errdroppedtxpktsrate,omitempty"`
+	Errdroppedtxpktsrate float64 `json:"errdroppedtxpktsrate,omitempty"`
 	Errlinkhangs uint32 `json:"errlinkhangs,omitempty"`
 	Nicstsstalls uint32 `json:"nicstsstalls,omitempty"`
 	Nictxstalls uint32 `json:"nictxstalls,omitempty"`
@@ -157,13 +157,13 @@ type Interfacestats struct {
 	/**
 	* Number of MAC moves between ports. If a high rate of MAC moves is observed, it is likely that there is a bridge loop between two interfaces.
 	*/
-	Macmovedrate int32 `json:"macmovedrate,omitempty"`
+	Macmovedrate float64 `json:"macmovedrate,omitempty"`
 	Errnicmuted uint32 `json:"errnicmuted,omitempty"`
 	Rxcrcerrors uint64 `json:"rxcrcerrors,omitempty"`
 	/**
 	* Number of packets received with the wrong checksum by the specified interface since the Citrix ADC was started or the interface statistics were cleared. This indicates the number of Jabber frames received instead of CRC errors on the 10G data ports of Citrix ADC 12000-10G platform and the data ports of Citrix ADC MPX 15000 and 17000 platforms.
 	*/
-	Rxcrcerrorsrate int32 `json:"rxcrcerrorsrate,omitempty"`
+	Rxcrcerrorsrate float64 `json:"rxcrcerrorsrate,omitempty"`
 	Interfacealias string `json:"interfacealias,omitempty"`
 	Curlinkstate string `json:"curlinkstate,omitempty"`
 

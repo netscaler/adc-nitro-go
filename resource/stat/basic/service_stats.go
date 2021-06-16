@@ -33,7 +33,7 @@ type Servicestats struct {
 	/**
 	* Number of bytes received or sent by this service (Mbps).
 	*/
-	Throughputrate int32 `json:"throughputrate,omitempty"`
+	Throughputrate float64 `json:"throughputrate,omitempty"`
 	Avgsvrttfb uint32 `json:"avgsvrttfb,omitempty"`
 	Primaryipaddress string `json:"primaryipaddress,omitempty"`
 	Primaryport int32 `json:"primaryport,omitempty"`
@@ -43,22 +43,22 @@ type Servicestats struct {
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Requestsrate int32 `json:"requestsrate,omitempty"`
+	Requestsrate float64 `json:"requestsrate,omitempty"`
 	Totalresponses uint64 `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Responsesrate int32 `json:"responsesrate,omitempty"`
+	Responsesrate float64 `json:"responsesrate,omitempty"`
 	Totalrequestbytes []uint64 `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
-	Requestbytesrate int32 `json:"requestbytesrate,omitempty"`
+	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
 	Totalresponsebytes []uint64 `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
-	Responsebytesrate int32 `json:"responsebytesrate,omitempty"`
+	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
 	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
 	Surgecount uint32 `json:"surgecount,omitempty"`
 	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
@@ -78,7 +78,7 @@ type Servicestats struct {
 	/**
 	* Number of times that the service has been provided.
 	*/
-	Vsvrservicehitsrate int32 `json:"vsvrservicehitsrate,omitempty"`
+	Vsvrservicehitsrate float64 `json:"vsvrservicehitsrate,omitempty"`
 	Activetransactions uint32 `json:"activetransactions,omitempty"`
 
 }

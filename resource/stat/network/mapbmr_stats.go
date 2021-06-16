@@ -33,81 +33,81 @@ type Mapbmrstats struct {
 	/**
 	* Total number of MAP-T BMR V6 Recieved packets.
 	*/
-	Bmrv6rxpktsrate int32 `json:"bmrv6rxpktsrate,omitempty"`
+	Bmrv6rxpktsrate float64 `json:"bmrv6rxpktsrate,omitempty"`
 	Bmrtotv6txpkts uint64 `json:"bmrtotv6txpkts,omitempty"`
 	/**
 	* Total number of MAP-T BMR V6 Transmitted packets.
 	*/
-	Bmrv6txpktsrate int32 `json:"bmrv6txpktsrate,omitempty"`
+	Bmrv6txpktsrate float64 `json:"bmrv6txpktsrate,omitempty"`
 	Bmrtotv4rxpkts uint64 `json:"bmrtotv4rxpkts,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 Recieved packets.
 	*/
-	Bmrv4rxpktsrate int32 `json:"bmrv4rxpktsrate,omitempty"`
+	Bmrv4rxpktsrate float64 `json:"bmrv4rxpktsrate,omitempty"`
 	Bmrtotv4txpkts uint64 `json:"bmrtotv4txpkts,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 Transmitted packets.
 	*/
-	Bmrv4txpktsrate int32 `json:"bmrv4txpktsrate,omitempty"`
+	Bmrv4txpktsrate float64 `json:"bmrv4txpktsrate,omitempty"`
 	Bmrtotv6rxpktstcp uint64 `json:"bmrtotv6rxpktstcp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V6 TCP Recieved packets.
 	*/
-	Bmrv6rxpktstcprate int32 `json:"bmrv6rxpktstcprate,omitempty"`
+	Bmrv6rxpktstcprate float64 `json:"bmrv6rxpktstcprate,omitempty"`
 	Bmrtotv6txpktstcp uint64 `json:"bmrtotv6txpktstcp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V6 TCP Transmitted packets.
 	*/
-	Bmrv6txpktstcprate int32 `json:"bmrv6txpktstcprate,omitempty"`
+	Bmrv6txpktstcprate float64 `json:"bmrv6txpktstcprate,omitempty"`
 	Bmrtotv4rxpktstcp uint64 `json:"bmrtotv4rxpktstcp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 TCP Recieved packets.
 	*/
-	Bmrv4rxpktstcprate int32 `json:"bmrv4rxpktstcprate,omitempty"`
+	Bmrv4rxpktstcprate float64 `json:"bmrv4rxpktstcprate,omitempty"`
 	Bmrtotv4txpktstcp uint64 `json:"bmrtotv4txpktstcp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 TCP Transmitted packets.
 	*/
-	Bmrv4txpktstcprate int32 `json:"bmrv4txpktstcprate,omitempty"`
+	Bmrv4txpktstcprate float64 `json:"bmrv4txpktstcprate,omitempty"`
 	Bmrtotv6rxpktsudp uint64 `json:"bmrtotv6rxpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V6 UDP Recieved packets.
 	*/
-	Bmrv6rxpktsudprate int32 `json:"bmrv6rxpktsudprate,omitempty"`
+	Bmrv6rxpktsudprate float64 `json:"bmrv6rxpktsudprate,omitempty"`
 	Bmrtotv6txpktsudp uint64 `json:"bmrtotv6txpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V6 UDP Transmitted packets.
 	*/
-	Bmrv6txpktsudprate int32 `json:"bmrv6txpktsudprate,omitempty"`
+	Bmrv6txpktsudprate float64 `json:"bmrv6txpktsudprate,omitempty"`
 	Bmrtotv4rxpktsudp uint64 `json:"bmrtotv4rxpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 UDP Recieved packets.
 	*/
-	Bmrv4rxpktsudprate int32 `json:"bmrv4rxpktsudprate,omitempty"`
+	Bmrv4rxpktsudprate float64 `json:"bmrv4rxpktsudprate,omitempty"`
 	Bmrtotv4txpktsudp uint64 `json:"bmrtotv4txpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 UDP Transmitted packets.
 	*/
-	Bmrv4txpktsudprate int32 `json:"bmrv4txpktsudprate,omitempty"`
+	Bmrv4txpktsudprate float64 `json:"bmrv4txpktsudprate,omitempty"`
 	Bmrtotv6rxpktsicmp uint64 `json:"bmrtotv6rxpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V6 ICMP Recieved packets.
 	*/
-	Bmrv6rxpktsicmprate int32 `json:"bmrv6rxpktsicmprate,omitempty"`
+	Bmrv6rxpktsicmprate float64 `json:"bmrv6rxpktsicmprate,omitempty"`
 	Bmrtotv6txpktsicmp uint64 `json:"bmrtotv6txpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V6 ICMP Transmitted packets.
 	*/
-	Bmrv6txpktsicmprate int32 `json:"bmrv6txpktsicmprate,omitempty"`
+	Bmrv6txpktsicmprate float64 `json:"bmrv6txpktsicmprate,omitempty"`
 	Bmrtotv4rxpktsicmp uint64 `json:"bmrtotv4rxpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 ICMP Recieved packets.
 	*/
-	Bmrv4rxpktsicmprate int32 `json:"bmrv4rxpktsicmprate,omitempty"`
+	Bmrv4rxpktsicmprate float64 `json:"bmrv4rxpktsicmprate,omitempty"`
 	Bmrtotv4txpktsicmp uint64 `json:"bmrtotv4txpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T BMR V4 ICMP Transmitted packets.
 	*/
-	Bmrv4txpktsicmprate int32 `json:"bmrv4txpktsicmprate,omitempty"`
+	Bmrv4txpktsicmprate float64 `json:"bmrv4txpktsicmprate,omitempty"`
 
 }

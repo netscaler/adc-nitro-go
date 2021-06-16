@@ -53,47 +53,47 @@ type Lbvserverstats struct {
 	/**
 	* Total vserver hits
 	*/
-	Hitsrate int32 `json:"hitsrate,omitempty"`
+	Hitsrate float64 `json:"hitsrate,omitempty"`
 	Totalrequests uint64 `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Requestsrate int32 `json:"requestsrate,omitempty"`
+	Requestsrate float64 `json:"requestsrate,omitempty"`
 	Totalresponses uint64 `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Responsesrate int32 `json:"responsesrate,omitempty"`
+	Responsesrate float64 `json:"responsesrate,omitempty"`
 	Totalrequestbytes uint64 `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
-	Requestbytesrate int32 `json:"requestbytesrate,omitempty"`
+	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
 	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
-	Responsebytesrate int32 `json:"responsebytesrate,omitempty"`
+	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
 	Totalh2requests uint64 `json:"totalh2requests,omitempty"`
 	/**
 	* Total number of Http2 requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	H2requestsrate int32 `json:"h2requestsrate,omitempty"`
+	H2requestsrate float64 `json:"h2requestsrate,omitempty"`
 	Totalh2responses uint64 `json:"totalh2responses,omitempty"`
 	/**
 	* Number of Http2 responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	H2responsesrate int32 `json:"h2responsesrate,omitempty"`
+	H2responsesrate float64 `json:"h2responsesrate,omitempty"`
 	Totalpktsrecvd uint64 `json:"totalpktsrecvd,omitempty"`
 	/**
 	* Total number of packets received by this service or virtual server.
 	*/
-	Pktsrecvdrate int32 `json:"pktsrecvdrate,omitempty"`
+	Pktsrecvdrate float64 `json:"pktsrecvdrate,omitempty"`
 	Totalpktssent uint64 `json:"totalpktssent,omitempty"`
 	/**
 	* Total number of packets sent.
 	*/
-	Pktssentrate int32 `json:"pktssentrate,omitempty"`
+	Pktssentrate float64 `json:"pktssentrate,omitempty"`
 	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
 	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
 	Curpersistencesessions uint64 `json:"curpersistencesessions,omitempty"`
@@ -108,7 +108,7 @@ type Lbvserverstats struct {
 	/**
 	* Number of deferred request on this vserver
 	*/
-	Deferredreqrate int32 `json:"deferredreqrate,omitempty"`
+	Deferredreqrate float64 `json:"deferredreqrate,omitempty"`
 	Invalidrequestresponse uint64 `json:"invalidrequestresponse,omitempty"`
 	Invalidrequestresponsedropped uint64 `json:"invalidrequestresponsedropped,omitempty"`
 	Totvserverdownbackuphits uint32 `json:"totvserverdownbackuphits,omitempty"`
@@ -120,7 +120,7 @@ type Lbvserverstats struct {
 	/**
 	* Total no of server busy error
 	*/
-	Svrbusyerrrate int32 `json:"svrbusyerrrate,omitempty"`
+	Svrbusyerrrate float64 `json:"svrbusyerrrate,omitempty"`
 	Reqretrycount uint64 `json:"reqretrycount,omitempty"`
 	Reqretrycountexceeded uint64 `json:"reqretrycountexceeded,omitempty"`
 	Httpmaxhdrszpkts uint64 `json:"httpmaxhdrszpkts,omitempty"`

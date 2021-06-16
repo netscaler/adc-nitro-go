@@ -38,29 +38,29 @@ type Gslbservicestats struct {
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
-	Requestbytesrate int32 `json:"requestbytesrate,omitempty"`
+	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
 	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
-	Responsebytesrate int32 `json:"responsebytesrate,omitempty"`
+	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
 	Curload uint32 `json:"curload,omitempty"`
 	Totalrequests uint64 `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Requestsrate int32 `json:"requestsrate,omitempty"`
+	Requestsrate float64 `json:"requestsrate,omitempty"`
 	Totalresponses uint64 `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Responsesrate int32 `json:"responsesrate,omitempty"`
+	Responsesrate float64 `json:"responsesrate,omitempty"`
 	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
 	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
 	Vsvrservicehits uint64 `json:"vsvrservicehits,omitempty"`
 	/**
 	* Number of times that the service has been provided.
 	*/
-	Vsvrservicehitsrate int32 `json:"vsvrservicehitsrate,omitempty"`
+	Vsvrservicehitsrate float64 `json:"vsvrservicehitsrate,omitempty"`
 
 }

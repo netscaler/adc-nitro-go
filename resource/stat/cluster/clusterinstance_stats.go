@@ -33,12 +33,12 @@ type Clusterinstancestats struct {
 	/**
 	* Traffic transmitted from backplane (in mbits)
 	*/
-	Clbkplanetxrate int32 `json:"clbkplanetxrate,omitempty"`
+	Clbkplanetxrate float64 `json:"clbkplanetxrate,omitempty"`
 	Clbkplanerx uint64 `json:"clbkplanerx,omitempty"`
 	/**
 	* Traffic received on backplane (in mbits)
 	*/
-	Clbkplanerxrate int32 `json:"clbkplanerxrate,omitempty"`
+	Clbkplanerxrate float64 `json:"clbkplanerxrate,omitempty"`
 	Clnumnodes uint32 `json:"clnumnodes,omitempty"`
 	Clcurstatus string `json:"clcurstatus,omitempty"`
 	Clviewleader string `json:"clviewleader,omitempty"`
@@ -46,7 +46,7 @@ type Clusterinstancestats struct {
 	/**
 	* Total number of packets steered on the cluster backplane.
 	*/
-	Steeredpktsrate int32 `json:"steeredpktsrate,omitempty"`
+	Steeredpktsrate float64 `json:"steeredpktsrate,omitempty"`
 	Numdfddroppkts uint64 `json:"numdfddroppkts,omitempty"`
 	Totpropagationtimeout uint32 `json:"totpropagationtimeout,omitempty"`
 

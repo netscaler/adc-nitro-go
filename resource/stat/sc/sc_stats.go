@@ -26,51 +26,51 @@ type Scstats struct {
 	/**
 	* Number of times that SureConnect conditions were triggered.
 	*/
-	Sccondtriggeredrate int32 `json:"sccondtriggeredrate,omitempty"`
+	Sccondtriggeredrate float64 `json:"sccondtriggeredrate,omitempty"`
 	Scpolicyurlhits uint64 `json:"scpolicyurlhits,omitempty"`
 	/**
 	* Total number of incoming requests that matched configured sureconnect policies.
 	*/
-	Scpolicyurlhitsrate int32 `json:"scpolicyurlhitsrate,omitempty"`
+	Scpolicyurlhitsrate float64 `json:"scpolicyurlhitsrate,omitempty"`
 	Scpopups uint64 `json:"scpopups,omitempty"`
 	/**
 	* Total number of in-memory java script  served which throws the pop-up window.
 	*/
-	Scpopupsrate int32 `json:"scpopupsrate,omitempty"`
+	Scpopupsrate float64 `json:"scpopupsrate,omitempty"`
 	Sctotreissuedrequests uint64 `json:"sctotreissuedrequests,omitempty"`
 	/**
 	* Total number of reissued SureConnect requests.
 	*/
-	Screissuedrequestsrate int32 `json:"screissuedrequestsrate,omitempty"`
+	Screissuedrequestsrate float64 `json:"screissuedrequestsrate,omitempty"`
 	Scsessionreqs uint64 `json:"scsessionreqs,omitempty"`
 	/**
 	* Total number of requests that were  handled in a single SureConnect session.
 	*/
-	Scsessionreqsrate int32 `json:"scsessionreqsrate,omitempty"`
+	Scsessionreqsrate float64 `json:"scsessionreqsrate,omitempty"`
 	Scaltconturls uint64 `json:"scaltconturls,omitempty"`
 	/**
 	* Total number of alternate content served which throws the pop-up window.
 	*/
-	Scaltconturlsrate int32 `json:"scaltconturlsrate,omitempty"`
+	Scaltconturlsrate float64 `json:"scaltconturlsrate,omitempty"`
 	Scpostreqs uint64 `json:"scpostreqs,omitempty"`
 	/**
 	* Total number of   HTTP POST requests that triggered SureConnect feature.
 	*/
-	Scpostreqsrate int32 `json:"scpostreqsrate,omitempty"`
+	Scpostreqsrate float64 `json:"scpostreqsrate,omitempty"`
 	Scresetstats uint64 `json:"scresetstats,omitempty"`
 	/**
 	* Toal number of times that SureConnect statistics were reset.
 	*/
-	Scresetstatsrate int32 `json:"scresetstatsrate,omitempty"`
+	Scresetstatsrate float64 `json:"scresetstatsrate,omitempty"`
 	Scunsupbrow uint64 `json:"scunsupbrow,omitempty"`
 	/**
 	* Total number of requests that came from all unsupported browsers.
 	*/
-	Scunsupbrowrate int32 `json:"scunsupbrowrate,omitempty"`
+	Scunsupbrowrate float64 `json:"scunsupbrowrate,omitempty"`
 	Scfaultycookies uint64 `json:"scfaultycookies,omitempty"`
 	/**
 	* Total number of corrupted SureConnect cookies.
 	*/
-	Scfaultycookiesrate int32 `json:"scfaultycookiesrate,omitempty"`
+	Scfaultycookiesrate float64 `json:"scfaultycookiesrate,omitempty"`
 
 }

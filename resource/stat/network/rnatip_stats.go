@@ -34,27 +34,27 @@ type Rnatipstats struct {
 	/**
 	* Bytes received on this IP address during RNAT sessions.
 	*/
-	Iprnatrxbytesrate int32 `json:"iprnatrxbytesrate,omitempty"`
+	Iprnatrxbytesrate float64 `json:"iprnatrxbytesrate,omitempty"`
 	Iprnattottxbytes uint64 `json:"iprnattottxbytes,omitempty"`
 	/**
 	* Bytes sent from this IP address during RNAT sessions.
 	*/
-	Iprnattxbytesrate int32 `json:"iprnattxbytesrate,omitempty"`
+	Iprnattxbytesrate float64 `json:"iprnattxbytesrate,omitempty"`
 	Iprnattotrxpkts uint64 `json:"iprnattotrxpkts,omitempty"`
 	/**
 	* Packets received on this IP address during RNAT sessions.
 	*/
-	Iprnatrxpktsrate int32 `json:"iprnatrxpktsrate,omitempty"`
+	Iprnatrxpktsrate float64 `json:"iprnatrxpktsrate,omitempty"`
 	Iprnattottxpkts uint64 `json:"iprnattottxpkts,omitempty"`
 	/**
 	* Packets sent from this IP address during RNAT sessions.
 	*/
-	Iprnattxpktsrate int32 `json:"iprnattxpktsrate,omitempty"`
+	Iprnattxpktsrate float64 `json:"iprnattxpktsrate,omitempty"`
 	Iprnattottxsyn uint64 `json:"iprnattottxsyn,omitempty"`
 	/**
 	* Requests for connections sent from this IP address during RNAT sessions.
 	*/
-	Iprnattxsynrate int32 `json:"iprnattxsynrate,omitempty"`
+	Iprnattxsynrate float64 `json:"iprnattxsynrate,omitempty"`
 	Iprnatcursessions uint32 `json:"iprnatcursessions,omitempty"`
 
 }

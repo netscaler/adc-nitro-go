@@ -39,12 +39,12 @@ type Nsstats struct {
 	/**
 	* Intercepted HTTP requests requiring fetches from origin server.
 	*/
-	Cachemissesrate int32 `json:"cachemissesrate,omitempty"`
+	Cachemissesrate float64 `json:"cachemissesrate,omitempty"`
 	Cachetothits uint64 `json:"cachetothits,omitempty"`
 	/**
 	* Responses served from the integrated cache. These responses match a policy with a CACHE action.
 	*/
-	Cachehitsrate int32 `json:"cachehitsrate,omitempty"`
+	Cachehitsrate float64 `json:"cachehitsrate,omitempty"`
 	Memusagepcnt float64 `json:"memusagepcnt,omitempty"`
 	Memuseinmb uint32 `json:"memuseinmb,omitempty"`
 	Mgmtcpuusagepcnt float64 `json:"mgmtcpuusagepcnt,omitempty"`
@@ -64,12 +64,12 @@ type Nsstats struct {
 	/**
 	* Number of megabytes received by the Citrix ADC.
 	*/
-	Rxmbitsrate int32 `json:"rxmbitsrate,omitempty"`
+	Rxmbitsrate float64 `json:"rxmbitsrate,omitempty"`
 	Tottxmbits uint64 `json:"tottxmbits,omitempty"`
 	/**
 	* Number of megabytes transmitted by the Citrix ADC.
 	*/
-	Txmbitsrate int32 `json:"txmbitsrate,omitempty"`
+	Txmbitsrate float64 `json:"txmbitsrate,omitempty"`
 	Tcpcurclientconn uint32 `json:"tcpcurclientconn,omitempty"`
 	Tcpcurclientconnestablished uint32 `json:"tcpcurclientconnestablished,omitempty"`
 	Tcpcurserverconn uint32 `json:"tcpcurserverconn,omitempty"`
@@ -78,52 +78,52 @@ type Nsstats struct {
 	/**
 	* Total number of HTTP requests received.
 	*/
-	Httprequestsrate int32 `json:"httprequestsrate,omitempty"`
+	Httprequestsrate float64 `json:"httprequestsrate,omitempty"`
 	Httptotresponses uint64 `json:"httptotresponses,omitempty"`
 	/**
 	* Total number of HTTP responses sent.
 	*/
-	Httpresponsesrate int32 `json:"httpresponsesrate,omitempty"`
+	Httpresponsesrate float64 `json:"httpresponsesrate,omitempty"`
 	Httptotrxrequestbytes uint64 `json:"httptotrxrequestbytes,omitempty"`
 	/**
 	* Total number of bytes of HTTP request data received.
 	*/
-	Httprxrequestbytesrate int32 `json:"httprxrequestbytesrate,omitempty"`
+	Httprxrequestbytesrate float64 `json:"httprxrequestbytesrate,omitempty"`
 	Httptotrxresponsebytes uint64 `json:"httptotrxresponsebytes,omitempty"`
 	/**
 	* Total number of bytes of HTTP response data received.
 	*/
-	Httprxresponsebytesrate int32 `json:"httprxresponsebytesrate,omitempty"`
+	Httprxresponsebytesrate float64 `json:"httprxresponsebytesrate,omitempty"`
 	Ssltottransactions uint64 `json:"ssltottransactions,omitempty"`
 	/**
 	* Number of SSL transactions on the Citrix ADC
 	*/
-	Ssltransactionsrate int32 `json:"ssltransactionsrate,omitempty"`
+	Ssltransactionsrate float64 `json:"ssltransactionsrate,omitempty"`
 	Ssltotsessionhits uint64 `json:"ssltotsessionhits,omitempty"`
 	/**
 	* Number of SSL session reuse hits on the Citrix ADC.
 	*/
-	Sslsessionhitsrate int32 `json:"sslsessionhitsrate,omitempty"`
+	Sslsessionhitsrate float64 `json:"sslsessionhitsrate,omitempty"`
 	Appfirewallrequests uint64 `json:"appfirewallrequests,omitempty"`
 	/**
 	* HTTP/HTTPS requests sent to your protected web servers via the Application Firewall.
 	*/
-	Appfirewallrequestsrate int32 `json:"appfirewallrequestsrate,omitempty"`
+	Appfirewallrequestsrate float64 `json:"appfirewallrequestsrate,omitempty"`
 	Appfirewallresponses uint64 `json:"appfirewallresponses,omitempty"`
 	/**
 	* HTTP/HTTPS responses sent by your protected web servers via the Application Firewall.
 	*/
-	Appfirewallresponsesrate int32 `json:"appfirewallresponsesrate,omitempty"`
+	Appfirewallresponsesrate float64 `json:"appfirewallresponsesrate,omitempty"`
 	Appfirewallaborts uint64 `json:"appfirewallaborts,omitempty"`
 	/**
 	* Incomplete HTTP/HTTPS requests aborted by the client before the Application Firewall could finish processing them.
 	*/
-	Appfirewallabortsrate int32 `json:"appfirewallabortsrate,omitempty"`
+	Appfirewallabortsrate float64 `json:"appfirewallabortsrate,omitempty"`
 	Appfirewallredirects uint64 `json:"appfirewallredirects,omitempty"`
 	/**
 	* HTTP/HTTPS requests redirected by the Application Firewall to a different Web page or web server. (HTTP 302)
 	*/
-	Appfirewallredirectsrate int32 `json:"appfirewallredirectsrate,omitempty"`
+	Appfirewallredirectsrate float64 `json:"appfirewallredirectsrate,omitempty"`
 	Misccounter0 int32 `json:"misccounter0,omitempty"`
 	Misccounter1 int32 `json:"misccounter1,omitempty"`
 	Numcpus uint32 `json:"numcpus,omitempty"`

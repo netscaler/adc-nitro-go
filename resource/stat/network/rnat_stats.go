@@ -29,27 +29,27 @@ type Rnatstats struct {
 	/**
 	* Bytes received during RNAT sessions.
 	*/
-	Rnatrxbytesrate int32 `json:"rnatrxbytesrate,omitempty"`
+	Rnatrxbytesrate float64 `json:"rnatrxbytesrate,omitempty"`
 	Rnattottxbytes uint64 `json:"rnattottxbytes,omitempty"`
 	/**
 	* Bytes sent during RNAT sessions.
 	*/
-	Rnattxbytesrate int32 `json:"rnattxbytesrate,omitempty"`
+	Rnattxbytesrate float64 `json:"rnattxbytesrate,omitempty"`
 	Rnattotrxpkts uint64 `json:"rnattotrxpkts,omitempty"`
 	/**
 	* Packets received during RNAT sessions.
 	*/
-	Rnatrxpktsrate int32 `json:"rnatrxpktsrate,omitempty"`
+	Rnatrxpktsrate float64 `json:"rnatrxpktsrate,omitempty"`
 	Rnattottxpkts uint64 `json:"rnattottxpkts,omitempty"`
 	/**
 	* Packets sent during RNAT sessions.
 	*/
-	Rnattxpktsrate int32 `json:"rnattxpktsrate,omitempty"`
+	Rnattxpktsrate float64 `json:"rnattxpktsrate,omitempty"`
 	Rnattottxsyn uint64 `json:"rnattottxsyn,omitempty"`
 	/**
 	* Requests for connections sent during RNAT sessions.
 	*/
-	Rnattxsynrate int32 `json:"rnattxsynrate,omitempty"`
+	Rnattxsynrate float64 `json:"rnattxsynrate,omitempty"`
 	Rnatcursessions uint32 `json:"rnatcursessions,omitempty"`
 
 }

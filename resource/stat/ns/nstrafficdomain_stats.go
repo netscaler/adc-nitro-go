@@ -33,16 +33,16 @@ type Nstrafficdomainstats struct {
 	/**
 	* Packets received on this TD.
 	*/
-	Nstdrxpktsrate int32 `json:"nstdrxpktsrate,omitempty"`
+	Nstdrxpktsrate float64 `json:"nstdrxpktsrate,omitempty"`
 	Nstdtottxpkts uint64 `json:"nstdtottxpkts,omitempty"`
 	/**
 	* Packets transmitted from this TD.
 	*/
-	Nstdtxpktsrate int32 `json:"nstdtxpktsrate,omitempty"`
+	Nstdtxpktsrate float64 `json:"nstdtxpktsrate,omitempty"`
 	Nstdtotdroppedpkts uint64 `json:"nstdtotdroppedpkts,omitempty"`
 	/**
 	* Inbound packets dropped on this TD by reception.
 	*/
-	Nstddroppedpktsrate int32 `json:"nstddroppedpktsrate,omitempty"`
+	Nstddroppedpktsrate float64 `json:"nstddroppedpktsrate,omitempty"`
 
 }

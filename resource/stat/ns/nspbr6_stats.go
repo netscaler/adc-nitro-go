@@ -33,31 +33,31 @@ type Nspbr6stats struct {
 	/**
 	* Total packets that matched the PBR6 with action ALLOW 
 	*/
-	Pbr6pktsallowedrate int32 `json:"pbr6pktsallowedrate,omitempty"`
+	Pbr6pktsallowedrate float64 `json:"pbr6pktsallowedrate,omitempty"`
 	Pbr6totpktsdenied uint64 `json:"pbr6totpktsdenied,omitempty"`
 	/**
 	* Total packets that matched PBR6 with action DENY 
 	*/
-	Pbr6pktsdeniedrate int32 `json:"pbr6pktsdeniedrate,omitempty"`
+	Pbr6pktsdeniedrate float64 `json:"pbr6pktsdeniedrate,omitempty"`
 	Pbr6tothits uint64 `json:"pbr6tothits,omitempty"`
 	/**
 	* Total packets that matched one of the configured PBR6
 	*/
-	Pbr6hitsrate int32 `json:"pbr6hitsrate,omitempty"`
+	Pbr6hitsrate float64 `json:"pbr6hitsrate,omitempty"`
 	Pbr6totmisses uint64 `json:"pbr6totmisses,omitempty"`
 	/**
 	* Total packets that did not match any PBR6
 	*/
-	Pbr6missesrate int32 `json:"pbr6missesrate,omitempty"`
+	Pbr6missesrate float64 `json:"pbr6missesrate,omitempty"`
 	Pbr6totnulldrop uint64 `json:"pbr6totnulldrop,omitempty"`
 	/**
 	* Total packets that are dropped due to null next hop
 	*/
-	Pbr6nulldroprate int32 `json:"pbr6nulldroprate,omitempty"`
+	Pbr6nulldroprate float64 `json:"pbr6nulldroprate,omitempty"`
 	Pbr6perhits uint64 `json:"pbr6perhits,omitempty"`
 	/**
 	* Number of times the pbr6 was hit
 	*/
-	Pbr6perhitsrate int32 `json:"pbr6perhitsrate,omitempty"`
+	Pbr6perhitsrate float64 `json:"pbr6perhitsrate,omitempty"`
 
 }

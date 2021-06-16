@@ -33,43 +33,43 @@ type Pqpolicystats struct {
 	/**
 	* Average wait time for clients for this priority queuing policy.
 	*/
-	Pqavgqueuewaittimerate int32 `json:"pqavgqueuewaittimerate,omitempty"`
+	Pqavgqueuewaittimerate float64 `json:"pqavgqueuewaittimerate,omitempty"`
 	Pqavgclienttransactiontimems uint64 `json:"pqavgclienttransactiontimems,omitempty"`
 	/**
 	* Average time taken by a priority queuing client to complete its transaction for this  priority queuing policy.
 	*/
-	Pqavgclienttransactiontimemsrate int32 `json:"pqavgclienttransactiontimemsrate,omitempty"`
+	Pqavgclienttransactiontimemsrate float64 `json:"pqavgclienttransactiontimemsrate,omitempty"`
 	Pqvserverip string `json:"pqvserverip,omitempty"`
 	Pqvserverport int32 `json:"pqvserverport,omitempty"`
 	Pqqdepth uint32 `json:"pqqdepth,omitempty"`
 	/**
 	* Number of clients waiting currently for this priority queuing policy.
 	*/
-	Pqqdepthrate int32 `json:"pqqdepthrate,omitempty"`
+	Pqqdepthrate float64 `json:"pqqdepthrate,omitempty"`
 	Pqcurrentclientconnections uint32 `json:"pqcurrentclientconnections,omitempty"`
 	/**
 	* Current number of server connections established for serving clients for this priority queuing policy.
 	*/
-	Pqcurrentclientconnectionsrate int32 `json:"pqcurrentclientconnectionsrate,omitempty"`
+	Pqcurrentclientconnectionsrate float64 `json:"pqcurrentclientconnectionsrate,omitempty"`
 	Pqtotclientconnections []uint64 `json:"pqtotclientconnections,omitempty"`
 	/**
 	* Total number of server connections established for serving clients for this priority queuing policy.
 	*/
-	Pqclientconnectionsrate int32 `json:"pqclientconnectionsrate,omitempty"`
+	Pqclientconnectionsrate float64 `json:"pqclientconnectionsrate,omitempty"`
 	Pqdropped uint64 `json:"pqdropped,omitempty"`
 	/**
 	* Total number of dropped transactions for this priority queuing policy.
 	*/
-	Pqdroppedrate int32 `json:"pqdroppedrate,omitempty"`
+	Pqdroppedrate float64 `json:"pqdroppedrate,omitempty"`
 	Totclienttransactions uint64 `json:"totclienttransactions,omitempty"`
 	/**
 	* Total number of client transactions for this priority queuing policy.
 	*/
-	Clienttransactionsrate int32 `json:"clienttransactionsrate,omitempty"`
+	Clienttransactionsrate float64 `json:"clienttransactionsrate,omitempty"`
 	Pqtotqueuedepth uint64 `json:"pqtotqueuedepth,omitempty"`
 	/**
 	* Total number of waiting clients for this priority queuing policy.
 	*/
-	Pqqueuedepthrate int32 `json:"pqqueuedepthrate,omitempty"`
+	Pqqueuedepthrate float64 `json:"pqqueuedepthrate,omitempty"`
 
 }

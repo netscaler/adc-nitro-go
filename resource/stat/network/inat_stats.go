@@ -33,81 +33,81 @@ type Inatstats struct {
 	/**
 	* Total TCP packets translated (V4->v6).
 	*/
-	Nat46tcp46rate int32 `json:"nat46tcp46rate,omitempty"`
+	Nat46tcp46rate float64 `json:"nat46tcp46rate,omitempty"`
 	Nat46totudp46 uint64 `json:"nat46totudp46,omitempty"`
 	/**
 	* Total UDP packets translated (V4->v6).
 	*/
-	Nat46udp46rate int32 `json:"nat46udp46rate,omitempty"`
+	Nat46udp46rate float64 `json:"nat46udp46rate,omitempty"`
 	Nat46toticmp46 uint64 `json:"nat46toticmp46,omitempty"`
 	/**
 	* Total ICMP packets translated (V4->v6).
 	*/
-	Nat46icmp46rate int32 `json:"nat46icmp46rate,omitempty"`
+	Nat46icmp46rate float64 `json:"nat46icmp46rate,omitempty"`
 	Nat46totdrop46 uint64 `json:"nat46totdrop46,omitempty"`
 	/**
 	* Total IPV4 packets dropped.
 	*/
-	Nat46drop46rate int32 `json:"nat46drop46rate,omitempty"`
+	Nat46drop46rate float64 `json:"nat46drop46rate,omitempty"`
 	Nat46tottcp64 uint64 `json:"nat46tottcp64,omitempty"`
 	/**
 	* Total TCP packets translated (V6->v4).
 	*/
-	Nat46tcp64rate int32 `json:"nat46tcp64rate,omitempty"`
+	Nat46tcp64rate float64 `json:"nat46tcp64rate,omitempty"`
 	Nat46totudp64 uint64 `json:"nat46totudp64,omitempty"`
 	/**
 	* Total UDP packets translated (V6->v4).
 	*/
-	Nat46udp64rate int32 `json:"nat46udp64rate,omitempty"`
+	Nat46udp64rate float64 `json:"nat46udp64rate,omitempty"`
 	Nat46toticmp64 uint64 `json:"nat46toticmp64,omitempty"`
 	/**
 	* Total ICMP packets translated (V6->v4).
 	*/
-	Nat46icmp64rate int32 `json:"nat46icmp64rate,omitempty"`
+	Nat46icmp64rate float64 `json:"nat46icmp64rate,omitempty"`
 	Nat46totdrop64 uint64 `json:"nat46totdrop64,omitempty"`
 	/**
 	* Total IPV6 packets dropped.
 	*/
-	Nat46drop64rate int32 `json:"nat46drop64rate,omitempty"`
+	Nat46drop64rate float64 `json:"nat46drop64rate,omitempty"`
 	Inatnat46tcp46 uint64 `json:"inatnat46tcp46,omitempty"`
 	/**
 	* TCP packets translated (V4->v6).
 	*/
-	Inatnat46tcp46rate int32 `json:"inatnat46tcp46rate,omitempty"`
+	Inatnat46tcp46rate float64 `json:"inatnat46tcp46rate,omitempty"`
 	Inatnat46udp46 uint64 `json:"inatnat46udp46,omitempty"`
 	/**
 	* UDP packets translated (V4->v6).
 	*/
-	Inatnat46udp46rate int32 `json:"inatnat46udp46rate,omitempty"`
+	Inatnat46udp46rate float64 `json:"inatnat46udp46rate,omitempty"`
 	Inatnat46icmp46 uint64 `json:"inatnat46icmp46,omitempty"`
 	/**
 	* ICMP packets translated (V4->v6).
 	*/
-	Inatnat46icmp46rate int32 `json:"inatnat46icmp46rate,omitempty"`
+	Inatnat46icmp46rate float64 `json:"inatnat46icmp46rate,omitempty"`
 	Inatnat46drop46 uint64 `json:"inatnat46drop46,omitempty"`
 	/**
 	* IPV4 packets dropped.
 	*/
-	Inatnat46drop46rate int32 `json:"inatnat46drop46rate,omitempty"`
+	Inatnat46drop46rate float64 `json:"inatnat46drop46rate,omitempty"`
 	Inatnat46tcp64 uint64 `json:"inatnat46tcp64,omitempty"`
 	/**
 	* TCP packets translated (V6->v4).
 	*/
-	Inatnat46tcp64rate int32 `json:"inatnat46tcp64rate,omitempty"`
+	Inatnat46tcp64rate float64 `json:"inatnat46tcp64rate,omitempty"`
 	Inatnat46udp64 uint64 `json:"inatnat46udp64,omitempty"`
 	/**
 	* UDP packets translated (V6->v4).
 	*/
-	Inatnat46udp64rate int32 `json:"inatnat46udp64rate,omitempty"`
+	Inatnat46udp64rate float64 `json:"inatnat46udp64rate,omitempty"`
 	Inatnat46icmp64 uint64 `json:"inatnat46icmp64,omitempty"`
 	/**
 	* ICMP packets translated (V6->v4).
 	*/
-	Inatnat46icmp64rate int32 `json:"inatnat46icmp64rate,omitempty"`
+	Inatnat46icmp64rate float64 `json:"inatnat46icmp64rate,omitempty"`
 	Inatnat46drop64 uint64 `json:"inatnat46drop64,omitempty"`
 	/**
 	* IPV6 packets dropped.
 	*/
-	Inatnat46drop64rate int32 `json:"inatnat46drop64rate,omitempty"`
+	Inatnat46drop64rate float64 `json:"inatnat46drop64rate,omitempty"`
 
 }

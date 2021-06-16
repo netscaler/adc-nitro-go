@@ -33,6 +33,6 @@ type Botpolicylabelstats struct {
 	/**
 	* Number of times policy label was invoked. 
 	*/
-	Pipolicylabelhitsrate int32 `json:"pipolicylabelhitsrate,omitempty"`
+	Pipolicylabelhitsrate float64 `json:"pipolicylabelhitsrate,omitempty"`
 
 }

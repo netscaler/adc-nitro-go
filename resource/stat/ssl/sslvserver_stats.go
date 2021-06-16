@@ -39,41 +39,41 @@ type Sslvserverstats struct {
 	/**
 	* Number of successful client authentication on this vserver
 	*/
-	Sslclientauthsuccessrate int32 `json:"sslclientauthsuccessrate,omitempty"`
+	Sslclientauthsuccessrate float64 `json:"sslclientauthsuccessrate,omitempty"`
 	Ssltotclientauthfailure uint32 `json:"ssltotclientauthfailure,omitempty"`
 	/**
 	* Number of failure client authentication on this vserver
 	*/
-	Sslclientauthfailurerate int32 `json:"sslclientauthfailurerate,omitempty"`
+	Sslclientauthfailurerate float64 `json:"sslclientauthfailurerate,omitempty"`
 	Sslctxtotencbytes uint32 `json:"sslctxtotencbytes,omitempty"`
 	/**
 	* Number of encrypted bytes per SSL vserver
 	*/
-	Sslctxencbytesrate int32 `json:"sslctxencbytesrate,omitempty"`
+	Sslctxencbytesrate float64 `json:"sslctxencbytesrate,omitempty"`
 	Sslctxtotdecbytes uint32 `json:"sslctxtotdecbytes,omitempty"`
 	/**
 	* Number of decrypted bytes per SSL vserver
 	*/
-	Sslctxdecbytesrate int32 `json:"sslctxdecbytesrate,omitempty"`
+	Sslctxdecbytesrate float64 `json:"sslctxdecbytesrate,omitempty"`
 	Sslctxtothwencbytes uint32 `json:"sslctxtothwencbytes,omitempty"`
 	/**
 	* Number of hardware encrypted bytes per SSL vserver
 	*/
-	Sslctxhwencbytesrate int32 `json:"sslctxhwencbytesrate,omitempty"`
+	Sslctxhwencbytesrate float64 `json:"sslctxhwencbytesrate,omitempty"`
 	Sslctxtothwdecbytes uint32 `json:"sslctxtothwdec_bytes,omitempty"`
 	/**
 	* Number of hw decrypted bytes per SSL vserver
 	*/
-	Sslctxhwdecbytesrate int32 `json:"sslctxhwdec_bytesrate,omitempty"`
+	Sslctxhwdecbytesrate float64 `json:"sslctxhwdec_bytesrate,omitempty"`
 	Sslctxtotsessionnew uint32 `json:"sslctxtotsessionnew,omitempty"`
 	/**
 	* Number of new sessions created
 	*/
-	Sslctxsessionnewrate int32 `json:"sslctxsessionnewrate,omitempty"`
+	Sslctxsessionnewrate float64 `json:"sslctxsessionnewrate,omitempty"`
 	Sslctxtotsessionhits uint32 `json:"sslctxtotsessionhits,omitempty"`
 	/**
 	* Number of session hits
 	*/
-	Sslctxsessionhitsrate int32 `json:"sslctxsessionhitsrate,omitempty"`
+	Sslctxsessionhitsrate float64 `json:"sslctxsessionhitsrate,omitempty"`
 
 }

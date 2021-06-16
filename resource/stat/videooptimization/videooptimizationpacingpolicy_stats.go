@@ -33,11 +33,11 @@ type Videooptimizationpacingpolicystats struct {
 	/**
 	* Number of hits on the policy
 	*/
-	Pipolicyhitsrate int32 `json:"pipolicyhitsrate,omitempty"`
+	Pipolicyhitsrate float64 `json:"pipolicyhitsrate,omitempty"`
 	Pipolicyundefhits uint64 `json:"pipolicyundefhits,omitempty"`
 	/**
 	* Number of undef hits on the policy
 	*/
-	Pipolicyundefhitsrate int32 `json:"pipolicyundefhitsrate,omitempty"`
+	Pipolicyundefhitsrate float64 `json:"pipolicyundefhitsrate,omitempty"`
 
 }

@@ -29,42 +29,42 @@ type Protocolipstats struct {
 	/**
 	* IP packets received.
 	*/
-	Iprxpktsrate int32 `json:"iprxpktsrate,omitempty"`
+	Iprxpktsrate float64 `json:"iprxpktsrate,omitempty"`
 	Iptotrxbytes uint64 `json:"iptotrxbytes,omitempty"`
 	/**
 	* Bytes of IP data received.
 	*/
-	Iprxbytesrate int32 `json:"iprxbytesrate,omitempty"`
+	Iprxbytesrate float64 `json:"iprxbytesrate,omitempty"`
 	Iptottxpkts uint64 `json:"iptottxpkts,omitempty"`
 	/**
 	* IP packets transmitted.
 	*/
-	Iptxpktsrate int32 `json:"iptxpktsrate,omitempty"`
+	Iptxpktsrate float64 `json:"iptxpktsrate,omitempty"`
 	Iptottxbytes uint64 `json:"iptottxbytes,omitempty"`
 	/**
 	* Bytes of IP data transmitted.
 	*/
-	Iptxbytesrate int32 `json:"iptxbytesrate,omitempty"`
+	Iptxbytesrate float64 `json:"iptxbytesrate,omitempty"`
 	Iptotrxmbits uint64 `json:"iptotrxmbits,omitempty"`
 	/**
 	* Megabits of IP data received.
 	*/
-	Iprxmbitsrate int32 `json:"iprxmbitsrate,omitempty"`
+	Iprxmbitsrate float64 `json:"iprxmbitsrate,omitempty"`
 	Iptottxmbits uint64 `json:"iptottxmbits,omitempty"`
 	/**
 	* Megabits of IP data transmitted.
 	*/
-	Iptxmbitsrate int32 `json:"iptxmbitsrate,omitempty"`
+	Iptxmbitsrate float64 `json:"iptxmbitsrate,omitempty"`
 	Iptotroutedpkts uint64 `json:"iptotroutedpkts,omitempty"`
 	/**
 	* Total routed packets.
 	*/
-	Iproutedpktsrate int32 `json:"iproutedpktsrate,omitempty"`
+	Iproutedpktsrate float64 `json:"iproutedpktsrate,omitempty"`
 	Iptotroutedmbits uint64 `json:"iptotroutedmbits,omitempty"`
 	/**
 	* Total routed Mbits
 	*/
-	Iproutedmbitsrate int32 `json:"iproutedmbitsrate,omitempty"`
+	Iproutedmbitsrate float64 `json:"iproutedmbitsrate,omitempty"`
 	Iptotfragments uint64 `json:"iptotfragments,omitempty"`
 	Iptotsuccreassembly uint64 `json:"iptotsuccreassembly,omitempty"`
 	Iptotreassemblyattempt uint64 `json:"iptotreassemblyattempt,omitempty"`

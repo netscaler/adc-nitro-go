@@ -29,41 +29,41 @@ type Protocolhttp3stats struct {
 	/**
 	* Total number of HTTP/3 requests received
 	*/
-	Http3requestsrcvdrate int32 `json:"http3requestsrcvdrate,omitempty"`
+	Http3requestsrcvdrate float64 `json:"http3requestsrcvdrate,omitempty"`
 	Http3requestssent uint64 `json:"http3requestssent,omitempty"`
 	/**
 	* Total number of HTTP/3 requests sent
 	*/
-	Http3requestssentrate int32 `json:"http3requestssentrate,omitempty"`
+	Http3requestssentrate float64 `json:"http3requestssentrate,omitempty"`
 	Http3responsesrcvd uint64 `json:"http3responsesrcvd,omitempty"`
 	/**
 	* Total number of HTTP/3 responses received
 	*/
-	Http3responsesrcvdrate int32 `json:"http3responsesrcvdrate,omitempty"`
+	Http3responsesrcvdrate float64 `json:"http3responsesrcvdrate,omitempty"`
 	Http3responsessent uint64 `json:"http3responsessent,omitempty"`
 	/**
 	* Total number of HTTP/3 responses sent
 	*/
-	Http3responsessentrate int32 `json:"http3responsessentrate,omitempty"`
+	Http3responsessentrate float64 `json:"http3responsessentrate,omitempty"`
 	Http3conninfalcfail uint64 `json:"http3conninfalcfail,omitempty"`
 	/**
 	* Number of HTTP/3 connection-info allocation failures
 	*/
-	Http3conninfalcfailrate int32 `json:"http3conninfalcfailrate,omitempty"`
+	Http3conninfalcfailrate float64 `json:"http3conninfalcfailrate,omitempty"`
 	Http3nsbalcfail uint64 `json:"http3nsbalcfail,omitempty"`
 	/**
 	* Number of HTTP/3 NSB allocation failures
 	*/
-	Http3nsbalcfailrate int32 `json:"http3nsbalcfailrate,omitempty"`
+	Http3nsbalcfailrate float64 `json:"http3nsbalcfailrate,omitempty"`
 	Http3strminfalcfail uint64 `json:"http3strminfalcfail,omitempty"`
 	/**
 	* Number of HTTP/3 stream-info allocation failures
 	*/
-	Http3strminfalcfailrate int32 `json:"http3strminfalcfailrate,omitempty"`
+	Http3strminfalcfailrate float64 `json:"http3strminfalcfailrate,omitempty"`
 	Http3strmpcbalcfail uint64 `json:"http3strmpcbalcfail,omitempty"`
 	/**
 	* Number of HTTP/3 stream PCB allocation failures
 	*/
-	Http3strmpcbalcfailrate int32 `json:"http3strmpcbalcfailrate,omitempty"`
+	Http3strmpcbalcfailrate float64 `json:"http3strmpcbalcfailrate,omitempty"`
 
 }

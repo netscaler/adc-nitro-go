@@ -29,21 +29,21 @@ type Nat64stats struct {
 	/**
 	* Total number of TCP sessions created by NAT64.
 	*/
-	Nat64tcpsessionsrate int32 `json:"nat64tcpsessionsrate,omitempty"`
+	Nat64tcpsessionsrate float64 `json:"nat64tcpsessionsrate,omitempty"`
 	Nat64totudpsessions uint64 `json:"nat64totudpsessions,omitempty"`
 	/**
 	* Total number of UDP sessions created by NAT64.
 	*/
-	Nat64udpsessionsrate int32 `json:"nat64udpsessionsrate,omitempty"`
+	Nat64udpsessionsrate float64 `json:"nat64udpsessionsrate,omitempty"`
 	Nat64toticmpsessions uint64 `json:"nat64toticmpsessions,omitempty"`
 	/**
 	* Total number of ICMP sessions created by NAT64.
 	*/
-	Nat64icmpsessionsrate int32 `json:"nat64icmpsessionsrate,omitempty"`
+	Nat64icmpsessionsrate float64 `json:"nat64icmpsessionsrate,omitempty"`
 	Nat64totsessions uint64 `json:"nat64totsessions,omitempty"`
 	/**
 	* Total number of sessions created by NAT64.
 	*/
-	Nat64sessionsrate int32 `json:"nat64sessionsrate,omitempty"`
+	Nat64sessionsrate float64 `json:"nat64sessionsrate,omitempty"`
 
 }

@@ -44,22 +44,22 @@ type Gslbsitestats struct {
 	/**
 	* Total number of request bytes received by the virtual servers represented by all GSLB services associated with this GSLB site.
 	*/
-	Siterequestbytesrate int32 `json:"siterequestbytesrate,omitempty"`
+	Siterequestbytesrate float64 `json:"siterequestbytesrate,omitempty"`
 	Sitetotalresponsebytes uint64 `json:"sitetotalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by the virtual servers represented by all GSLB services associated with this GSLB site.
 	*/
-	Siteresponsebytesrate int32 `json:"siteresponsebytesrate,omitempty"`
+	Siteresponsebytesrate float64 `json:"siteresponsebytesrate,omitempty"`
 	Sitetotalrequests uint64 `json:"sitetotalrequests,omitempty"`
 	/**
 	* Total number of requests received by the virtual servers represented by all GSLB services associated with this GSLB site.
 	*/
-	Siterequestsrate int32 `json:"siterequestsrate,omitempty"`
+	Siterequestsrate float64 `json:"siterequestsrate,omitempty"`
 	Sitetotalresponses uint64 `json:"sitetotalresponses,omitempty"`
 	/**
 	* Number of responses received by the virtual servers represented by all GSLB services associated with this GSLB site.
 	*/
-	Siteresponsesrate int32 `json:"siteresponsesrate,omitempty"`
+	Siteresponsesrate float64 `json:"siteresponsesrate,omitempty"`
 	Sitecurclntconnections uint32 `json:"sitecurclntconnections,omitempty"`
 	Sitecursrvrconnections uint32 `json:"sitecursrvrconnections,omitempty"`
 

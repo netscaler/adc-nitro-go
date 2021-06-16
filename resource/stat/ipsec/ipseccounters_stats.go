@@ -29,21 +29,21 @@ type Ipseccountersstats struct {
 	/**
 	* Bytes received during IPsec sessions.
 	*/
-	Ipsecrxbytesrate int32 `json:"ipsecrxbytesrate,omitempty"`
+	Ipsecrxbytesrate float64 `json:"ipsecrxbytesrate,omitempty"`
 	Ipsectottxbytes uint64 `json:"ipsectottxbytes,omitempty"`
 	/**
 	* Bytes sent during IPsec sessions.
 	*/
-	Ipsectxbytesrate int32 `json:"ipsectxbytesrate,omitempty"`
+	Ipsectxbytesrate float64 `json:"ipsectxbytesrate,omitempty"`
 	Ipsectotrxpkts uint64 `json:"ipsectotrxpkts,omitempty"`
 	/**
 	* Packets received during IPsec sessions.
 	*/
-	Ipsecrxpktsrate int32 `json:"ipsecrxpktsrate,omitempty"`
+	Ipsecrxpktsrate float64 `json:"ipsecrxpktsrate,omitempty"`
 	Ipsectottxpkts uint64 `json:"ipsectottxpkts,omitempty"`
 	/**
 	* Packets sent during IPsec sessions.
 	*/
-	Ipsectxpktsrate int32 `json:"ipsectxpktsrate,omitempty"`
+	Ipsectxpktsrate float64 `json:"ipsectxpktsrate,omitempty"`
 
 }

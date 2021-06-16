@@ -36,31 +36,31 @@ type Dospolicystats struct {
 	/**
 	* Current queue size of the server to which this policy is bound.
 	*/
-	Doscurrentqueuesizerate int32 `json:"doscurrentqueuesizerate,omitempty"`
+	Doscurrentqueuesizerate float64 `json:"doscurrentqueuesizerate,omitempty"`
 	Dostotjssent uint64 `json:"dostotjssent,omitempty"`
 	/**
 	* Total number of DoS JavaScript transactions performed for this policy.
 	*/
-	Dosjssentrate int32 `json:"dosjssentrate,omitempty"`
+	Dosjssentrate float64 `json:"dosjssentrate,omitempty"`
 	Dostotjsrefused uint64 `json:"dostotjsrefused,omitempty"`
 	/**
 	* Number of times the DoS JavaScript was not sent because the set JavaScript rate was not met for this policy.
 	*/
-	Dosjsrefusedrate int32 `json:"dosjsrefusedrate,omitempty"`
+	Dosjsrefusedrate float64 `json:"dosjsrefusedrate,omitempty"`
 	Dostotvalidclients uint64 `json:"dostotvalidclients,omitempty"`
 	/**
 	* Total number of valid DoS cookies received for this policy.
 	*/
-	Dosvalidclientsrate int32 `json:"dosvalidclientsrate,omitempty"`
+	Dosvalidclientsrate float64 `json:"dosvalidclientsrate,omitempty"`
 	Dostotjsbytessent uint64 `json:"dostotjsbytessent,omitempty"`
 	/**
 	* Total number of DoS JavaScript bytes sent for this policy.
 	*/
-	Dosjsbytessentrate int32 `json:"dosjsbytessentrate,omitempty"`
+	Dosjsbytessentrate float64 `json:"dosjsbytessentrate,omitempty"`
 	Dostotnongetpostrequests uint64 `json:"dostotnongetpostrequests,omitempty"`
 	/**
 	* Number of non-GET and non-POST requests for which DOS JavaScript was sent.
 	*/
-	Dosnongetpostrequestsrate int32 `json:"dosnongetpostrequestsrate,omitempty"`
+	Dosnongetpostrequestsrate float64 `json:"dosnongetpostrequestsrate,omitempty"`
 
 }

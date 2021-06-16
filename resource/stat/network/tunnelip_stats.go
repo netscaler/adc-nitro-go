@@ -33,21 +33,21 @@ type Tunnelipstats struct {
 	/**
 	* Total number of packets received on the tunnel.
 	*/
-	Tnlrxpktsrate int32 `json:"tnlrxpktsrate,omitempty"`
+	Tnlrxpktsrate float64 `json:"tnlrxpktsrate,omitempty"`
 	Tnltottxpkts uint64 `json:"tnltottxpkts,omitempty"`
 	/**
 	* Total number of packets transmitted on the tunnel.
 	*/
-	Tnltxpktsrate int32 `json:"tnltxpktsrate,omitempty"`
+	Tnltxpktsrate float64 `json:"tnltxpktsrate,omitempty"`
 	Tnltotrxbytes uint64 `json:"tnltotrxbytes,omitempty"`
 	/**
 	* Total number of bytes received on the tunnel.
 	*/
-	Tnlrxbytesrate int32 `json:"tnlrxbytesrate,omitempty"`
+	Tnlrxbytesrate float64 `json:"tnlrxbytesrate,omitempty"`
 	Tnltottxbytes uint64 `json:"tnltottxbytes,omitempty"`
 	/**
 	* Total number of bytes transmitted on the tunnel.
 	*/
-	Tnltxbytesrate int32 `json:"tnltxbytesrate,omitempty"`
+	Tnltxbytesrate float64 `json:"tnltxbytesrate,omitempty"`
 
 }

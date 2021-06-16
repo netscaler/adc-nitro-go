@@ -40,37 +40,37 @@ type Csvserverstats struct {
 	/**
 	* Total vserver hits
 	*/
-	Hitsrate int32 `json:"hitsrate,omitempty"`
+	Hitsrate float64 `json:"hitsrate,omitempty"`
 	Totalrequests uint64 `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Requestsrate int32 `json:"requestsrate,omitempty"`
+	Requestsrate float64 `json:"requestsrate,omitempty"`
 	Totalresponses uint64 `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
-	Responsesrate int32 `json:"responsesrate,omitempty"`
+	Responsesrate float64 `json:"responsesrate,omitempty"`
 	Totalrequestbytes uint64 `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
-	Requestbytesrate int32 `json:"requestbytesrate,omitempty"`
+	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
 	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
-	Responsebytesrate int32 `json:"responsebytesrate,omitempty"`
+	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
 	Totalpktsrecvd uint64 `json:"totalpktsrecvd,omitempty"`
 	/**
 	* Total number of packets received by this service or virtual server.
 	*/
-	Pktsrecvdrate int32 `json:"pktsrecvdrate,omitempty"`
+	Pktsrecvdrate float64 `json:"pktsrecvdrate,omitempty"`
 	Totalpktssent uint64 `json:"totalpktssent,omitempty"`
 	/**
 	* Total number of packets sent.
 	*/
-	Pktssentrate int32 `json:"pktssentrate,omitempty"`
+	Pktssentrate float64 `json:"pktssentrate,omitempty"`
 	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
 	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
 	Curpersistencesessions uint64 `json:"curpersistencesessions,omitempty"`
@@ -83,7 +83,7 @@ type Csvserverstats struct {
 	/**
 	* Number of deferred request on this vserver
 	*/
-	Deferredreqrate int32 `json:"deferredreqrate,omitempty"`
+	Deferredreqrate float64 `json:"deferredreqrate,omitempty"`
 	Invalidrequestresponse uint64 `json:"invalidrequestresponse,omitempty"`
 	Invalidrequestresponsedropped uint64 `json:"invalidrequestresponsedropped,omitempty"`
 	Totvserverdownbackuphits uint32 `json:"totvserverdownbackuphits,omitempty"`

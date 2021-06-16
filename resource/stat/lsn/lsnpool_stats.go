@@ -35,12 +35,12 @@ type Lsnpoolstats struct {
 	/**
 	* Current port allocation for tcp in this pool.
 	*/
-	Lsnpoolcurportalloctcprate int32 `json:"lsnpoolcurportalloctcprate,omitempty"`
+	Lsnpoolcurportalloctcprate float64 `json:"lsnpoolcurportalloctcprate,omitempty"`
 	Lsnpoolcurportallocother uint64 `json:"lsnpoolcurportallocother,omitempty"`
 	/**
 	* Current port allocation for other protocols in this pool.
 	*/
-	Lsnpoolcurportallocotherrate int32 `json:"lsnpoolcurportallocotherrate,omitempty"`
+	Lsnpoolcurportallocotherrate float64 `json:"lsnpoolcurportallocotherrate,omitempty"`
 	Lsnpooltotips uint32 `json:"lsnpooltotips,omitempty"`
 
 }

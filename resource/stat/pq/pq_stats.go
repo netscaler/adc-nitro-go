@@ -26,26 +26,26 @@ type Pqstats struct {
 	/**
 	* Number of times the Citrix ADC matched an incoming request using any priority queuing policy.
 	*/
-	Pqpolicymatchesrate int32 `json:"pqpolicymatchesrate,omitempty"`
+	Pqpolicymatchesrate float64 `json:"pqpolicymatchesrate,omitempty"`
 	Pqtotalthresholdfailed uint64 `json:"pqtotalthresholdfailed,omitempty"`
 	/**
 	* Number of times the Citrix ADC failed to match an incoming request to any of priority queing policy.
 	*/
-	Pqthresholdfailedrate int32 `json:"pqthresholdfailedrate,omitempty"`
+	Pqthresholdfailedrate float64 `json:"pqthresholdfailedrate,omitempty"`
 	Pqpriority1requests uint64 `json:"pqpriority1requests,omitempty"`
 	/**
 	* Number of priority 1 requests that the Citrix ADC received.
 	*/
-	Pqpriority1requestsrate int32 `json:"pqpriority1requestsrate,omitempty"`
+	Pqpriority1requestsrate float64 `json:"pqpriority1requestsrate,omitempty"`
 	Pqpriority2requests uint64 `json:"pqpriority2requests,omitempty"`
 	/**
 	* Number of priority 2 requests that the Citrix ADC received.
 	*/
-	Pqpriority2requestsrate int32 `json:"pqpriority2requestsrate,omitempty"`
+	Pqpriority2requestsrate float64 `json:"pqpriority2requestsrate,omitempty"`
 	Pqpriority3requests uint64 `json:"pqpriority3requests,omitempty"`
 	/**
 	* Number of priority 3 requests that the Citrix ADC received.
 	*/
-	Pqpriority3requestsrate int32 `json:"pqpriority3requestsrate,omitempty"`
+	Pqpriority3requestsrate float64 `json:"pqpriority3requestsrate,omitempty"`
 
 }

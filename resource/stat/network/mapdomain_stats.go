@@ -33,141 +33,141 @@ type Mapdomainstats struct {
 	/**
 	* Total number of MAP-T IPv6 TCP Recieved packets.
 	*/
-	Mapv6rxpktstcprate int32 `json:"mapv6rxpktstcprate,omitempty"`
+	Mapv6rxpktstcprate float64 `json:"mapv6rxpktstcprate,omitempty"`
 	Maptotv6txpktstcp uint64 `json:"maptotv6txpktstcp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 TCP Transmitted packets.
 	*/
-	Mapv6txpktstcprate int32 `json:"mapv6txpktstcprate,omitempty"`
+	Mapv6txpktstcprate float64 `json:"mapv6txpktstcprate,omitempty"`
 	Maptotv6rxbytestcp uint64 `json:"maptotv6rxbytestcp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 TCP Recieved Bytes.
 	*/
-	Mapv6rxbytestcprate int32 `json:"mapv6rxbytestcprate,omitempty"`
+	Mapv6rxbytestcprate float64 `json:"mapv6rxbytestcprate,omitempty"`
 	Maptotv6txbytestcp uint64 `json:"maptotv6txbytestcp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 TCP Transmitted Bytes.
 	*/
-	Mapv6txbytestcprate int32 `json:"mapv6txbytestcprate,omitempty"`
+	Mapv6txbytestcprate float64 `json:"mapv6txbytestcprate,omitempty"`
 	Maptotv4rxpktstcp uint64 `json:"maptotv4rxpktstcp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 TCP Recieved packets.
 	*/
-	Mapv4rxpktstcprate int32 `json:"mapv4rxpktstcprate,omitempty"`
+	Mapv4rxpktstcprate float64 `json:"mapv4rxpktstcprate,omitempty"`
 	Maptotv4txpktstcp uint64 `json:"maptotv4txpktstcp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 TCP Transmitted packets.
 	*/
-	Mapv4txpktstcprate int32 `json:"mapv4txpktstcprate,omitempty"`
+	Mapv4txpktstcprate float64 `json:"mapv4txpktstcprate,omitempty"`
 	Maptotv4rxbytestcp uint64 `json:"maptotv4rxbytestcp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 TCP Recieved Bytes.
 	*/
-	Mapv4rxbytestcprate int32 `json:"mapv4rxbytestcprate,omitempty"`
+	Mapv4rxbytestcprate float64 `json:"mapv4rxbytestcprate,omitempty"`
 	Maptotv4txbytestcp uint64 `json:"maptotv4txbytestcp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 TCP Transmitted Bytes.
 	*/
-	Mapv4txbytestcprate int32 `json:"mapv4txbytestcprate,omitempty"`
+	Mapv4txbytestcprate float64 `json:"mapv4txbytestcprate,omitempty"`
 	Maptotv6rxpktsudp uint64 `json:"maptotv6rxpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 UDP Recieved packets.
 	*/
-	Mapv6rxpktsudprate int32 `json:"mapv6rxpktsudprate,omitempty"`
+	Mapv6rxpktsudprate float64 `json:"mapv6rxpktsudprate,omitempty"`
 	Maptotv6txpktsudp uint64 `json:"maptotv6txpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 UDP Transmitted packets.
 	*/
-	Mapv6txpktsudprate int32 `json:"mapv6txpktsudprate,omitempty"`
+	Mapv6txpktsudprate float64 `json:"mapv6txpktsudprate,omitempty"`
 	Maptotv6rxbytesudp uint64 `json:"maptotv6rxbytesudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 UDP Recieved Bytes.
 	*/
-	Mapv6rxbytesudprate int32 `json:"mapv6rxbytesudprate,omitempty"`
+	Mapv6rxbytesudprate float64 `json:"mapv6rxbytesudprate,omitempty"`
 	Maptotv6txbytesudp uint64 `json:"maptotv6txbytesudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 UDP Transmitted Bytes.
 	*/
-	Mapv6txbytesudprate int32 `json:"mapv6txbytesudprate,omitempty"`
+	Mapv6txbytesudprate float64 `json:"mapv6txbytesudprate,omitempty"`
 	Maptotv4rxpktsudp uint64 `json:"maptotv4rxpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 UDP Recieved packets.
 	*/
-	Mapv4rxpktsudprate int32 `json:"mapv4rxpktsudprate,omitempty"`
+	Mapv4rxpktsudprate float64 `json:"mapv4rxpktsudprate,omitempty"`
 	Maptotv4txpktsudp uint64 `json:"maptotv4txpktsudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 UDP Transmitted packets.
 	*/
-	Mapv4txpktsudprate int32 `json:"mapv4txpktsudprate,omitempty"`
+	Mapv4txpktsudprate float64 `json:"mapv4txpktsudprate,omitempty"`
 	Maptotv4rxbytesudp uint64 `json:"maptotv4rxbytesudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 UDP Recieved Bytes.
 	*/
-	Mapv4rxbytesudprate int32 `json:"mapv4rxbytesudprate,omitempty"`
+	Mapv4rxbytesudprate float64 `json:"mapv4rxbytesudprate,omitempty"`
 	Maptotv4txbytesudp uint64 `json:"maptotv4txbytesudp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 UDP Transmitted Bytes.
 	*/
-	Mapv4txbytesudprate int32 `json:"mapv4txbytesudprate,omitempty"`
+	Mapv4txbytesudprate float64 `json:"mapv4txbytesudprate,omitempty"`
 	Maptotv6rxpktsicmp uint64 `json:"maptotv6rxpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 ICMP Recieved packets.
 	*/
-	Mapv6rxpktsicmprate int32 `json:"mapv6rxpktsicmprate,omitempty"`
+	Mapv6rxpktsicmprate float64 `json:"mapv6rxpktsicmprate,omitempty"`
 	Maptotv6txpktsicmp uint64 `json:"maptotv6txpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 ICMP Transmitted packets.
 	*/
-	Mapv6txpktsicmprate int32 `json:"mapv6txpktsicmprate,omitempty"`
+	Mapv6txpktsicmprate float64 `json:"mapv6txpktsicmprate,omitempty"`
 	Maptotv6rxbytesicmp uint64 `json:"maptotv6rxbytesicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 ICMP Recieved Bytes.
 	*/
-	Mapv6rxbytesicmprate int32 `json:"mapv6rxbytesicmprate,omitempty"`
+	Mapv6rxbytesicmprate float64 `json:"mapv6rxbytesicmprate,omitempty"`
 	Maptotv6txbytesicmp uint64 `json:"maptotv6txbytesicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv6 ICMP Transmitted Bytes.
 	*/
-	Mapv6txbytesicmprate int32 `json:"mapv6txbytesicmprate,omitempty"`
+	Mapv6txbytesicmprate float64 `json:"mapv6txbytesicmprate,omitempty"`
 	Maptotv4rxpktsicmp uint64 `json:"maptotv4rxpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 ICMP Recieved packets.
 	*/
-	Mapv4rxpktsicmprate int32 `json:"mapv4rxpktsicmprate,omitempty"`
+	Mapv4rxpktsicmprate float64 `json:"mapv4rxpktsicmprate,omitempty"`
 	Maptotv4txpktsicmp uint64 `json:"maptotv4txpktsicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 ICMP Transmitted packets.
 	*/
-	Mapv4txpktsicmprate int32 `json:"mapv4txpktsicmprate,omitempty"`
+	Mapv4txpktsicmprate float64 `json:"mapv4txpktsicmprate,omitempty"`
 	Maptotv4rxbytesicmp uint64 `json:"maptotv4rxbytesicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 ICMP Recieved Bytes.
 	*/
-	Mapv4rxbytesicmprate int32 `json:"mapv4rxbytesicmprate,omitempty"`
+	Mapv4rxbytesicmprate float64 `json:"mapv4rxbytesicmprate,omitempty"`
 	Maptotv4txbytesicmp uint64 `json:"maptotv4txbytesicmp,omitempty"`
 	/**
 	* Total number of MAP-T IPv4 ICMP Transmitted Bytes.
 	*/
-	Mapv4txbytesicmprate int32 `json:"mapv4txbytesicmprate,omitempty"`
+	Mapv4txbytesicmprate float64 `json:"mapv4txbytesicmprate,omitempty"`
 	Maptotv6rxpkts uint64 `json:"maptotv6rxpkts,omitempty"`
 	/**
 	* Total number of MAP-T V6 Recieved packets.
 	*/
-	Mapv6rxpktsrate int32 `json:"mapv6rxpktsrate,omitempty"`
+	Mapv6rxpktsrate float64 `json:"mapv6rxpktsrate,omitempty"`
 	Maptotv6txpkts uint64 `json:"maptotv6txpkts,omitempty"`
 	/**
 	* Total number of MAP-T V6 Transmitted packets.
 	*/
-	Mapv6txpktsrate int32 `json:"mapv6txpktsrate,omitempty"`
+	Mapv6txpktsrate float64 `json:"mapv6txpktsrate,omitempty"`
 	Maptotv4rxpkts uint64 `json:"maptotv4rxpkts,omitempty"`
 	/**
 	* Total number of MAP-T V4 Recieved packets.
 	*/
-	Mapv4rxpktsrate int32 `json:"mapv4rxpktsrate,omitempty"`
+	Mapv4rxpktsrate float64 `json:"mapv4rxpktsrate,omitempty"`
 	Maptotv4txpkts uint64 `json:"maptotv4txpkts,omitempty"`
 	/**
 	* Total number of MAP-T V4 Transmitted packets.
 	*/
-	Mapv4txpktsrate int32 `json:"mapv4txpktsrate,omitempty"`
+	Mapv4txpktsrate float64 `json:"mapv4txpktsrate,omitempty"`
 
 }

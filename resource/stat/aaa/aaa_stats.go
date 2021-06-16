@@ -26,71 +26,71 @@ type Aaastats struct {
 	/**
 	* Count of authentication successes.
 	*/
-	Aaaauthsuccessrate int32 `json:"aaaauthsuccessrate,omitempty"`
+	Aaaauthsuccessrate float64 `json:"aaaauthsuccessrate,omitempty"`
 	Aaaauthfail uint64 `json:"aaaauthfail,omitempty"`
 	/**
 	* Count of authentication failures.
 	*/
-	Aaaauthfailrate int32 `json:"aaaauthfailrate,omitempty"`
+	Aaaauthfailrate float64 `json:"aaaauthfailrate,omitempty"`
 	Aaaauthonlyhttpsuccess uint64 `json:"aaaauthonlyhttpsuccess,omitempty"`
 	/**
 	* Count of HTTP connections that succeeded authorization.
 	*/
-	Aaaauthonlyhttpsuccessrate int32 `json:"aaaauthonlyhttpsuccessrate,omitempty"`
+	Aaaauthonlyhttpsuccessrate float64 `json:"aaaauthonlyhttpsuccessrate,omitempty"`
 	Aaaauthonlyhttpfail uint64 `json:"aaaauthonlyhttpfail,omitempty"`
 	/**
 	* Count of HTTP connections that failed authorization.
 	*/
-	Aaaauthonlyhttpfailrate int32 `json:"aaaauthonlyhttpfailrate,omitempty"`
+	Aaaauthonlyhttpfailrate float64 `json:"aaaauthonlyhttpfailrate,omitempty"`
 	Aaaauthnonhttpsuccess uint64 `json:"aaaauthnonhttpsuccess,omitempty"`
 	/**
 	* Count of non HTTP connections that succeeded authorization.
 	*/
-	Aaaauthnonhttpsuccessrate int32 `json:"aaaauthnonhttpsuccessrate,omitempty"`
+	Aaaauthnonhttpsuccessrate float64 `json:"aaaauthnonhttpsuccessrate,omitempty"`
 	Aaaauthnonhttpfail uint64 `json:"aaaauthnonhttpfail,omitempty"`
 	/**
 	* Count of non HTTP connections that failed authorization.
 	*/
-	Aaaauthnonhttpfailrate int32 `json:"aaaauthnonhttpfailrate,omitempty"`
+	Aaaauthnonhttpfailrate float64 `json:"aaaauthnonhttpfailrate,omitempty"`
 	Aaacursessions uint64 `json:"aaacursessions,omitempty"`
 	/**
 	* Count of current SmartAccess AAA sessions.
 	*/
-	Aaacursessionsrate int32 `json:"aaacursessionsrate,omitempty"`
+	Aaacursessionsrate float64 `json:"aaacursessionsrate,omitempty"`
 	Aaatotsessions uint64 `json:"aaatotsessions,omitempty"`
 	/**
 	* Count of all SmartAccess AAA sessions.
 	*/
-	Aaasessionsrate int32 `json:"aaasessionsrate,omitempty"`
+	Aaasessionsrate float64 `json:"aaasessionsrate,omitempty"`
 	Aaatotsessiontimeout uint64 `json:"aaatotsessiontimeout,omitempty"`
 	/**
 	* Count of AAA sessions that have timed out.
 	*/
-	Aaasessiontimeoutrate int32 `json:"aaasessiontimeoutrate,omitempty"`
+	Aaasessiontimeoutrate float64 `json:"aaasessiontimeoutrate,omitempty"`
 	Aaacuricasessions uint64 `json:"aaacuricasessions,omitempty"`
 	/**
 	* Count of current Basic ICA only sessions.
 	*/
-	Aaacuricasessionsrate int32 `json:"aaacuricasessionsrate,omitempty"`
+	Aaacuricasessionsrate float64 `json:"aaacuricasessionsrate,omitempty"`
 	Aaacuricaonlyconn uint64 `json:"aaacuricaonlyconn,omitempty"`
 	/**
 	* Count of current Basic ICA only connections.
 	*/
-	Aaacuricaonlyconnrate int32 `json:"aaacuricaonlyconnrate,omitempty"`
+	Aaacuricaonlyconnrate float64 `json:"aaacuricaonlyconnrate,omitempty"`
 	Aaacuricaconn uint64 `json:"aaacuricaconn,omitempty"`
 	/**
 	* Count of current SmartAccess ICA connections.
 	*/
-	Aaacuricaconnrate int32 `json:"aaacuricaconnrate,omitempty"`
+	Aaacuricaconnrate float64 `json:"aaacuricaconnrate,omitempty"`
 	Aaacurtmsessions uint64 `json:"aaacurtmsessions,omitempty"`
 	/**
 	* Count of current AAATM sessions.
 	*/
-	Aaacurtmsessionsrate int32 `json:"aaacurtmsessionsrate,omitempty"`
+	Aaacurtmsessionsrate float64 `json:"aaacurtmsessionsrate,omitempty"`
 	Aaatottmsessions uint64 `json:"aaatottmsessions,omitempty"`
 	/**
 	* Count of all AAATM sessions.
 	*/
-	Aaatmsessionsrate int32 `json:"aaatmsessionsrate,omitempty"`
+	Aaatmsessionsrate float64 `json:"aaatmsessionsrate,omitempty"`
 
 }

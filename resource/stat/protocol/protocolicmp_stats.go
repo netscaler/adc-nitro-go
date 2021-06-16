@@ -29,37 +29,37 @@ type Protocolicmpstats struct {
 	/**
 	* ICMP packets received.
 	*/
-	Icmprxpktsrate int32 `json:"icmprxpktsrate,omitempty"`
+	Icmprxpktsrate float64 `json:"icmprxpktsrate,omitempty"`
 	Icmptotrxbytes uint64 `json:"icmptotrxbytes,omitempty"`
 	/**
 	* Bytes of ICMP data received.
 	*/
-	Icmprxbytesrate int32 `json:"icmprxbytesrate,omitempty"`
+	Icmprxbytesrate float64 `json:"icmprxbytesrate,omitempty"`
 	Icmptottxpkts uint64 `json:"icmptottxpkts,omitempty"`
 	/**
 	* ICMP packets transmitted.
 	*/
-	Icmptxpktsrate int32 `json:"icmptxpktsrate,omitempty"`
+	Icmptxpktsrate float64 `json:"icmptxpktsrate,omitempty"`
 	Icmptottxbytes uint64 `json:"icmptottxbytes,omitempty"`
 	/**
 	* Bytes of ICMP data transmitted.
 	*/
-	Icmptxbytesrate int32 `json:"icmptxbytesrate,omitempty"`
+	Icmptxbytesrate float64 `json:"icmptxbytesrate,omitempty"`
 	Icmptotrxechoreply uint64 `json:"icmptotrxechoreply,omitempty"`
 	/**
 	* ICMP Ping echo replies received.
 	*/
-	Icmprxechoreplyrate int32 `json:"icmprxechoreplyrate,omitempty"`
+	Icmprxechoreplyrate float64 `json:"icmprxechoreplyrate,omitempty"`
 	Icmptottxechoreply uint64 `json:"icmptottxechoreply,omitempty"`
 	/**
 	* ICMP Ping echo replies transmitted.
 	*/
-	Icmptxechoreplyrate int32 `json:"icmptxechoreplyrate,omitempty"`
+	Icmptxechoreplyrate float64 `json:"icmptxechoreplyrate,omitempty"`
 	Icmptotrxecho uint64 `json:"icmptotrxecho,omitempty"`
 	/**
 	* ICMP Ping Echo Request and Echo Reply packets received.
 	*/
-	Icmprxechorate int32 `json:"icmprxechorate,omitempty"`
+	Icmprxechorate float64 `json:"icmprxechorate,omitempty"`
 	Icmptotdstiplookup uint64 `json:"icmptotdstiplookup,omitempty"`
 	Icmpcurratethreshold uint32 `json:"icmpcurratethreshold,omitempty"`
 	Icmptotportunreachablerx uint64 `json:"icmptotportunreachablerx,omitempty"`

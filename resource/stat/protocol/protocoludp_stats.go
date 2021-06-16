@@ -29,22 +29,22 @@ type Protocoludpstats struct {
 	/**
 	* Total number of UDP packets received.
 	*/
-	Udprxpktsrate int32 `json:"udprxpktsrate,omitempty"`
+	Udprxpktsrate float64 `json:"udprxpktsrate,omitempty"`
 	Udptotrxbytes uint64 `json:"udptotrxbytes,omitempty"`
 	/**
 	* Total number of UDP data received in bytes.
 	*/
-	Udprxbytesrate int32 `json:"udprxbytesrate,omitempty"`
+	Udprxbytesrate float64 `json:"udprxbytesrate,omitempty"`
 	Udptottxpkts uint64 `json:"udptottxpkts,omitempty"`
 	/**
 	* Total number of UDP packets transmitted.
 	*/
-	Udptxpktsrate int32 `json:"udptxpktsrate,omitempty"`
+	Udptxpktsrate float64 `json:"udptxpktsrate,omitempty"`
 	Udptottxbytes uint64 `json:"udptottxbytes,omitempty"`
 	/**
 	* Total number of UDP data transmitted in bytes.
 	*/
-	Udptxbytesrate int32 `json:"udptxbytesrate,omitempty"`
+	Udptxbytesrate float64 `json:"udptxbytesrate,omitempty"`
 	Udpcurratethreshold uint32 `json:"udpcurratethreshold,omitempty"`
 	Udptotunknownsvcpkts uint64 `json:"udptotunknownsvcpkts,omitempty"`
 	Udpbadchecksum uint64 `json:"udpbadchecksum,omitempty"`

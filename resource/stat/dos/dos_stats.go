@@ -26,16 +26,16 @@ type Dosstats struct {
 	/**
 	* Number of times the Citrix ADC triggered the DOS JavaScript due to a condition match.
 	*/
-	Dosconditiontriggeredrate int32 `json:"dosconditiontriggeredrate,omitempty"`
+	Dosconditiontriggeredrate float64 `json:"dosconditiontriggeredrate,omitempty"`
 	Dostotvalidcookies uint64 `json:"dostotvalidcookies,omitempty"`
 	/**
 	* Number of clients from whom the Citrix ADC received a valid DOS cookie.
 	*/
-	Dosvalidcookiesrate int32 `json:"dosvalidcookiesrate,omitempty"`
+	Dosvalidcookiesrate float64 `json:"dosvalidcookiesrate,omitempty"`
 	Dostotdospriorityclients uint64 `json:"dostotdospriorityclients,omitempty"`
 	/**
 	* Number of valid clients that were given DOS priority.
 	*/
-	Dosdospriorityclientsrate int32 `json:"dosdospriorityclientsrate,omitempty"`
+	Dosdospriorityclientsrate float64 `json:"dosdospriorityclientsrate,omitempty"`
 
 }

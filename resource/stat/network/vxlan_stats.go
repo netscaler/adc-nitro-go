@@ -33,21 +33,21 @@ type Vxlanstats struct {
 	/**
 	* Packets received on the VXLAN.
 	*/
-	Vxlanrxpktsrate int32 `json:"vxlanrxpktsrate,omitempty"`
+	Vxlanrxpktsrate float64 `json:"vxlanrxpktsrate,omitempty"`
 	Vxlantotrxbytes uint64 `json:"vxlantotrxbytes,omitempty"`
 	/**
 	* Bytes of data received on the VXLAN.
 	*/
-	Vxlanrxbytesrate int32 `json:"vxlanrxbytesrate,omitempty"`
+	Vxlanrxbytesrate float64 `json:"vxlanrxbytesrate,omitempty"`
 	Vxlantottxpkts uint64 `json:"vxlantottxpkts,omitempty"`
 	/**
 	* Packets transmitted on the VXLAN.
 	*/
-	Vxlantxpktsrate int32 `json:"vxlantxpktsrate,omitempty"`
+	Vxlantxpktsrate float64 `json:"vxlantxpktsrate,omitempty"`
 	Vxlantottxbytes uint64 `json:"vxlantottxbytes,omitempty"`
 	/**
 	* Bytes of data transmitted on the VXLAN.
 	*/
-	Vxlantxbytesrate int32 `json:"vxlantxbytesrate,omitempty"`
+	Vxlantxbytesrate float64 `json:"vxlantxbytesrate,omitempty"`
 
 }

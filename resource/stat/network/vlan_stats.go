@@ -33,22 +33,22 @@ type Vlanstats struct {
 	/**
 	* Packets received on the VLAN.
 	*/
-	Vlanrxpktsrate int32 `json:"vlanrxpktsrate,omitempty"`
+	Vlanrxpktsrate float64 `json:"vlanrxpktsrate,omitempty"`
 	Vlantotrxbytes uint64 `json:"vlantotrxbytes,omitempty"`
 	/**
 	* Bytes of data received on the VLAN.
 	*/
-	Vlanrxbytesrate int32 `json:"vlanrxbytesrate,omitempty"`
+	Vlanrxbytesrate float64 `json:"vlanrxbytesrate,omitempty"`
 	Vlantottxpkts uint64 `json:"vlantottxpkts,omitempty"`
 	/**
 	* Packets transmitted on the VLAN.
 	*/
-	Vlantxpktsrate int32 `json:"vlantxpktsrate,omitempty"`
+	Vlantxpktsrate float64 `json:"vlantxpktsrate,omitempty"`
 	Vlantottxbytes uint64 `json:"vlantottxbytes,omitempty"`
 	/**
 	* Bytes of data transmitted on the VLAN.
 	*/
-	Vlantxbytesrate int32 `json:"vlantxbytesrate,omitempty"`
+	Vlantxbytesrate float64 `json:"vlantxbytesrate,omitempty"`
 	Vlantotdroppedpkts uint64 `json:"vlantotdroppedpkts,omitempty"`
 	Vlantotbroadcastpkts uint64 `json:"vlantotbroadcastpkts,omitempty"`
 

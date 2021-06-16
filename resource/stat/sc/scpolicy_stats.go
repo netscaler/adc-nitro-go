@@ -33,73 +33,73 @@ type Scpolicystats struct {
 	/**
 	* Average server transaction time in seconds for this SureConnect Policy.
 	*/
-	Avgservertransactiontimerate int32 `json:"avgservertransactiontimerate,omitempty"`
+	Avgservertransactiontimerate float64 `json:"avgservertransactiontimerate,omitempty"`
 	Scaverageclientttlb uint32 `json:"scaverageclientttlb,omitempty"`
 	/**
 	* Average value of the client Time-To-Last-Byte in seconds for this SureConnect policy.
 	*/
-	Scaverageclientttlbrate int32 `json:"scaverageclientttlbrate,omitempty"`
+	Scaverageclientttlbrate float64 `json:"scaverageclientttlbrate,omitempty"`
 	Scphysicalserviceip string `json:"scphysicalserviceip,omitempty"`
 	Scphysicalserviceport int32 `json:"scphysicalserviceport,omitempty"`
 	Sccurrentclientconnections uint32 `json:"sccurrentclientconnections,omitempty"`
 	/**
 	* Number of clients currently  allowed a server connection by this SureConnect policy.
 	*/
-	Sccurrentclientconnectionsrate int32 `json:"sccurrentclientconnectionsrate,omitempty"`
+	Sccurrentclientconnectionsrate float64 `json:"sccurrentclientconnectionsrate,omitempty"`
 	Sccurrentwaitingclients uint32 `json:"sccurrentwaitingclients,omitempty"`
 	/**
 	* Current number of SureConnect priority clients that are waiting for a server connection.
 	*/
-	Sccurrentwaitingclientsrate int32 `json:"sccurrentwaitingclientsrate,omitempty"`
+	Sccurrentwaitingclientsrate float64 `json:"sccurrentwaitingclientsrate,omitempty"`
 	Totopenconn uint32 `json:"totopenconn,omitempty"`
 	/**
 	* Current number of open connections to the servers matching this policy.
 	*/
-	Openconnrate int32 `json:"openconnrate,omitempty"`
+	Openconnrate float64 `json:"openconnrate,omitempty"`
 	Sccurrentwaitingtime uint32 `json:"sccurrentwaitingtime,omitempty"`
 	/**
 	* Value of the currently estimated waiting time in seconds for the configured URL.
 	*/
-	Sccurrentwaitingtimerate int32 `json:"sccurrentwaitingtimerate,omitempty"`
+	Sccurrentwaitingtimerate float64 `json:"sccurrentwaitingtimerate,omitempty"`
 	Sctotalclientconnections uint64 `json:"sctotalclientconnections,omitempty"`
 	/**
 	* Total number of clients that were allowed a server connection by this SureConnect policy.
 	*/
-	Scclientconnectionsrate int32 `json:"scclientconnectionsrate,omitempty"`
+	Scclientconnectionsrate float64 `json:"scclientconnectionsrate,omitempty"`
 	Sctotalserverconnections uint64 `json:"sctotalserverconnections,omitempty"`
 	/**
 	* Total number of server connections that were established through this SureConnect policy.
 	*/
-	Scserverconnectionsrate int32 `json:"scserverconnectionsrate,omitempty"`
+	Scserverconnectionsrate float64 `json:"scserverconnectionsrate,omitempty"`
 	Totclienttransaction uint64 `json:"totclienttransaction,omitempty"`
 	/**
 	* Total number of client transactions processed by this SureConnect policy.
 	*/
-	Clienttransactionrate int32 `json:"clienttransactionrate,omitempty"`
+	Clienttransactionrate float64 `json:"clienttransactionrate,omitempty"`
 	Sctotalservertransactions []uint64 `json:"sctotalservertransactions,omitempty"`
 	/**
 	* Number of 200 OK responses received from the web server by this SureConnect policy.
 	*/
-	Scservertransactionsrate int32 `json:"scservertransactionsrate,omitempty"`
+	Scservertransactionsrate float64 `json:"scservertransactionsrate,omitempty"`
 	Sctotalrequestsreceived uint64 `json:"sctotalrequestsreceived,omitempty"`
 	/**
 	* Total number of requests received by this SureConnect policy.
 	*/
-	Screquestsreceivedrate int32 `json:"screquestsreceivedrate,omitempty"`
+	Screquestsreceivedrate float64 `json:"screquestsreceivedrate,omitempty"`
 	Sctotalrequestbytes uint64 `json:"sctotalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received by this SureConnect policy.
 	*/
-	Screquestbytesrate int32 `json:"screquestbytesrate,omitempty"`
+	Screquestbytesrate float64 `json:"screquestbytesrate,omitempty"`
 	Sctotalresponsesreceived uint64 `json:"sctotalresponsesreceived,omitempty"`
 	/**
 	* Total number of server responses received by this SureConnect policy.
 	*/
-	Scresponsesreceivedrate int32 `json:"scresponsesreceivedrate,omitempty"`
+	Scresponsesreceivedrate float64 `json:"scresponsesreceivedrate,omitempty"`
 	Sctotalresponsebytes uint64 `json:"sctotalresponsebytes,omitempty"`
 	/**
 	* Total number of response bytes received by this SureConnect policy.
 	*/
-	Scresponsebytesrate int32 `json:"scresponsebytesrate,omitempty"`
+	Scresponsebytesrate float64 `json:"scresponsebytesrate,omitempty"`
 
 }

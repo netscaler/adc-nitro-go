@@ -35,7 +35,7 @@ type Gslbdomainstats struct {
 	/**
 	* Total number of DNS queries received.
 	*/
-	Dnsqueriesrate int32 `json:"dnsqueriesrate,omitempty"`
+	Dnsqueriesrate float64 `json:"dnsqueriesrate,omitempty"`
 	Gslbdnsrectype string `json:"gslbdnsrectype,omitempty"`
 
 }

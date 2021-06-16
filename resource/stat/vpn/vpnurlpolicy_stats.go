@@ -33,6 +33,6 @@ type Vpnurlpolicystats struct {
 	/**
 	* Number of hits on the policy
 	*/
-	Pipolicyhitsrate int32 `json:"pipolicyhitsrate,omitempty"`
+	Pipolicyhitsrate float64 `json:"pipolicyhitsrate,omitempty"`
 
 }

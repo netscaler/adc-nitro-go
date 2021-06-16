@@ -30,36 +30,36 @@ type Lldpstats struct {
 	/**
 	* Total LLDP Packets received.
 	*/
-	Rxportframesrate int32 `json:"rxportframesrate,omitempty"`
+	Rxportframesrate float64 `json:"rxportframesrate,omitempty"`
 	Rxportbytestotal uint64 `json:"rxportbytestotal,omitempty"`
 	/**
 	* Total LLDP bytes received
 	*/
-	Rxportbytesrate int32 `json:"rxportbytesrate,omitempty"`
+	Rxportbytesrate float64 `json:"rxportbytesrate,omitempty"`
 	Txportframestotal uint64 `json:"txportframestotal,omitempty"`
 	/**
 	* Total LLDP Packets transmitted
 	*/
-	Txportframesrate int32 `json:"txportframesrate,omitempty"`
+	Txportframesrate float64 `json:"txportframesrate,omitempty"`
 	Txportbytestotal uint64 `json:"txportbytestotal,omitempty"`
 	/**
 	* Total LLDP bytes transmitted.
 	*/
-	Txportbytesrate int32 `json:"txportbytesrate,omitempty"`
+	Txportbytesrate float64 `json:"txportbytesrate,omitempty"`
 	Rxportframeserrors uint64 `json:"rxportframeserrors,omitempty"`
 	/**
 	* Total errors in LLDP packets.
 	*/
-	Rxportframeserrorsrate int32 `json:"rxportframeserrorsrate,omitempty"`
+	Rxportframeserrorsrate float64 `json:"rxportframeserrorsrate,omitempty"`
 	Rxporttlvsdiscardedtotal uint64 `json:"rxporttlvsdiscardedtotal,omitempty"`
 	/**
 	* Total discarded LLDP packets.
 	*/
-	Rxporttlvsdiscardedrate int32 `json:"rxporttlvsdiscardedrate,omitempty"`
+	Rxporttlvsdiscardedrate float64 `json:"rxporttlvsdiscardedrate,omitempty"`
 	Rxporttlvsunrecognizedtotal uint64 `json:"rxporttlvsunrecognizedtotal,omitempty"`
 	/**
 	* Total TLVs not Recognised.
 	*/
-	Rxporttlvsunrecognizedrate int32 `json:"rxporttlvsunrecognizedrate,omitempty"`
+	Rxporttlvsunrecognizedrate float64 `json:"rxporttlvsunrecognizedrate,omitempty"`
 
 }
