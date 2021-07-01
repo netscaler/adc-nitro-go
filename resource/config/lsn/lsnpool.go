@@ -45,11 +45,11 @@ type Lsnpool struct {
 		* Dynamic NAT with port block allocation
 		In these cases, ports are immediately reallocated.
 	*/
-	Portrealloctimeout uint64 `json:"portrealloctimeout,omitempty"`
+	Portrealloctimeout int `json:"portrealloctimeout,omitempty"`
 	/**
 	* Maximum number of ports for which the port reallocation timeout applies for each NAT IP address. In other words, the maximum deallocated-port queue size for which the reallocation timeout applies for each NAT IP address.
 		When the queue size is full, the next port deallocated is reallocated immediately for a new LSN session.
 	*/
-	Maxportrealloctmq uint32 `json:"maxportrealloctmq,omitempty"`
+	Maxportrealloctmq int `json:"maxportrealloctmq,omitempty"`
 
 }

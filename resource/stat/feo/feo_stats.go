@@ -22,117 +22,117 @@ type Feostats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Optcacheobjects uint32 `json:"optcacheobjects,omitempty"`
+	Optcacheobjects int `json:"optcacheobjects,omitempty"`
 	/**
 	* Total number of optimized cache objects ready to be served.
 	*/
 	Optcacheobjectsrate float64 `json:"optcacheobjectsrate,omitempty"`
-	Origcacheobjects uint32 `json:"origcacheobjects,omitempty"`
+	Origcacheobjects int `json:"origcacheobjects,omitempty"`
 	/**
 	* Total number of original cache objects ready to be served.
 	*/
 	Origcacheobjectsrate float64 `json:"origcacheobjectsrate,omitempty"`
-	Totalimgsdomainsharded uint32 `json:"totalimgsdomainsharded,omitempty"`
+	Totalimgsdomainsharded int `json:"totalimgsdomainsharded,omitempty"`
 	/**
 	* Total no of images whose domain has been set from shards.
 	*/
 	Imgsdomainshardedrate float64 `json:"imgsdomainshardedrate,omitempty"`
-	Totalimgslazyloaded uint32 `json:"totalimgslazyloaded,omitempty"`
+	Totalimgslazyloaded int `json:"totalimgslazyloaded,omitempty"`
 	/**
 	* Total number of images modified for lazy loading.
 	*/
 	Imgslazyloadedrate float64 `json:"imgslazyloadedrate,omitempty"`
-	Toturireplaced uint32 `json:"toturireplaced,omitempty"`
+	Toturireplaced int `json:"toturireplaced,omitempty"`
 	/**
 	* Total number of URI replaced.
 	*/
 	Urireplacedrate float64 `json:"urireplacedrate,omitempty"`
-	Totalimgsinlinedincss uint32 `json:"totalimgsinlinedincss,omitempty"`
+	Totalimgsinlinedincss int `json:"totalimgsinlinedincss,omitempty"`
 	/**
 	* Total number of images inlined in CSS.
 	*/
 	Imgsinlinedincssrate float64 `json:"imgsinlinedincssrate,omitempty"`
-	Totalinlinedjs uint32 `json:"totalinlinedjs,omitempty"`
+	Totalinlinedjs int `json:"totalinlinedjs,omitempty"`
 	/**
 	* Total number of inlined JS files.
 	*/
 	Inlinedjsrate float64 `json:"inlinedjsrate,omitempty"`
-	Totalinlinedcss uint32 `json:"totalinlinedcss,omitempty"`
+	Totalinlinedcss int `json:"totalinlinedcss,omitempty"`
 	/**
 	* Total number of inlined CSS files.
 	*/
 	Inlinedcssrate float64 `json:"inlinedcssrate,omitempty"`
-	Totalinlinedimgs uint32 `json:"totalinlinedimgs,omitempty"`
+	Totalinlinedimgs int `json:"totalinlinedimgs,omitempty"`
 	/**
 	* Total number of inlined images in HTML.
 	*/
 	Inlinedimgsrate float64 `json:"inlinedimgsrate,omitempty"`
-	Totaldatasavings uint32 `json:"totaldatasavings,omitempty"`
+	Totaldatasavings int `json:"totaldatasavings,omitempty"`
 	/**
 	* Total data savings in bytes.
 	*/
 	Datasavingsrate float64 `json:"datasavingsrate,omitempty"`
-	Htmlcommentsremoved uint32 `json:"htmlcommentsremoved,omitempty"`
+	Htmlcommentsremoved int `json:"htmlcommentsremoved,omitempty"`
 	/**
 	* The total number of HTML comments removed.
 	*/
 	Htmlcommentsremovedrate float64 `json:"htmlcommentsremovedrate,omitempty"`
-	Totalcacheextended uint32 `json:"totalcacheextended,omitempty"`
+	Totalcacheextended int `json:"totalcacheextended,omitempty"`
 	/**
 	* The total number of objects cache extended.
 	*/
 	Cacheextendedrate float64 `json:"cacheextendedrate,omitempty"`
-	Totalcsscombined uint32 `json:"totalcsscombined,omitempty"`
+	Totalcsscombined int `json:"totalcsscombined,omitempty"`
 	/**
 	* The total number of CSS combined.
 	*/
 	Csscombinedrate float64 `json:"csscombinedrate,omitempty"`
-	Totalimporttolink uint32 `json:"totalimporttolink,omitempty"`
+	Totalimporttolink int `json:"totalimporttolink,omitempty"`
 	/**
 	* The total number of CSS imports converted to links
 	*/
 	Importtolinkrate float64 `json:"importtolinkrate,omitempty"`
-	Totaljsmoved uint32 `json:"totaljsmoved,omitempty"`
+	Totaljsmoved int `json:"totaljsmoved,omitempty"`
 	/**
 	* The total number of JS moved to end.
 	*/
 	Jsmovedrate float64 `json:"jsmovedrate,omitempty"`
-	Totalcssmoved uint32 `json:"totalcssmoved,omitempty"`
+	Totalcssmoved int `json:"totalcssmoved,omitempty"`
 	/**
 	* The total number of CSS moved to head.
 	*/
 	Cssmovedrate float64 `json:"cssmovedrate,omitempty"`
-	Totaljsmin uint32 `json:"totaljsmin,omitempty"`
+	Totaljsmin int `json:"totaljsmin,omitempty"`
 	/**
 	* The total number of JS files minified.
 	*/
 	Jsminrate float64 `json:"jsminrate,omitempty"`
-	Totalcssmin uint32 `json:"totalcssmin,omitempty"`
+	Totalcssmin int `json:"totalcssmin,omitempty"`
 	/**
 	* The total number of CSS files minified.
 	*/
 	Cssminrate float64 `json:"cssminrate,omitempty"`
-	Totalimgstojxr uint32 `json:"totalimgstojxr,omitempty"`
+	Totalimgstojxr int `json:"totalimgstojxr,omitempty"`
 	/**
 	* The total number of images converted to JPEGXR format.
 	*/
 	Imgstojxrrate float64 `json:"imgstojxrrate,omitempty"`
-	Totalimgstowebp uint32 `json:"totalimgstowebp,omitempty"`
+	Totalimgstowebp int `json:"totalimgstowebp,omitempty"`
 	/**
 	* The total number of images converted to WEBP format.
 	*/
 	Imgstowebprate float64 `json:"imgstowebprate,omitempty"`
-	Totaljpegsoptimized uint32 `json:"totaljpegsoptimized,omitempty"`
+	Totaljpegsoptimized int `json:"totaljpegsoptimized,omitempty"`
 	/**
 	* The total number of JPEG format images optimized.
 	*/
 	Jpegsoptimizedrate float64 `json:"jpegsoptimizedrate,omitempty"`
-	Totalgifstopng uint32 `json:"totalgifstopng,omitempty"`
+	Totalgifstopng int `json:"totalgifstopng,omitempty"`
 	/**
 	* The total number of images converted from GIF to PNG format.
 	*/
 	Gifstopngrate float64 `json:"gifstopngrate,omitempty"`
-	Totalimgsresized uint32 `json:"totalimgsresized,omitempty"`
+	Totalimgsresized int `json:"totalimgsresized,omitempty"`
 	/**
 	* The total number of images resized to dimensions in the <img> tag.
 	*/

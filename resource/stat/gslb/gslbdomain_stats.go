@@ -31,7 +31,7 @@ type Gslbdomainstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Dnstotalqueries uint64 `json:"dnstotalqueries,omitempty"`
+	Dnstotalqueries int `json:"dnstotalqueries,omitempty"`
 	/**
 	* Total number of DNS queries received.
 	*/

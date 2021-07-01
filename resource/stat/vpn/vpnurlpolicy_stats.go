@@ -29,7 +29,7 @@ type Vpnurlpolicystats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Pipolicyhits uint64 `json:"pipolicyhits,omitempty"`
+	Pipolicyhits int `json:"pipolicyhits,omitempty"`
 	/**
 	* Number of hits on the policy
 	*/

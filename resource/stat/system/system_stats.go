@@ -24,10 +24,10 @@ type Systemstats struct {
 	Clearstats string `json:"clearstats,omitempty"`
 	Voltagev12n float64 `json:"voltagev12n,omitempty"`
 	Voltagev5n float64 `json:"voltagev5n,omitempty"`
-	Cpuusage uint32 `json:"cpuusage,omitempty"`
-	Rescpuusage uint32 `json:"rescpuusage,omitempty"`
-	Slavecpuusage uint32 `json:"slavecpuusage,omitempty"`
-	Mastercpuusage uint32 `json:"mastercpuusage,omitempty"`
+	Cpuusage int `json:"cpuusage,omitempty"`
+	Rescpuusage int `json:"rescpuusage,omitempty"`
+	Slavecpuusage int `json:"slavecpuusage,omitempty"`
+	Mastercpuusage int `json:"mastercpuusage,omitempty"`
 	Auxvolt7 float64 `json:"auxvolt7,omitempty"`
 	Auxvolt6 float64 `json:"auxvolt6,omitempty"`
 	Auxvolt5 float64 `json:"auxvolt5,omitempty"`
@@ -46,9 +46,9 @@ type Systemstats struct {
 	Voltagev33main float64 `json:"voltagev33main,omitempty"`
 	Voltagevcc1 float64 `json:"voltagevcc1,omitempty"`
 	Voltagevcc0 float64 `json:"voltagevcc0,omitempty"`
-	Numcpus uint32 `json:"numcpus,omitempty"`
+	Numcpus int `json:"numcpus,omitempty"`
 	Memusagepcnt float64 `json:"memusagepcnt,omitempty"`
-	Memuseinmb uint32 `json:"memuseinmb,omitempty"`
+	Memuseinmb int `json:"memuseinmb,omitempty"`
 	Addimgmtcpuusagepcnt float64 `json:"addimgmtcpuusagepcnt,omitempty"`
 	Mgmtcpu0usagepcnt float64 `json:"mgmtcpu0usagepcnt,omitempty"`
 	Mgmtcpuusagepcnt float64 `json:"mgmtcpuusagepcnt,omitempty"`
@@ -57,35 +57,35 @@ type Systemstats struct {
 	Rescpuusagepcnt float64 `json:"rescpuusagepcnt,omitempty"`
 	Starttimelocal string `json:"starttimelocal,omitempty"`
 	Starttime string `json:"starttime,omitempty"`
-	Disk0perusage int32 `json:"disk0perusage,omitempty"`
-	Disk1perusage int32 `json:"disk1perusage,omitempty"`
-	Cpufan0speed int32 `json:"cpufan0speed,omitempty"`
-	Cpufan1speed int32 `json:"cpufan1speed,omitempty"`
-	Systemfanspeed int32 `json:"systemfanspeed,omitempty"`
-	Fan0speed int32 `json:"fan0speed,omitempty"`
-	Fanspeed int32 `json:"fanspeed,omitempty"`
-	Cpu0temp int32 `json:"cpu0temp,omitempty"`
-	Cpu1temp int32 `json:"cpu1temp,omitempty"`
-	Internaltemp int32 `json:"internaltemp,omitempty"`
+	Disk0perusage int `json:"disk0perusage,omitempty"`
+	Disk1perusage int `json:"disk1perusage,omitempty"`
+	Cpufan0speed int `json:"cpufan0speed,omitempty"`
+	Cpufan1speed int `json:"cpufan1speed,omitempty"`
+	Systemfanspeed int `json:"systemfanspeed,omitempty"`
+	Fan0speed int `json:"fan0speed,omitempty"`
+	Fanspeed int `json:"fanspeed,omitempty"`
+	Cpu0temp int `json:"cpu0temp,omitempty"`
+	Cpu1temp int `json:"cpu1temp,omitempty"`
+	Internaltemp int `json:"internaltemp,omitempty"`
 	Powersupply1status string `json:"powersupply1status,omitempty"`
 	Powersupply2status string `json:"powersupply2status,omitempty"`
 	Powersupply3status string `json:"powersupply3status,omitempty"`
 	Powersupply4status string `json:"powersupply4status,omitempty"`
-	Disk0size int32 `json:"disk0size,omitempty"`
-	Disk0used int32 `json:"disk0used,omitempty"`
-	Disk0avail int32 `json:"disk0avail,omitempty"`
-	Disk1size int32 `json:"disk1size,omitempty"`
-	Disk1used int32 `json:"disk1used,omitempty"`
-	Disk1avail int32 `json:"disk1avail,omitempty"`
-	Fan2speed int32 `json:"fan2speed,omitempty"`
-	Fan3speed int32 `json:"fan3speed,omitempty"`
-	Fan4speed int32 `json:"fan4speed,omitempty"`
-	Fan5speed int32 `json:"fan5speed,omitempty"`
-	Auxtemp0 int32 `json:"auxtemp0,omitempty"`
-	Auxtemp1 int32 `json:"auxtemp1,omitempty"`
-	Auxtemp2 int32 `json:"auxtemp2,omitempty"`
-	Auxtemp3 int32 `json:"auxtemp3,omitempty"`
+	Disk0size int `json:"disk0size,omitempty"`
+	Disk0used int `json:"disk0used,omitempty"`
+	Disk0avail int `json:"disk0avail,omitempty"`
+	Disk1size int `json:"disk1size,omitempty"`
+	Disk1used int `json:"disk1used,omitempty"`
+	Disk1avail int `json:"disk1avail,omitempty"`
+	Fan2speed int `json:"fan2speed,omitempty"`
+	Fan3speed int `json:"fan3speed,omitempty"`
+	Fan4speed int `json:"fan4speed,omitempty"`
+	Fan5speed int `json:"fan5speed,omitempty"`
+	Auxtemp0 int `json:"auxtemp0,omitempty"`
+	Auxtemp1 int `json:"auxtemp1,omitempty"`
+	Auxtemp2 int `json:"auxtemp2,omitempty"`
+	Auxtemp3 int `json:"auxtemp3,omitempty"`
 	Timesincestart string `json:"timesincestart,omitempty"`
-	Memsizemb uint32 `json:"memsizemb,omitempty"`
+	Memsizemb int `json:"memsizemb,omitempty"`
 
 }

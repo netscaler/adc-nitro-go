@@ -25,22 +25,22 @@ type Ipseccountersstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Ipsectotrxbytes uint64 `json:"ipsectotrxbytes,omitempty"`
+	Ipsectotrxbytes int `json:"ipsectotrxbytes,omitempty"`
 	/**
 	* Bytes received during IPsec sessions.
 	*/
 	Ipsecrxbytesrate float64 `json:"ipsecrxbytesrate,omitempty"`
-	Ipsectottxbytes uint64 `json:"ipsectottxbytes,omitempty"`
+	Ipsectottxbytes int `json:"ipsectottxbytes,omitempty"`
 	/**
 	* Bytes sent during IPsec sessions.
 	*/
 	Ipsectxbytesrate float64 `json:"ipsectxbytesrate,omitempty"`
-	Ipsectotrxpkts uint64 `json:"ipsectotrxpkts,omitempty"`
+	Ipsectotrxpkts int `json:"ipsectotrxpkts,omitempty"`
 	/**
 	* Packets received during IPsec sessions.
 	*/
 	Ipsecrxpktsrate float64 `json:"ipsecrxpktsrate,omitempty"`
-	Ipsectottxpkts uint64 `json:"ipsectottxpkts,omitempty"`
+	Ipsectottxpkts int `json:"ipsectottxpkts,omitempty"`
 	/**
 	* Packets sent during IPsec sessions.
 	*/

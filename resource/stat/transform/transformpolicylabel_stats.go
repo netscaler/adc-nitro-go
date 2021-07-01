@@ -29,7 +29,7 @@ type Transformpolicylabelstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Pipolicylabelhits uint64 `json:"pipolicylabelhits,omitempty"`
+	Pipolicylabelhits int `json:"pipolicylabelhits,omitempty"`
 	/**
 	* Number of times policy label was invoked. 
 	*/

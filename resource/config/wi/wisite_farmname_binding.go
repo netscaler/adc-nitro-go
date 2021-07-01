@@ -31,7 +31,7 @@ type Wisitefarmnamebinding struct {
 	/**
 	* Port number at which to contact the XML service.
 	*/
-	Xmlport uint32 `json:"xmlport,omitempty"`
+	Xmlport int `json:"xmlport,omitempty"`
 	/**
 	* Transport protocol to use for transferring data, related to the Web Interface site, between the Citrix ADC and the XML service.
 	*/
@@ -40,7 +40,7 @@ type Wisitefarmnamebinding struct {
 	* TCP port at which the XenApp or XenDesktop servers listenfor SSL Relay traffic from the Citrix ADC. This parameter is required if you have set SSL Relay as the transport protocol. 
 		Web Interface uses root certificates when authenticating a server running SSL Relay. Make sure that all the servers running SSL Relay are configured to listen on the same port.
 	*/
-	Sslrelayport uint32 `json:"sslrelayport,omitempty"`
+	Sslrelayport int `json:"sslrelayport,omitempty"`
 	/**
 	* Use all the XML servers (load balancing mode) or only one server (failover mode).
 	*/

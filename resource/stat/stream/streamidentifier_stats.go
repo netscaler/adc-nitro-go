@@ -56,13 +56,13 @@ type Streamidentifierstats struct {
 	* use this argument to specify sort order
 	*/
 	Sortorder string `json:"sortorder,omitempty"`
-	Streamobjreq uint64 `json:"streamobjreq,omitempty"`
-	Streamobjbandw uint64 `json:"streamobjbandw,omitempty"`
-	Streamobjresptime uint64 `json:"streamobjresptime,omitempty"`
-	Streamobjconn uint64 `json:"streamobjconn,omitempty"`
-	Streamobjbreachcnt uint64 `json:"streamobjbreachcnt,omitempty"`
-	Streamobjpktcredits uint64 `json:"streamobjpktcredits,omitempty"`
-	Streamobjpktspersecond uint64 `json:"streamobjpktspersecond,omitempty"`
-	Streamobjdroppedconns uint64 `json:"streamobjdroppedconns,omitempty"`
+	Streamobjreq int `json:"streamobjreq,omitempty"`
+	Streamobjbandw int `json:"streamobjbandw,omitempty"`
+	Streamobjresptime int `json:"streamobjresptime,omitempty"`
+	Streamobjconn int `json:"streamobjconn,omitempty"`
+	Streamobjbreachcnt int `json:"streamobjbreachcnt,omitempty"`
+	Streamobjpktcredits int `json:"streamobjpktcredits,omitempty"`
+	Streamobjpktspersecond int `json:"streamobjpktspersecond,omitempty"`
+	Streamobjdroppedconns int `json:"streamobjdroppedconns,omitempty"`
 
 }

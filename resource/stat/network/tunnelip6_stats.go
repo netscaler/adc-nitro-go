@@ -29,22 +29,22 @@ type Tunnelip6stats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Tnltotrxpkts uint64 `json:"tnltotrxpkts,omitempty"`
+	Tnltotrxpkts int `json:"tnltotrxpkts,omitempty"`
 	/**
 	* Total number of packets received on the tunnel.
 	*/
 	Tnlrxpktsrate float64 `json:"tnlrxpktsrate,omitempty"`
-	Tnltottxpkts uint64 `json:"tnltottxpkts,omitempty"`
+	Tnltottxpkts int `json:"tnltottxpkts,omitempty"`
 	/**
 	* Total number of packets transmitted on the tunnel.
 	*/
 	Tnltxpktsrate float64 `json:"tnltxpktsrate,omitempty"`
-	Tnltotrxbytes uint64 `json:"tnltotrxbytes,omitempty"`
+	Tnltotrxbytes int `json:"tnltotrxbytes,omitempty"`
 	/**
 	* Total number of bytes received on the tunnel.
 	*/
 	Tnlrxbytesrate float64 `json:"tnlrxbytesrate,omitempty"`
-	Tnltottxbytes uint64 `json:"tnltottxbytes,omitempty"`
+	Tnltottxbytes int `json:"tnltottxbytes,omitempty"`
 	/**
 	* Total number of bytes transmitted on the tunnel.
 	*/

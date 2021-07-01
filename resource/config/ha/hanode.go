@@ -23,7 +23,7 @@ type Hanode struct {
 	/**
 	* Number that uniquely identifies the node. For self node, it will always be 0. Peer node values can range from 1-64.
 	*/
-	Id uint32 `json:"id,omitempty"`
+	Id int `json:"id,omitempty"`
 	/**
 	* The NSIP or NSIP6 address of the node to be added for an HA configuration. This setting is neither propagated nor synchronized.
 	*/
@@ -53,11 +53,11 @@ type Hanode struct {
 	/**
 	* Interval, in milliseconds, between heartbeat messages sent to the peer node. The heartbeat messages are UDP packets sent to port 3003 of the peer node.
 	*/
-	Hellointerval uint32 `json:"hellointerval,omitempty"`
+	Hellointerval int `json:"hellointerval,omitempty"`
 	/**
 	* Number of seconds after which a peer node is marked DOWN if heartbeat messages are not received from the peer node.
 	*/
-	Deadinterval uint64 `json:"deadinterval,omitempty"`
+	Deadinterval int `json:"deadinterval,omitempty"`
 	/**
 	* Keep one node primary if both nodes fail the health check, so that a partially available node can back up data and handle traffic. This mode is set independently on each node.
 	*/
@@ -65,15 +65,15 @@ type Hanode struct {
 	/**
 	* Max number of flips allowed before becoming sticky primary
 	*/
-	Maxflips uint32 `json:"maxflips,omitempty"`
+	Maxflips int `json:"maxflips,omitempty"`
 	/**
 	* Interval after which flipping of node states can again start
 	*/
-	Maxfliptime uint32 `json:"maxfliptime,omitempty"`
+	Maxfliptime int `json:"maxfliptime,omitempty"`
 	/**
 	* Vlan on which HA related communication is sent. This include sync, propagation , connection mirroring , LB persistency config sync, persistent session sync and session state sync. However HA heartbeats can go all interfaces.
 	*/
-	Syncvlan uint32 `json:"syncvlan,omitempty"`
+	Syncvlan int `json:"syncvlan,omitempty"`
 	/**
 	* strict mode flag for sync status
 	*/

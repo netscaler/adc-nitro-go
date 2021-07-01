@@ -29,23 +29,23 @@ type Nspartitionstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Maxbandwidth uint32 `json:"maxbandwidth,omitempty"`
-	Maxconnection uint32 `json:"maxconnection,omitempty"`
-	Maxmemory uint32 `json:"maxmemory,omitempty"`
-	Currentbandwidth uint32 `json:"currentbandwidth,omitempty"`
-	Currentconnections uint32 `json:"currentconnections,omitempty"`
-	Memoryusagepcnt uint32 `json:"memoryusagepcnt,omitempty"`
-	Totaldrops uint32 `json:"totaldrops,omitempty"`
+	Maxbandwidth int `json:"maxbandwidth,omitempty"`
+	Maxconnection int `json:"maxconnection,omitempty"`
+	Maxmemory int `json:"maxmemory,omitempty"`
+	Currentbandwidth int `json:"currentbandwidth,omitempty"`
+	Currentconnections int `json:"currentconnections,omitempty"`
+	Memoryusagepcnt int `json:"memoryusagepcnt,omitempty"`
+	Totaldrops int `json:"totaldrops,omitempty"`
 	/**
 	* Total packet drops for the partition.
 	*/
 	Dropsrate float64 `json:"dropsrate,omitempty"`
-	Totaltokendrops uint32 `json:"totaltokendrops,omitempty"`
+	Totaltokendrops int `json:"totaltokendrops,omitempty"`
 	/**
 	* Total drops(KB) for the partition.
 	*/
 	Tokendropsrate float64 `json:"tokendropsrate,omitempty"`
-	Totalconnectiondrops uint32 `json:"totalconnectiondrops,omitempty"`
+	Totalconnectiondrops int `json:"totalconnectiondrops,omitempty"`
 	/**
 	* Total connection drops for the partition.
 	*/

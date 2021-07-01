@@ -27,7 +27,7 @@ type Lsnrtspalgprofile struct {
 	/**
 	* Idle timeout for the rtsp sessions in seconds.
 	*/
-	Rtspidletimeout uint32 `json:"rtspidletimeout,omitempty"`
+	Rtspidletimeout int `json:"rtspidletimeout,omitempty"`
 	/**
 	* port for the RTSP
 	*/

@@ -46,11 +46,11 @@ type Botprofileratelimitbinding struct {
 	/**
 	* Maximum number of requests that are allowed in this session in the given period time.
 	*/
-	Rate uint32 `json:"rate,omitempty"`
+	Rate int `json:"rate,omitempty"`
 	/**
 	* Time interval during which requests are tracked to check if they cross the given rate.
 	*/
-	Timeslice uint32 `json:"timeslice,omitempty"`
+	Timeslice int `json:"timeslice,omitempty"`
 	/**
 	* One or more actions to be taken when the current rate becomes more than the configured rate. Only LOG action can be combined with DROP, REDIRECT or RESET action.
 	*/

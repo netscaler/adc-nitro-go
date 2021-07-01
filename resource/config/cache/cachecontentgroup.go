@@ -27,19 +27,19 @@ type Cachecontentgroup struct {
 	/**
 	* Relative expiry time, in seconds, for expiring positive responses with response codes between 200 and 399. Cannot be used in combination with other Expiry attributes. Similar to -relExpiry but has lower precedence.
 	*/
-	Weakposrelexpiry uint64 `json:"weakposrelexpiry,omitempty"`
+	Weakposrelexpiry int `json:"weakposrelexpiry,omitempty"`
 	/**
 	* Heuristic expiry time, in percent of the duration, since the object was last modified.
 	*/
-	Heurexpiryparam uint32 `json:"heurexpiryparam,omitempty"`
+	Heurexpiryparam int `json:"heurexpiryparam,omitempty"`
 	/**
 	* Relative expiry time, in seconds, after which to expire an object cached in this content group.
 	*/
-	Relexpiry uint64 `json:"relexpiry,omitempty"`
+	Relexpiry int `json:"relexpiry,omitempty"`
 	/**
 	* Relative expiry time, in milliseconds, after which to expire an object cached in this content group.
 	*/
-	Relexpirymillisec uint32 `json:"relexpirymillisec,omitempty"`
+	Relexpirymillisec int `json:"relexpirymillisec,omitempty"`
 	/**
 	* Local time, up to 4 times a day, at which all objects in the content group must expire. 
 		CLI Users:
@@ -54,7 +54,7 @@ type Cachecontentgroup struct {
 	/**
 	* Relative expiry time, in seconds, for expiring negative responses. This value is used only if the expiry time cannot be determined from any other source. It is applicable only to the following status codes: 307, 403, 404, and 410.
 	*/
-	Weaknegrelexpiry uint64 `json:"weaknegrelexpiry,omitempty"`
+	Weaknegrelexpiry int `json:"weaknegrelexpiry,omitempty"`
 	/**
 	* Parameters to use for parameterized hit evaluation of an object. Up to 128 parameters can be specified. Mutually exclusive with the Hit Selector parameter.
 	*/
@@ -95,15 +95,15 @@ type Cachecontentgroup struct {
 	/**
 	* Time period, in seconds before an object's calculated expiry time, during which to attempt prefetch.
 	*/
-	Prefetchperiod uint64 `json:"prefetchperiod,omitempty"`
+	Prefetchperiod int `json:"prefetchperiod,omitempty"`
 	/**
 	* Time period, in milliseconds before an object's calculated expiry time, during which to attempt prefetch.
 	*/
-	Prefetchperiodmillisec uint32 `json:"prefetchperiodmillisec,omitempty"`
+	Prefetchperiodmillisec int `json:"prefetchperiodmillisec,omitempty"`
 	/**
 	* Maximum number of outstanding prefetches that can be queued for the content group.
 	*/
-	Prefetchmaxpending uint32 `json:"prefetchmaxpending,omitempty"`
+	Prefetchmaxpending int `json:"prefetchmaxpending,omitempty"`
 	/**
 	* Perform flash cache. Mutually exclusive with Poll Every Time (PET) on the same content group.
 	*/
@@ -131,20 +131,20 @@ type Cachecontentgroup struct {
 	/**
 	* If the size of an object that is being downloaded is less than or equal to the quick abort value, and a client aborts during the download, the cache stops downloading the response. If the object is larger than the quick abort size, the cache continues to download the response.
 	*/
-	Quickabortsize uint64 `json:"quickabortsize,omitempty"`
+	Quickabortsize int `json:"quickabortsize,omitempty"`
 	/**
 	* Minimum size of a response that can be cached in this content group.
 		Default minimum response size is 0.
 	*/
-	Minressize uint64 `json:"minressize,omitempty"`
+	Minressize int `json:"minressize,omitempty"`
 	/**
 	* Maximum size of a response that can be cached in this content group.
 	*/
-	Maxressize uint64 `json:"maxressize,omitempty"`
+	Maxressize int `json:"maxressize,omitempty"`
 	/**
 	* Maximum amount of memory that the cache can use. The effective limit is based on the available memory of the Citrix ADC.
 	*/
-	Memlimit uint64 `json:"memlimit,omitempty"`
+	Memlimit int `json:"memlimit,omitempty"`
 	/**
 	* Ignore Cache-Control and Pragma headers in the incoming request.
 	*/
@@ -152,7 +152,7 @@ type Cachecontentgroup struct {
 	/**
 	* Number of hits that qualifies a response for storage in this content group.
 	*/
-	Minhits int32 `json:"minhits,omitempty"`
+	Minhits int `json:"minhits,omitempty"`
 	/**
 	* Force policy evaluation for each response arriving from the origin server. Cannot be set to YES if the Prefetch parameter is also set to YES.
 	*/

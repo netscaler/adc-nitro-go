@@ -29,92 +29,92 @@ type Pcpserverstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Pcptotrequests uint64 `json:"pcptotrequests,omitempty"`
+	Pcptotrequests int `json:"pcptotrequests,omitempty"`
 	/**
 	* PCP Request received.
 	*/
 	Pcprequestsrate float64 `json:"pcprequestsrate,omitempty"`
-	Pcptotresponses uint64 `json:"pcptotresponses,omitempty"`
+	Pcptotresponses int `json:"pcptotresponses,omitempty"`
 	/**
 	* Number PCP responces sent.
 	*/
 	Pcpresponsesrate float64 `json:"pcpresponsesrate,omitempty"`
-	Pcptotmaprequests uint64 `json:"pcptotmaprequests,omitempty"`
+	Pcptotmaprequests int `json:"pcptotmaprequests,omitempty"`
 	/**
 	* PCP MAP Requests received.
 	*/
 	Pcpmaprequestsrate float64 `json:"pcpmaprequestsrate,omitempty"`
-	Pcptotpeerrequests uint64 `json:"pcptotpeerrequests,omitempty"`
+	Pcptotpeerrequests int `json:"pcptotpeerrequests,omitempty"`
 	/**
 	* PCP PEER Requests received.
 	*/
 	Pcppeerrequestsrate float64 `json:"pcppeerrequestsrate,omitempty"`
-	Pcptoterrinrquest uint64 `json:"pcptoterrinrquest,omitempty"`
+	Pcptoterrinrquest int `json:"pcptoterrinrquest,omitempty"`
 	/**
 	* total PCP request with error.
 	*/
 	Pcperrinrquestrate float64 `json:"pcperrinrquestrate,omitempty"`
-	Pcptoterrinres uint64 `json:"pcptoterrinres,omitempty"`
+	Pcptoterrinres int `json:"pcptoterrinres,omitempty"`
 	/**
 	* Total PCP responses with errors.
 	*/
 	Pcperrinresrate float64 `json:"pcperrinresrate,omitempty"`
-	Pcptotunsuppvers uint64 `json:"pcptotunsuppvers,omitempty"`
+	Pcptotunsuppvers int `json:"pcptotunsuppvers,omitempty"`
 	/**
 	* PCP request with unsupported version.
 	*/
 	Pcpunsuppversrate float64 `json:"pcpunsuppversrate,omitempty"`
-	Pcptotmalformedreq uint64 `json:"pcptotmalformedreq,omitempty"`
+	Pcptotmalformedreq int `json:"pcptotmalformedreq,omitempty"`
 	/**
 	* total PCP request having malformed PCP packets.
 	*/
 	Pcpmalformedreqrate float64 `json:"pcpmalformedreqrate,omitempty"`
-	Pcptotunsuppopcode uint64 `json:"pcptotunsuppopcode,omitempty"`
+	Pcptotunsuppopcode int `json:"pcptotunsuppopcode,omitempty"`
 	/**
 	* total Unsupproted OPCODES received Requests.
 	*/
 	Pcpunsuppopcoderate float64 `json:"pcpunsuppopcoderate,omitempty"`
-	Pcptotunsuppoption uint64 `json:"pcptotunsuppoption,omitempty"`
+	Pcptotunsuppoption int `json:"pcptotunsuppoption,omitempty"`
 	/**
 	* total Unsupproted OPTIONS received in requests.
 	*/
 	Pcpunsuppoptionrate float64 `json:"pcpunsuppoptionrate,omitempty"`
-	Pcptotmalformedoption uint64 `json:"pcptotmalformedoption,omitempty"`
+	Pcptotmalformedoption int `json:"pcptotmalformedoption,omitempty"`
 	/**
 	* total malformed OPTIONS received in requests.
 	*/
 	Pcpmalformedoptionrate float64 `json:"pcpmalformedoptionrate,omitempty"`
-	Pcptotnetfailure uint64 `json:"pcptotnetfailure,omitempty"`
+	Pcptotnetfailure int `json:"pcptotnetfailure,omitempty"`
 	/**
 	* Total Network Failures.
 	*/
 	Pcpnetfailurerate float64 `json:"pcpnetfailurerate,omitempty"`
-	Pcptotnoresources uint64 `json:"pcptotnoresources,omitempty"`
+	Pcptotnoresources int `json:"pcptotnoresources,omitempty"`
 	/**
 	* no resources
 	*/
 	Pcpnoresourcesrate float64 `json:"pcpnoresourcesrate,omitempty"`
-	Pcptotunsupportedprotocol uint64 `json:"pcptotunsupportedprotocol,omitempty"`
+	Pcptotunsupportedprotocol int `json:"pcptotunsupportedprotocol,omitempty"`
 	/**
 	* Total Unsupported Protocols requests.
 	*/
 	Pcpunsupportedprotocolrate float64 `json:"pcpunsupportedprotocolrate,omitempty"`
-	Pcptotuserexqouta uint64 `json:"pcptotuserexqouta,omitempty"`
+	Pcptotuserexqouta int `json:"pcptotuserexqouta,omitempty"`
 	/**
 	* Total user ex quota.
 	*/
 	Pcpuserexqoutarate float64 `json:"pcpuserexqoutarate,omitempty"`
-	Pcptotnoexternal uint64 `json:"pcptotnoexternal,omitempty"`
+	Pcptotnoexternal int `json:"pcptotnoexternal,omitempty"`
 	/**
 	* Total responses with opcode can not provide external.
 	*/
 	Pcpnoexternalrate float64 `json:"pcpnoexternalrate,omitempty"`
-	Pcptotaddrmismatch uint64 `json:"pcptotaddrmismatch,omitempty"`
+	Pcptotaddrmismatch int `json:"pcptotaddrmismatch,omitempty"`
 	/**
 	* Total address mismatch.
 	*/
 	Pcpaddrmismatchrate float64 `json:"pcpaddrmismatchrate,omitempty"`
-	Pcptotexcesspeers uint64 `json:"pcptotexcesspeers,omitempty"`
+	Pcptotexcesspeers int `json:"pcptotexcesspeers,omitempty"`
 	/**
 	* Total responses with opcode excessive remote peers.
 	*/

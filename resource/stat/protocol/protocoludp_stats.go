@@ -25,29 +25,29 @@ type Protocoludpstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Udptotrxpkts uint64 `json:"udptotrxpkts,omitempty"`
+	Udptotrxpkts int `json:"udptotrxpkts,omitempty"`
 	/**
 	* Total number of UDP packets received.
 	*/
 	Udprxpktsrate float64 `json:"udprxpktsrate,omitempty"`
-	Udptotrxbytes uint64 `json:"udptotrxbytes,omitempty"`
+	Udptotrxbytes int `json:"udptotrxbytes,omitempty"`
 	/**
 	* Total number of UDP data received in bytes.
 	*/
 	Udprxbytesrate float64 `json:"udprxbytesrate,omitempty"`
-	Udptottxpkts uint64 `json:"udptottxpkts,omitempty"`
+	Udptottxpkts int `json:"udptottxpkts,omitempty"`
 	/**
 	* Total number of UDP packets transmitted.
 	*/
 	Udptxpktsrate float64 `json:"udptxpktsrate,omitempty"`
-	Udptottxbytes uint64 `json:"udptottxbytes,omitempty"`
+	Udptottxbytes int `json:"udptottxbytes,omitempty"`
 	/**
 	* Total number of UDP data transmitted in bytes.
 	*/
 	Udptxbytesrate float64 `json:"udptxbytesrate,omitempty"`
-	Udpcurratethreshold uint32 `json:"udpcurratethreshold,omitempty"`
-	Udptotunknownsvcpkts uint64 `json:"udptotunknownsvcpkts,omitempty"`
-	Udpbadchecksum uint64 `json:"udpbadchecksum,omitempty"`
-	Udpcurratethresholdexceeds uint64 `json:"udpcurratethresholdexceeds,omitempty"`
+	Udpcurratethreshold int `json:"udpcurratethreshold,omitempty"`
+	Udptotunknownsvcpkts int `json:"udptotunknownsvcpkts,omitempty"`
+	Udpbadchecksum int `json:"udpbadchecksum,omitempty"`
+	Udpcurratethresholdexceeds int `json:"udpcurratethresholdexceeds,omitempty"`
 
 }

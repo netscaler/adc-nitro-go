@@ -27,7 +27,7 @@ type Subscriberprofile struct {
 	/**
 	* The vlan number on which the subscriber is located.
 	*/
-	Vlan uint32 `json:"vlan,omitempty"`
+	Vlan int `json:"vlan,omitempty"`
 	/**
 	* Rules configured for this subscriber. This is similar to rules received from PCRF for dynamic subscriber sessions.
 	*/

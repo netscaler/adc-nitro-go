@@ -137,7 +137,7 @@ type Authenticationoauthaction struct {
 	/**
 	* Interval at which services are monitored for necessary configuration.
 	*/
-	Refreshinterval uint32 `json:"refreshinterval,omitempty"`
+	Refreshinterval int `json:"refreshinterval,omitempty"`
 	/**
 	* URL of the endpoint that contains JWKs (Json Web Key) for JWT (Json Web Token) verification.
 	*/
@@ -153,7 +153,7 @@ type Authenticationoauthaction struct {
 	/**
 	* This option specifies the allowed clock skew in number of minutes that Citrix ADC allows on an incoming token. For example, if skewTime is 10, then token would be valid from (current time - 10) min to (current time + 10) min, ie 20min in all.
 	*/
-	Skewtime uint32 `json:"skewtime,omitempty"`
+	Skewtime int `json:"skewtime,omitempty"`
 	/**
 	* Identity of the server whose tokens are to be accepted.
 	*/

@@ -23,19 +23,19 @@ type Feoparameter struct {
 	/**
 	* The percentage value of a JPEG image quality to be reduced. Range: 0 - 100
 	*/
-	Jpegqualitypercent uint32 `json:"jpegqualitypercent,omitempty"`
+	Jpegqualitypercent int `json:"jpegqualitypercent,omitempty"`
 	/**
 	* Threshold value of the file size (in bytes) for converting external CSS files to inline CSS files.
 	*/
-	Cssinlinethressize uint32 `json:"cssinlinethressize,omitempty"`
+	Cssinlinethressize int `json:"cssinlinethressize,omitempty"`
 	/**
 	* Threshold value of the file size (in bytes), for converting external JavaScript files to inline JavaScript files.
 	*/
-	Jsinlinethressize uint32 `json:"jsinlinethressize,omitempty"`
+	Jsinlinethressize int `json:"jsinlinethressize,omitempty"`
 	/**
 	* Maximum file size of an image (in bytes), for coverting linked images to inline images.
 	*/
-	Imginlinethressize uint32 `json:"imginlinethressize,omitempty"`
+	Imginlinethressize int `json:"imginlinethressize,omitempty"`
 
 	//------- Read only Parameter ---------;
 

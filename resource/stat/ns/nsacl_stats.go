@@ -29,50 +29,50 @@ type Nsaclstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Acltotpktsbridged uint64 `json:"acltotpktsbridged,omitempty"`
+	Acltotpktsbridged int `json:"acltotpktsbridged,omitempty"`
 	/**
 	* Packets matching a bridge ACL, which is in transparent mode and bypasses service processing.
 	*/
 	Aclpktsbridgedrate float64 `json:"aclpktsbridgedrate,omitempty"`
-	Acltotpktsdenied uint64 `json:"acltotpktsdenied,omitempty"`
+	Acltotpktsdenied int `json:"acltotpktsdenied,omitempty"`
 	/**
 	* Packets dropped because they match ACLs with processing mode set to DENY.
 	*/
 	Aclpktsdeniedrate float64 `json:"aclpktsdeniedrate,omitempty"`
-	Acltotpktsallowed uint64 `json:"acltotpktsallowed,omitempty"`
+	Acltotpktsallowed int `json:"acltotpktsallowed,omitempty"`
 	/**
 	* Packets matching ACLs with processing mode set to ALLOW. Citrix ADC processes these packets.
 	*/
 	Aclpktsallowedrate float64 `json:"aclpktsallowedrate,omitempty"`
-	Acltotpktsnat uint64 `json:"acltotpktsnat,omitempty"`
+	Acltotpktsnat int `json:"acltotpktsnat,omitempty"`
 	/**
 	* Packets matching a NAT ACL, resulting in a NAT session.
 	*/
 	Aclpktsnatrate float64 `json:"aclpktsnatrate,omitempty"`
-	Acltothits uint64 `json:"acltothits,omitempty"`
+	Acltothits int `json:"acltothits,omitempty"`
 	/**
 	* Packets matching an ACL.
 	*/
 	Aclhitsrate float64 `json:"aclhitsrate,omitempty"`
-	Acltotmisses uint64 `json:"acltotmisses,omitempty"`
+	Acltotmisses int `json:"acltotmisses,omitempty"`
 	/**
 	* Packets not matching any ACL.
 	*/
 	Aclmissesrate float64 `json:"aclmissesrate,omitempty"`
-	Acltotcount uint64 `json:"acltotcount,omitempty"`
-	Effectiveacltotcount uint64 `json:"effectiveacltotcount,omitempty"`
-	Dfdacltothits uint64 `json:"dfdacltothits,omitempty"`
+	Acltotcount int `json:"acltotcount,omitempty"`
+	Effectiveacltotcount int `json:"effectiveacltotcount,omitempty"`
+	Dfdacltothits int `json:"dfdacltothits,omitempty"`
 	/**
 	* Packets matching an dfd ACL.
 	*/
 	Dfdaclhitsrate float64 `json:"dfdaclhitsrate,omitempty"`
-	Dfdacltotmisses uint64 `json:"dfdacltotmisses,omitempty"`
+	Dfdacltotmisses int `json:"dfdacltotmisses,omitempty"`
 	/**
 	* Packets not matching any DFD ACL.
 	*/
 	Dfdaclmissesrate float64 `json:"dfdaclmissesrate,omitempty"`
-	Dfdacltotcount uint64 `json:"dfdacltotcount,omitempty"`
-	Aclperhits uint64 `json:"aclperhits,omitempty"`
+	Dfdacltotcount int `json:"dfdacltotcount,omitempty"`
+	Aclperhits int `json:"aclperhits,omitempty"`
 	/**
 	* Number of times the acl was hit
 	*/

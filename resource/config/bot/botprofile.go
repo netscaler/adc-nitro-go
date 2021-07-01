@@ -108,7 +108,7 @@ type Botprofile struct {
 	/**
 	* Size of the KM data send by the browser, needs to be processed on ADC
 	*/
-	Kmeventspostbodylimit uint32 `json:"kmeventspostbodylimit,omitempty"`
+	Kmeventspostbodylimit int `json:"kmeventspostbodylimit,omitempty"`
 
 	//------- Read only Parameter ---------;
 

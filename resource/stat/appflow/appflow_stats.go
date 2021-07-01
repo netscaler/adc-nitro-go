@@ -22,42 +22,42 @@ type Appflowstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Appflowtotaltxoctets uint64 `json:"appflowtotaltxoctets,omitempty"`
+	Appflowtotaltxoctets int `json:"appflowtotaltxoctets,omitempty"`
 	/**
 	* The total number of AppFlow (IPFIX) octets that the Citrix ADC has transmitted.
 	*/
 	Appflowtxoctetsrate float64 `json:"appflowtxoctetsrate,omitempty"`
-	Appflowtotalflows uint64 `json:"appflowtotalflows,omitempty"`
+	Appflowtotalflows int `json:"appflowtotalflows,omitempty"`
 	/**
 	* The total number of AppFlow (IPFIX) flows that the Citrix ADC has transmitted.
 	*/
 	Appflowflowsrate float64 `json:"appflowflowsrate,omitempty"`
-	Appflowtotaltxmessagess uint64 `json:"appflowtotaltxmessagess,omitempty"`
+	Appflowtotaltxmessagess int `json:"appflowtotaltxmessagess,omitempty"`
 	/**
 	* The total number of AppFlow (IPFIX) messages that the Citrix ADC has transmitted.
 	*/
 	Appflowtxmessagessrate float64 `json:"appflowtxmessagessrate,omitempty"`
-	Appflowtotalignoctets uint64 `json:"appflowtotalignoctets,omitempty"`
+	Appflowtotalignoctets int `json:"appflowtotalignoctets,omitempty"`
 	/**
 	* The total number of octets that the Citrix ADC has ignored for AppFlow (IPFIX).
 	*/
 	Appflowignoctetsrate float64 `json:"appflowignoctetsrate,omitempty"`
-	Appflowtotalignpacketss uint64 `json:"appflowtotalignpacketss,omitempty"`
+	Appflowtotalignpacketss int `json:"appflowtotalignpacketss,omitempty"`
 	/**
 	* The total number of packets that the Citrix ADC has ignored for AppFlow (IPFIX).
 	*/
 	Appflowignpacketssrate float64 `json:"appflowignpacketssrate,omitempty"`
-	Appflowtotalnotxoctets uint64 `json:"appflowtotalnotxoctets,omitempty"`
+	Appflowtotalnotxoctets int `json:"appflowtotalnotxoctets,omitempty"`
 	/**
 	* The total number of AppFlow (IPFIX) octets that the Citrix ADC has not transmitted.
 	*/
 	Appflownotxoctetsrate float64 `json:"appflownotxoctetsrate,omitempty"`
-	Appflowtotalnotxflows uint64 `json:"appflowtotalnotxflows,omitempty"`
+	Appflowtotalnotxflows int `json:"appflowtotalnotxflows,omitempty"`
 	/**
 	* The total number of AppFlow (IPFIX) flows that the Citrix ADC has not transmitted.
 	*/
 	Appflownotxflowsrate float64 `json:"appflownotxflowsrate,omitempty"`
-	Appflowtotalnotxpackets uint64 `json:"appflowtotalnotxpackets,omitempty"`
+	Appflowtotalnotxpackets int `json:"appflowtotalnotxpackets,omitempty"`
 	/**
 	* The total number of AppFlow (IPFIX) packets that the Citrix ADC has not transmitted.
 	*/

@@ -29,48 +29,48 @@ type Sslvserverstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Vslbhealth uint32 `json:"vslbhealth,omitempty"`
+	Vslbhealth int `json:"vslbhealth,omitempty"`
 	Primaryipaddress string `json:"primaryipaddress,omitempty"`
-	Primaryport int32 `json:"primaryport,omitempty"`
+	Primaryport int `json:"primaryport,omitempty"`
 	Type string `json:"type,omitempty"`
 	State string `json:"state,omitempty"`
-	Actsvcs uint64 `json:"actsvcs,omitempty"`
-	Ssltotclientauthsuccess uint32 `json:"ssltotclientauthsuccess,omitempty"`
+	Actsvcs int `json:"actsvcs,omitempty"`
+	Ssltotclientauthsuccess int `json:"ssltotclientauthsuccess,omitempty"`
 	/**
 	* Number of successful client authentication on this vserver
 	*/
 	Sslclientauthsuccessrate float64 `json:"sslclientauthsuccessrate,omitempty"`
-	Ssltotclientauthfailure uint32 `json:"ssltotclientauthfailure,omitempty"`
+	Ssltotclientauthfailure int `json:"ssltotclientauthfailure,omitempty"`
 	/**
 	* Number of failure client authentication on this vserver
 	*/
 	Sslclientauthfailurerate float64 `json:"sslclientauthfailurerate,omitempty"`
-	Sslctxtotencbytes uint32 `json:"sslctxtotencbytes,omitempty"`
+	Sslctxtotencbytes int `json:"sslctxtotencbytes,omitempty"`
 	/**
 	* Number of encrypted bytes per SSL vserver
 	*/
 	Sslctxencbytesrate float64 `json:"sslctxencbytesrate,omitempty"`
-	Sslctxtotdecbytes uint32 `json:"sslctxtotdecbytes,omitempty"`
+	Sslctxtotdecbytes int `json:"sslctxtotdecbytes,omitempty"`
 	/**
 	* Number of decrypted bytes per SSL vserver
 	*/
 	Sslctxdecbytesrate float64 `json:"sslctxdecbytesrate,omitempty"`
-	Sslctxtothwencbytes uint32 `json:"sslctxtothwencbytes,omitempty"`
+	Sslctxtothwencbytes int `json:"sslctxtothwencbytes,omitempty"`
 	/**
 	* Number of hardware encrypted bytes per SSL vserver
 	*/
 	Sslctxhwencbytesrate float64 `json:"sslctxhwencbytesrate,omitempty"`
-	Sslctxtothwdecbytes uint32 `json:"sslctxtothwdec_bytes,omitempty"`
+	Sslctxtothwdecbytes int `json:"sslctxtothwdec_bytes,omitempty"`
 	/**
 	* Number of hw decrypted bytes per SSL vserver
 	*/
 	Sslctxhwdecbytesrate float64 `json:"sslctxhwdec_bytesrate,omitempty"`
-	Sslctxtotsessionnew uint32 `json:"sslctxtotsessionnew,omitempty"`
+	Sslctxtotsessionnew int `json:"sslctxtotsessionnew,omitempty"`
 	/**
 	* Number of new sessions created
 	*/
 	Sslctxsessionnewrate float64 `json:"sslctxsessionnewrate,omitempty"`
-	Sslctxtotsessionhits uint32 `json:"sslctxtotsessionhits,omitempty"`
+	Sslctxtotsessionhits int `json:"sslctxtotsessionhits,omitempty"`
 	/**
 	* Number of session hits
 	*/

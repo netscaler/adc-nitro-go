@@ -30,45 +30,45 @@ type Crvserverstats struct {
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
 	Primaryipaddress string `json:"primaryipaddress,omitempty"`
-	Primaryport int32 `json:"primaryport,omitempty"`
+	Primaryport int `json:"primaryport,omitempty"`
 	Type string `json:"type,omitempty"`
 	State string `json:"state,omitempty"`
-	Tothits uint64 `json:"tothits,omitempty"`
+	Tothits int `json:"tothits,omitempty"`
 	/**
 	* Total vserver hits
 	*/
 	Hitsrate float64 `json:"hitsrate,omitempty"`
-	Totalrequests uint64 `json:"totalrequests,omitempty"`
+	Totalrequests int `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Requestsrate float64 `json:"requestsrate,omitempty"`
-	Totalresponses uint64 `json:"totalresponses,omitempty"`
+	Totalresponses int `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Responsesrate float64 `json:"responsesrate,omitempty"`
-	Totalrequestbytes uint64 `json:"totalrequestbytes,omitempty"`
+	Totalrequestbytes int `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
 	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
-	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
+	Totalresponsebytes int `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
 	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
-	Totalpktsrecvd uint64 `json:"totalpktsrecvd,omitempty"`
+	Totalpktsrecvd int `json:"totalpktsrecvd,omitempty"`
 	/**
 	* Total number of packets received by this service or virtual server.
 	*/
 	Pktsrecvdrate float64 `json:"pktsrecvdrate,omitempty"`
-	Totalpktssent uint64 `json:"totalpktssent,omitempty"`
+	Totalpktssent int `json:"totalpktssent,omitempty"`
 	/**
 	* Total number of packets sent.
 	*/
 	Pktssentrate float64 `json:"pktssentrate,omitempty"`
-	Invalidrequestresponse uint64 `json:"invalidrequestresponse,omitempty"`
-	Invalidrequestresponsedropped uint64 `json:"invalidrequestresponsedropped,omitempty"`
+	Invalidrequestresponse int `json:"invalidrequestresponse,omitempty"`
+	Invalidrequestresponsedropped int `json:"invalidrequestresponsedropped,omitempty"`
 
 }

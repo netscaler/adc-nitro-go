@@ -27,11 +27,11 @@ type Cacheobject struct {
 	/**
 	* ID of the cached object.
 	*/
-	Locator uint64 `json:"locator,omitempty"`
+	Locator int `json:"locator,omitempty"`
 	/**
 	* HTTP status of the object.
 	*/
-	Httpstatus uint32 `json:"httpstatus,omitempty"`
+	Httpstatus int `json:"httpstatus,omitempty"`
 	/**
 	* Host name of the object. Parameter "url" must be specified.
 	*/
@@ -39,7 +39,7 @@ type Cacheobject struct {
 	/**
 	* Host port of the object. You must also set the Host parameter.
 	*/
-	Port int32 `json:"port,omitempty"`
+	Port int `json:"port,omitempty"`
 	/**
 	* Name of the content group to which the object belongs. It will display only the objects belonging to the specified content group. You must also set the Host parameter.
 	*/
@@ -63,7 +63,7 @@ type Cacheobject struct {
 	/**
 	* Unique number that identifies the cluster node.
 	*/
-	Nodeid uint32 `json:"nodeid,omitempty"`
+	Nodeid int `json:"nodeid,omitempty"`
 	/**
 	* Object will be saved onto Secondary.
 	*/

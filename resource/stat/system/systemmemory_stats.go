@@ -26,19 +26,19 @@ type Systemmemorystats struct {
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
 	Cacmemmaxmemlimitpcnt float64 `json:"cacmemmaxmemlimitpcnt,omitempty"`
-	Cacmemmaxmemlimit uint32 `json:"cacmemmaxmemlimit,omitempty"`
-	Shmemerrallocfailed uint64 `json:"shmemerrallocfailed,omitempty"`
+	Cacmemmaxmemlimit int `json:"cacmemmaxmemlimit,omitempty"`
+	Shmemerrallocfailed int `json:"shmemerrallocfailed,omitempty"`
 	Shmemallocpcnt float64 `json:"shmemallocpcnt,omitempty"`
-	Shmemallocinmb uint32 `json:"shmemallocinmb,omitempty"`
-	Shmemtotinmb uint32 `json:"shmemtotinmb,omitempty"`
-	Memtotallocfailed uint64 `json:"memtotallocfailed,omitempty"`
-	Memtotfree uint32 `json:"memtotfree,omitempty"`
+	Shmemallocinmb int `json:"shmemallocinmb,omitempty"`
+	Shmemtotinmb int `json:"shmemtotinmb,omitempty"`
+	Memtotallocfailed int `json:"memtotallocfailed,omitempty"`
+	Memtotfree int `json:"memtotfree,omitempty"`
 	Memusagepcnt float64 `json:"memusagepcnt,omitempty"`
-	Memtotuseinmb uint32 `json:"memtotuseinmb,omitempty"`
+	Memtotuseinmb int `json:"memtotuseinmb,omitempty"`
 	Memtotallocpcnt float64 `json:"memtotallocpcnt,omitempty"`
-	Memtotallocmb uint32 `json:"memtotallocmb,omitempty"`
-	Memtotinmb uint32 `json:"memtotinmb,omitempty"`
-	Memtotavail uint64 `json:"memtotavail,omitempty"`
-	Cacmemmaxsyslimitmb uint32 `json:"cacmemmaxsyslimitmb,omitempty"`
+	Memtotallocmb int `json:"memtotallocmb,omitempty"`
+	Memtotinmb int `json:"memtotinmb,omitempty"`
+	Memtotavail int `json:"memtotavail,omitempty"`
+	Cacmemmaxsyslimitmb int `json:"cacmemmaxsyslimitmb,omitempty"`
 
 }

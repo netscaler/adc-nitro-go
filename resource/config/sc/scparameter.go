@@ -23,7 +23,7 @@ type Scparameter struct {
 	/**
 	* Time, in seconds, between the first time and the next time the SureConnect alternative content window is displayed. The alternative content window is displayed only once during a session for the same browser accessing a configured URL, so this parameter determines the length of a session.
 	*/
-	Sessionlife uint64 `json:"sessionlife,omitempty"`
+	Sessionlife int `json:"sessionlife,omitempty"`
 	/**
 	* File containing the customized response to be displayed when the ACTION in the SureConnect policy is set to NS.
 	*/

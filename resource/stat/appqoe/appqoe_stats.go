@@ -22,127 +22,127 @@ type Appqoestats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Totinmemrsp uint64 `json:"totinmemrsp,omitempty"`
+	Totinmemrsp int `json:"totinmemrsp,omitempty"`
 	/**
 	* Total in-memory responses sent from NS
 	*/
 	Inmemrsprate float64 `json:"inmemrsprate,omitempty"`
-	Totfaultycookies uint64 `json:"totfaultycookies,omitempty"`
+	Totfaultycookies int `json:"totfaultycookies,omitempty"`
 	/**
 	* Total faulty cookies received
 	*/
 	Faultycookiesrate float64 `json:"faultycookiesrate,omitempty"`
-	Totvalidcookies uint64 `json:"totvalidcookies,omitempty"`
+	Totvalidcookies int `json:"totvalidcookies,omitempty"`
 	/**
 	* Total valid cookies received
 	*/
 	Validcookiesrate float64 `json:"validcookiesrate,omitempty"`
-	Tothighprireq uint64 `json:"tothighprireq,omitempty"`
+	Tothighprireq int `json:"tothighprireq,omitempty"`
 	/**
 	* Total Requests served from higher priority queue
 	*/
 	Highprireqrate float64 `json:"highprireqrate,omitempty"`
-	Totmediumprireq uint64 `json:"totmediumprireq,omitempty"`
+	Totmediumprireq int `json:"totmediumprireq,omitempty"`
 	/**
 	* Total Requests served from medium priority queue
 	*/
 	Mediumprireqrate float64 `json:"mediumprireqrate,omitempty"`
-	Totlowprireq uint64 `json:"totlowprireq,omitempty"`
+	Totlowprireq int `json:"totlowprireq,omitempty"`
 	/**
 	* Total Requests served from low priority queue
 	*/
 	Lowprireqrate float64 `json:"lowprireqrate,omitempty"`
-	Totlowestprireq uint64 `json:"totlowestprireq,omitempty"`
+	Totlowestprireq int `json:"totlowestprireq,omitempty"`
 	/**
 	* Total Requests served from surge priority queue
 	*/
 	Lowestprireqrate float64 `json:"lowestprireqrate,omitempty"`
-	Totaltsvrsubfailed uint64 `json:"totaltsvrsubfailed,omitempty"`
+	Totaltsvrsubfailed int `json:"totaltsvrsubfailed,omitempty"`
 	/**
 	* Total number of times alternate server substitution failed
 	*/
 	Tsvrsubfailedrate float64 `json:"tsvrsubfailedrate,omitempty"`
-	Totdostrig uint64 `json:"totdostrig,omitempty"`
+	Totdostrig int `json:"totdostrig,omitempty"`
 	/**
 	* Total number of times HDOS condition triggered
 	*/
 	Dostrigrate float64 `json:"dostrigrate,omitempty"`
-	Totdosqvalidcookies uint64 `json:"totdosqvalidcookies,omitempty"`
+	Totdosqvalidcookies int `json:"totdosqvalidcookies,omitempty"`
 	/**
 	* Total DOSQ valid cookies received
 	*/
 	Dosqvalidcookiesrate float64 `json:"dosqvalidcookiesrate,omitempty"`
-	Totdoshvalidcookies uint64 `json:"totdoshvalidcookies,omitempty"`
+	Totdoshvalidcookies int `json:"totdoshvalidcookies,omitempty"`
 	/**
 	* Total DOSH valid cookies received
 	*/
 	Doshvalidcookiesrate float64 `json:"doshvalidcookiesrate,omitempty"`
-	Totsidvalidcookies uint64 `json:"totsidvalidcookies,omitempty"`
+	Totsidvalidcookies int `json:"totsidvalidcookies,omitempty"`
 	/**
 	* Total SID valid cookies received
 	*/
 	Sidvalidcookiesrate float64 `json:"sidvalidcookiesrate,omitempty"`
-	Totonhvalidcookies uint64 `json:"totonhvalidcookies,omitempty"`
+	Totonhvalidcookies int `json:"totonhvalidcookies,omitempty"`
 	/**
 	* Total ONH valid cookies received
 	*/
 	Onhvalidcookiesrate float64 `json:"onhvalidcookiesrate,omitempty"`
-	Totpriqvalidcookies uint64 `json:"totpriqvalidcookies,omitempty"`
+	Totpriqvalidcookies int `json:"totpriqvalidcookies,omitempty"`
 	/**
 	* Total PRIQ valid cookies received
 	*/
 	Priqvalidcookiesrate float64 `json:"priqvalidcookiesrate,omitempty"`
-	Totdosqfaultycookies uint64 `json:"totdosqfaultycookies,omitempty"`
+	Totdosqfaultycookies int `json:"totdosqfaultycookies,omitempty"`
 	/**
 	* Total DOSQ faulty cookies received
 	*/
 	Dosqfaultycookiesrate float64 `json:"dosqfaultycookiesrate,omitempty"`
-	Totdoshfaultycookies uint64 `json:"totdoshfaultycookies,omitempty"`
+	Totdoshfaultycookies int `json:"totdoshfaultycookies,omitempty"`
 	/**
 	* Total DOSH faulty cookies received
 	*/
 	Doshfaultycookiesrate float64 `json:"doshfaultycookiesrate,omitempty"`
-	Totsidfaultycookies uint64 `json:"totsidfaultycookies,omitempty"`
+	Totsidfaultycookies int `json:"totsidfaultycookies,omitempty"`
 	/**
 	* Total SID faulty cookies received
 	*/
 	Sidfaultycookiesrate float64 `json:"sidfaultycookiesrate,omitempty"`
-	Totonhfaultycookies uint64 `json:"totonhfaultycookies,omitempty"`
+	Totonhfaultycookies int `json:"totonhfaultycookies,omitempty"`
 	/**
 	* Total ONH faulty cookies received
 	*/
 	Onhfaultycookiesrate float64 `json:"onhfaultycookiesrate,omitempty"`
-	Totpriqfaultycookies uint64 `json:"totpriqfaultycookies,omitempty"`
+	Totpriqfaultycookies int `json:"totpriqfaultycookies,omitempty"`
 	/**
 	* Total PRIQ faulty cookies received
 	*/
 	Priqfaultycookiesrate float64 `json:"priqfaultycookiesrate,omitempty"`
-	Totpriembedlinks uint64 `json:"totpriembedlinks,omitempty"`
+	Totpriembedlinks int `json:"totpriembedlinks,omitempty"`
 	/**
 	* Total requests for valid embedded links
 	*/
 	Priembedlinksrate float64 `json:"priembedlinksrate,omitempty"`
-	Totsessreq uint64 `json:"totsessreq,omitempty"`
+	Totsessreq int `json:"totsessreq,omitempty"`
 	/**
 	* Total valid SIDQ requests within session
 	*/
 	Sessreqrate float64 `json:"sessreqrate,omitempty"`
-	Totaltcntreq uint64 `json:"totaltcntreq,omitempty"`
+	Totaltcntreq int `json:"totaltcntreq,omitempty"`
 	/**
 	* Total requests for alternate contents
 	*/
 	Tcntreqrate float64 `json:"tcntreqrate,omitempty"`
-	Totgetinmemrsp uint64 `json:"totgetinmemrsp,omitempty"`
+	Totgetinmemrsp int `json:"totgetinmemrsp,omitempty"`
 	/**
 	* Total in-memory GET responses sent from NS
 	*/
 	Getinmemrsprate float64 `json:"getinmemrsprate,omitempty"`
-	Totpostinmemrsp uint64 `json:"totpostinmemrsp,omitempty"`
+	Totpostinmemrsp int `json:"totpostinmemrsp,omitempty"`
 	/**
 	* Total in-memory POST responses sent from NS
 	*/
 	Postinmemrsprate float64 `json:"postinmemrsprate,omitempty"`
-	Totpostinmemrspbytes uint64 `json:"totpostinmemrspbytes,omitempty"`
+	Totpostinmemrspbytes int `json:"totpostinmemrspbytes,omitempty"`
 	/**
 	* Total in-memory response bytes sent from NS
 	*/

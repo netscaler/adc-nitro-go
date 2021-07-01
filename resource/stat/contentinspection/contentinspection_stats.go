@@ -22,36 +22,36 @@ type Contentinspectionstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Inlinerequestssent uint64 `json:"inlinerequestssent,omitempty"`
-	Inlineresponsessent uint64 `json:"inlineresponsessent,omitempty"`
-	Inlinereqbytessent uint64 `json:"inlinereqbytessent,omitempty"`
-	Inlinereqbytesrecv uint64 `json:"inlinereqbytesrecv,omitempty"`
-	Inlinerespbytessent uint64 `json:"inlinerespbytessent,omitempty"`
-	Inlinerespbytesrecv uint64 `json:"inlinerespbytesrecv,omitempty"`
-	Inlineserverdownreset uint64 `json:"inlineserverdownreset,omitempty"`
-	Inlineserverdowndrop uint64 `json:"inlineserverdowndrop,omitempty"`
-	Inlineserverdownbypass uint64 `json:"inlineserverdownbypass,omitempty"`
-	Inlinegeneratedresponses uint64 `json:"inlinegeneratedresponses,omitempty"`
-	Mirrorrequestssent uint64 `json:"mirrorrequestssent,omitempty"`
-	Mirrorresponsessent uint64 `json:"mirrorresponsessent,omitempty"`
-	Mirrorreqbytessent uint64 `json:"mirrorreqbytessent,omitempty"`
-	Mirrorrespbytessent uint64 `json:"mirrorrespbytessent,omitempty"`
-	Mirrorserverdownreset uint64 `json:"mirrorserverdownreset,omitempty"`
-	Mirrorserverdowndrop uint64 `json:"mirrorserverdowndrop,omitempty"`
-	Mirrorserverdownbypass uint64 `json:"mirrorserverdownbypass,omitempty"`
-	Icapreqmodrequests uint64 `json:"icapreqmodrequests,omitempty"`
-	Icaprespmodrequests uint64 `json:"icaprespmodrequests,omitempty"`
-	Icappreviewenabledrequests uint64 `json:"icappreviewenabledrequests,omitempty"`
-	Icap204enabledrequests uint64 `json:"icap204enabledrequests,omitempty"`
-	Icap100contrecv uint64 `json:"icap100contrecv,omitempty"`
-	Icap204nocontentrecv uint64 `json:"icap204nocontentrecv,omitempty"`
-	Icapadaptiverequests uint64 `json:"icapadaptiverequests,omitempty"`
-	Icapadaptiveresponses uint64 `json:"icapadaptiveresponses,omitempty"`
-	Icapcalloutinitiated uint64 `json:"icapcalloutinitiated,omitempty"`
-	Icapcalloutcompleted uint64 `json:"icapcalloutcompleted,omitempty"`
-	Icaperrorshandled uint64 `json:"icaperrorshandled,omitempty"`
-	Icapserverdownreset uint64 `json:"icapserverdownreset,omitempty"`
-	Icapserverdowndrop uint64 `json:"icapserverdowndrop,omitempty"`
-	Icapserverdownbypass uint64 `json:"icapserverdownbypass,omitempty"`
+	Inlinerequestssent int `json:"inlinerequestssent,omitempty"`
+	Inlineresponsessent int `json:"inlineresponsessent,omitempty"`
+	Inlinereqbytessent int `json:"inlinereqbytessent,omitempty"`
+	Inlinereqbytesrecv int `json:"inlinereqbytesrecv,omitempty"`
+	Inlinerespbytessent int `json:"inlinerespbytessent,omitempty"`
+	Inlinerespbytesrecv int `json:"inlinerespbytesrecv,omitempty"`
+	Inlineserverdownreset int `json:"inlineserverdownreset,omitempty"`
+	Inlineserverdowndrop int `json:"inlineserverdowndrop,omitempty"`
+	Inlineserverdownbypass int `json:"inlineserverdownbypass,omitempty"`
+	Inlinegeneratedresponses int `json:"inlinegeneratedresponses,omitempty"`
+	Mirrorrequestssent int `json:"mirrorrequestssent,omitempty"`
+	Mirrorresponsessent int `json:"mirrorresponsessent,omitempty"`
+	Mirrorreqbytessent int `json:"mirrorreqbytessent,omitempty"`
+	Mirrorrespbytessent int `json:"mirrorrespbytessent,omitempty"`
+	Mirrorserverdownreset int `json:"mirrorserverdownreset,omitempty"`
+	Mirrorserverdowndrop int `json:"mirrorserverdowndrop,omitempty"`
+	Mirrorserverdownbypass int `json:"mirrorserverdownbypass,omitempty"`
+	Icapreqmodrequests int `json:"icapreqmodrequests,omitempty"`
+	Icaprespmodrequests int `json:"icaprespmodrequests,omitempty"`
+	Icappreviewenabledrequests int `json:"icappreviewenabledrequests,omitempty"`
+	Icap204enabledrequests int `json:"icap204enabledrequests,omitempty"`
+	Icap100contrecv int `json:"icap100contrecv,omitempty"`
+	Icap204nocontentrecv int `json:"icap204nocontentrecv,omitempty"`
+	Icapadaptiverequests int `json:"icapadaptiverequests,omitempty"`
+	Icapadaptiveresponses int `json:"icapadaptiveresponses,omitempty"`
+	Icapcalloutinitiated int `json:"icapcalloutinitiated,omitempty"`
+	Icapcalloutcompleted int `json:"icapcalloutcompleted,omitempty"`
+	Icaperrorshandled int `json:"icaperrorshandled,omitempty"`
+	Icapserverdownreset int `json:"icapserverdownreset,omitempty"`
+	Icapserverdowndrop int `json:"icapserverdowndrop,omitempty"`
+	Icapserverdownbypass int `json:"icapserverdownbypass,omitempty"`
 
 }
