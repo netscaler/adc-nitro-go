@@ -26,8 +26,8 @@ type Nsparam struct {
 	Httpport []int `json:"httpport,omitempty"`
 	/**
 	* Maximum number of connections that will be made from the appliance to the web server(s) attached to it. The value entered here is applied globally to all attached servers.
-	*/
-	Maxconn int `json:"maxconn,omitempty"`
+	 */
+	Maxconn int `json:"maxconn"` // Zero is a valid value
 	/**
 	* Maximum number of requests that the system can pass on a particular connection between the appliance and a server attached to it. Setting this value to 0 allows an unlimited number of requests to be passed. This value is overridden by the maximum number of requests configured on the individual service.
 	*/
