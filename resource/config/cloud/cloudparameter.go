@@ -27,7 +27,7 @@ type Cloudparameter struct {
 	/**
 	* Port number of the controller to which the Citrix ADC SDProxy connects
 	*/
-	Controllerport int32 `json:"controllerport,omitempty"`
+	Controllerport int `json:"controllerport,omitempty"`
 	/**
 	* Instance ID of the customer provided by Trust
 	*/

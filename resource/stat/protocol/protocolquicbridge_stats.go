@@ -25,32 +25,32 @@ type Protocolquicbridgestats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Quicbridgeconn uint64 `json:"quicbridgeconn,omitempty"`
+	Quicbridgeconn int `json:"quicbridgeconn,omitempty"`
 	/**
 	* Total number of QUIC Bridge connections
 	*/
 	Quicbridgeconnrate float64 `json:"quicbridgeconnrate,omitempty"`
-	Quicbridgemigratedconn uint64 `json:"quicbridgemigratedconn,omitempty"`
+	Quicbridgemigratedconn int `json:"quicbridgemigratedconn,omitempty"`
 	/**
 	* Total number of migrated QUIC Bridge connections
 	*/
 	Quicbridgemigratedconnrate float64 `json:"quicbridgemigratedconnrate,omitempty"`
-	Quicbridgeqci uint64 `json:"quicbridgeqci,omitempty"`
+	Quicbridgeqci int `json:"quicbridgeqci,omitempty"`
 	/**
 	* Current number of QUIC Bridge connection infos
 	*/
 	Quicbridgeqcirate float64 `json:"quicbridgeqcirate,omitempty"`
-	Quicbridgeqpi uint64 `json:"quicbridgeqpi,omitempty"`
+	Quicbridgeqpi int `json:"quicbridgeqpi,omitempty"`
 	/**
 	* Current number of QUIC Bridge peer infos
 	*/
 	Quicbridgeqpirate float64 `json:"quicbridgeqpirate,omitempty"`
-	Quicbridgeqpialcfail uint64 `json:"quicbridgeqpialcfail,omitempty"`
+	Quicbridgeqpialcfail int `json:"quicbridgeqpialcfail,omitempty"`
 	/**
 	* Number of QUIC Bridge peer info allocation failures
 	*/
 	Quicbridgeqpialcfailrate float64 `json:"quicbridgeqpialcfailrate,omitempty"`
-	Quicbridgeqcialcfail uint64 `json:"quicbridgeqcialcfail,omitempty"`
+	Quicbridgeqcialcfail int `json:"quicbridgeqcialcfail,omitempty"`
 	/**
 	* Number of QUIC Bridge connection info allocation failures
 	*/

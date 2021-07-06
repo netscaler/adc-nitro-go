@@ -31,11 +31,11 @@ type Lsnsipalgcalldatachannelbinding struct {
 	/**
 	* port for the channel.
 	*/
-	Channelport int32 `json:"channelport,omitempty"`
+	Channelport int `json:"channelport,omitempty"`
 	/**
 	* Natted port for the channel.
 	*/
-	Channelnatport int32 `json:"channelnatport,omitempty"`
+	Channelnatport int `json:"channelnatport,omitempty"`
 	/**
 	* Channel transport protocol.
 	*/
@@ -43,11 +43,11 @@ type Lsnsipalgcalldatachannelbinding struct {
 	/**
 	* Flags for the call entry.
 	*/
-	Channelflags uint32 `json:"channelflags,omitempty"`
+	Channelflags int `json:"channelflags,omitempty"`
 	/**
 	* Timeout for the channel.
 	*/
-	Channeltimeout uint32 `json:"channeltimeout,omitempty"`
+	Channeltimeout int `json:"channeltimeout,omitempty"`
 	/**
 	* Call ID for the SIP call.
 	*/

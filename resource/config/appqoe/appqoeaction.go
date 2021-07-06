@@ -51,19 +51,19 @@ type Appqoeaction struct {
 	/**
 	* Policy queue depth threshold value. When the policy queue size (number of requests queued for the policy binding this action is attached to) increases to the specified polqDepth value, subsequent requests are dropped to the lowest priority level.
 	*/
-	Polqdepth uint32 `json:"polqdepth,omitempty"`
+	Polqdepth int `json:"polqdepth,omitempty"`
 	/**
 	* Queue depth threshold value per priorirty level. If the queue size (number of requests in the queue of that particular priorirty) on the virtual server to which this policy is bound, increases to the specified qDepth value, subsequent requests are dropped to the lowest priority level.
 	*/
-	Priqdepth uint32 `json:"priqdepth,omitempty"`
+	Priqdepth int `json:"priqdepth,omitempty"`
 	/**
 	* Maximum number of concurrent connections that can be open for requests that matches with rule.
 	*/
-	Maxconn uint32 `json:"maxconn,omitempty"`
+	Maxconn int `json:"maxconn,omitempty"`
 	/**
 	* Delay threshold, in microseconds, for requests that match the policy's rule. If the delay statistics gathered for the matching request exceed the specified delay, configured action triggered for that request, if there is no action then requests are dropped to the lowest priority level
 	*/
-	Delay uint32 `json:"delay,omitempty"`
+	Delay int `json:"delay,omitempty"`
 	/**
 	* Optional expression to add second level check to trigger DoS actions. Specifically used for Analytics based DoS response generation
 	*/
@@ -83,11 +83,11 @@ type Appqoeaction struct {
 	/**
 	* Retry on request Timeout(in millisec) upon sending request to backend servers
 	*/
-	Retryontimeout uint32 `json:"retryontimeout,omitempty"`
+	Retryontimeout int `json:"retryontimeout,omitempty"`
 	/**
 	* Retry count
 	*/
-	Numretries uint32 `json:"numretries,omitempty"`
+	Numretries int `json:"numretries,omitempty"`
 
 	//------- Read only Parameter ---------;
 

@@ -24,22 +24,22 @@ type Nstrafficdomainstats struct {
 	/**
 	* An integer specifying the Traffic Domain ID. Possible values: 1 through 4094.
 	*/
-	Td uint32 `json:"td,omitempty"`
+	Td int `json:"td,omitempty"`
 	/**
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Nstdtotrxpkts uint64 `json:"nstdtotrxpkts,omitempty"`
+	Nstdtotrxpkts int `json:"nstdtotrxpkts,omitempty"`
 	/**
 	* Packets received on this TD.
 	*/
 	Nstdrxpktsrate float64 `json:"nstdrxpktsrate,omitempty"`
-	Nstdtottxpkts uint64 `json:"nstdtottxpkts,omitempty"`
+	Nstdtottxpkts int `json:"nstdtottxpkts,omitempty"`
 	/**
 	* Packets transmitted from this TD.
 	*/
 	Nstdtxpktsrate float64 `json:"nstdtxpktsrate,omitempty"`
-	Nstdtotdroppedpkts uint64 `json:"nstdtotdroppedpkts,omitempty"`
+	Nstdtotdroppedpkts int `json:"nstdtotdroppedpkts,omitempty"`
 	/**
 	* Inbound packets dropped on this TD by reception.
 	*/

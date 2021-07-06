@@ -40,6 +40,6 @@ type Authenticationauthnprofile struct {
 	/**
 	* Authentication weight or level of the vserver to which this will bound. This is used to order TM vservers based on the protection required. A session that is created by authenticating against TM vserver at given level cannot be used to access TM vserver at a higher level.
 	*/
-	Authenticationlevel uint32 `json:"authenticationlevel,omitempty"`
+	Authenticationlevel int `json:"authenticationlevel,omitempty"`
 
 }

@@ -25,28 +25,28 @@ type Nssimpleacl6stats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Sacl6tothits uint64 `json:"sacl6tothits,omitempty"`
+	Sacl6tothits int `json:"sacl6tothits,omitempty"`
 	/**
 	* Packets matching a SimpleACL6.
 	*/
 	Sacl6hitsrate float64 `json:"sacl6hitsrate,omitempty"`
-	Sacl6totmisses uint64 `json:"sacl6totmisses,omitempty"`
+	Sacl6totmisses int `json:"sacl6totmisses,omitempty"`
 	/**
 	* Packets not matching any SimpleACL6.
 	*/
 	Sacl6missesrate float64 `json:"sacl6missesrate,omitempty"`
-	Sacl6scount uint64 `json:"sacl6scount,omitempty"`
-	Sacl6totpktsallowed uint64 `json:"sacl6totpktsallowed,omitempty"`
+	Sacl6scount int `json:"sacl6scount,omitempty"`
+	Sacl6totpktsallowed int `json:"sacl6totpktsallowed,omitempty"`
 	/**
 	* Total packets that matched a SimpleACL6 with action ALLOW and got consumed by Citrix ADC.
 	*/
 	Sacl6pktsallowedrate float64 `json:"sacl6pktsallowedrate,omitempty"`
-	Sacl6totpktsbridged uint64 `json:"sacl6totpktsbridged,omitempty"`
+	Sacl6totpktsbridged int `json:"sacl6totpktsbridged,omitempty"`
 	/**
 	* Total packets that matched a SimpleACL6 with action BRIDGE and got bridged by Citrix ADC.
 	*/
 	Sacl6pktsbridgedrate float64 `json:"sacl6pktsbridgedrate,omitempty"`
-	Sacl6totpktsdenied uint64 `json:"sacl6totpktsdenied,omitempty"`
+	Sacl6totpktsdenied int `json:"sacl6totpktsdenied,omitempty"`
 	/**
 	* Packets dropped because they match SimpleACL6 with processing mode set to DENY.
 	*/

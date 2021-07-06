@@ -35,6 +35,6 @@ type Lsnappsattributes struct {
 	/**
 	* Timeout, in seconds, for an idle LSN session. If an LSN session is idle for a time that exceeds this value, the Citrix ADC removes the session.This timeout does not apply for a TCP LSN session when a FIN or RST message is received from either of the endpoints.
 	*/
-	Sessiontimeout uint64 `json:"sessiontimeout,omitempty"`
+	Sessiontimeout int `json:"sessiontimeout,omitempty"`
 
 }

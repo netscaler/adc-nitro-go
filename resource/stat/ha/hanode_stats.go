@@ -29,17 +29,17 @@ type Hanodestats struct {
 	Hacurstate string `json:"hacurstate,omitempty"`
 	Hacurmasterstate string `json:"hacurmasterstate,omitempty"`
 	Transtime string `json:"transtime,omitempty"`
-	Hatotpktrx uint64 `json:"hatotpktrx,omitempty"`
+	Hatotpktrx int `json:"hatotpktrx,omitempty"`
 	/**
 	* Number of heartbeat packets received from the peer node. Heartbeats are sent at regular intervals (default is 200 milliseconds) to determine the state of the peer node.
 	*/
 	Hapktrxrate float64 `json:"hapktrxrate,omitempty"`
-	Hatotpkttx uint64 `json:"hatotpkttx,omitempty"`
+	Hatotpkttx int `json:"hatotpkttx,omitempty"`
 	/**
 	* Number of heartbeat packets sent to the peer node. Heartbeats are sent at regular intervals (default is 200 milliseconds) to determine the state of the peer node.
 	*/
 	Hapkttxrate float64 `json:"hapkttxrate,omitempty"`
-	Haerrproptimeout uint64 `json:"haerrproptimeout,omitempty"`
-	Haerrsyncfailure uint64 `json:"haerrsyncfailure,omitempty"`
+	Haerrproptimeout int `json:"haerrproptimeout,omitempty"`
+	Haerrsyncfailure int `json:"haerrsyncfailure,omitempty"`
 
 }

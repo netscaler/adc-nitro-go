@@ -31,6 +31,6 @@ type Nsmemorystats struct {
 	Clearstats string `json:"clearstats,omitempty"`
 	Allocf float64 `json:"allocf,omitempty"`
 	Memcurallocper float64 `json:"memcurallocper,omitempty"`
-	Memcurinkb uint32 `json:"memcurinkb,omitempty"`
+	Memcurinkb int `json:"memcurinkb,omitempty"`
 
 }

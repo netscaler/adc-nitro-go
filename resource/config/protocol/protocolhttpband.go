@@ -26,14 +26,14 @@ type Protocolhttpband struct {
 		100 - 199 bytes
 		200 - 299 bytes and so on.
 	*/
-	Reqbandsize int32 `json:"reqbandsize,omitempty"`
+	Reqbandsize int `json:"reqbandsize,omitempty"`
 	/**
 	* Band size, in bytes, for HTTP response band statistics. For example, if you specify a band size of 100 bytes, statistics will be maintained and displayed for the following size ranges:
 		0 - 99 bytes
 		100 - 199 bytes
 		200 - 299 bytes and so on.
 	*/
-	Respbandsize int32 `json:"respbandsize,omitempty"`
+	Respbandsize int `json:"respbandsize,omitempty"`
 	/**
 	* Type of statistics to display.
 	*/
@@ -41,7 +41,7 @@ type Protocolhttpband struct {
 	/**
 	* Unique number that identifies the cluster node.
 	*/
-	Nodeid uint32 `json:"nodeid,omitempty"`
+	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 

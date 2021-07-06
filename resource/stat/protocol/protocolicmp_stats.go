@@ -25,59 +25,59 @@ type Protocolicmpstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Icmptotrxpkts uint64 `json:"icmptotrxpkts,omitempty"`
+	Icmptotrxpkts int `json:"icmptotrxpkts,omitempty"`
 	/**
 	* ICMP packets received.
 	*/
 	Icmprxpktsrate float64 `json:"icmprxpktsrate,omitempty"`
-	Icmptotrxbytes uint64 `json:"icmptotrxbytes,omitempty"`
+	Icmptotrxbytes int `json:"icmptotrxbytes,omitempty"`
 	/**
 	* Bytes of ICMP data received.
 	*/
 	Icmprxbytesrate float64 `json:"icmprxbytesrate,omitempty"`
-	Icmptottxpkts uint64 `json:"icmptottxpkts,omitempty"`
+	Icmptottxpkts int `json:"icmptottxpkts,omitempty"`
 	/**
 	* ICMP packets transmitted.
 	*/
 	Icmptxpktsrate float64 `json:"icmptxpktsrate,omitempty"`
-	Icmptottxbytes uint64 `json:"icmptottxbytes,omitempty"`
+	Icmptottxbytes int `json:"icmptottxbytes,omitempty"`
 	/**
 	* Bytes of ICMP data transmitted.
 	*/
 	Icmptxbytesrate float64 `json:"icmptxbytesrate,omitempty"`
-	Icmptotrxechoreply uint64 `json:"icmptotrxechoreply,omitempty"`
+	Icmptotrxechoreply int `json:"icmptotrxechoreply,omitempty"`
 	/**
 	* ICMP Ping echo replies received.
 	*/
 	Icmprxechoreplyrate float64 `json:"icmprxechoreplyrate,omitempty"`
-	Icmptottxechoreply uint64 `json:"icmptottxechoreply,omitempty"`
+	Icmptottxechoreply int `json:"icmptottxechoreply,omitempty"`
 	/**
 	* ICMP Ping echo replies transmitted.
 	*/
 	Icmptxechoreplyrate float64 `json:"icmptxechoreplyrate,omitempty"`
-	Icmptotrxecho uint64 `json:"icmptotrxecho,omitempty"`
+	Icmptotrxecho int `json:"icmptotrxecho,omitempty"`
 	/**
 	* ICMP Ping Echo Request and Echo Reply packets received.
 	*/
 	Icmprxechorate float64 `json:"icmprxechorate,omitempty"`
-	Icmptotdstiplookup uint64 `json:"icmptotdstiplookup,omitempty"`
-	Icmpcurratethreshold uint32 `json:"icmpcurratethreshold,omitempty"`
-	Icmptotportunreachablerx uint64 `json:"icmptotportunreachablerx,omitempty"`
-	Icmptotportunreachabletx uint64 `json:"icmptotportunreachabletx,omitempty"`
-	Icmptotneedfragrx uint64 `json:"icmptotneedfragrx,omitempty"`
-	Icmptotthresholdexceeds uint64 `json:"icmptotthresholdexceeds,omitempty"`
-	Icmptotpktsdropped uint64 `json:"icmptotpktsdropped,omitempty"`
-	Icmptotbadchecksum uint64 `json:"icmptotbadchecksum,omitempty"`
-	Icmptotnonfirstipfrag uint64 `json:"icmptotnonfirstipfrag,omitempty"`
-	Icmptotinvalidbodylen uint64 `json:"icmptotinvalidbodylen,omitempty"`
-	Icmptotnotcpconn uint64 `json:"icmptotnotcpconn,omitempty"`
-	Icmptotnoudpconn uint64 `json:"icmptotnoudpconn,omitempty"`
-	Icmptotinvalidtcpseqno uint64 `json:"icmptotinvalidtcpseqno,omitempty"`
-	Icmptotinvalidnextmtuval uint64 `json:"icmptotinvalidnextmtuval,omitempty"`
-	Icmptotbignextmtu uint64 `json:"icmptotbignextmtu,omitempty"`
-	Icmptotinvalidprotocol uint64 `json:"icmptotinvalidprotocol,omitempty"`
-	Icmptotbadpmtuipchecksum uint64 `json:"icmptotbadpmtuipchecksum,omitempty"`
-	Icmptotpmtunolink uint64 `json:"icmptotpmtunolink,omitempty"`
-	Icmptotpmtudiscoverydisabled uint64 `json:"icmptotpmtudiscoverydisabled,omitempty"`
+	Icmptotdstiplookup int `json:"icmptotdstiplookup,omitempty"`
+	Icmpcurratethreshold int `json:"icmpcurratethreshold,omitempty"`
+	Icmptotportunreachablerx int `json:"icmptotportunreachablerx,omitempty"`
+	Icmptotportunreachabletx int `json:"icmptotportunreachabletx,omitempty"`
+	Icmptotneedfragrx int `json:"icmptotneedfragrx,omitempty"`
+	Icmptotthresholdexceeds int `json:"icmptotthresholdexceeds,omitempty"`
+	Icmptotpktsdropped int `json:"icmptotpktsdropped,omitempty"`
+	Icmptotbadchecksum int `json:"icmptotbadchecksum,omitempty"`
+	Icmptotnonfirstipfrag int `json:"icmptotnonfirstipfrag,omitempty"`
+	Icmptotinvalidbodylen int `json:"icmptotinvalidbodylen,omitempty"`
+	Icmptotnotcpconn int `json:"icmptotnotcpconn,omitempty"`
+	Icmptotnoudpconn int `json:"icmptotnoudpconn,omitempty"`
+	Icmptotinvalidtcpseqno int `json:"icmptotinvalidtcpseqno,omitempty"`
+	Icmptotinvalidnextmtuval int `json:"icmptotinvalidnextmtuval,omitempty"`
+	Icmptotbignextmtu int `json:"icmptotbignextmtu,omitempty"`
+	Icmptotinvalidprotocol int `json:"icmptotinvalidprotocol,omitempty"`
+	Icmptotbadpmtuipchecksum int `json:"icmptotbadpmtuipchecksum,omitempty"`
+	Icmptotpmtunolink int `json:"icmptotpmtunolink,omitempty"`
+	Icmptotpmtudiscoverydisabled int `json:"icmptotpmtudiscoverydisabled,omitempty"`
 
 }

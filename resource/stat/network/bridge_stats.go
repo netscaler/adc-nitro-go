@@ -25,27 +25,27 @@ type Bridgestats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Tcptotbdgmacmoved uint64 `json:"tcptotbdgmacmoved,omitempty"`
+	Tcptotbdgmacmoved int `json:"tcptotbdgmacmoved,omitempty"`
 	/**
 	* The number of times bridging registered MAC moved
 	*/
 	Tcpbdgmacmovedrate float64 `json:"tcpbdgmacmovedrate,omitempty"`
-	Tcptotbdgcollisions uint64 `json:"tcptotbdgcollisions,omitempty"`
+	Tcptotbdgcollisions int `json:"tcptotbdgcollisions,omitempty"`
 	/**
 	* The number of bridging table collisions
 	*/
 	Tcpbdgcollisionsrate float64 `json:"tcpbdgcollisionsrate,omitempty"`
-	Tcperrbdgmuted uint64 `json:"tcperrbdgmuted,omitempty"`
+	Tcperrbdgmuted int `json:"tcperrbdgmuted,omitempty"`
 	/**
 	* The number of bridging related interface mutes
 	*/
 	Tcperrbdgmutedrate float64 `json:"tcperrbdgmutedrate,omitempty"`
-	Totbdgpkts uint64 `json:"totbdgpkts,omitempty"`
+	Totbdgpkts int `json:"totbdgpkts,omitempty"`
 	/**
 	* The total number of bridged packets
 	*/
 	Bdgpktsrate float64 `json:"bdgpktsrate,omitempty"`
-	Totbdgmbits uint64 `json:"totbdgmbits,omitempty"`
+	Totbdgmbits int `json:"totbdgmbits,omitempty"`
 	/**
 	* The total number of bridged Mbits
 	*/

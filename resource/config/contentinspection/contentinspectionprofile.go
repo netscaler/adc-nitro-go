@@ -38,7 +38,7 @@ type Contentinspectionprofile struct {
 	/**
 	* Ingress Vlan for CI
 	*/
-	Ingressvlan uint32 `json:"ingressvlan,omitempty"`
+	Ingressvlan int `json:"ingressvlan,omitempty"`
 	/**
 	* Egress interface for CI profile.It is a mandatory argument while creating an ContentInspection profile of type INLINEINSPECTION or MIRROR.
 	*/
@@ -50,6 +50,6 @@ type Contentinspectionprofile struct {
 	/**
 	* Egress Vlan for CI
 	*/
-	Egressvlan uint32 `json:"egressvlan,omitempty"`
+	Egressvlan int `json:"egressvlan,omitempty"`
 
 }

@@ -37,96 +37,96 @@ type Lbvserverstats struct {
 	* use this argument to specify sort order
 	*/
 	Sortorder string `json:"sortorder,omitempty"`
-	Avgcltttlb uint32 `json:"avgcltttlb,omitempty"`
+	Avgcltttlb int `json:"avgcltttlb,omitempty"`
 	Cltresponsetimeapdex float64 `json:"cltresponsetimeapdex,omitempty"`
-	Vsvrsurgecount uint32 `json:"vsvrsurgecount,omitempty"`
-	Establishedconn uint32 `json:"establishedconn,omitempty"`
-	Inactsvcs uint64 `json:"inactsvcs,omitempty"`
-	Vslbhealth uint32 `json:"vslbhealth,omitempty"`
+	Vsvrsurgecount int `json:"vsvrsurgecount,omitempty"`
+	Establishedconn int `json:"establishedconn,omitempty"`
+	Inactsvcs int `json:"inactsvcs,omitempty"`
+	Vslbhealth int `json:"vslbhealth,omitempty"`
 	Primaryipaddress string `json:"primaryipaddress,omitempty"`
-	Primaryport int32 `json:"primaryport,omitempty"`
+	Primaryport int `json:"primaryport,omitempty"`
 	Type string `json:"type,omitempty"`
 	State string `json:"state,omitempty"`
-	Actsvcs uint64 `json:"actsvcs,omitempty"`
-	Cpuusagepm uint64 `json:"cpuusagepm,omitempty"`
-	Tothits uint64 `json:"tothits,omitempty"`
+	Actsvcs int `json:"actsvcs,omitempty"`
+	Cpuusagepm int `json:"cpuusagepm,omitempty"`
+	Tothits int `json:"tothits,omitempty"`
 	/**
 	* Total vserver hits
 	*/
 	Hitsrate float64 `json:"hitsrate,omitempty"`
-	Totalrequests uint64 `json:"totalrequests,omitempty"`
+	Totalrequests int `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Requestsrate float64 `json:"requestsrate,omitempty"`
-	Totalresponses uint64 `json:"totalresponses,omitempty"`
+	Totalresponses int `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Responsesrate float64 `json:"responsesrate,omitempty"`
-	Totalrequestbytes uint64 `json:"totalrequestbytes,omitempty"`
+	Totalrequestbytes int `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
 	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
-	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
+	Totalresponsebytes int `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
 	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
-	Totalh2requests uint64 `json:"totalh2requests,omitempty"`
+	Totalh2requests int `json:"totalh2requests,omitempty"`
 	/**
 	* Total number of Http2 requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	H2requestsrate float64 `json:"h2requestsrate,omitempty"`
-	Totalh2responses uint64 `json:"totalh2responses,omitempty"`
+	Totalh2responses int `json:"totalh2responses,omitempty"`
 	/**
 	* Number of Http2 responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	H2responsesrate float64 `json:"h2responsesrate,omitempty"`
-	Totalpktsrecvd uint64 `json:"totalpktsrecvd,omitempty"`
+	Totalpktsrecvd int `json:"totalpktsrecvd,omitempty"`
 	/**
 	* Total number of packets received by this service or virtual server.
 	*/
 	Pktsrecvdrate float64 `json:"pktsrecvdrate,omitempty"`
-	Totalpktssent uint64 `json:"totalpktssent,omitempty"`
+	Totalpktssent int `json:"totalpktssent,omitempty"`
 	/**
 	* Total number of packets sent.
 	*/
 	Pktssentrate float64 `json:"pktssentrate,omitempty"`
-	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
-	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
-	Curpersistencesessions uint64 `json:"curpersistencesessions,omitempty"`
-	Curbackuppersistencesessions uint64 `json:"curbackuppersistencesessions,omitempty"`
-	Surgecount uint32 `json:"surgecount,omitempty"`
-	Svcsurgecount uint32 `json:"svcsurgecount,omitempty"`
-	Sothreshold uint32 `json:"sothreshold,omitempty"`
-	Totspillovers uint32 `json:"totspillovers,omitempty"`
-	Labelledconn uint32 `json:"labelledconn,omitempty"`
-	Pushlabel uint32 `json:"pushlabel,omitempty"`
-	Deferredreq uint64 `json:"deferredreq,omitempty"`
+	Curclntconnections int `json:"curclntconnections,omitempty"`
+	Cursrvrconnections int `json:"cursrvrconnections,omitempty"`
+	Curpersistencesessions int `json:"curpersistencesessions,omitempty"`
+	Curbackuppersistencesessions int `json:"curbackuppersistencesessions,omitempty"`
+	Surgecount int `json:"surgecount,omitempty"`
+	Svcsurgecount int `json:"svcsurgecount,omitempty"`
+	Sothreshold int `json:"sothreshold,omitempty"`
+	Totspillovers int `json:"totspillovers,omitempty"`
+	Labelledconn int `json:"labelledconn,omitempty"`
+	Pushlabel int `json:"pushlabel,omitempty"`
+	Deferredreq int `json:"deferredreq,omitempty"`
 	/**
 	* Number of deferred request on this vserver
 	*/
 	Deferredreqrate float64 `json:"deferredreqrate,omitempty"`
-	Invalidrequestresponse uint64 `json:"invalidrequestresponse,omitempty"`
-	Invalidrequestresponsedropped uint64 `json:"invalidrequestresponsedropped,omitempty"`
-	Totvserverdownbackuphits uint32 `json:"totvserverdownbackuphits,omitempty"`
-	Curmptcpsessions uint32 `json:"curmptcpsessions,omitempty"`
-	Cursubflowconn uint32 `json:"cursubflowconn,omitempty"`
-	Totalconnreassemblyqueue75 uint64 `json:"totalconnreassemblyqueue75,omitempty"`
-	Totalconnreassemblyqueueflush uint64 `json:"totalconnreassemblyqueueflush,omitempty"`
-	Totalsvrbusyerr uint64 `json:"totalsvrbusyerr,omitempty"`
+	Invalidrequestresponse int `json:"invalidrequestresponse,omitempty"`
+	Invalidrequestresponsedropped int `json:"invalidrequestresponsedropped,omitempty"`
+	Totvserverdownbackuphits int `json:"totvserverdownbackuphits,omitempty"`
+	Curmptcpsessions int `json:"curmptcpsessions,omitempty"`
+	Cursubflowconn int `json:"cursubflowconn,omitempty"`
+	Totalconnreassemblyqueue75 int `json:"totalconnreassemblyqueue75,omitempty"`
+	Totalconnreassemblyqueueflush int `json:"totalconnreassemblyqueueflush,omitempty"`
+	Totalsvrbusyerr int `json:"totalsvrbusyerr,omitempty"`
 	/**
 	* Total no of server busy error
 	*/
 	Svrbusyerrrate float64 `json:"svrbusyerrrate,omitempty"`
-	Reqretrycount uint64 `json:"reqretrycount,omitempty"`
-	Reqretrycountexceeded uint64 `json:"reqretrycountexceeded,omitempty"`
-	Httpmaxhdrszpkts uint64 `json:"httpmaxhdrszpkts,omitempty"`
-	Tcpmaxooopkts uint64 `json:"tcpmaxooopkts,omitempty"`
-	Totcltttlbtransactions uint64 `json:"totcltttlbtransactions,omitempty"`
-	Toleratingttlbtransactions uint32 `json:"toleratingttlbtransactions,omitempty"`
-	Frustratingttlbtransactions uint32 `json:"frustratingttlbtransactions,omitempty"`
+	Reqretrycount int `json:"reqretrycount,omitempty"`
+	Reqretrycountexceeded int `json:"reqretrycountexceeded,omitempty"`
+	Httpmaxhdrszpkts int `json:"httpmaxhdrszpkts,omitempty"`
+	Tcpmaxooopkts int `json:"tcpmaxooopkts,omitempty"`
+	Totcltttlbtransactions int `json:"totcltttlbtransactions,omitempty"`
+	Toleratingttlbtransactions int `json:"toleratingttlbtransactions,omitempty"`
+	Frustratingttlbtransactions int `json:"frustratingttlbtransactions,omitempty"`
 
 }

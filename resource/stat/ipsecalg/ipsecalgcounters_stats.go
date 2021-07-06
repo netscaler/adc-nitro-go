@@ -29,32 +29,32 @@ type Ipsecalgcountersstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Ipsecalgtotsessions uint64 `json:"ipsecalgtotsessions,omitempty"`
+	Ipsecalgtotsessions int `json:"ipsecalgtotsessions,omitempty"`
 	/**
 	* Total session for IPSec ALG.
 	*/
 	Ipsecalgsessionsrate float64 `json:"ipsecalgsessionsrate,omitempty"`
-	Ipsecalgtotdrsessions uint64 `json:"ipsecalgtotdrsessions,omitempty"`
+	Ipsecalgtotdrsessions int `json:"ipsecalgtotdrsessions,omitempty"`
 	/**
 	* Total Dropped IPsec ALG sessions.
 	*/
 	Ipsecalgdrsessionsrate float64 `json:"ipsecalgdrsessionsrate,omitempty"`
-	Ipsecalgcuractsessions uint64 `json:"ipsecalgcuractsessions,omitempty"`
+	Ipsecalgcuractsessions int `json:"ipsecalgcuractsessions,omitempty"`
 	/**
 	* Currently active IPsec ALG sessions.
 	*/
 	Ipsecalgcuractsessionsrate float64 `json:"ipsecalgcuractsessionsrate,omitempty"`
-	Ipsecalgcurblksessions uint64 `json:"ipsecalgcurblksessions,omitempty"`
+	Ipsecalgcurblksessions int `json:"ipsecalgcurblksessions,omitempty"`
 	/**
 	* Currently blocked sessions on ESP Gate.
 	*/
 	Ipsecalgcurblksessionsrate float64 `json:"ipsecalgcurblksessionsrate,omitempty"`
-	Ipsecalgtotrxpkts uint64 `json:"ipsecalgtotrxpkts,omitempty"`
+	Ipsecalgtotrxpkts int `json:"ipsecalgtotrxpkts,omitempty"`
 	/**
 	* Total Packets received during IPsec ALG sessions.
 	*/
 	Ipsecalgrxpktsrate float64 `json:"ipsecalgrxpktsrate,omitempty"`
-	Ipsecalgtottxpkts uint64 `json:"ipsecalgtottxpkts,omitempty"`
+	Ipsecalgtottxpkts int `json:"ipsecalgtottxpkts,omitempty"`
 	/**
 	* Total Packets sent during IPsec ALG sessions.
 	*/

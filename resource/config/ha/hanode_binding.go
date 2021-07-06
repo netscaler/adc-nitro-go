@@ -23,7 +23,7 @@ type Hanodebinding struct {
 	/**
 	* ID of the node whose HA settings you want to display. (The ID of the local node is always 0.).<br/>Minimum value =  0<br/>Maximum value =  64
 	*/
-	Id uint32 `json:"id,omitempty"`
+	Id int `json:"id,omitempty"`
 
 
 }

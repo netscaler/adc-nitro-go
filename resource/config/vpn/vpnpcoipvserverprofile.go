@@ -31,6 +31,6 @@ type Vpnpcoipvserverprofile struct {
 	/**
 	* UDP port for PCoIP data traffic
 	*/
-	Udpport int32 `json:"udpport,omitempty"`
+	Udpport int `json:"udpport,omitempty"`
 
 }

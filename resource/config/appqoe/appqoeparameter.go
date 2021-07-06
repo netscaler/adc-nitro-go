@@ -23,18 +23,18 @@ type Appqoeparameter struct {
 	/**
 	* Time, in seconds, between the first time and the next time the AppQoE alternative content window is displayed. The alternative content window is displayed only once during a session for the same browser accessing a configured URL, so this parameter determines the length of a session.
 	*/
-	Sessionlife uint64 `json:"sessionlife,omitempty"`
+	Sessionlife int `json:"sessionlife,omitempty"`
 	/**
 	* average number of client connections, that can sit in service waiting queue
 	*/
-	Avgwaitingclient uint32 `json:"avgwaitingclient,omitempty"`
+	Avgwaitingclient int `json:"avgwaitingclient,omitempty"`
 	/**
 	* maximum bandwidth which will determine whether to send alternate content response
 	*/
-	Maxaltrespbandwidth uint32 `json:"maxaltrespbandwidth,omitempty"`
+	Maxaltrespbandwidth int `json:"maxaltrespbandwidth,omitempty"`
 	/**
 	* average number of client connection that can queue up on vserver level without triggering DoS mitigation module
 	*/
-	Dosattackthresh uint32 `json:"dosattackthresh,omitempty"`
+	Dosattackthresh int `json:"dosattackthresh,omitempty"`
 
 }

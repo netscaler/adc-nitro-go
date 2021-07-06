@@ -24,11 +24,11 @@ type Systemcpustats struct {
 	/**
 	* ID of the CPU for which to display statistics.
 	*/
-	Id uint32 `json:"id,omitempty"`
+	Id int `json:"id,omitempty"`
 	/**
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Percpuuse uint32 `json:"percpuuse,omitempty"`
+	Percpuuse int `json:"percpuuse,omitempty"`
 
 }

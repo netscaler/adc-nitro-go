@@ -25,31 +25,31 @@ type Rnat6stats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Rnat6totrxbytes uint64 `json:"rnat6totrxbytes,omitempty"`
+	Rnat6totrxbytes int `json:"rnat6totrxbytes,omitempty"`
 	/**
 	* Bytes received during RNAT6 sessions.
 	*/
 	Rnat6rxbytesrate float64 `json:"rnat6rxbytesrate,omitempty"`
-	Rnat6tottxbytes uint64 `json:"rnat6tottxbytes,omitempty"`
+	Rnat6tottxbytes int `json:"rnat6tottxbytes,omitempty"`
 	/**
 	* Bytes sent during RNAT6 sessions.
 	*/
 	Rnat6txbytesrate float64 `json:"rnat6txbytesrate,omitempty"`
-	Rnat6totrxpkts uint64 `json:"rnat6totrxpkts,omitempty"`
+	Rnat6totrxpkts int `json:"rnat6totrxpkts,omitempty"`
 	/**
 	* Packets received during RNAT6 sessions.
 	*/
 	Rnat6rxpktsrate float64 `json:"rnat6rxpktsrate,omitempty"`
-	Rnat6tottxpkts uint64 `json:"rnat6tottxpkts,omitempty"`
+	Rnat6tottxpkts int `json:"rnat6tottxpkts,omitempty"`
 	/**
 	* Packets sent during RNAT6 sessions.
 	*/
 	Rnat6txpktsrate float64 `json:"rnat6txpktsrate,omitempty"`
-	Rnat6tottxsyn uint64 `json:"rnat6tottxsyn,omitempty"`
+	Rnat6tottxsyn int `json:"rnat6tottxsyn,omitempty"`
 	/**
 	* Requests for connections sent during RNAT6 sessions.
 	*/
 	Rnat6txsynrate float64 `json:"rnat6txsynrate,omitempty"`
-	Rnat6cursessions uint32 `json:"rnat6cursessions,omitempty"`
+	Rnat6cursessions int `json:"rnat6cursessions,omitempty"`
 
 }

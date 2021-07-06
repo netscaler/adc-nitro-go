@@ -29,45 +29,45 @@ type Gslbvserverstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Establishedconn uint32 `json:"establishedconn,omitempty"`
-	Inactsvcs uint64 `json:"inactsvcs,omitempty"`
-	Vslbhealth uint32 `json:"vslbhealth,omitempty"`
+	Establishedconn int `json:"establishedconn,omitempty"`
+	Inactsvcs int `json:"inactsvcs,omitempty"`
+	Vslbhealth int `json:"vslbhealth,omitempty"`
 	Type string `json:"type,omitempty"`
 	State string `json:"state,omitempty"`
-	Actsvcs uint64 `json:"actsvcs,omitempty"`
-	Tothits uint64 `json:"tothits,omitempty"`
+	Actsvcs int `json:"actsvcs,omitempty"`
+	Tothits int `json:"tothits,omitempty"`
 	/**
 	* Total vserver hits
 	*/
 	Hitsrate float64 `json:"hitsrate,omitempty"`
-	Vsvrtotbkplbhits int32 `json:"vsvrtotbkplbhits,omitempty"`
-	Vsvrtotbkplbfail int32 `json:"vsvrtotbkplbfail,omitempty"`
-	Curpersistencesessions uint64 `json:"curpersistencesessions,omitempty"`
-	Vsvrtotpersistencehits uint64 `json:"vsvrtotpersistencehits,omitempty"`
-	Totalrequestbytes uint64 `json:"totalrequestbytes,omitempty"`
+	Vsvrtotbkplbhits int `json:"vsvrtotbkplbhits,omitempty"`
+	Vsvrtotbkplbfail int `json:"vsvrtotbkplbfail,omitempty"`
+	Curpersistencesessions int `json:"curpersistencesessions,omitempty"`
+	Vsvrtotpersistencehits int `json:"vsvrtotpersistencehits,omitempty"`
+	Totalrequestbytes int `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
 	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
-	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
+	Totalresponsebytes int `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
 	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
-	Sothreshold uint32 `json:"sothreshold,omitempty"`
-	Totspillovers uint32 `json:"totspillovers,omitempty"`
-	Totvserverdownbackuphits uint32 `json:"totvserverdownbackuphits,omitempty"`
-	Totalrequests uint64 `json:"totalrequests,omitempty"`
+	Sothreshold int `json:"sothreshold,omitempty"`
+	Totspillovers int `json:"totspillovers,omitempty"`
+	Totvserverdownbackuphits int `json:"totvserverdownbackuphits,omitempty"`
+	Totalrequests int `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Requestsrate float64 `json:"requestsrate,omitempty"`
-	Totalresponses uint64 `json:"totalresponses,omitempty"`
+	Totalresponses int `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Responsesrate float64 `json:"responsesrate,omitempty"`
-	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
-	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
+	Curclntconnections int `json:"curclntconnections,omitempty"`
+	Cursrvrconnections int `json:"cursrvrconnections,omitempty"`
 
 }

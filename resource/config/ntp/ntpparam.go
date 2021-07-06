@@ -27,14 +27,14 @@ type Ntpparam struct {
 	/**
 	* Key identifiers that are trusted for server authentication with symmetric key cryptography in the keys file.
 	*/
-	Trustedkey []uint32 `json:"trustedkey,omitempty"`
+	Trustedkey []int `json:"trustedkey,omitempty"`
 	/**
 	* Autokey protocol requires the keys to be refreshed periodically. This parameter specifies the interval between regenerations of new session keys. In seconds, expressed as a power of 2.
 	*/
-	Autokeylogsec uint32 `json:"autokeylogsec,omitempty"`
+	Autokeylogsec int `json:"autokeylogsec,omitempty"`
 	/**
 	* Interval between re-randomizations of the autokey seeds to prevent brute-force attacks on the autokey algorithms.
 	*/
-	Revokelogsec uint32 `json:"revokelogsec,omitempty"`
+	Revokelogsec int `json:"revokelogsec,omitempty"`
 
 }

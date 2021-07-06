@@ -24,27 +24,27 @@ type Vxlanstats struct {
 	/**
 	* An integer specifying the VXLAN identification number (VNID).
 	*/
-	Id uint32 `json:"id,omitempty"`
+	Id int `json:"id,omitempty"`
 	/**
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Vxlantotrxpkts uint64 `json:"vxlantotrxpkts,omitempty"`
+	Vxlantotrxpkts int `json:"vxlantotrxpkts,omitempty"`
 	/**
 	* Packets received on the VXLAN.
 	*/
 	Vxlanrxpktsrate float64 `json:"vxlanrxpktsrate,omitempty"`
-	Vxlantotrxbytes uint64 `json:"vxlantotrxbytes,omitempty"`
+	Vxlantotrxbytes int `json:"vxlantotrxbytes,omitempty"`
 	/**
 	* Bytes of data received on the VXLAN.
 	*/
 	Vxlanrxbytesrate float64 `json:"vxlanrxbytesrate,omitempty"`
-	Vxlantottxpkts uint64 `json:"vxlantottxpkts,omitempty"`
+	Vxlantottxpkts int `json:"vxlantottxpkts,omitempty"`
 	/**
 	* Packets transmitted on the VXLAN.
 	*/
 	Vxlantxpktsrate float64 `json:"vxlantxpktsrate,omitempty"`
-	Vxlantottxbytes uint64 `json:"vxlantottxbytes,omitempty"`
+	Vxlantottxbytes int `json:"vxlantottxbytes,omitempty"`
 	/**
 	* Bytes of data transmitted on the VXLAN.
 	*/

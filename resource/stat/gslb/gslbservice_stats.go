@@ -29,35 +29,35 @@ type Gslbservicestats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Establishedconn uint32 `json:"establishedconn,omitempty"`
+	Establishedconn int `json:"establishedconn,omitempty"`
 	Primaryipaddress string `json:"primaryipaddress,omitempty"`
-	Primaryport int32 `json:"primaryport,omitempty"`
+	Primaryport int `json:"primaryport,omitempty"`
 	Servicetype string `json:"servicetype,omitempty"`
 	State string `json:"state,omitempty"`
-	Totalrequestbytes uint64 `json:"totalrequestbytes,omitempty"`
+	Totalrequestbytes int `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
 	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
-	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
+	Totalresponsebytes int `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
 	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
-	Curload uint32 `json:"curload,omitempty"`
-	Totalrequests uint64 `json:"totalrequests,omitempty"`
+	Curload int `json:"curload,omitempty"`
+	Totalrequests int `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Requestsrate float64 `json:"requestsrate,omitempty"`
-	Totalresponses uint64 `json:"totalresponses,omitempty"`
+	Totalresponses int `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Responsesrate float64 `json:"responsesrate,omitempty"`
-	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
-	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
-	Vsvrservicehits uint64 `json:"vsvrservicehits,omitempty"`
+	Curclntconnections int `json:"curclntconnections,omitempty"`
+	Cursrvrconnections int `json:"cursrvrconnections,omitempty"`
+	Vsvrservicehits int `json:"vsvrservicehits,omitempty"`
 	/**
 	* Number of times that the service has been provided.
 	*/

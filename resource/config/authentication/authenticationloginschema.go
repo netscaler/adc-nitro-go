@@ -39,15 +39,15 @@ type Authenticationloginschema struct {
 	/**
 	* The index at which user entered username should be stored in session.
 	*/
-	Usercredentialindex uint32 `json:"usercredentialindex,omitempty"`
+	Usercredentialindex int `json:"usercredentialindex,omitempty"`
 	/**
 	* The index at which user entered password should be stored in session.
 	*/
-	Passwordcredentialindex uint32 `json:"passwordcredentialindex,omitempty"`
+	Passwordcredentialindex int `json:"passwordcredentialindex,omitempty"`
 	/**
 	* Weight of the current authentication
 	*/
-	Authenticationstrength uint32 `json:"authenticationstrength,omitempty"`
+	Authenticationstrength int `json:"authenticationstrength,omitempty"`
 	/**
 	* This option indicates whether current factor credentials are the default SSO (SingleSignOn) credentials.
 	*/

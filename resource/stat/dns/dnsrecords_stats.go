@@ -26,16 +26,16 @@ type Dnsrecordsstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Dnstotentries uint64 `json:"dnstotentries,omitempty"`
-	Dnstotupdates uint64 `json:"dnstotupdates,omitempty"`
-	Dnstotresponses uint64 `json:"dnstotresponses,omitempty"`
-	Dnstotrequests uint64 `json:"dnstotrequests,omitempty"`
-	Dnscurentries uint32 `json:"dnscurentries,omitempty"`
-	Dnstotqueryforexpiredrecord uint64 `json:"dnstotqueryforexpiredrecord,omitempty"`
-	Dnstoterrlimits uint64 `json:"dnstoterrlimits,omitempty"`
-	Dnstoterrrespform uint64 `json:"dnstoterrrespform,omitempty"`
-	Dnstoterraliasex uint64 `json:"dnstoterraliasex,omitempty"`
-	Dnstoterrnodomains uint64 `json:"dnstoterrnodomains,omitempty"`
-	Dnscurrecords uint32 `json:"dnscurrecords,omitempty"`
+	Dnstotentries int `json:"dnstotentries,omitempty"`
+	Dnstotupdates int `json:"dnstotupdates,omitempty"`
+	Dnstotresponses int `json:"dnstotresponses,omitempty"`
+	Dnstotrequests int `json:"dnstotrequests,omitempty"`
+	Dnscurentries int `json:"dnscurentries,omitempty"`
+	Dnstotqueryforexpiredrecord int `json:"dnstotqueryforexpiredrecord,omitempty"`
+	Dnstoterrlimits int `json:"dnstoterrlimits,omitempty"`
+	Dnstoterrrespform int `json:"dnstoterrrespform,omitempty"`
+	Dnstoterraliasex int `json:"dnstoterraliasex,omitempty"`
+	Dnstoterrnodomains int `json:"dnstoterrnodomains,omitempty"`
+	Dnscurrecords int `json:"dnscurrecords,omitempty"`
 
 }

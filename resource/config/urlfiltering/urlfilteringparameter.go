@@ -23,7 +23,7 @@ type Urlfilteringparameter struct {
 	/**
 	* URL Filtering hours between DB updates.
 	*/
-	Hoursbetweendbupdates uint32 `json:"hoursbetweendbupdates,omitempty"`
+	Hoursbetweendbupdates int `json:"hoursbetweendbupdates,omitempty"`
 	/**
 	* URL Filtering time of day to update DB.
 	*/
@@ -31,7 +31,7 @@ type Urlfilteringparameter struct {
 	/**
 	* URL Filtering Local DB number of threads.
 	*/
-	Localdatabasethreads uint32 `json:"localdatabasethreads,omitempty"`
+	Localdatabasethreads int `json:"localdatabasethreads,omitempty"`
 	/**
 	* URL Filtering Cloud host.
 	*/

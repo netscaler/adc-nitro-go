@@ -29,62 +29,62 @@ type Inatsessionstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Globalinathits uint64 `json:"globalinathits,omitempty"`
+	Globalinathits int `json:"globalinathits,omitempty"`
 	/**
 	* Total INAT Session hits
 	*/
 	Globalinathitsrate float64 `json:"globalinathitsrate,omitempty"`
-	Globalinatcursessions uint64 `json:"globalinatcursessions,omitempty"`
+	Globalinatcursessions int `json:"globalinatcursessions,omitempty"`
 	/**
 	* Total INAT current sessions
 	*/
 	Globalinatcursessionsrate float64 `json:"globalinatcursessionsrate,omitempty"`
-	Globalinatreceivebytes uint64 `json:"globalinatreceivebytes,omitempty"`
+	Globalinatreceivebytes int `json:"globalinatreceivebytes,omitempty"`
 	/**
 	* Total INAT Received Bytes
 	*/
 	Globalinatreceivebytesrate float64 `json:"globalinatreceivebytesrate,omitempty"`
-	Globalinattotsentbytes uint64 `json:"globalinattotsentbytes,omitempty"`
+	Globalinattotsentbytes int `json:"globalinattotsentbytes,omitempty"`
 	/**
 	* Total INAT Sent Bytes
 	*/
 	Globalinatsentbytesrate float64 `json:"globalinatsentbytesrate,omitempty"`
-	Globalinatpktreceived uint64 `json:"globalinatpktreceived,omitempty"`
+	Globalinatpktreceived int `json:"globalinatpktreceived,omitempty"`
 	/**
 	* Total INAT Packets Received
 	*/
 	Globalinatpktreceivedrate float64 `json:"globalinatpktreceivedrate,omitempty"`
-	Globalinatpktsent uint64 `json:"globalinatpktsent,omitempty"`
+	Globalinatpktsent int `json:"globalinatpktsent,omitempty"`
 	/**
 	* Total INAT Packets Sent
 	*/
 	Globalinatpktsentrate float64 `json:"globalinatpktsentrate,omitempty"`
-	Inattothits uint64 `json:"inattothits,omitempty"`
+	Inattothits int `json:"inattothits,omitempty"`
 	/**
 	* INAT total sessions
 	*/
 	Inathitsrate float64 `json:"inathitsrate,omitempty"`
-	Inatcursessions uint64 `json:"inatcursessions,omitempty"`
+	Inatcursessions int `json:"inatcursessions,omitempty"`
 	/**
 	* INAT current sessions
 	*/
 	Inatcursessionsrate float64 `json:"inatcursessionsrate,omitempty"`
-	Inattotreceivebytes uint64 `json:"inattotreceivebytes,omitempty"`
+	Inattotreceivebytes int `json:"inattotreceivebytes,omitempty"`
 	/**
 	* INAT total Received Bytes
 	*/
 	Inatreceivebytesrate float64 `json:"inatreceivebytesrate,omitempty"`
-	Inattotsentbytes uint64 `json:"inattotsentbytes,omitempty"`
+	Inattotsentbytes int `json:"inattotsentbytes,omitempty"`
 	/**
 	* INAT total Sent Bytes
 	*/
 	Inatsentbytesrate float64 `json:"inatsentbytesrate,omitempty"`
-	Inattotpktreceived uint64 `json:"inattotpktreceived,omitempty"`
+	Inattotpktreceived int `json:"inattotpktreceived,omitempty"`
 	/**
 	* INAT total Packets Received
 	*/
 	Inatpktreceivedrate float64 `json:"inatpktreceivedrate,omitempty"`
-	Inattotpktsent uint64 `json:"inattotpktsent,omitempty"`
+	Inattotpktsent int `json:"inattotpktsent,omitempty"`
 	/**
 	* INAT total Packets Sent
 	*/

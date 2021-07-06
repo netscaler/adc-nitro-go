@@ -31,7 +31,7 @@ type Hanoderoutemonitorbinding struct {
 	/**
 	* The flags for this entry.
 	*/
-	Flags uint32 `json:"flags,omitempty"`
+	Flags int `json:"flags,omitempty"`
 	/**
 	* State for route monitor
 	*/
@@ -39,7 +39,7 @@ type Hanoderoutemonitorbinding struct {
 	/**
 	* Number that uniquely identifies the local node. The ID of the local node is always 0.
 	*/
-	Id uint32 `json:"id,omitempty"`
+	Id int `json:"id,omitempty"`
 
 
 }

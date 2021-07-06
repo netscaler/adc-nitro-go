@@ -24,7 +24,7 @@ type Clusternodestats struct {
 	/**
 	* ID of the cluster node for which to display statistics. If an ID is not provided, statistics are shown for all nodes.
 	*/
-	Nodeid uint32 `json:"nodeid,omitempty"`
+	Nodeid int `json:"nodeid,omitempty"`
 	/**
 	* Clear the statsistics / counters
 	*/
@@ -33,14 +33,14 @@ type Clusternodestats struct {
 	Clnodeeffectivehealth string `json:"clnodeeffectivehealth,omitempty"`
 	Clnodeip string `json:"clnodeip,omitempty"`
 	Clmasterstate string `json:"clmasterstate,omitempty"`
-	Cltothbtx uint64 `json:"cltothbtx,omitempty"`
-	Cltothbrx uint64 `json:"cltothbrx,omitempty"`
-	Nnmcurconn uint32 `json:"nnmcurconn,omitempty"`
-	Nnmtotconntx uint64 `json:"nnmtotconntx,omitempty"`
-	Nnmtotconnrx uint64 `json:"nnmtotconnrx,omitempty"`
+	Cltothbtx int `json:"cltothbtx,omitempty"`
+	Cltothbrx int `json:"cltothbrx,omitempty"`
+	Nnmcurconn int `json:"nnmcurconn,omitempty"`
+	Nnmtotconntx int `json:"nnmtotconntx,omitempty"`
+	Nnmtotconnrx int `json:"nnmtotconnrx,omitempty"`
 	Clptpstate string `json:"clptpstate,omitempty"`
-	Clptptx uint64 `json:"clptptx,omitempty"`
-	Clptprx uint64 `json:"clptprx,omitempty"`
-	Nnmerrmsend uint64 `json:"nnmerrmsend,omitempty"`
+	Clptptx int `json:"clptptx,omitempty"`
+	Clptprx int `json:"clptprx,omitempty"`
+	Nnmerrmsend int `json:"nnmerrmsend,omitempty"`
 
 }

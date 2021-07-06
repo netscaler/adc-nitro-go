@@ -31,16 +31,16 @@ type Lsnpoolstats struct {
 	Clearstats string `json:"clearstats,omitempty"`
 	Lsnpoolotherportusagepercen float64 `json:"lsnpoolotherportusagepercen,omitempty"`
 	Lsnpooltcpportusagepercen float64 `json:"lsnpooltcpportusagepercen,omitempty"`
-	Lsnpoolcurportalloctcp uint64 `json:"lsnpoolcurportalloctcp,omitempty"`
+	Lsnpoolcurportalloctcp int `json:"lsnpoolcurportalloctcp,omitempty"`
 	/**
 	* Current port allocation for tcp in this pool.
 	*/
 	Lsnpoolcurportalloctcprate float64 `json:"lsnpoolcurportalloctcprate,omitempty"`
-	Lsnpoolcurportallocother uint64 `json:"lsnpoolcurportallocother,omitempty"`
+	Lsnpoolcurportallocother int `json:"lsnpoolcurportallocother,omitempty"`
 	/**
 	* Current port allocation for other protocols in this pool.
 	*/
 	Lsnpoolcurportallocotherrate float64 `json:"lsnpoolcurportallocotherrate,omitempty"`
-	Lsnpooltotips uint32 `json:"lsnpooltotips,omitempty"`
+	Lsnpooltotips int `json:"lsnpooltotips,omitempty"`
 
 }

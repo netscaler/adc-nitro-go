@@ -25,31 +25,31 @@ type Rnatstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Rnattotrxbytes uint64 `json:"rnattotrxbytes,omitempty"`
+	Rnattotrxbytes int `json:"rnattotrxbytes,omitempty"`
 	/**
 	* Bytes received during RNAT sessions.
 	*/
 	Rnatrxbytesrate float64 `json:"rnatrxbytesrate,omitempty"`
-	Rnattottxbytes uint64 `json:"rnattottxbytes,omitempty"`
+	Rnattottxbytes int `json:"rnattottxbytes,omitempty"`
 	/**
 	* Bytes sent during RNAT sessions.
 	*/
 	Rnattxbytesrate float64 `json:"rnattxbytesrate,omitempty"`
-	Rnattotrxpkts uint64 `json:"rnattotrxpkts,omitempty"`
+	Rnattotrxpkts int `json:"rnattotrxpkts,omitempty"`
 	/**
 	* Packets received during RNAT sessions.
 	*/
 	Rnatrxpktsrate float64 `json:"rnatrxpktsrate,omitempty"`
-	Rnattottxpkts uint64 `json:"rnattottxpkts,omitempty"`
+	Rnattottxpkts int `json:"rnattottxpkts,omitempty"`
 	/**
 	* Packets sent during RNAT sessions.
 	*/
 	Rnattxpktsrate float64 `json:"rnattxpktsrate,omitempty"`
-	Rnattottxsyn uint64 `json:"rnattottxsyn,omitempty"`
+	Rnattottxsyn int `json:"rnattottxsyn,omitempty"`
 	/**
 	* Requests for connections sent during RNAT sessions.
 	*/
 	Rnattxsynrate float64 `json:"rnattxsynrate,omitempty"`
-	Rnatcursessions uint32 `json:"rnatcursessions,omitempty"`
+	Rnatcursessions int `json:"rnatcursessions,omitempty"`
 
 }

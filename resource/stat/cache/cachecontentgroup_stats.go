@@ -29,12 +29,12 @@ type Cachecontentgroupstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Groupnon304hit uint32 `json:"groupnon304hit,omitempty"`
-	Group304hit uint64 `json:"group304hit,omitempty"`
-	Totcell uint32 `json:"totcell,omitempty"`
-	Totmarkercell uint32 `json:"totmarkercell,omitempty"`
-	Timesflushed uint32 `json:"timesflushed,omitempty"`
-	Totmemory uint32 `json:"totmemory,omitempty"`
-	Maxmemory uint32 `json:"maxmemory,omitempty"`
+	Groupnon304hit int `json:"groupnon304hit,omitempty"`
+	Group304hit int `json:"group304hit,omitempty"`
+	Totcell int `json:"totcell,omitempty"`
+	Totmarkercell int `json:"totmarkercell,omitempty"`
+	Timesflushed int `json:"timesflushed,omitempty"`
+	Totmemory int `json:"totmemory,omitempty"`
+	Maxmemory int `json:"maxmemory,omitempty"`
 
 }

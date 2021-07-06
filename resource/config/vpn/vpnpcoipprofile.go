@@ -35,6 +35,6 @@ type Vpnpcoipprofile struct {
 	/**
 	* PCOIP Idle Session timeout
 	*/
-	Sessionidletimeout uint32 `json:"sessionidletimeout,omitempty"`
+	Sessionidletimeout int `json:"sessionidletimeout,omitempty"`
 
 }

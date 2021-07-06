@@ -27,6 +27,6 @@ type Aaaotpparameter struct {
 	/**
 	* Maximum number of otp devices user can register. Default value is 4. Max value is 255
 	*/
-	Maxotpdevices uint32 `json:"maxotpdevices,omitempty"`
+	Maxotpdevices int `json:"maxotpdevices,omitempty"`
 
 }

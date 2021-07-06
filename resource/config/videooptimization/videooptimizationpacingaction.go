@@ -27,7 +27,7 @@ type Videooptimizationpacingaction struct {
 	/**
 	* ABR Video Optimization Pacing Rate (in Kbps)
 	*/
-	Rate int32 `json:"rate,omitempty"`
+	Rate int `json:"rate,omitempty"`
 	/**
 	* Comment. Any type of information about this video optimization detection action.
 	*/

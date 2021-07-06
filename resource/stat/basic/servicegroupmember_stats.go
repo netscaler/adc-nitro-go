@@ -37,49 +37,49 @@ type Servicegroupmemberstats struct {
 	/**
 	* Port number of the service group member.
 	*/
-	Port int32 `json:"port,omitempty"`
+	Port int `json:"port,omitempty"`
 	/**
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Avgsvrttfb uint32 `json:"avgsvrttfb,omitempty"`
+	Avgsvrttfb int `json:"avgsvrttfb,omitempty"`
 	Primaryipaddress string `json:"primaryipaddress,omitempty"`
-	Primaryport int32 `json:"primaryport,omitempty"`
+	Primaryport int `json:"primaryport,omitempty"`
 	Servicetype string `json:"servicetype,omitempty"`
 	State string `json:"state,omitempty"`
-	Totalrequests uint64 `json:"totalrequests,omitempty"`
+	Totalrequests int `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Requestsrate float64 `json:"requestsrate,omitempty"`
-	Totalresponses uint64 `json:"totalresponses,omitempty"`
+	Totalresponses int `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
 	*/
 	Responsesrate float64 `json:"responsesrate,omitempty"`
-	Totalrequestbytes uint64 `json:"totalrequestbytes,omitempty"`
+	Totalrequestbytes int `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
 	*/
 	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
-	Totalresponsebytes uint64 `json:"totalresponsebytes,omitempty"`
+	Totalresponsebytes int `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
 	*/
 	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
-	Curclntconnections uint32 `json:"curclntconnections,omitempty"`
-	Surgecount uint32 `json:"surgecount,omitempty"`
-	Cursrvrconnections uint32 `json:"cursrvrconnections,omitempty"`
-	Svrestablishedconn uint32 `json:"svrestablishedconn,omitempty"`
-	Curreusepool uint32 `json:"curreusepool,omitempty"`
-	Maxclients uint32 `json:"maxclients,omitempty"`
-	Totalconnreassemblyqueue75 uint64 `json:"totalconnreassemblyqueue75,omitempty"`
-	Totalconnreassemblyqueueflush uint64 `json:"totalconnreassemblyqueueflush,omitempty"`
-	Totsvrttlbtransactions uint64 `json:"totsvrttlbtransactions,omitempty"`
-	Toleratingttlbtransactions uint32 `json:"toleratingttlbtransactions,omitempty"`
-	Frustratingttlbtransactions uint32 `json:"frustratingttlbtransactions,omitempty"`
-	Curload uint32 `json:"curload,omitempty"`
-	Httpmaxhdrszpkts uint64 `json:"httpmaxhdrszpkts,omitempty"`
-	Tcpmaxooopkts uint64 `json:"tcpmaxooopkts,omitempty"`
+	Curclntconnections int `json:"curclntconnections,omitempty"`
+	Surgecount int `json:"surgecount,omitempty"`
+	Cursrvrconnections int `json:"cursrvrconnections,omitempty"`
+	Svrestablishedconn int `json:"svrestablishedconn,omitempty"`
+	Curreusepool int `json:"curreusepool,omitempty"`
+	Maxclients int `json:"maxclients,omitempty"`
+	Totalconnreassemblyqueue75 int `json:"totalconnreassemblyqueue75,omitempty"`
+	Totalconnreassemblyqueueflush int `json:"totalconnreassemblyqueueflush,omitempty"`
+	Totsvrttlbtransactions int `json:"totsvrttlbtransactions,omitempty"`
+	Toleratingttlbtransactions int `json:"toleratingttlbtransactions,omitempty"`
+	Frustratingttlbtransactions int `json:"frustratingttlbtransactions,omitempty"`
+	Curload int `json:"curload,omitempty"`
+	Httpmaxhdrszpkts int `json:"httpmaxhdrszpkts,omitempty"`
+	Tcpmaxooopkts int `json:"tcpmaxooopkts,omitempty"`
 
 }

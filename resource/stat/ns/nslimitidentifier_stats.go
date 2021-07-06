@@ -41,8 +41,8 @@ type Nslimitidentifierstats struct {
 	* use this argument to specify sort order
 	*/
 	Sortorder string `json:"sortorder,omitempty"`
-	Ratelmtobjhits uint64 `json:"ratelmtobjhits,omitempty"`
-	Ratelmtobjdrops uint64 `json:"ratelmtobjdrops,omitempty"`
-	Ratelmtsessionobjhits uint32 `json:"ratelmtsessionobjhits,omitempty"`
+	Ratelmtobjhits int `json:"ratelmtobjhits,omitempty"`
+	Ratelmtobjdrops int `json:"ratelmtobjdrops,omitempty"`
+	Ratelmtsessionobjhits int `json:"ratelmtsessionobjhits,omitempty"`
 
 }

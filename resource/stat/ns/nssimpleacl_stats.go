@@ -25,28 +25,28 @@ type Nssimpleaclstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Sacltothits uint64 `json:"sacltothits,omitempty"`
+	Sacltothits int `json:"sacltothits,omitempty"`
 	/**
 	* Packets matching a SimpleACL.
 	*/
 	Saclhitsrate float64 `json:"saclhitsrate,omitempty"`
-	Sacltotmisses uint64 `json:"sacltotmisses,omitempty"`
+	Sacltotmisses int `json:"sacltotmisses,omitempty"`
 	/**
 	* Packets not matching any SimpleACL.
 	*/
 	Saclmissesrate float64 `json:"saclmissesrate,omitempty"`
-	Saclscount uint64 `json:"saclscount,omitempty"`
-	Sacltotpktsallowed uint64 `json:"sacltotpktsallowed,omitempty"`
+	Saclscount int `json:"saclscount,omitempty"`
+	Sacltotpktsallowed int `json:"sacltotpktsallowed,omitempty"`
 	/**
 	* Total packets that matched a SimpleACL with action ALLOW and got consumed by Citrix ADC.
 	*/
 	Saclpktsallowedrate float64 `json:"saclpktsallowedrate,omitempty"`
-	Sacltotpktsbridged uint64 `json:"sacltotpktsbridged,omitempty"`
+	Sacltotpktsbridged int `json:"sacltotpktsbridged,omitempty"`
 	/**
 	* Total packets that matched a SimpleACL with action BRIDGE and got bridged by Citrix ADC.
 	*/
 	Saclpktsbridgedrate float64 `json:"saclpktsbridgedrate,omitempty"`
-	Sacltotpktsdenied uint64 `json:"sacltotpktsdenied,omitempty"`
+	Sacltotpktsdenied int `json:"sacltotpktsdenied,omitempty"`
 	/**
 	* Packets dropped because they match SimpleACL (Access Control List) with processing mode set to DENY.
 	*/
