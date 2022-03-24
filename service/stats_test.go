@@ -21,21 +21,20 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/citrix/adc-nitro-go/resource/config/basic"
-	"github.com/citrix/adc-nitro-go/resource/config/lb"
+	"github.com/citrix/adc-nitro-go/resource/config"
 )
 
 func TestNitroClient_FindAllStats(t *testing.T) {
 	lbName1 := "test_lb_" + randomString(5)
 	lbName2 := "test_lb_" + randomString(5)
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName1,
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
 		Port:        8000,
 	}
-	lb2 := lb.Lbvserver{
+	lb2 := config.Lbvserver{
 		Name:        lbName2,
 		Ipv46:       randomIP(),
 		Lbmethod:    "LEASTCONNECTION",
@@ -62,7 +61,7 @@ func TestNitroClient_FindAllStats(t *testing.T) {
 
 func TestNitroClient_FindStats(t *testing.T) {
 	lbName1 := "test_lb_" + randomString(5)
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName1,
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
@@ -79,13 +78,13 @@ func TestNitroClient_FindStats(t *testing.T) {
 
 	svcName1 := "test_svc_" + randomString(5)
 	svcName2 := "test_svc_" + randomString(5)
-	service1 := basic.Service{
+	service1 := config.Service{
 		Name:        svcName1,
 		Ip:          randomIP(),
 		Port:        80,
 		Servicetype: "HTTP",
 	}
-	service2 := basic.Service{
+	service2 := config.Service{
 		Name:        svcName2,
 		Ip:          randomIP(),
 		Port:        80,

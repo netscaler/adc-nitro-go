@@ -38,13 +38,13 @@ Logging level can be set using env variable `NS_LOG` or calling function `client
 package main
 
 import (
-        "github.com/citrix/adc-nitro-go/resource/config/lb"
+        "github.com/citrix/adc-nitro-go/resource/config"
         "github.com/citrix/adc-nitro-go/service"
 )
 
 func main() {
         client, _ := service.NewNitroClientFromEnv()
-        lb1 := lb.Lbvserver{
+        lb1 := config.Lbvserver{
                 Name:        "sample_lb",
                 Ipv46:       "10.71.136.50",
                 Lbmethod:    "ROUNDROBIN",

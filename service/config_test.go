@@ -25,10 +25,7 @@ import (
 
 	"os"
 
-	"github.com/citrix/adc-nitro-go/resource/config/basic"
-	"github.com/citrix/adc-nitro-go/resource/config/lb"
-	"github.com/citrix/adc-nitro-go/resource/config/network"
-	"github.com/citrix/adc-nitro-go/resource/config/ns"
+	"github.com/citrix/adc-nitro-go/resource/config"
 )
 
 var client *NitroClient
@@ -81,7 +78,7 @@ func TestAdd(t *testing.T) {
 	rndIP := randomIP()
 	lbName := "test_lb_" + randomString(5)
 
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName,
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
@@ -120,7 +117,7 @@ func TestAdd(t *testing.T) {
 	svcName := randomString(5)
 	rndIP2 := randomIP()
 
-	service1 := basic.Service{
+	service1 := config.Service{
 		Name:        svcName,
 		Ip:          rndIP2,
 		Port:        80,
@@ -137,7 +134,7 @@ func TestAdd(t *testing.T) {
 
 func TestApply(t *testing.T) {
 	aclName := "test_acl_" + randomString(5)
-	acl1 := ns.Nsacl{
+	acl1 := config.Nsacl{
 		Aclname:   aclName,
 		Aclaction: "ALLOW",
 		Srcip:     true,
@@ -154,7 +151,7 @@ func TestApply(t *testing.T) {
 		return
 	}
 
-	acls := ns.Nsacls{}
+	acls := config.Nsacls{}
 	client.ApplyResource(Nsacls.Type(), &acls)
 
 	readAcls, err := client.FindResourceArray(Nsacl.Type(), aclName)
@@ -174,7 +171,7 @@ func TestUpdate(t *testing.T) {
 	rndIP := randomIP()
 	lbName := "test_lb_" + randomString(5)
 
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName,
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
@@ -188,7 +185,7 @@ func TestUpdate(t *testing.T) {
 		return
 	}
 
-	lb1 = lb.Lbvserver{
+	lb1 = config.Lbvserver{
 		Name:     lbName,
 		Lbmethod: "LEASTCONNECTION",
 	}
@@ -221,7 +218,7 @@ func TestBindUnBind(t *testing.T) {
 	rndIP2 := randomIP()
 	svcName := "test_svc_" + randomString(5)
 
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName,
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
@@ -234,7 +231,7 @@ func TestBindUnBind(t *testing.T) {
 		t.Log("Cannot continue")
 		return
 	}
-	service1 := basic.Service{
+	service1 := config.Service{
 		Name:        svcName,
 		Ip:          rndIP2,
 		Port:        80,
@@ -248,7 +245,7 @@ func TestBindUnBind(t *testing.T) {
 		return
 	}
 
-	binding := lb.Lbvserverservicebinding{
+	binding := config.Lbvserverservicebinding{
 		Name:        lbName,
 		Servicename: svcName,
 	}
@@ -280,7 +277,7 @@ func TestBindUnBind(t *testing.T) {
 
 func TestFindBoundResource(t *testing.T) {
 	lbName := "test_lb_" + randomString(5)
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName,
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
@@ -294,7 +291,7 @@ func TestFindBoundResource(t *testing.T) {
 		return
 	}
 	svcName := "test_svc_" + randomString(5)
-	service1 := basic.Service{
+	service1 := config.Service{
 		Name:        svcName,
 		Ip:          randomIP(),
 		Port:        80,
@@ -308,7 +305,7 @@ func TestFindBoundResource(t *testing.T) {
 		return
 
 	}
-	binding := lb.Lbvserverservicebinding{
+	binding := config.Lbvserverservicebinding{
 		Name:        lbName,
 		Servicename: svcName,
 	}
@@ -337,7 +334,7 @@ func TestDelete(t *testing.T) {
 	rndIP := randomIP()
 	lbName := "test_lb_" + randomString(5)
 
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName,
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
@@ -365,7 +362,7 @@ func TestDelete(t *testing.T) {
 func TestDeleteWithArgs(t *testing.T) {
 	monitorName := "test_lb_monitor_" + randomString(5)
 
-	lbmonitor := lb.Lbmonitor{
+	lbmonitor := config.Lbmonitor{
 		Monitorname:    monitorName,
 		Type:           "http",
 		Retries:        20,
@@ -452,14 +449,14 @@ func TestSaveConfig(t *testing.T) {
 func TestFindAllResources(t *testing.T) {
 	lbName1 := "test_lb_" + randomString(5)
 	lbName2 := "test_lb_" + randomString(5)
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName1,
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
 		Port:        8000,
 	}
-	lb2 := lb.Lbvserver{
+	lb2 := config.Lbvserver{
 		Name:        lbName2,
 		Ipv46:       randomIP(),
 		Lbmethod:    "LEASTCONNECTION",
@@ -503,7 +500,7 @@ func TestFindAllBoundResources(t *testing.T) {
 	lbName1 := "test_lb_" + randomString(5)
 	svcName1 := "test_svc_" + randomString(5)
 	svcName2 := "test_svc_" + randomString(5)
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName1,
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
@@ -514,13 +511,13 @@ func TestFindAllBoundResources(t *testing.T) {
 	if err != nil {
 		t.Error("Could not create LB")
 	}
-	service1 := basic.Service{
+	service1 := config.Service{
 		Name:        svcName1,
 		Ip:          randomIP(),
 		Port:        80,
 		Servicetype: "HTTP",
 	}
-	service2 := basic.Service{
+	service2 := config.Service{
 		Name:        svcName2,
 		Ip:          randomIP(),
 		Port:        80,
@@ -540,11 +537,11 @@ func TestFindAllBoundResources(t *testing.T) {
 		return
 	}
 
-	binding1 := lb.Lbvserverservicebinding{
+	binding1 := config.Lbvserverservicebinding{
 		Name:        lbName1,
 		Servicename: svcName1,
 	}
-	binding2 := lb.Lbvserverservicebinding{
+	binding2 := config.Lbvserverservicebinding{
 		Name:        lbName1,
 		Servicename: svcName2,
 	}
@@ -587,7 +584,7 @@ func TestFindAllBoundResources(t *testing.T) {
 
 func TestAction(t *testing.T) {
 	svcGrpName := "test_sg_" + randomString(5)
-	sg1 := basic.Servicegroup{
+	sg1 := config.Servicegroup{
 		Servicegroupname: svcGrpName,
 		Servicetype:      "http",
 	}
@@ -598,7 +595,7 @@ func TestAction(t *testing.T) {
 		t.Log("Cannot continue")
 		return
 	}
-	createServer := basic.Server{
+	createServer := config.Server{
 		Ipaddress: "192.168.1.101",
 		Name:      "test-srvr",
 	}
@@ -610,7 +607,7 @@ func TestAction(t *testing.T) {
 		return
 	}
 
-	bindSvcGrpToServer := basic.Servicegroupservicegroupmemberbinding{
+	bindSvcGrpToServer := config.Servicegroupservicegroupmemberbinding{
 		Servicegroupname: svcGrpName,
 		Servername:       "test-srvr",
 		Port:             22,
@@ -623,7 +620,7 @@ func TestAction(t *testing.T) {
 		return
 	}
 
-	bindSvcGrpToServer2 := basic.Servicegroupservicegroupmemberbinding{
+	bindSvcGrpToServer2 := config.Servicegroupservicegroupmemberbinding{
 		Servicegroupname: svcGrpName,
 		Ip:               "192.168.1.102",
 		Port:             22,
@@ -635,7 +632,7 @@ func TestAction(t *testing.T) {
 		t.Log("Cannot continue")
 		return
 	}
-	sg2 := basic.Servicegroup{
+	sg2 := config.Servicegroup{
 		Servicegroupname: svcGrpName,
 		Servername:       "test-srvr",
 		Port:             22,
@@ -650,7 +647,7 @@ func TestAction(t *testing.T) {
 		t.Log("Cannot continue")
 		return
 	}
-	sg3 := basic.Servicegroup{
+	sg3 := config.Servicegroup{
 		Servicegroupname: svcGrpName,
 		Servername:       "test-srvr",
 		Port:             22,
@@ -664,7 +661,7 @@ func TestAction(t *testing.T) {
 		return
 	}
 
-	sg4 := basic.Servicegroup{
+	sg4 := config.Servicegroup{
 		Servicegroupname: svcGrpName,
 		Newname:          svcGrpName + "-NEW",
 	}
@@ -683,7 +680,7 @@ func TestUpdateUnnamedResource(t *testing.T) {
 	if os.Getenv("ADC_PLATFORM") == "CPX" {
 		t.Skip("Skipping test not supported by CPX")
 	}
-	rnat := network.Rnat{
+	rnat := config.Rnat{
 		Natip:   "172.17.0.2",
 		Netmask: "255.255.240.0",
 		Network: "192.168.16.0",
@@ -701,7 +698,7 @@ func TestFindFilteredResource(t *testing.T) {
 	if os.Getenv("ADC_PLATFORM") == "CPX" {
 		t.Skip("Skipping test not supported by CPX")
 	}
-	rnat := network.Rnat{
+	rnat := config.Rnat{
 		Natip:   "172.17.0.2",
 		Netmask: "255.255.240.0",
 		Network: "192.168.16.0",
@@ -735,7 +732,7 @@ func TestFindFilteredResource(t *testing.T) {
 // which is used to bind multiple IP-only members to servicegroup in single Nitro call
 func TestDesiredStateServicegroupAPI(t *testing.T) {
 	svcGrpName := "test_sg_" + randomString(5)
-	sg1 := basic.Servicegroup{
+	sg1 := config.Servicegroup{
 		Servicegroupname: svcGrpName,
 		Servicetype:      "http",
 		Autoscale:        "API",
@@ -748,7 +745,7 @@ func TestDesiredStateServicegroupAPI(t *testing.T) {
 		return
 	}
 
-	ipmembers := []basic.Members{
+	ipmembers := []config.Members{
 		{
 			Ip:   "1.1.1.1",
 			Port: 80,
@@ -763,7 +760,7 @@ func TestDesiredStateServicegroupAPI(t *testing.T) {
 		},
 	}
 
-	bindSvcGrpToServer := basic.Servicegroupservicegroupmemberlistbinding{
+	bindSvcGrpToServer := config.Servicegroupservicegroupmemberlistbinding{
 		Servicegroupname: svcGrpName,
 		Members:          ipmembers,
 	}
@@ -781,7 +778,7 @@ func TestNullAction(t *testing.T) {
 	if os.Getenv("ADC_PLATFORM") == "CPX" {
 		t.Skip("Skipping test not supported by CPX")
 	}
-	reboot := ns.Reboot{
+	reboot := config.Reboot{
 		Warm: true,
 	}
 
@@ -806,7 +803,7 @@ func TestTokenBasedAuth(t *testing.T) {
 	}
 	rndIP := randomIP()
 	lbName := "test_lb_" + randomString(5)
-	lb1 := lb.Lbvserver{
+	lb1 := config.Lbvserver{
 		Name:        lbName,
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
@@ -997,7 +994,7 @@ func TestFindResourceArrayWithParams(t *testing.T) {
 
 	testCase2 := func(t *testing.T) {
 		argsMap := make(map[string]string)
-		argsMap["filename"] = "ns.conf"
+		argsMap["filename"] = "config.conf"
 		argsMap["filelocation"] = "%2Fnsconfig"
 		findParams := FindParams{
 			ResourceType: "systemfile",
@@ -1023,7 +1020,7 @@ func TestFindResourceArrayWithParams(t *testing.T) {
 
 	testCase3 := func(t *testing.T) {
 		argsMap := make(map[string]string)
-		//argsMap["filename"] = "ns.conf"
+		//argsMap["filename"] = "config.conf"
 		argsMap["filelocation"] = "%2Fnsconfig"
 		findParams := FindParams{
 			ResourceType: "systemfile",
