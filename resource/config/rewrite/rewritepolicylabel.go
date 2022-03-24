@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package rewrite
 
 /**
 * Configuration for rewrite policy label resource.
-*/
+ */
 type Rewritepolicylabel struct {
 	/**
 	* Name for the rewrite policy label. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Cannot be changed after the rewrite policy label is added.
@@ -48,10 +48,10 @@ type Rewritepolicylabel struct {
 	Transform string `json:"transform,omitempty"`
 	/**
 	* Any comments to preserve information about this rewrite policy label.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
-	* New name for the rewrite policy label. 
+	* New name for the rewrite policy label.
 		Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters.
 		The following requirement applies only to the Citrix ADC CLI:
 		If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my policy label" or 'my policy label').
@@ -60,16 +60,15 @@ type Rewritepolicylabel struct {
 
 	//------- Read only Parameter ---------;
 
-	Numpol string `json:"numpol,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Priority string `json:"priority,omitempty"`
+	Numpol                 string `json:"numpol,omitempty"`
+	Hits                   string `json:"hits,omitempty"`
+	Priority               string `json:"priority,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype string `json:"labeltype,omitempty"`
-	Invokelabelname string `json:"invoke_labelname,omitempty"`
-	Flowtype string `json:"flowtype,omitempty"`
-	Description string `json:"description,omitempty"`
-	Isdefault string `json:"isdefault,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Labeltype              string `json:"labeltype,omitempty"`
+	Invokelabelname        string `json:"invoke_labelname,omitempty"`
+	Flowtype               string `json:"flowtype,omitempty"`
+	Description            string `json:"description,omitempty"`
+	Isdefault              string `json:"isdefault,omitempty"`
+	Builtin                string `json:"builtin,omitempty"`
+	Feature                string `json:"feature,omitempty"`
 }

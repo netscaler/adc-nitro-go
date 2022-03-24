@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package policy
 
 /**
-* Binding object which returns the resources bound to policydataset_binding. 
-*/
+* Binding object which returns the resources bound to policydataset_binding.
+ */
 type Policydatasetbinding struct {
 	/**
-	* Name of the dataset. Must not exceed 127 characters.<br/>Minimum value =  
-	*/
+	* Name of the dataset. Must not exceed 127 characters.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for system group resource.
-*/
+ */
 type Systemgroup struct {
 	/**
 	* Name for the group. Must begin with a letter, number, hash(#) or the underscore (_) character, and must contain only alphanumeric, hyphen (-), period (.), hash (#), space ( ), at (@), equal (=), colon (:), and underscore characters. Cannot be changed after the group is created.
@@ -26,7 +26,7 @@ type Systemgroup struct {
 	*/
 	Groupname string `json:"groupname,omitempty"`
 	/**
-	* String to display at the command-line prompt. Can consist of letters, numbers, hyphen (-), period (.), hash (#), space ( ), at (@), equal (=), colon (:), underscore (_), and the following variables: 
+	* String to display at the command-line prompt. Can consist of letters, numbers, hyphen (-), period (.), hash (#), space ( ), at (@), equal (=), colon (:), underscore (_), and the following variables:
 		* %u - Will be replaced by the user name.
 		* %h - Will be replaced by the hostname of the Citrix ADC.
 		* %t - Will be replaced by the current time in 12-hour format.
@@ -38,11 +38,10 @@ type Systemgroup struct {
 	Promptstring string `json:"promptstring,omitempty"`
 	/**
 	* CLI session inactivity timeout, in seconds. If Restrictedtimeout argument of system parameter is enabled, Timeout can have values in the range [300-86400] seconds.If Restrictedtimeout argument of system parameter is disabled, Timeout can have values in the range [0, 10-100000000] seconds. Default value is 900 seconds.
-	*/
+	 */
 	Timeout int `json:"timeout,omitempty"`
 	/**
 	* Allowed Management interfaces of the system users in the group. By default allowed from both API and CLI interfaces. If management interface for a group is set to API, then all users under this group will not allowed to access NS through CLI. GUI interface will come under API interface
-	*/
+	 */
 	Allowedmanagementinterface []string `json:"allowedmanagementinterface,omitempty"`
-
 }

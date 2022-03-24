@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
 * Configuration for LSN parameter resource.
-*/
+ */
 type Lsnparameter struct {
 	/**
 	* Amount of Citrix ADC memory to reserve for the LSN feature, in multiples of 2MB.
@@ -34,12 +34,11 @@ type Lsnparameter struct {
 	Sessionsync string `json:"sessionsync,omitempty"`
 	/**
 	* LSN global setting for controlling subscriber aware session removal, when this is enabled, when ever the subscriber info is deleted from subscriber database, sessions corresponding to that subscriber will be removed. if this setting is disabled, subscriber sessions will be timed out as per the idle time out settings.
-	*/
+	 */
 	Subscrsessionremoval string `json:"subscrsessionremoval,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Memlimitactive string `json:"memlimitactive,omitempty"`
-	Maxmemlimit string `json:"maxmemlimit,omitempty"`
-
+	Maxmemlimit    string `json:"maxmemlimit,omitempty"`
 }

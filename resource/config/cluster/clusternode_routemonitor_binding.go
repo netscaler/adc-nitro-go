@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
 * Binding class showing the routemonitor that can be bound to clusternode.
-*/
+ */
 type Clusternoderoutemonitorbinding struct {
 	/**
 	* The IP address (IPv4 or IPv6).
-	*/
+	 */
 	Routemonitor string `json:"routemonitor,omitempty"`
 	/**
 	* The netmask.
-	*/
+	 */
 	Netmask string `json:"netmask,omitempty"`
 	/**
 	* Current routemonstate
-	*/
+	 */
 	Routemonstate int `json:"routemonstate,omitempty"`
 	/**
-	* A number that uniquely identifies the cluster node. 
-	*/
+	* A number that uniquely identifies the cluster node.
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
-
-
 }

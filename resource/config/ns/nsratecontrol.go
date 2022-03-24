@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for rate control resource.
-*/
+ */
 type Nsratecontrol struct {
 	/**
 	* Number of SYNs permitted per 10 milliseconds.
-	*/
+	 */
 	Tcpthreshold int `json:"tcpthreshold,omitempty"`
 	/**
 	* Number of UDP packets permitted per 10 milliseconds.
-	*/
+	 */
 	Udpthreshold int `json:"udpthreshold,omitempty"`
 	/**
 	* Number of ICMP packets permitted per 10 milliseconds.
-	*/
+	 */
 	Icmpthreshold int `json:"icmpthreshold,omitempty"`
 	/**
 	* The number of TCP RST packets permitted per 10 milli second. zero means rate control is disabled and 0xffffffff means every thing is rate controlled
-	*/
+	 */
 	Tcprstthreshold int `json:"tcprstthreshold,omitempty"`
-
 }

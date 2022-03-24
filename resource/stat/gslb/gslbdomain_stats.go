@@ -12,30 +12,29 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
 * Statistics for GSLB domain resource.
-*/
+ */
 
 type Gslbdomainstats struct {
 	/**
 	* Name of the GSLB domain for which to display statistics. If you do not specify a name, statistics are shown for all configured GSLB
 		domains.
 	*/
-	Name string `json:"name,omitempty"`
+	Name          string `json:"name,omitempty"`
 	Dnsrecordtype string `json:"dnsrecordtype,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Dnstotalqueries int `json:"dnstotalqueries,omitempty"`
+	 */
+	Clearstats      string `json:"clearstats,omitempty"`
+	Dnstotalqueries int    `json:"dnstotalqueries,omitempty"`
 	/**
 	* Total number of DNS queries received.
-	*/
+	 */
 	Dnsqueriesrate float64 `json:"dnsqueriesrate,omitempty"`
-	Gslbdnsrectype string `json:"gslbdnsrectype,omitempty"`
-
+	Gslbdnsrectype string  `json:"gslbdnsrectype,omitempty"`
 }

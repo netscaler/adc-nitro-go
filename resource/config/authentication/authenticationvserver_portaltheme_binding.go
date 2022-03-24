@@ -12,23 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Binding class showing the portaltheme that can be bound to authenticationvserver.
-*/
+ */
 type Authenticationvserverportalthemebinding struct {
 	/**
 	* Theme for Authentication virtual server Login portal
-	*/
+	 */
 	Portaltheme string `json:"portaltheme,omitempty"`
-	Acttype uint32 `json:"acttype,omitempty"`
+	Acttype     uint32 `json:"acttype,omitempty"`
 	/**
 	* Name of the authentication virtual server to which to bind the policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

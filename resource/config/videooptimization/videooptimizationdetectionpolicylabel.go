@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package videooptimization
 
 /**
 * Configuration for videooptimization detection policy label resource.
-*/
+ */
 type Videooptimizationdetectionpolicylabel struct {
 	/**
 	* Name for the Video optimization detection policy label. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (
@@ -35,7 +35,7 @@ type Videooptimizationdetectionpolicylabel struct {
 	Policylabeltype string `json:"policylabeltype,omitempty"`
 	/**
 	* Any comments to preserve information about this videooptimization detection policy label.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* New name for the videooptimization detection policy label. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (
@@ -45,11 +45,10 @@ type Videooptimizationdetectionpolicylabel struct {
 
 	//------- Read only Parameter ---------;
 
-	Numpol string `json:"numpol,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Priority string `json:"priority,omitempty"`
+	Numpol                 string `json:"numpol,omitempty"`
+	Hits                   string `json:"hits,omitempty"`
+	Priority               string `json:"priority,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype string `json:"labeltype,omitempty"`
-	Invokelabelname string `json:"invoke_labelname,omitempty"`
-
+	Labeltype              string `json:"labeltype,omitempty"`
+	Invokelabelname        string `json:"invoke_labelname,omitempty"`
 }

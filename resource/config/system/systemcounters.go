@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for counters resource.
-*/
+ */
 type Systemcounters struct {
 	/**
 	* Specify the (counter) group name which contains all the counters specific tot his particular group.
-	*/
+	 */
 	Countergroup string `json:"countergroup,omitempty"`
 	/**
 	* Specifies the source which contains all the stored counter values.
-	*/
+	 */
 	Datasource string `json:"datasource,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the ciphersuite that can be bound to sslcipher.
-*/
+ */
 type Sslcipherciphersuitebinding struct {
 	/**
 	* Cipher name.
-	*/
+	 */
 	Ciphername string `json:"ciphername,omitempty"`
 	/**
 	* Name for the user-defined cipher group. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the cipher group is created.
@@ -32,11 +32,11 @@ type Sslcipherciphersuitebinding struct {
 	Ciphergroupname string `json:"ciphergroupname,omitempty"`
 	/**
 	* Cipher suite description.
-	*/
+	 */
 	Description string `json:"description,omitempty"`
 	/**
 	* This indicates priority assigned to the particular cipher
-	*/
+	 */
 	Cipherpriority uint32 `json:"cipherpriority,omitempty"`
 	/**
 	* The operation that is performed when adding the cipher-suite.
@@ -48,8 +48,6 @@ type Sslcipherciphersuitebinding struct {
 	Cipheroperation string `json:"cipheroperation,omitempty"`
 	/**
 	* A cipher-suite can consist of an individual cipher name, the system predefined cipher-alias name, or user defined cipher-group name.
-	*/
+	 */
 	Ciphgrpals string `json:"ciphgrpals,omitempty"`
-
-
 }

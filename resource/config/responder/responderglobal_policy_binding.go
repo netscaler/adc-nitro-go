@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package responder
 
 /**
 * Binding class showing the policy that can be bound to responderglobal.
-*/
+ */
 type Responderglobalpolicybinding struct {
 	/**
 	* Name of the responder policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Specifies the bind point whose policies you want to display. Available settings function as follows:
@@ -44,15 +44,15 @@ type Responderglobalpolicybinding struct {
 	Type string `json:"type,omitempty"`
 	/**
 	* Specifies the priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* If the current policy evaluates to TRUE, terminate evaluation of policies bound to the current policy label, and then forward the request to the specified virtual server or evaluate the specified policy label.
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of invocation, Available settings function as follows:
@@ -62,17 +62,15 @@ type Responderglobalpolicybinding struct {
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the policy label to invoke. If the current policy evaluates to TRUE, the invoke parameter is set, and Label Type is policylabel.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* number of polices bound to label.
-	*/
+	 */
 	Numpol uint32 `json:"numpol,omitempty"`
 	/**
 	* flowtype of the bound responder policy.
-	*/
-	Flowtype uint32 `json:"flowtype,omitempty"`
+	 */
+	Flowtype       uint32 `json:"flowtype,omitempty"`
 	Globalbindtype string `json:"globalbindtype,omitempty"`
-
-
 }

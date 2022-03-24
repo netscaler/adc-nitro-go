@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for cipher resource.
-*/
+ */
 type Sslcipher struct {
 	/**
 	* Name for the user-defined cipher group. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the cipher group is created.
@@ -33,15 +33,14 @@ type Sslcipher struct {
 	Ciphgrpalias string `json:"ciphgrpalias,omitempty"`
 	/**
 	* Cipher name.
-	*/
+	 */
 	Ciphername string `json:"ciphername,omitempty"`
 	/**
 	* This indicates priority assigned to the particular cipher
-	*/
+	 */
 	Cipherpriority int `json:"cipherpriority,omitempty"`
 	/**
 	* Name of the profile to which cipher is attached.
-	*/
+	 */
 	Sslprofile string `json:"sslprofile,omitempty"`
-
 }

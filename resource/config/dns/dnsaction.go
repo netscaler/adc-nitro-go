@@ -12,21 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
 
 /**
 * Configuration for DNS action resource.
-*/
+ */
 type Dnsaction struct {
 	/**
 	* Name of the dns action.
-	*/
+	 */
 	Actionname string `json:"actionname,omitempty"`
 	/**
 	* The type of DNS action that is being configured.
-	*/
+	 */
 	Actiontype string `json:"actiontype,omitempty"`
 	/**
 	* List of IP address to be returned in case of rewrite_response actiontype. They can be of IPV4 or IPV6 type.
@@ -35,26 +35,25 @@ type Dnsaction struct {
 	Ipaddress []string `json:"ipaddress,omitempty"`
 	/**
 	* Time to live, in seconds.
-	*/
+	 */
 	Ttl int `json:"ttl,omitempty"`
 	/**
 	* The view name that must be used for the given action.
-	*/
+	 */
 	Viewname string `json:"viewname,omitempty"`
 	/**
 	* The location list in priority order used for the given action.
-	*/
+	 */
 	Preferredloclist []string `json:"preferredloclist,omitempty"`
 	/**
 	* Name of the DNS profile to be associated with the transaction for which the action is chosen
-	*/
+	 */
 	Dnsprofilename string `json:"dnsprofilename,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Drop string `json:"drop,omitempty"`
+	Drop        string `json:"drop,omitempty"`
 	Cachebypass string `json:"cachebypass,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Builtin     string `json:"builtin,omitempty"`
+	Feature     string `json:"feature,omitempty"`
 }

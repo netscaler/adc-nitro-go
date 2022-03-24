@@ -12,25 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cs
 
 /**
 * Binding class showing the tmtrafficpolicy that can be bound to csvserver.
-*/
+ */
 type Csvservertmtrafficpolicybinding struct {
 	/**
 	* Policies bound to this vserver.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Priority for the policy.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* Name of the content switching virtual server to which the content switching policy applies.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of the Load Balancing virtual server to which the content is switched, if policy rule is evaluated to be TRUE.
@@ -56,20 +56,18 @@ type Csvservertmtrafficpolicybinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Bind point at which policy needs to be bound. Note: Content switching policies are evaluated only at request time.
-	*/
+	 */
 	Bindpoint string `json:"bindpoint,omitempty"`
 	/**
 	* Invoke a policy label if this policy's rule evaluates to TRUE (valid only for default-syntax policies such as application firewall, transform, integrated cache, rewrite, responder, and content switching).
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of label to be invoked.
-	*/
+	 */
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the label to be invoked.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cr
 
 /**
 * Binding class showing the lbvserver that can be bound to crvserver.
-*/
+ */
 type Crvserverlbvserverbinding struct {
 	/**
 	* The Default target server name.
-	*/
+	 */
 	Lbvserver string `json:"lbvserver,omitempty"`
 	/**
 	* Number of hits.
-	*/
+	 */
 	Hits int `json:"hits,omitempty"`
 	/**
 	* Name of the cache redirection virtual server to which to bind the cache redirection policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

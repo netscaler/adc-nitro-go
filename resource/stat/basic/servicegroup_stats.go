@@ -12,24 +12,23 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package basic
 
 /**
 * Statistics for service group resource.
-*/
+ */
 
 type Servicegroupstats struct {
 	/**
 	* Name of the service group for which to display settings.
-	*/
+	 */
 	Servicegroupname string `json:"servicegroupname,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	State string `json:"state,omitempty"`
+	 */
+	Clearstats  string `json:"clearstats,omitempty"`
+	State       string `json:"state,omitempty"`
 	Servicetype string `json:"servicetype,omitempty"`
-
 }

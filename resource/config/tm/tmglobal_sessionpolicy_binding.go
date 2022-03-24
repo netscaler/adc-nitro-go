@@ -12,38 +12,36 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package tm
 
 /**
 * Binding class showing the sessionpolicy that can be bound to tmglobal.
-*/
+ */
 type Tmglobalsessionpolicybinding struct {
 	/**
 	* The name of the policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* The priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Bound policy type
-	*/
+	 */
 	Bindpolicytype uint32 `json:"bindpolicytype,omitempty"`
 	/**
 	* Indicates that a variable is a built-in (SYSTEM INTERNAL) type.
-	*/
+	 */
 	Builtin []string `json:"builtin,omitempty"`
 	/**
 	* The feature to be checked while applying this config
-	*/
+	 */
 	Feature string `json:"feature,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-
-
 }

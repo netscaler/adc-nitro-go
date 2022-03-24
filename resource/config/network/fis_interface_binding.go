@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the interface that can be bound to fis.
-*/
+ */
 type Fisinterfacebinding struct {
 	/**
 	* Interface to be bound to the FIS, specified in slot/port notation (for example, 1/3)
-	*/
+	 */
 	Ifnum string `json:"ifnum,omitempty"`
 	/**
 	* ID of the cluster node for which you are creating the FIS. Can be configured only through the cluster IP address.
-	*/
+	 */
 	Ownernode int `json:"ownernode,omitempty"`
 	/**
 	* The name of the FIS to which you want to bind interfaces.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

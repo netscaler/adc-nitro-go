@@ -12,23 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Binding class showing the vpnnexthopserver that can be bound to vpnvserver.
-*/
+ */
 type Vpnvservervpnnexthopserverbinding struct {
 	/**
 	* The name of the next hop server bound to the VPN virtual server.
-	*/
+	 */
 	Nexthopserver string `json:"nexthopserver,omitempty"`
-	Acttype int `json:"acttype,omitempty"`
+	Acttype       int    `json:"acttype,omitempty"`
 	/**
 	* Name of the virtual server.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

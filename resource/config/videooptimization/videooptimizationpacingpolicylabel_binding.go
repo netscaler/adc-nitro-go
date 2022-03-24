@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package videooptimization
 
 /**
-* Binding object which returns the resources bound to videooptimizationpacingpolicylabel_binding. 
-*/
+* Binding object which returns the resources bound to videooptimizationpacingpolicylabel_binding.
+ */
 type Videooptimizationpacingpolicylabelbinding struct {
 	/**
 	* Name of the videooptimization pacing policy label.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

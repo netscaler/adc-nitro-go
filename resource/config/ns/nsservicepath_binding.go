@@ -12,20 +12,18 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
-* Binding object which returns the resources bound to nsservicepath_binding. 
-*/
+* Binding object which returns the resources bound to nsservicepath_binding.
+ */
 type Nsservicepathbinding struct {
 	/**
 	* Name for the Service path. Must begin with an ASCII alphanumeric or underscore (_) character, and must
 		contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-)
-		characters.<br/>Minimum value =  
+		characters.<br/>Minimum value =
 	*/
 	Servicepathname string `json:"servicepathname,omitempty"`
-
-
 }

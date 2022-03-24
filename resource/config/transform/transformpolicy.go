@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package transform
 
 /**
 * Configuration for URL Transformation policy resource.
-*/
+ */
 type Transformpolicy struct {
 	/**
 	* Name for the URL Transformation policy.
@@ -31,21 +31,21 @@ type Transformpolicy struct {
 	* Expression, or name of a named expression, against which to evaluate traffic.
 		The following requirements apply only to the Citrix ADC CLI:
 		* If the expression includes blank spaces, the entire expression must be enclosed in double quotation marks.
-		* If the expression itself includes double quotation marks, you must escape the quotations by using the \ character. 
+		* If the expression itself includes double quotation marks, you must escape the quotations by using the \ character.
 		* Alternatively, you can use single quotation marks to enclose the rule, in which case you do not have to escape the double quotation marks.
 	*/
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Name of the URL Transformation profile to use to transform requests and responses that match the policy.
-	*/
+	 */
 	Profilename string `json:"profilename,omitempty"`
 	/**
 	* Any comments to preserve information about this URL Transformation policy.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Log server to use to log connections that match this policy.
-	*/
+	 */
 	Logaction string `json:"logaction,omitempty"`
 	/**
 	* New name for the policy. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at (@), equals (=), colon (:), and underscore characters.
@@ -56,9 +56,8 @@ type Transformpolicy struct {
 
 	//------- Read only Parameter ---------;
 
-	Hits string `json:"hits,omitempty"`
+	Hits      string `json:"hits,omitempty"`
 	Isdefault string `json:"isdefault,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Builtin   string `json:"builtin,omitempty"`
+	Feature   string `json:"feature,omitempty"`
 }

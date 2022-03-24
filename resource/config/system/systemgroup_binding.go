@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
-* Binding object which returns the resources bound to systemgroup_binding. 
-*/
+* Binding object which returns the resources bound to systemgroup_binding.
+ */
 type Systemgroupbinding struct {
 	/**
-	* Name of the system group about which to display information.<br/>Minimum value =  
-	*/
+	* Name of the system group about which to display information.<br/>Minimum value =
+	 */
 	Groupname string `json:"groupname,omitempty"`
-
-
 }

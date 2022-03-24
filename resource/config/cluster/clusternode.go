@@ -12,21 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
 * Configuration for cluster node resource.
-*/
+ */
 type Clusternode struct {
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid"` // Zero is a valid value
 	/**
 	* Citrix ADC IP (NSIP) address of the appliance to add to the cluster. Must be an IPv4 address.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Admin state of the cluster node. The available settings function as follows:
@@ -37,7 +37,7 @@ type Clusternode struct {
 	State string `json:"state,omitempty"`
 	/**
 	* Interface through which the node communicates with the other nodes in the cluster. Must be specified in the three-tuple form n/c/u, where n represents the node ID and c/u refers to the interface on the appliance.
-	*/
+	 */
 	Backplane string `json:"backplane,omitempty"`
 	/**
 	* Preference for selecting a node as the configuration coordinator. The node with the lowest priority value is selected as the configuration coordinator.
@@ -47,44 +47,43 @@ type Clusternode struct {
 	Priority int `json:"priority"` // Zero is a valid value
 	/**
 	* The default node group in a Cluster system.
-	*/
+	 */
 	Nodegroup string `json:"nodegroup,omitempty"`
 	/**
 	* Applicable for Passive node and node becomes passive after this timeout (in minutes)
-	*/
+	 */
 	Delay int `json:"delay,omitempty"`
 	/**
 	* To set the tunnel mode
-	*/
+	 */
 	Tunnelmode string `json:"tunnelmode,omitempty"`
 	/**
 	* Option to remove nodegroup config
-	*/
+	 */
 	Clearnodegroupconfig string `json:"clearnodegroupconfig,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Clusterhealth string `json:"clusterhealth,omitempty"`
-	Effectivestate string `json:"effectivestate,omitempty"`
-	Operationalsyncstate string `json:"operationalsyncstate,omitempty"`
-	Syncfailurereason string `json:"syncfailurereason,omitempty"`
-	Masterstate string `json:"masterstate,omitempty"`
-	Health string `json:"health,omitempty"`
-	Syncstate string `json:"syncstate,omitempty"`
+	Clusterhealth              string `json:"clusterhealth,omitempty"`
+	Effectivestate             string `json:"effectivestate,omitempty"`
+	Operationalsyncstate       string `json:"operationalsyncstate,omitempty"`
+	Syncfailurereason          string `json:"syncfailurereason,omitempty"`
+	Masterstate                string `json:"masterstate,omitempty"`
+	Health                     string `json:"health,omitempty"`
+	Syncstate                  string `json:"syncstate,omitempty"`
 	Isconfigurationcoordinator string `json:"isconfigurationcoordinator,omitempty"`
-	Islocalnode string `json:"islocalnode,omitempty"`
-	Nodersskeymismatch string `json:"nodersskeymismatch,omitempty"`
-	Nodelicensemismatch string `json:"nodelicensemismatch,omitempty"`
-	Nodejumbonotsupported string `json:"nodejumbonotsupported,omitempty"`
-	Nodelist string `json:"nodelist,omitempty"`
-	Ifaceslist string `json:"ifaceslist,omitempty"`
-	Enabledifaces string `json:"enabledifaces,omitempty"`
-	Disabledifaces string `json:"disabledifaces,omitempty"`
-	Partialfailifaces string `json:"partialfailifaces,omitempty"`
-	Hamonifaces string `json:"hamonifaces,omitempty"`
-	Name string `json:"name,omitempty"`
-	Cfgflags string `json:"cfgflags,omitempty"`
-	Routemonitor string `json:"routemonitor,omitempty"`
-	Netmask string `json:"netmask,omitempty"`
-
+	Islocalnode                string `json:"islocalnode,omitempty"`
+	Nodersskeymismatch         string `json:"nodersskeymismatch,omitempty"`
+	Nodelicensemismatch        string `json:"nodelicensemismatch,omitempty"`
+	Nodejumbonotsupported      string `json:"nodejumbonotsupported,omitempty"`
+	Nodelist                   string `json:"nodelist,omitempty"`
+	Ifaceslist                 string `json:"ifaceslist,omitempty"`
+	Enabledifaces              string `json:"enabledifaces,omitempty"`
+	Disabledifaces             string `json:"disabledifaces,omitempty"`
+	Partialfailifaces          string `json:"partialfailifaces,omitempty"`
+	Hamonifaces                string `json:"hamonifaces,omitempty"`
+	Name                       string `json:"name,omitempty"`
+	Cfgflags                   string `json:"cfgflags,omitempty"`
+	Routemonitor               string `json:"routemonitor,omitempty"`
+	Netmask                    string `json:"netmask,omitempty"`
 }

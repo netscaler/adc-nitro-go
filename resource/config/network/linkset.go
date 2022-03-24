@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Configuration for link set resource.
-*/
+ */
 type Linkset struct {
 	/**
 	* Unique identifier for the linkset. Must be of the form LS/x, where x can be an integer from 1 to 32.
-	*/
+	 */
 	Id string `json:"id,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Ifnum string `json:"ifnum,omitempty"`
-
 }

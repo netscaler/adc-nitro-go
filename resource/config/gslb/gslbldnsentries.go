@@ -12,26 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
 * Configuration for LDNS entry resource.
-*/
+ */
 type Gslbldnsentries struct {
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Sitename string `json:"sitename,omitempty"`
-	Numsites string `json:"numsites,omitempty"`
+	Sitename  string `json:"sitename,omitempty"`
+	Numsites  string `json:"numsites,omitempty"`
 	Ipaddress string `json:"ipaddress,omitempty"`
-	Ttl string `json:"ttl,omitempty"`
-	Name string `json:"name,omitempty"`
-	Rtt string `json:"rtt,omitempty"`
-
+	Ttl       string `json:"ttl,omitempty"`
+	Name      string `json:"name,omitempty"`
+	Rtt       string `json:"rtt,omitempty"`
 }

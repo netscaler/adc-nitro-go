@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the ip that can be bound to netbridge.
-*/
+ */
 type Netbridgeipbinding struct {
 	/**
 	* The subnet that is extended by this network bridge.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* The network mask for the subnet.
-	*/
+	 */
 	Netmask string `json:"netmask,omitempty"`
 	/**
 	* The name of the network bridge.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

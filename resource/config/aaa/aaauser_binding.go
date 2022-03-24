@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
-* Binding object which returns the resources bound to aaauser_binding. 
-*/
+* Binding object which returns the resources bound to aaauser_binding.
+ */
 type Aaauserbinding struct {
 	/**
-	* Name of the user who has the account.<br/>Minimum value =  
-	*/
+	* Name of the user who has the account.<br/>Minimum value =
+	 */
 	Username string `json:"username,omitempty"`
-
-
 }

@@ -12,21 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Binding class showing the servicefunction that can be bound to nsservicepath.
-*/
+ */
 type Nsservicepathservicefunctionbinding struct {
 	/**
 	* List of service functions constituting the chain.
-	*/
+	 */
 	Servicefunction string `json:"servicefunction,omitempty"`
 	/**
 	* The serviceindex of each servicefunction in path.
-	*/
+	 */
 	Index uint32 `json:"index,omitempty"`
 	/**
 	* Name for the Service path. Must begin with an ASCII alphanumeric or underscore (_) character, and must
@@ -34,6 +34,4 @@ type Nsservicepathservicefunctionbinding struct {
 		characters.
 	*/
 	Servicepathname string `json:"servicepathname,omitempty"`
-
-
 }

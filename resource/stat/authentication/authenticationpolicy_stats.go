@@ -12,32 +12,31 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Statistics for Authentication Policy resource.
-*/
+ */
 
 type Authenticationpolicystats struct {
 	/**
 	* Name of the advanced authentication policy for which to display statistics. If no name is specified, statistics for all advanced authentication polices are shown.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Pipolicyhits int `json:"pipolicyhits,omitempty"`
+	 */
+	Clearstats   string `json:"clearstats,omitempty"`
+	Pipolicyhits int    `json:"pipolicyhits,omitempty"`
 	/**
 	* Number of hits on the policy
-	*/
-	Pipolicyhitsrate float64 `json:"pipolicyhitsrate,omitempty"`
-	Pipolicyundefhits int `json:"pipolicyundefhits,omitempty"`
+	 */
+	Pipolicyhitsrate  float64 `json:"pipolicyhitsrate,omitempty"`
+	Pipolicyundefhits int     `json:"pipolicyundefhits,omitempty"`
 	/**
 	* Number of undef hits on the policy
-	*/
+	 */
 	Pipolicyundefhitsrate float64 `json:"pipolicyundefhitsrate,omitempty"`
-
 }

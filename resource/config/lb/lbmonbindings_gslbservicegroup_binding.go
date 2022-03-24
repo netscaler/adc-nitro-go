@@ -12,34 +12,32 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
 * Binding class showing the gslbservicegroup that can be bound to lbmonbindings.
-*/
+ */
 type Lbmonbindingsgslbservicegroupbinding struct {
 	/**
 	* The name of the service group.
-	*/
+	 */
 	Servicegroupname string `json:"servicegroupname,omitempty"`
 	/**
 	* The type of service
-	*/
+	 */
 	Servicetype string `json:"servicetype,omitempty"`
 	/**
 	* The state of the servicegroup.
-	*/
+	 */
 	Boundservicegroupsvrstate string `json:"boundservicegroupsvrstate,omitempty"`
 	/**
 	* The configured state (enable/disable) of Monitor on this service.
-	*/
+	 */
 	Monstate string `json:"monstate,omitempty"`
 	/**
 	* The name of the monitor.
-	*/
+	 */
 	Monitorname string `json:"monitorname,omitempty"`
-
-
 }

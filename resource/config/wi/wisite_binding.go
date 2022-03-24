@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package wi
 
 /**
-* Binding object which returns the resources bound to wisite_binding. 
-*/
+* Binding object which returns the resources bound to wisite_binding.
+ */
 type Wisitebinding struct {
 	/**
-	* Path of a Web Interface site whose details you want the Citrix ADC to display.<br/>Minimum value =  
-	*/
+	* Path of a Web Interface site whose details you want the Citrix ADC to display.<br/>Minimum value =
+	 */
 	Sitepath string `json:"sitepath,omitempty"`
-
-
 }

@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for surge queue resource.
-*/
+ */
 type Nssurgeq struct {
 	/**
 	* Name of a virtual server, service or service group for which the SurgeQ must be flushed.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of a service group member. This argument is needed when you want to flush the SurgeQ of a service group.
-	*/
+	 */
 	Servername string `json:"servername,omitempty"`
 	/**
 	* port on which server is bound to the entity(Servicegroup).
-	*/
+	 */
 	Port int `json:"port,omitempty"`
-
 }

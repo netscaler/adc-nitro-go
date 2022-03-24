@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the ip6 that can be bound to vxlan.
-*/
+ */
 type Vxlanip6binding struct {
 	/**
 	* The IP address assigned to the VXLAN.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* A positive integer, which is also called VXLAN Network Identifier (VNI), that uniquely identifies a VXLAN.
-	*/
+	 */
 	Id uint32 `json:"id,omitempty"`
 	/**
 	* Subnet mask for the network address defined for this VXLAN.
-	*/
+	 */
 	Netmask string `json:"netmask,omitempty"`
-
-
 }

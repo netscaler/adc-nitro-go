@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cache
 
 /**
-* Binding object which returns the resources bound to cachepolicylabel_binding. 
-*/
+* Binding object which returns the resources bound to cachepolicylabel_binding.
+ */
 type Cachepolicylabelbinding struct {
 	/**
 	* Name of the cache-policy label about which to display information.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

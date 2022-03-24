@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package transform
 
 /**
-* Binding object which returns the resources bound to transformpolicylabel_binding. 
-*/
+* Binding object which returns the resources bound to transformpolicylabel_binding.
+ */
 type Transformpolicylabelbinding struct {
 	/**
 	* Name for the policy label. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Can be changed after the URL Transformation policy label is added.
@@ -26,6 +26,4 @@ type Transformpolicylabelbinding struct {
 		If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, ^A"my transform policylabel^A" or ^A'my transform policylabel).
 	*/
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

@@ -12,10 +12,9 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
-
 
 type Authenticationloginschema struct {
 	/**
@@ -26,36 +25,35 @@ type Authenticationloginschema struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of the file for reading authentication schema to be sent for Login Page UI. This file should contain xml definition of elements as per Citrix Forms Authentication Protocol to be able to render login form. If administrator does not want to prompt users for additional credentials but continue with previously obtained credentials, then "noschema" can be given as argument. Please note that this applies only to loginSchemas that are used with user-defined factors, and not the vserver factor.
-	*/
+	 */
 	Authenticationschema string `json:"authenticationschema,omitempty"`
 	/**
 	* Expression for username extraction during login. This can be any relevant advanced policy expression.
-	*/
+	 */
 	Userexpression string `json:"userexpression,omitempty"`
 	/**
 	* Expression for password extraction during login. This can be any relevant advanced policy expression.
-	*/
+	 */
 	Passwdexpression string `json:"passwdexpression,omitempty"`
 	/**
 	* The index at which user entered username should be stored in session.
-	*/
+	 */
 	Usercredentialindex int `json:"usercredentialindex,omitempty"`
 	/**
 	* The index at which user entered password should be stored in session.
-	*/
+	 */
 	Passwordcredentialindex int `json:"passwordcredentialindex,omitempty"`
 	/**
 	* Weight of the current authentication
-	*/
+	 */
 	Authenticationstrength int `json:"authenticationstrength,omitempty"`
 	/**
 	* This option indicates whether current factor credentials are the default SSO (SingleSignOn) credentials.
-	*/
+	 */
 	Ssocredentials string `json:"ssocredentials,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

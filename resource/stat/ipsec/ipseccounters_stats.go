@@ -12,38 +12,37 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ipsec
 
 /**
 * Statistics for counters resource.
-*/
+ */
 
 type Ipseccountersstats struct {
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Ipsectotrxbytes int `json:"ipsectotrxbytes,omitempty"`
+	 */
+	Clearstats      string `json:"clearstats,omitempty"`
+	Ipsectotrxbytes int    `json:"ipsectotrxbytes,omitempty"`
 	/**
 	* Bytes received during IPsec sessions.
-	*/
+	 */
 	Ipsecrxbytesrate float64 `json:"ipsecrxbytesrate,omitempty"`
-	Ipsectottxbytes int `json:"ipsectottxbytes,omitempty"`
+	Ipsectottxbytes  int     `json:"ipsectottxbytes,omitempty"`
 	/**
 	* Bytes sent during IPsec sessions.
-	*/
+	 */
 	Ipsectxbytesrate float64 `json:"ipsectxbytesrate,omitempty"`
-	Ipsectotrxpkts int `json:"ipsectotrxpkts,omitempty"`
+	Ipsectotrxpkts   int     `json:"ipsectotrxpkts,omitempty"`
 	/**
 	* Packets received during IPsec sessions.
-	*/
+	 */
 	Ipsecrxpktsrate float64 `json:"ipsecrxpktsrate,omitempty"`
-	Ipsectottxpkts int `json:"ipsectottxpkts,omitempty"`
+	Ipsectottxpkts  int     `json:"ipsectottxpkts,omitempty"`
 	/**
 	* Packets sent during IPsec sessions.
-	*/
+	 */
 	Ipsectxpktsrate float64 `json:"ipsectxpktsrate,omitempty"`
-
 }

@@ -12,24 +12,22 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cmp
 
 /**
 * Binding class showing the crvserver that can be bound to cmppolicy.
-*/
+ */
 type Cmppolicycrvserverbinding struct {
 	/**
 	* The name of the entity to which the policy is bound.
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority int `json:"priority,omitempty"`
-	Activepolicy int `json:"activepolicy,omitempty"`
+	 */
+	Boundto      string `json:"boundto,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+	Activepolicy int    `json:"activepolicy,omitempty"`
 	/**
 	* Name of the HTTP compression policy for which to display details.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

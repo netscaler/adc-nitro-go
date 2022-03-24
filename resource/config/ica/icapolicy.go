@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ica
 
 /**
 * Configuration for ICA policy resource.
-*/
+ */
 type Icapolicy struct {
 	/**
 	* Name for the policy. Must begin with an ASCII alphabetic or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters.
@@ -36,15 +36,15 @@ type Icapolicy struct {
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Name of the ica action to be associated with this policy.
-	*/
+	 */
 	Action string `json:"action,omitempty"`
 	/**
 	* Any type of information about this ICA policy.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Name of the messagelog action to use for requests that match this policy.
-	*/
+	 */
 	Logaction string `json:"logaction,omitempty"`
 	/**
 	* New name for the policy. Must begin with an ASCII alphabetic or underscore (_)character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), s
@@ -56,9 +56,8 @@ type Icapolicy struct {
 
 	//------- Read only Parameter ---------;
 
-	Hits string `json:"hits,omitempty"`
+	Hits      string `json:"hits,omitempty"`
 	Undefhits string `json:"undefhits,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Builtin   string `json:"builtin,omitempty"`
+	Feature   string `json:"feature,omitempty"`
 }

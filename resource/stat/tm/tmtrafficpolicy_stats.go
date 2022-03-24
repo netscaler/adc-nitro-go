@@ -12,27 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package tm
 
 /**
 * Statistics for TM traffic policy resource.
-*/
+ */
 
 type Tmtrafficpolicystats struct {
 	/**
 	* The name of the TM traffic policy for which statistics will be displayed.  If not given statistics are shown for all policies.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Pipolicyhits int `json:"pipolicyhits,omitempty"`
+	 */
+	Clearstats   string `json:"clearstats,omitempty"`
+	Pipolicyhits int    `json:"pipolicyhits,omitempty"`
 	/**
 	* Number of hits on the policy
-	*/
+	 */
 	Pipolicyhitsrate float64 `json:"pipolicyhitsrate,omitempty"`
-
 }

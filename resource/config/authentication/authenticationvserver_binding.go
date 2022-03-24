@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
-* Binding object which returns the resources bound to authenticationvserver_binding. 
-*/
+* Binding object which returns the resources bound to authenticationvserver_binding.
+ */
 type Authenticationvserverbinding struct {
 	/**
-	* Name of the authentication virtual server.<br/>Minimum value =  
-	*/
+	* Name of the authentication virtual server.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

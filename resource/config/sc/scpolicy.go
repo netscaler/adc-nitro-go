@@ -12,38 +12,38 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package sc
 
 /**
 * Configuration for SureConnect policy resource.
-*/
+ */
 type Scpolicy struct {
 	/**
 	* Name for the policy. Must begin with an ASCII alphabetic or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* URL against which to match incoming client request.
-	*/
+	 */
 	Url string `json:"url,omitempty"`
 	/**
-	* Expression against which the traffic is evaluated. 
+	* Expression against which the traffic is evaluated.
 		Maximum length of a string literal in the expression is 255 characters. A longer string can be split into smaller strings of up to 255 characters each, and the smaller strings concatenated with the + operator. For example, you can create a 500-character string as follows: '"<string of 255 characters>" + "<string of 245 characters>"'
 		The following requirements apply only to the Citrix ADC CLI:
 		* If the expression includes one or more spaces, enclose the entire expression in double quotation marks.
-		* If the expression itself includes double quotation marks, escape the quotations by using the  character. 
+		* If the expression itself includes double quotation marks, escape the quotations by using the  character.
 		* Alternatively, you can use single quotation marks to enclose the rule, in which case you do not have to escape the double quotation marks.
 	*/
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Delay threshold, in microseconds, for requests that match the policy's URL or rule. If the delay statistics gathered for the matching request exceed the specified delay, SureConnect is triggered for that request.
-	*/
+	 */
 	Delay int `json:"delay,omitempty"`
 	/**
 	* Maximum number of concurrent connections that can be open for requests that match the policy's URL or rule.
-	*/
+	 */
 	Maxconn int `json:"maxconn,omitempty"`
 	/**
 	* Action to be taken when the delay or maximum-connections threshold is reached. Available settings function as follows:
@@ -54,11 +54,10 @@ type Scpolicy struct {
 	Action string `json:"action,omitempty"`
 	/**
 	* Name of the alternative content service to be used in the ACS action.
-	*/
+	 */
 	Altcontentsvcname string `json:"altcontentsvcname,omitempty"`
 	/**
 	* Path to the alternative content service to be used in the ACS action.
-	*/
+	 */
 	Altcontentpath string `json:"altcontentpath,omitempty"`
-
 }

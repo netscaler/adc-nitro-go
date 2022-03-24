@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Configuration for pre authentication action resource.
-*/
+ */
 type Aaapreauthenticationaction struct {
 	/**
 	* Name for the preauthentication action. Must begin with a letter, number, or the underscore character (_), and must consist only of letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Cannot be changed after preauthentication action is created.
@@ -28,24 +28,23 @@ type Aaapreauthenticationaction struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Allow or deny logon after endpoint analysis (EPA) results.
-	*/
+	 */
 	Preauthenticationaction string `json:"preauthenticationaction,omitempty"`
 	/**
 	* String specifying the name of a process to be terminated by the endpoint analysis (EPA) tool.
-	*/
+	 */
 	Killprocess string `json:"killprocess,omitempty"`
 	/**
 	* String specifying the path(s) and name(s) of the files to be deleted by the endpoint analysis (EPA) tool.
-	*/
+	 */
 	Deletefiles string `json:"deletefiles,omitempty"`
 	/**
 	* This is the default group that is chosen when the EPA check succeeds.
-	*/
+	 */
 	Defaultepagroup string `json:"defaultepagroup,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

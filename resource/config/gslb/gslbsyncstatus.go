@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
 * Configuration for sync status resource.
-*/
+ */
 type Gslbsyncstatus struct {
 	/**
 	* sync status summary to be displayed in one line (Success/Failure), in case of Failure stating reason for failure
-	*/
+	 */
 	Summary bool `json:"summary,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cloud
 
 /**
 * Configuration for Allowed ticket profile for NGS resource.
-*/
+ */
 type Cloudallowedngsticketprofile struct {
 	/**
 	* Profile name for allowed tickets
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Created name for allowed tickets
-	*/
+	 */
 	Creator string `json:"creator,omitempty"`
-
 }

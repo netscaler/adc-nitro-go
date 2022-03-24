@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cmp
 
 /**
 * Binding class showing the cmppolicy that can be bound to cmpglobal.
-*/
+ */
 type Cmpglobalcmppolicybinding struct {
 	/**
 	* The name of the globally bound HTTP compression policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Positive integer specifying the priority of the policy. The lower the number, the higher the priority. By default, polices within a label are evaluated in the order of their priority numbers.
@@ -31,20 +31,20 @@ type Cmpglobalcmppolicybinding struct {
 	Priority int `json:"priority,omitempty"`
 	/**
 	* The current state of the policy binding. This attribute is relevant only for CLASSIC policies.
-	*/
+	 */
 	State string `json:"state,omitempty"`
 	/**
 	* Bind point to which the policy is bound.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* The number of policies bound to the bindpoint.
-	*/
+	 */
 	Numpol int `json:"numpol,omitempty"`
 	/**
 	* Policy type (Classic/Advanced) to be bound.Used for display.
-	*/
-	Policytype string `json:"policytype,omitempty"`
+	 */
+	Policytype     string `json:"policytype,omitempty"`
 	Globalbindtype string `json:"globalbindtype,omitempty"`
 	/**
 	* Expression or other value specifying the priority of the next policy, within the policy label, to evaluate if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -52,7 +52,7 @@ type Cmpglobalcmppolicybinding struct {
 		* END - Stop evaluation.
 		* USE_INVOCATION_RESULT - Applicable if this policy invokes another policy label. If the final goto in the invoked policy label has a value of END, the evaluation stops. If the final goto is anything other than END, the current policy label performs a NEXT.
 		* An expression that evaluates to a number.
-		If you specify an expression, it's evaluation result determines the next policy to evaluate, as follows: 
+		If you specify an expression, it's evaluation result determines the next policy to evaluate, as follows:
 		* If the expression evaluates to a higher numbered priority, that policy is evaluated next.
 		* If the expression evaluates to the priority of the current policy, the policy with the next higher priority number is evaluated next.
 		* If the expression evaluates to a priority number that is numerically higher than the highest priority number, policy evaluation ends.
@@ -64,16 +64,14 @@ type Cmpglobalcmppolicybinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Invoke policies bound to a virtual server or a policy label. After the invoked policies are evaluated, the flow returns to the policy with the next priority. Applicable only for default-syntax policies.
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of policy label invocation. This argument is relevant only for advanced (default-syntax) policies.
-	*/
+	 */
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the label to invoke if the current policy rule evaluates to TRUE. Applicable only to advanced (default-syntax) policies.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

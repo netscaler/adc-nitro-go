@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for FIPS key resource.
-*/
+ */
 type Sslfipskey struct {
 	/**
 	* Name for the FIPS key. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the FIPS key is created.
@@ -28,7 +28,7 @@ type Sslfipskey struct {
 	Fipskeyname string `json:"fipskeyname,omitempty"`
 	/**
 	* Only RSA key and ECDSA Key are supported.
-	*/
+	 */
 	Keytype string `json:"keytype,omitempty"`
 	/**
 	* Exponent value for the FIPS key to be created. Available values function as follows:
@@ -38,11 +38,11 @@ type Sslfipskey struct {
 	Exponent string `json:"exponent,omitempty"`
 	/**
 	* Modulus, in multiples of 64, of the FIPS key to be created.
-	*/
+	 */
 	Modulus int `json:"modulus,omitempty"`
 	/**
 	* Only p_256 (prime256v1) and P_384 (secp384r1) are supported.
-	*/
+	 */
 	Curve string `json:"curve,omitempty"`
 	/**
 	* Name of and, optionally, path to the key file to be imported.
@@ -57,15 +57,14 @@ type Sslfipskey struct {
 	Inform string `json:"inform,omitempty"`
 	/**
 	* Name of the wrap key to use for importing the key. Required for importing a non-FIPS key.
-	*/
+	 */
 	Wrapkeyname string `json:"wrapkeyname,omitempty"`
 	/**
 	* Initialization Vector (IV) to use for importing the key. Required for importing a non-FIPS key.
-	*/
+	 */
 	Iv string `json:"iv,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Size string `json:"size,omitempty"`
-
 }

@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
 
 /**
 * Binding class showing the domain that can be bound to dnszone.
-*/
+ */
 type Dnszonedomainbinding struct {
 	/**
 	* Domain name that belongs to the given zone
-	*/
+	 */
 	Domain string `json:"domain,omitempty"`
 	/**
 	* An array of record types associated with the nsec record.
-	*/
+	 */
 	Nextrecs []string `json:"nextrecs,omitempty"`
 	/**
 	* Name of the zone. Mutually exclusive with the type parameter.
-	*/
+	 */
 	Zonename string `json:"zonename,omitempty"`
-
-
 }

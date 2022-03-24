@@ -12,27 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package filter
 
 /**
 * Configuration for HTML injection variable resource.
-*/
+ */
 type Filterhtmlinjectionvariable struct {
 	/**
 	* Name for the HTML injection variable to be added.
-	*/
+	 */
 	Variable string `json:"variable,omitempty"`
 	/**
 	* Value to be assigned to the new variable.
-	*/
+	 */
 	Value string `json:"value,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-	Type string `json:"type,omitempty"`
-
+	Type    string `json:"type,omitempty"`
 }

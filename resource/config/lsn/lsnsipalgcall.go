@@ -12,28 +12,27 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
 * Configuration for LSN SIPALG call resource.
-*/
+ */
 type Lsnsipalgcall struct {
 	/**
 	* Call ID for the SIP call.
-	*/
+	 */
 	Callid string `json:"callid,omitempty"`
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Callflags string `json:"callflags,omitempty"`
-	Xlatip string `json:"xlatip,omitempty"`
+	Callflags    string `json:"callflags,omitempty"`
+	Xlatip       string `json:"xlatip,omitempty"`
 	Callrefcount string `json:"callrefcount,omitempty"`
-	Calltimer string `json:"calltimer,omitempty"`
-
+	Calltimer    string `json:"calltimer,omitempty"`
 }

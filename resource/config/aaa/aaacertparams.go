@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Configuration for certificate parameter resource.
-*/
+ */
 type Aaacertparams struct {
 	/**
-	* Client certificate field that contains the username, in the format <field>:<subfield>. 
-	*/
+	* Client certificate field that contains the username, in the format <field>:<subfield>.
+	 */
 	Usernamefield string `json:"usernamefield,omitempty"`
 	/**
 	* Client certificate field that specifies the group, in the format <field>:<subfield>.
-	*/
+	 */
 	Groupnamefield string `json:"groupnamefield,omitempty"`
 	/**
 	* This is the default group that is chosen when the authentication succeeds in addition to extracted groups.
-	*/
+	 */
 	Defaultauthenticationgroup string `json:"defaultauthenticationgroup,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Twofactor string `json:"twofactor,omitempty"`
-
 }

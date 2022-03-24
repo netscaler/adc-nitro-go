@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
 * Configuration for Node group object type resource.
-*/
+ */
 type Clusternodegroup struct {
 	/**
 	* Name of the nodegroup. The name uniquely identifies the nodegroup on the cluster.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Specifies whether cluster nodes, that are not part of the nodegroup, will be used as backup for the nodegroup.
@@ -38,19 +38,18 @@ type Clusternodegroup struct {
 	Sticky string `json:"sticky,omitempty"`
 	/**
 	* State of the nodegroup. All the nodes binding to this nodegroup must have the same state. ACTIVE/SPARE/PASSIVE
-	*/
+	 */
 	State string `json:"state,omitempty"`
 	/**
 	* Priority of Nodegroup. This priority is used for all the nodes bound to the nodegroup for Nodegroup selection
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Currentnodemask string `json:"currentnodemask,omitempty"`
-	Backupnodemask string `json:"backupnodemask,omitempty"`
+	Currentnodemask          string `json:"currentnodemask,omitempty"`
+	Backupnodemask           string `json:"backupnodemask,omitempty"`
 	Boundedentitiescntfrompe string `json:"boundedentitiescntfrompe,omitempty"`
-	Activelist string `json:"activelist,omitempty"`
-	Backuplist string `json:"backuplist,omitempty"`
-
+	Activelist               string `json:"activelist,omitempty"`
+	Backuplist               string `json:"backuplist,omitempty"`
 }

@@ -12,22 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for Imported Certfile resource.
-*/
+ */
 type Sslcertfile struct {
 	/**
 	* Name to assign to the imported certificate file. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. The following requirement applies only to the Citrix ADC CLI: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my file" or 'my file').
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* URL specifying the protocol, host, and path, including file name, to the certificate file to be imported. For example, http://www.example.com/cert_file.
 		NOTE: The import fails if the object to be imported is on an HTTPS server that requires client certificate authentication for access.
 	*/
 	Src string `json:"src,omitempty"`
-
 }

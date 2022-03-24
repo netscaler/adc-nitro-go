@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cloud
 
 /**
 * Configuration for cloud credentials resource.
-*/
+ */
 type Cloudcredential struct {
 	/**
 	* Tenant ID of the Credentials
-	*/
+	 */
 	Tenantidentifier string `json:"tenantidentifier,omitempty"`
 	/**
 	* Application ID of the Credentials
-	*/
+	 */
 	Applicationid string `json:"applicationid,omitempty"`
 	/**
 	* Application Secret of the Credentials.
-	*/
+	 */
 	Applicationsecret string `json:"applicationsecret,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Isset string `json:"isset,omitempty"`
-
 }

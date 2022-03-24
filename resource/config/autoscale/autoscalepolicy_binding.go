@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package autoscale
 
 /**
-* Binding object which returns the resources bound to autoscalepolicy_binding. 
-*/
+* Binding object which returns the resources bound to autoscalepolicy_binding.
+ */
 type Autoscalepolicybinding struct {
 	/**
-	* The name of the autoscale policy.<br/>Minimum value =  
-	*/
+	* The name of the autoscale policy.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

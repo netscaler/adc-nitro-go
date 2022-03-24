@@ -12,23 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authorization
 
 /**
 * Binding class showing the lbvserver that can be bound to authorizationpolicy.
-*/
+ */
 type Authorizationpolicylbvserverbinding struct {
 	/**
 	* The entity name to which policy is bound
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority int `json:"priority,omitempty"`
+	 */
+	Boundto  string `json:"boundto,omitempty"`
+	Priority int    `json:"priority,omitempty"`
 	/**
 	* Name of the authorization policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

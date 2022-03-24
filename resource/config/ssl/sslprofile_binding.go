@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
-* Binding object which returns the resources bound to sslprofile_binding. 
-*/
+* Binding object which returns the resources bound to sslprofile_binding.
+ */
 type Sslprofilebinding struct {
 	/**
-	* Name of the SSL profile for which to show detailed information.<br/>Minimum value =  
-	*/
+	* Name of the SSL profile for which to show detailed information.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

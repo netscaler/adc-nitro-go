@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ha
 
 /**
 * Configuration for sync resource.
-*/
+ */
 type Hasync struct {
 	/**
 	* Force synchronization regardless of the state of HA propagation and HA synchronization on either node.
-	*/
+	 */
 	Force bool `json:"force,omitempty"`
 	/**
 	* After synchronization, automatically save the configuration in the secondary node configuration file (ns.conf) without prompting for confirmation.
-	*/
+	 */
 	Save string `json:"save,omitempty"`
-
 }

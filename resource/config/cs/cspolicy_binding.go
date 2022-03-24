@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cs
 
 /**
-* Binding object which returns the resources bound to cspolicy_binding. 
-*/
+* Binding object which returns the resources bound to cspolicy_binding.
+ */
 type Cspolicybinding struct {
 	/**
-	* Name of the content switching policy to display. If this parameter is omitted, details of all the policies are displayed.<br/>Minimum value =  
-	*/
+	* Name of the content switching policy to display. If this parameter is omitted, details of all the policies are displayed.<br/>Minimum value =
+	 */
 	Policyname string `json:"policyname,omitempty"`
-
-
 }

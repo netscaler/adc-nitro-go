@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
-* Binding object which returns the resources bound to nstrafficdomain_binding. 
-*/
+* Binding object which returns the resources bound to nstrafficdomain_binding.
+ */
 type Nstrafficdomainbinding struct {
 	/**
 	* Integer value that uniquely identifies a traffic domain.<br/>Minimum value =  1<br/>Maximum value =  4094
-	*/
+	 */
 	Td int `json:"td,omitempty"`
-
-
 }

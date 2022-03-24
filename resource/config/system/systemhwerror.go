@@ -12,22 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for Hardware errors resource.
-*/
+ */
 type Systemhwerror struct {
 	/**
 	* Perform only disk error checking.
-	*/
+	 */
 	Diskcheck bool `json:"diskcheck,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Response string `json:"response,omitempty"`
+	Response     string `json:"response,omitempty"`
 	Hwerrorcount string `json:"hwerrorcount,omitempty"`
-
 }

@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Binding class showing the systemgroup that can be bound to systemuser.
-*/
+ */
 type Systemusersystemgroupbinding struct {
 	/**
-	* The system group. 
-	*/
+	* The system group.
+	 */
 	Groupname string `json:"groupname,omitempty"`
 	/**
 	* Name of the system-user entry to which to bind the command policy.
-	*/
+	 */
 	Username string `json:"username,omitempty"`
-
-
 }

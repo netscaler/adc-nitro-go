@@ -12,35 +12,33 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package audit
 
 /**
 * Binding class showing the syslogpolicy that can be bound to auditsyslogglobal.
-*/
+ */
 type Auditsyslogglobalsyslogpolicybinding struct {
 	/**
 	* Name of the audit syslog policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Specifies the priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* number of polices bound to label.
-	*/
-	Numpol uint32 `json:"numpol,omitempty"`
+	 */
+	Numpol         uint32 `json:"numpol,omitempty"`
 	Globalbindtype string `json:"globalbindtype,omitempty"`
 	/**
 	* Indicates that a variable is a built-in (SYSTEM INTERNAL) type.
-	*/
+	 */
 	Builtin []string `json:"builtin,omitempty"`
 	/**
 	* The feature to be checked while applying this config
-	*/
+	 */
 	Feature string `json:"feature,omitempty"`
-
-
 }

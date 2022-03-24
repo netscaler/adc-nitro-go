@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cs
 
 /**
 * Binding class showing the profile that can be bound to csvserver.
-*/
+ */
 type Csvserverprofilebinding struct {
 	/**
 	* Name of the analytics profile bound to the LB vserver.
-	*/
+	 */
 	Analyticsprofile string `json:"analyticsprofile,omitempty"`
 	/**
 	* Name of the content switching virtual server to which the content switching policy applies.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

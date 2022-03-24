@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
-* Binding object which returns the resources bound to bridgegroup_binding. 
-*/
+* Binding object which returns the resources bound to bridgegroup_binding.
+ */
 type Bridgegroupbinding struct {
 	/**
 	* The name of the bridge group.<br/>Minimum value =  1<br/>Maximum value =  1000
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

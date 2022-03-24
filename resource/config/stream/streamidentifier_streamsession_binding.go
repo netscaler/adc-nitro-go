@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package stream
 
 /**
 * Binding class showing the streamsession that can be bound to streamidentifier.
-*/
+ */
 type Streamidentifierstreamsessionbinding struct {
 	/**
 	* The name of stream identifier.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

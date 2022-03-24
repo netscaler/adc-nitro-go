@@ -12,24 +12,22 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Binding class showing the vpnvserver that can be bound to aaapreauthenticationpolicy.
-*/
+ */
 type Aaapreauthenticationpolicyvpnvserverbinding struct {
 	/**
 	* The entity name to which policy is bound
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority int `json:"priority,omitempty"`
-	Activepolicy int `json:"activepolicy,omitempty"`
+	 */
+	Boundto      string `json:"boundto,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+	Activepolicy int    `json:"activepolicy,omitempty"`
 	/**
 	* Name of the preauthentication policy whose properties you want to view.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

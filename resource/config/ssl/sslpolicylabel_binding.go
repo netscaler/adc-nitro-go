@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
-* Binding object which returns the resources bound to sslpolicylabel_binding. 
-*/
+* Binding object which returns the resources bound to sslpolicylabel_binding.
+ */
 type Sslpolicylabelbinding struct {
 	/**
 	* Name of the SSL policy label for which to show detailed information.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

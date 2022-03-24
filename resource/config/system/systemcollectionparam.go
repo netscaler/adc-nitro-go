@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for collection parameter resource.
-*/
+ */
 type Systemcollectionparam struct {
 	/**
 	* SNMPv1 community name for authentication.
-	*/
+	 */
 	Communityname string `json:"communityname,omitempty"`
 	/**
 	* specify the log level. Possible values CRITICAL,WARNING,INFO,DEBUG1,DEBUG2
-	*/
+	 */
 	Loglevel string `json:"loglevel,omitempty"`
 	/**
 	* specify the data path to the database.
-	*/
+	 */
 	Datapath string `json:"datapath,omitempty"`
-
 }

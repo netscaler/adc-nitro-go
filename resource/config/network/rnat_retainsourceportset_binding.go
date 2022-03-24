@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the retainsourceportset that can be bound to rnat.
-*/
+ */
 type Rnatretainsourceportsetbinding struct {
 	/**
 	* When the source port range is configured and associated with the RNAT rule, Citrix ADC will choose a port from the specified source port range configured for connection establishment at the backend servers.
-	*/
+	 */
 	Retainsourceportrange string `json:"retainsourceportrange,omitempty"`
 	/**
 	* Name of the RNAT rule to which to bind NAT IPs.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

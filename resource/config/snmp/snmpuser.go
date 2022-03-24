@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package snmp
 
 /**
 * Configuration for SNMP user resource.
-*/
+ */
 type Snmpuser struct {
 	/**
 	* Name for the SNMPv3 user. Can consist of 1 to 31 characters that include uppercase and lowercase letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at sign (@), equals (=), colon (:), and underscore (_) characters.
@@ -28,11 +28,11 @@ type Snmpuser struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of the configured SNMPv3 group to which to bind this SNMPv3 user. The access rights (bound SNMPv3 views) and security level set for this group are assigned to this user.
-	*/
+	 */
 	Group string `json:"group,omitempty"`
 	/**
 	* Authentication algorithm used by the Citrix ADC and the SNMPv3 user for authenticating the communication between them. You must specify the same authentication algorithm when you configure the SNMPv3 user in the SNMP manager.
-	*/
+	 */
 	Authtype string `json:"authtype,omitempty"`
 	/**
 	* Plain-text pass phrase to be used by the authentication algorithm specified by the authType (Authentication Type) parameter. Can consist of 1 to 31 characters that include uppercase and lowercase letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at sign (@), equals (=), colon (:), and underscore (_) characters.
@@ -42,7 +42,7 @@ type Snmpuser struct {
 	Authpasswd string `json:"authpasswd,omitempty"`
 	/**
 	* Encryption algorithm used by the Citrix ADC and the SNMPv3 user for encrypting the communication between them. You must specify the same encryption algorithm when you configure the SNMPv3 user in the SNMP manager.
-	*/
+	 */
 	Privtype string `json:"privtype,omitempty"`
 	/**
 	* Encryption key to be used by the encryption algorithm specified by the privType (Encryption Type) parameter. Can consist of 1 to 31 characters that include uppercase and lowercase letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at sign (@), equals (=), colon (:), and underscore (_) characters.
@@ -53,8 +53,7 @@ type Snmpuser struct {
 
 	//------- Read only Parameter ---------;
 
-	Engineid string `json:"engineid,omitempty"`
+	Engineid    string `json:"engineid,omitempty"`
 	Storagetype string `json:"storagetype,omitempty"`
-	Status string `json:"status,omitempty"`
-
+	Status      string `json:"status,omitempty"`
 }

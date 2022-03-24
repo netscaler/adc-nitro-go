@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cr
 
 /**
-* Binding object which returns the resources bound to crpolicy_binding. 
-*/
+* Binding object which returns the resources bound to crpolicy_binding.
+ */
 type Crpolicybinding struct {
 	/**
-	* Name of the cache redirection policy to display. If this parameter is omitted, details of all the policies are displayed.<br/>Minimum value =  
-	*/
+	* Name of the cache redirection policy to display. If this parameter is omitted, details of all the policies are displayed.<br/>Minimum value =
+	 */
 	Policyname string `json:"policyname,omitempty"`
-
-
 }

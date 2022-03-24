@@ -12,24 +12,22 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package filter
 
 /**
 * Binding class showing the crvserver that can be bound to filterpolicy.
-*/
+ */
 type Filterpolicycrvserverbinding struct {
 	/**
 	* The entity name to which policy is bound
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority int `json:"priority,omitempty"`
-	Activepolicy int `json:"activepolicy,omitempty"`
+	 */
+	Boundto      string `json:"boundto,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+	Activepolicy int    `json:"activepolicy,omitempty"`
 	/**
 	* Name of the filter policy to be displayed. If a name is not provided, information about all the filter policies is shown.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

@@ -12,23 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
 * Binding class showing the profile that can be bound to lbvserver.
-*/
+ */
 type Lbvserverprofilebinding struct {
 	/**
 	* Name of the analytics profile bound to the LB vserver.
-	*/
+	 */
 	Analyticsprofile string `json:"analyticsprofile,omitempty"`
 	/**
 	* Name for the virtual server. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at sign (@), equal sign (=), and hyphen (-) characters. Can be changed after the virtual server is created.
-		CLI Users: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my vserver" or 'my vserver'). 
+		CLI Users: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my vserver" or 'my vserver').
 	*/
 	Name string `json:"name,omitempty"`
-
-
 }

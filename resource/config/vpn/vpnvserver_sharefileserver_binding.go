@@ -12,23 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Binding class showing the sharefileserver that can be bound to vpnvserver.
-*/
+ */
 type Vpnvserversharefileserverbinding struct {
 	/**
 	* Configured ShareFile server in XenMobile deployment. Format IP:PORT / FQDN:PORT
-	*/
+	 */
 	Sharefile string `json:"sharefile,omitempty"`
-	Acttype int `json:"acttype,omitempty"`
+	Acttype   int    `json:"acttype,omitempty"`
 	/**
 	* Name of the virtual server.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package policy
 
 /**
 * Binding class showing the pattern that can be bound to policypatset.
-*/
+ */
 type Policypatsetpatternbinding struct {
 	/**
 	* String of characters that constitutes a pattern. For more information about the characters that can be used, refer to the character set parameter.
@@ -27,7 +27,7 @@ type Policypatsetpatternbinding struct {
 	String string `json:"String,omitempty"`
 	/**
 	* The index of the string associated with the patset.
-	*/
+	 */
 	Index int `json:"index,omitempty"`
 	/**
 	* Character set associated with the characters in the string.
@@ -36,20 +36,18 @@ type Policypatsetpatternbinding struct {
 	Charset string `json:"charset,omitempty"`
 	/**
 	* Any comments to preserve information about this patset or a pattern bound to this patset.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Indicates that a variable is a built-in (SYSTEM INTERNAL) type.
-	*/
+	 */
 	Builtin []string `json:"builtin,omitempty"`
 	/**
 	* The feature to be checked while applying this config
-	*/
+	 */
 	Feature string `json:"feature,omitempty"`
 	/**
 	* Name of the pattern set to which to bind the string.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

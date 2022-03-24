@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package router
 
 /**
 * Configuration for dynamic routing config resource.
-*/
+ */
 type Routerdynamicrouting struct {
 	/**
 	* command to be executed
-	*/
+	 */
 	Commandstring string `json:"commandstring,omitempty"`
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Output string `json:"output,omitempty"`
-
 }

@@ -12,23 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Binding class showing the vpneula that can be bound to vpnvserver.
-*/
+ */
 type Vpnvservervpneulabinding struct {
 	/**
 	* Name of the EULA bound to VPN vserver
-	*/
-	Eula string `json:"eula,omitempty"`
-	Acttype int `json:"acttype,omitempty"`
+	 */
+	Eula    string `json:"eula,omitempty"`
+	Acttype int    `json:"acttype,omitempty"`
 	/**
 	* Name of the virtual server.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

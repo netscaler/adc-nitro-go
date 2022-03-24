@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for encryption key resource.
-*/
+ */
 type Nsencryptionkey struct {
 	/**
 	* Key name.  This follows the same syntax rules as other expression entity names:
@@ -74,7 +74,6 @@ type Nsencryptionkey struct {
 	Iv string `json:"iv,omitempty"`
 	/**
 	* Comments associated with this encryption key.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
-
 }

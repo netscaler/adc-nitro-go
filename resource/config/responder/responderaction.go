@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package responder
 
 /**
 * Configuration for responder action resource.
-*/
+ */
 type Responderaction struct {
 	/**
 	* Name for the responder action. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Can be changed after the responder policy is added.
@@ -36,7 +36,7 @@ type Responderaction struct {
 	*/
 	Type string `json:"type,omitempty"`
 	/**
-	* Expression specifying what to respond with. Typically a URL for redirect policies or a default-syntax expression.  In addition to Citrix ADC default-syntax expressions that refer to information in the request, a stringbuilder expression can contain text and HTML, and simple escape codes that define new lines and paragraphs. Enclose each stringbuilder expression element (either a Citrix ADC default-syntax expression or a string) in double quotation marks. Use the plus (+) character to join the elements. 
+	* Expression specifying what to respond with. Typically a URL for redirect policies or a default-syntax expression.  In addition to Citrix ADC default-syntax expressions that refer to information in the request, a stringbuilder expression can contain text and HTML, and simple escape codes that define new lines and paragraphs. Enclose each stringbuilder expression element (either a Citrix ADC default-syntax expression or a string) in double quotation marks. Use the plus (+) character to join the elements.
 		Examples:
 		1) Respondwith expression that sends an HTTP 1.1 200 OK response:
 		"HTTP/1.1 200 OK\r\n\r\n"
@@ -50,27 +50,27 @@ type Responderaction struct {
 	Target string `json:"target,omitempty"`
 	/**
 	* For respondwithhtmlpage policies, name of the HTML page object to use as the response. You must first import the page object.
-	*/
+	 */
 	Htmlpage string `json:"htmlpage,omitempty"`
 	/**
 	* Bypass the safety check, allowing potentially unsafe expressions. An unsafe expression in a response is one that contains references to request elements that might not be present in all requests. If a response refers to a missing request element, an empty string is used instead.
-	*/
+	 */
 	Bypasssafetycheck string `json:"bypasssafetycheck,omitempty"`
 	/**
 	* Comment. Any type of information about this responder action.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* HTTP response status code, for example 200, 302, 404, etc. The default value for the redirect action type is 302 and for respondwithhtmlpage is 200
-	*/
+	 */
 	Responsestatuscode int `json:"responsestatuscode,omitempty"`
 	/**
 	* Expression specifying the reason phrase of the HTTP response. The reason phrase may be a string literal with quotes or a PI expression. For example: "Invalid URL: " + HTTP.REQ.URL
-	*/
+	 */
 	Reasonphrase string `json:"reasonphrase,omitempty"`
 	/**
 	* One or more headers to insert into the HTTP response. Each header is specified as "name(expr)", where expr is an expression that is evaluated at runtime to provide the value for the named header. You can configure a maximum of eight headers for a responder action.
-	*/
+	 */
 	Headers []string `json:"headers,omitempty"`
 	/**
 	* New name for the responder action.
@@ -82,10 +82,9 @@ type Responderaction struct {
 
 	//------- Read only Parameter ---------;
 
-	Hits string `json:"hits,omitempty"`
+	Hits           string `json:"hits,omitempty"`
 	Referencecount string `json:"referencecount,omitempty"`
-	Undefhits string `json:"undefhits,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Undefhits      string `json:"undefhits,omitempty"`
+	Builtin        string `json:"builtin,omitempty"`
+	Feature        string `json:"feature,omitempty"`
 }

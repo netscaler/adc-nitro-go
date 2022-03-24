@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package xm
 
 /**
 * Configuration for XenMobile Deployment resource.
-*/
+ */
 type Xmdeployment struct {
 	/**
 	* XenMobile deployment name
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* XenMobile package name
-	*/
+	 */
 	Frompackage string `json:"frompackage,omitempty"`
 	/**
 	* XenMobile deployment config data
-	*/
+	 */
 	Config string `json:"config,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Meta string `json:"meta,omitempty"`
-
 }

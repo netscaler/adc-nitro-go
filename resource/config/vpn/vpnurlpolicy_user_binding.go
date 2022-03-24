@@ -12,24 +12,22 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Binding class showing the user that can be bound to vpnurlpolicy.
-*/
+ */
 type Vpnurlpolicyuserbinding struct {
 	/**
 	* The entity name to which policy is bound
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority uint32 `json:"priority,omitempty"`
+	 */
+	Boundto      string `json:"boundto,omitempty"`
+	Priority     uint32 `json:"priority,omitempty"`
 	Activepolicy uint32 `json:"activepolicy,omitempty"`
 	/**
 	* Name for the new urlPolicy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

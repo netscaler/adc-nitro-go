@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Binding class showing the bridgegroup that can be bound to nspartition.
-*/
+ */
 type Nspartitionbridgegroupbinding struct {
 	/**
 	* Identifier of the bridge group that is assigned to this partition.
-	*/
+	 */
 	Bridgegroup int `json:"bridgegroup,omitempty"`
 	/**
 	* Name of the Partition. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters.
-	*/
+	 */
 	Partitionname string `json:"partitionname,omitempty"`
-
-
 }

@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the iptunnel that can be bound to netbridge.
-*/
+ */
 type Netbridgeiptunnelbinding struct {
 	/**
 	* The name of the tunnel that is a part of this bridge.
-	*/
+	 */
 	Tunnel string `json:"tunnel,omitempty"`
 	/**
 	* The name of the network bridge.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

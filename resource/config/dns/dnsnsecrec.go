@@ -12,15 +12,14 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
-
 
 type Dnsnsecrec struct {
 	/**
 	* Name of the domain.
-	*/
+	 */
 	Hostname string `json:"hostname,omitempty"`
 	/**
 	* Type of records to display. Available settings function as follows:
@@ -32,9 +31,8 @@ type Dnsnsecrec struct {
 
 	//------- Read only Parameter ---------;
 
-	Nextnsec string `json:"nextnsec,omitempty"`
-	Nextrecs string `json:"nextrecs,omitempty"`
-	Ttl string `json:"ttl,omitempty"`
+	Nextnsec  string `json:"nextnsec,omitempty"`
+	Nextrecs  string `json:"nextrecs,omitempty"`
+	Ttl       string `json:"ttl,omitempty"`
 	Ecssubnet string `json:"ecssubnet,omitempty"`
-
 }

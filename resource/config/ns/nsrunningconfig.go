@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for running configuration resource.
-*/
+ */
 type Nsrunningconfig struct {
 	/**
 	* Include default values of parameters that have not been explicitly configured. If this argument is disabled, such parameters are not included.
-	*/
+	 */
 	Withdefaults bool `json:"withdefaults,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

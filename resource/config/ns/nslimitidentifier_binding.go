@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
-* Binding object which returns the resources bound to nslimitidentifier_binding. 
-*/
+* Binding object which returns the resources bound to nslimitidentifier_binding.
+ */
 type Nslimitidentifierbinding struct {
 	/**
 	* Name of the rate limit identifier about which to display information. If a name is not provided, information about all rate limit identifiers is shown.
-	*/
+	 */
 	Limitidentifier string `json:"limitidentifier,omitempty"`
-
-
 }

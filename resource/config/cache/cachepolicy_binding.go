@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cache
 
 /**
-* Binding object which returns the resources bound to cachepolicy_binding. 
-*/
+* Binding object which returns the resources bound to cachepolicy_binding.
+ */
 type Cachepolicybinding struct {
 	/**
-	* Name of the cache policy about which to display details.<br/>Minimum value =  
-	*/
+	* Name of the cache policy about which to display details.<br/>Minimum value =
+	 */
 	Policyname string `json:"policyname,omitempty"`
-
-
 }

@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for service Chain resource.
-*/
+ */
 type Nsservicepath struct {
 	/**
 	* Name for the Service path. Must begin with an ASCII alphanumeric or underscore (_) character, and must
@@ -26,5 +26,4 @@ type Nsservicepath struct {
 		characters.
 	*/
 	Servicepathname string `json:"servicepathname,omitempty"`
-
 }

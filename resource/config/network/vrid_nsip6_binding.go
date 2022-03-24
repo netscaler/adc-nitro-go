@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the nsip6 that can be bound to vrid.
-*/
+ */
 type Vridnsip6binding struct {
 	/**
 	* The IP address bound to the VRID.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Flags.
-	*/
+	 */
 	Flags int `json:"flags,omitempty"`
 	/**
 	* Integer that uniquely identifies the VMAC address. The generic VMAC address is in the form of 00:00:5e:00:01:<VRID>. For example, if you add a VRID with a value of 60 and bind it to an interface, the resulting VMAC address is 00:00:5e:00:01:3c, where 3c is the hexadecimal representation of 60.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

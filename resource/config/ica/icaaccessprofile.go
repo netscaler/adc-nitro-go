@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ica
 
 /**
 * Configuration for ica accessprofile resource.
-*/
+ */
 type Icaaccessprofile struct {
 	/**
 	* Name for the ICA accessprofile. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and
@@ -31,46 +31,45 @@ type Icaaccessprofile struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Allow Default access/Disable automatic connection of LPT ports from the client when the user logs on
-	*/
+	 */
 	Connectclientlptports string `json:"connectclientlptports,omitempty"`
 	/**
 	* Allow Default access/Disable applications hosted on the server to play sounds through a sound device installed on the client computer, also allows or prevents users to record audio input
-	*/
+	 */
 	Clientaudioredirection string `json:"clientaudioredirection,omitempty"`
 	/**
 	* Allow Default access/Disable file/data sharing via the Receiver for HTML5
-	*/
+	 */
 	Localremotedatasharing string `json:"localremotedatasharing,omitempty"`
 	/**
 	* Allow Default access/Disable the clipboard on the client device to be mapped to the clipboard on the server
-	*/
+	 */
 	Clientclipboardredirection string `json:"clientclipboardredirection,omitempty"`
 	/**
 	* Allow Default access/Disable COM port redirection to and from the client
-	*/
+	 */
 	Clientcomportredirection string `json:"clientcomportredirection,omitempty"`
 	/**
 	* Allow Default access/Disables drive redirection to and from the client
-	*/
+	 */
 	Clientdriveredirection string `json:"clientdriveredirection,omitempty"`
 	/**
 	* Allow Default access/Disable client printers to be mapped to a server when a user logs on to a session
-	*/
+	 */
 	Clientprinterredirection string `json:"clientprinterredirection,omitempty"`
 	/**
 	* Allow Default access/Disable the multistream feature for the specified users
-	*/
+	 */
 	Multistream string `json:"multistream,omitempty"`
 	/**
 	* Allow Default access/Disable the redirection of USB devices to and from the client
-	*/
+	 */
 	Clientusbdriveredirection string `json:"clientusbdriveredirection,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Refcnt string `json:"refcnt,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
+	Refcnt    string `json:"refcnt,omitempty"`
+	Builtin   string `json:"builtin,omitempty"`
+	Feature   string `json:"feature,omitempty"`
 	Isdefault string `json:"isdefault,omitempty"`
-
 }

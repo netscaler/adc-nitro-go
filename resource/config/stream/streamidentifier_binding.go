@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package stream
 
 /**
-* Binding object which returns the resources bound to streamidentifier_binding. 
-*/
+* Binding object which returns the resources bound to streamidentifier_binding.
+ */
 type Streamidentifierbinding struct {
 	/**
 	* The name of stream identifier.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

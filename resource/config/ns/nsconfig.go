@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for system config resource.
-*/
+ */
 type Nsconfig struct {
 	/**
 	* Configurations will be cleared without prompting for confirmation.
-	*/
+	 */
 	Force bool `json:"force,omitempty"`
 	/**
 	* Types of configurations to be cleared.
@@ -40,23 +40,23 @@ type Nsconfig struct {
 	Level string `json:"level,omitempty"`
 	/**
 	* RBA configurations and TACACS policies bound to system global will not be cleared if RBA is set to NO.This option is applicable only for BASIC level of clear configuration.Default is YES, which will clear rba configurations.
-	*/
+	 */
 	Rbaconfig string `json:"rbaconfig,omitempty"`
 	/**
 	* IP address of the Citrix ADC. Commonly referred to as NSIP address. This parameter is mandatory to bring up the appliance.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Netmask corresponding to the IP address. This parameter is mandatory to bring up the appliance.
-	*/
+	 */
 	Netmask string `json:"netmask,omitempty"`
 	/**
 	* VLAN (NSVLAN) for the subnet on which the IP address resides.
-	*/
+	 */
 	Nsvlan int `json:"nsvlan,omitempty"`
 	/**
 	* Interfaces of the appliances that must be bound to the NSVLAN.
-	*/
+	 */
 	Ifnum []string `json:"ifnum,omitempty"`
 	/**
 	* Specifies that the interfaces will be added as 802.1q tagged interfaces. Packets sent on these interface on this VLAN will have an additional 4-byte 802.1q tag which identifies the VLAN.
@@ -65,15 +65,15 @@ type Nsconfig struct {
 	Tagged string `json:"tagged,omitempty"`
 	/**
 	* The HTTP ports on the Web server. This allows the system to perform connection off-load for any client request that has a destination port matching one of these configured ports.
-	*/
+	 */
 	Httpport []int `json:"httpport,omitempty"`
 	/**
 	* The maximum number of connections that will be made from the system to the web server(s) attached to it. The value entered here is applied globally to all attached servers.
-	*/
+	 */
 	Maxconn int `json:"maxconn,omitempty"`
 	/**
 	* The maximum number of requests that the system can pass on a particular connection between the system and a server attached to it. Setting this value to 0 allows an unlimited number of requests to be passed.
-	*/
+	 */
 	Maxreq int `json:"maxreq,omitempty"`
 	/**
 	* The option to control (enable or disable) the insertion of the actual client IP address into the HTTP header request passed from the client to one, some, or all servers attached to the system.
@@ -84,103 +84,102 @@ type Nsconfig struct {
 	Cip string `json:"cip,omitempty"`
 	/**
 	* The text that will be used as the client IP header.
-	*/
+	 */
 	Cipheader string `json:"cipheader,omitempty"`
 	/**
 	* The version of the cookie inserted by system.
-	*/
+	 */
 	Cookieversion string `json:"cookieversion,omitempty"`
 	/**
 	* enable/disable secure flag for persistence cookie
-	*/
+	 */
 	Securecookie string `json:"securecookie,omitempty"`
 	/**
 	* The minimum Path MTU.
-	*/
+	 */
 	Pmtumin int `json:"pmtumin,omitempty"`
 	/**
 	* The timeout value in minutes.
-	*/
+	 */
 	Pmtutimeout int `json:"pmtutimeout,omitempty"`
 	/**
 	* Port range configured for FTP services.
-	*/
+	 */
 	Ftpportrange string `json:"ftpportrange,omitempty"`
 	/**
 	* Port range for cache redirection services.
-	*/
+	 */
 	Crportrange string `json:"crportrange,omitempty"`
 	/**
 	* Name of the timezone
-	*/
+	 */
 	Timezone string `json:"timezone,omitempty"`
 	/**
 	* The percentage of shared quota to be granted at a time for maxClient
-	*/
+	 */
 	Grantquotamaxclient int `json:"grantquotamaxclient,omitempty"`
 	/**
 	* The percentage of maxClient to be given to PEs
-	*/
+	 */
 	Exclusivequotamaxclient int `json:"exclusivequotamaxclient,omitempty"`
 	/**
 	* The percentage of shared quota to be granted at a time for spillover
-	*/
+	 */
 	Grantquotaspillover int `json:"grantquotaspillover,omitempty"`
 	/**
 	* The percentage of max limit to be given to PEs
-	*/
+	 */
 	Exclusivequotaspillover int `json:"exclusivequotaspillover,omitempty"`
 	/**
 	* Use this option to do saveconfig for all partitions
-	*/
+	 */
 	All bool `json:"all,omitempty"`
 	/**
 	* Location of the configurations.
-	*/
+	 */
 	Config1 string `json:"config1,omitempty"`
 	/**
 	* Location of the configurations.
-	*/
+	 */
 	Config2 string `json:"config2,omitempty"`
 	/**
 	* Format to display the difference in configurations.
-	*/
+	 */
 	Outtype string `json:"outtype,omitempty"`
 	/**
 	* File that contains the commands to be compared.
-	*/
+	 */
 	Template bool `json:"template,omitempty"`
 	/**
 	* Suppress device specific differences.
-	*/
+	 */
 	Ignoredevicespecific bool `json:"ignoredevicespecific,omitempty"`
 	/**
 	* Option to list all weak passwords (not adhering to strong password requirements). Takes config file as input, if no input specified, running configuration is considered. Command => query ns config -weakpassword  / query ns config -weakpassword /nsconfig/ns.conf
-	*/
+	 */
 	Weakpassword bool `json:"weakpassword,omitempty"`
 	/**
 	* Option to list all passwords changed which would not work when downgraded to older releases. Takes config file as input, if no input specified, running configuration is considered. Command => query ns config -changedpassword / query ns config -changedpassword /nsconfig/ns.conf
-	*/
+	 */
 	Changedpassword bool `json:"changedpassword,omitempty"`
 	/**
 	* configuration File to be used to find weak passwords, if not specified, running config is taken as input.
-	*/
+	 */
 	Config string `json:"config,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Message string `json:"message,omitempty"`
-	Mappedip string `json:"mappedip,omitempty"`
-	Range string `json:"range,omitempty"`
-	Systemtype string `json:"systemtype,omitempty"`
-	Primaryip string `json:"primaryip,omitempty"`
-	Primaryip6 string `json:"primaryip6,omitempty"`
-	Flags string `json:"flags,omitempty"`
+	Message               string `json:"message,omitempty"`
+	Mappedip              string `json:"mappedip,omitempty"`
+	Range                 string `json:"range,omitempty"`
+	Systemtype            string `json:"systemtype,omitempty"`
+	Primaryip             string `json:"primaryip,omitempty"`
+	Primaryip6            string `json:"primaryip6,omitempty"`
+	Flags                 string `json:"flags,omitempty"`
 	Lastconfigchangedtime string `json:"lastconfigchangedtime,omitempty"`
-	Lastconfigsavetime string `json:"lastconfigsavetime,omitempty"`
-	Currentsytemtime string `json:"currentsytemtime,omitempty"`
-	Systemtime string `json:"systemtime,omitempty"`
-	Configchanged string `json:"configchanged,omitempty"`
-	Response string `json:"response,omitempty"`
-
+	Lastconfigsavetime    string `json:"lastconfigsavetime,omitempty"`
+	Currentsytemtime      string `json:"currentsytemtime,omitempty"`
+	Systemtime            string `json:"systemtime,omitempty"`
+	Configchanged         string `json:"configchanged,omitempty"`
+	Response              string `json:"response,omitempty"`
 }

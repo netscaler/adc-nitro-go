@@ -12,34 +12,33 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ha
 
 /**
 * Statistics for node resource.
-*/
+ */
 
 type Hanodestats struct {
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Hacurstatus string `json:"hacurstatus,omitempty"`
-	Hacurstate string `json:"hacurstate,omitempty"`
+	 */
+	Clearstats       string `json:"clearstats,omitempty"`
+	Hacurstatus      string `json:"hacurstatus,omitempty"`
+	Hacurstate       string `json:"hacurstate,omitempty"`
 	Hacurmasterstate string `json:"hacurmasterstate,omitempty"`
-	Transtime string `json:"transtime,omitempty"`
-	Hatotpktrx int `json:"hatotpktrx,omitempty"`
+	Transtime        string `json:"transtime,omitempty"`
+	Hatotpktrx       int    `json:"hatotpktrx,omitempty"`
 	/**
 	* Number of heartbeat packets received from the peer node. Heartbeats are sent at regular intervals (default is 200 milliseconds) to determine the state of the peer node.
-	*/
+	 */
 	Hapktrxrate float64 `json:"hapktrxrate,omitempty"`
-	Hatotpkttx int `json:"hatotpkttx,omitempty"`
+	Hatotpkttx  int     `json:"hatotpkttx,omitempty"`
 	/**
 	* Number of heartbeat packets sent to the peer node. Heartbeats are sent at regular intervals (default is 200 milliseconds) to determine the state of the peer node.
-	*/
-	Hapkttxrate float64 `json:"hapkttxrate,omitempty"`
-	Haerrproptimeout int `json:"haerrproptimeout,omitempty"`
-	Haerrsyncfailure int `json:"haerrsyncfailure,omitempty"`
-
+	 */
+	Hapkttxrate      float64 `json:"hapkttxrate,omitempty"`
+	Haerrproptimeout int     `json:"haerrproptimeout,omitempty"`
+	Haerrsyncfailure int     `json:"haerrsyncfailure,omitempty"`
 }

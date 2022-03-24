@@ -12,30 +12,29 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
 
 /**
 * Configuration for subnet cache resource.
-*/
+ */
 type Dnssubnetcache struct {
 	/**
 	* ECS Subnet.
-	*/
+	 */
 	Ecssubnet string `json:"ecssubnet,omitempty"`
 	/**
 	* Flush all the ECS subnets from the DNS cache.
-	*/
+	 */
 	All bool `json:"all,omitempty"`
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Hostname string `json:"hostname,omitempty"`
 	Nextrecs string `json:"nextrecs,omitempty"`
-
 }

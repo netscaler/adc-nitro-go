@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the iptunnel that can be bound to vxlan.
-*/
+ */
 type Vxlaniptunnelbinding struct {
 	/**
 	* A positive integer, which is also called VXLAN Network Identifier (VNI), that uniquely identifies a VXLAN.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
 	/**
 	* Specifies the name of the configured tunnel to be associated with this VXLAN.
-	*/
+	 */
 	Tunnel string `json:"tunnel,omitempty"`
-
-
 }

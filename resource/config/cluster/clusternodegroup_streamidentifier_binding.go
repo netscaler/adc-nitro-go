@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
 * Binding class showing the streamidentifier that can be bound to clusternodegroup.
-*/
+ */
 type Clusternodegroupstreamidentifierbinding struct {
 	/**
 	* stream identifier  and rate limit identifier that need to be bound to this nodegroup.
-	*/
+	 */
 	Identifiername string `json:"identifiername,omitempty"`
 	/**
 	* Name of the nodegroup to which you want to bind a cluster node or an entity.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

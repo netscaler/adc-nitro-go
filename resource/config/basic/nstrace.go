@@ -12,25 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package basic
 
 /**
 * Configuration for nstrace operations resource.
-*/
+ */
 type Nstrace struct {
 	/**
 	* Number of files to be generated in cycle.
-	*/
+	 */
 	Nf int `json:"nf,omitempty"`
 	/**
 	* Time per file (sec).
-	*/
+	 */
 	Time int `json:"time,omitempty"`
 	/**
 	* Size of the captured data. Set 0 for full packet trace.
-	*/
+	 */
 	Size int `json:"size,omitempty"`
 	/**
 	* Capturing mode for trace. Mode can be any of the following values or combination of these values:
@@ -43,20 +43,20 @@ type Nstrace struct {
 		NS_FR_TX    TX/TXB packets are not captured in flow receiver.
 		MPTCP       MPTCP master flow
 		HTTP_QUIC   HTTP-over-QUIC stream data and stream events
-		Default mode: NEW_RX TXB 
+		Default mode: NEW_RX TXB
 	*/
 	Mode []string `json:"mode,omitempty"`
 	/**
 	* Use separate trace files for each interface. Works only with cap format.
-	*/
+	 */
 	Pernic string `json:"pernic,omitempty"`
 	/**
 	* Name of the trace file.
-	*/
+	 */
 	Filename string `json:"filename,omitempty"`
 	/**
 	* ID for the trace file name for uniqueness. Should be used only with -name option.
-	*/
+	 */
 	Fileid string `json:"fileid,omitempty"`
 	/**
 	* Filter expression for nstrace. Maximum length of filter is 255 and it can be of following format:
@@ -117,10 +117,10 @@ type Nstrace struct {
 		<qualifier-method> = [ EQ | NE | GT | GE | LT | LE
 		| BETWEEN ]
 		<qualifier-value>  = A valid core ID.
-		example = CONNECTION.PPEID.EQ(0)    
+		example = CONNECTION.PPEID.EQ(0)
 		<qualifier> = SVCNAME
-		<qualifier-method> = [ EQ | NE | CONTAINS | STARTSWITH 
-		| ENDSWITH ] 
+		<qualifier-method> = [ EQ | NE | CONTAINS | STARTSWITH
+		| ENDSWITH ]
 		<qualifier-value>  = A valid text string.
 		example = CONNECTION.SVCNAME.EQ("name")
 		<qualifier> = LB_VSERVER.NAME
@@ -153,11 +153,11 @@ type Nstrace struct {
 		<qualifier-value>  = A valid traffic domain ID.
 		example = CONNECTION.TRAFFIC_DOMAIN_ID.EQ(0)
 		eg: start nstrace -filter "CONNECTION.SRCIP.EQ(127.0.0.1) || (CONNECTION.SVCNAME.NE("s1") && CONNECTION.SRCPORT.EQ(80))"
-		The filter expression should be given in double quotes. 
+		The filter expression should be given in double quotes.
 		common use cases:
 		Trace capturing full sized traffic from/to ip 10.102.44.111, excluding loopback traffic
 		start nstrace -size 0 -filter "CONNECTION.IP.NE(127.0.0.1) && CONNECTION.IP.EQ(10.102.44.111)"
-		Trace capturing all traffic to (terminating at) port 80 or 443 
+		Trace capturing all traffic to (terminating at) port 80 or 443
 		start nstrace -size 0 -filter "CONNECTION.DSTPORT.EQ(443) || CONNECTION.DSTPORT.EQ(80)"
 		Trace capturing all backend traffic specific to service service1 along with corresponding client side traffic
 		start nstrace -size 0 -filter "CONNECTION.SVCNAME.EQ("service1")" -link ENABLED
@@ -166,44 +166,44 @@ type Nstrace struct {
 		Trace capturing all traffic specific through vlan 2
 		start nstrace -filter "CONNECTION.VLANID.EQ(2)"
 		Trace capturing all frontend (client side) traffic specific to lb vserver vserver1 along with corresponding server side traffic
-		start nstrace -size 0 -filter "CONNECTION.LB_VSERVER.NAME.EQ("vserver1")" -link ENABLED 
+		start nstrace -size 0 -filter "CONNECTION.LB_VSERVER.NAME.EQ("vserver1")" -link ENABLED
 	*/
 	Filter string `json:"filter,omitempty"`
 	/**
 	* Includes filtered connection's peer traffic.
-	*/
+	 */
 	Link string `json:"link,omitempty"`
 	/**
 	* Nodes on which tracing is started.
-	*/
+	 */
 	Nodes []int `json:"nodes,omitempty"`
 	/**
 	* File size, in MB, treshold for rollover. If free disk space is less than 2GB at the time of rollover, trace will stop
-	*/
+	 */
 	Filesize int `json:"filesize,omitempty"`
 	/**
 	* Format in which trace will be generated
-	*/
+	 */
 	Traceformat string `json:"traceformat,omitempty"`
 	/**
 	* Specify how traces across PE's are merged
-	*/
+	 */
 	Merge string `json:"merge,omitempty"`
 	/**
 	* Enable or disable runtime temp file cleanup
-	*/
+	 */
 	Doruntimecleanup string `json:"doruntimecleanup,omitempty"`
 	/**
 	* Number of 16KB trace buffers
-	*/
+	 */
 	Tracebuffers int `json:"tracebuffers,omitempty"`
 	/**
 	* skip RPC packets
-	*/
+	 */
 	Skiprpc string `json:"skiprpc,omitempty"`
 	/**
 	* skip local SSH packets
-	*/
+	 */
 	Skiplocalssh string `json:"skiplocalssh,omitempty"`
 	/**
 	* Capture SSL Master keys. Master keys will not be captured on FIPS machine.
@@ -212,21 +212,20 @@ type Nstrace struct {
 	Capsslkeys string `json:"capsslkeys,omitempty"`
 	/**
 	* Captures Dropped Packets if set to ENABLED.
-	*/
+	 */
 	Capdroppkt string `json:"capdroppkt,omitempty"`
 	/**
 	* Logs packets in appliance's memory and dumps the trace file on stopping the nstrace operation
-	*/
+	 */
 	Inmemorytrace string `json:"inmemorytrace,omitempty"`
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	State string `json:"state,omitempty"`
-	Scope string `json:"scope,omitempty"`
+	State         string `json:"state,omitempty"`
+	Scope         string `json:"scope,omitempty"`
 	Tracelocation string `json:"tracelocation,omitempty"`
-
 }

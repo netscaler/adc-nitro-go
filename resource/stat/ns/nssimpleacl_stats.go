@@ -12,44 +12,43 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Statistics for simple ACL resource.
-*/
+ */
 
 type Nssimpleaclstats struct {
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Sacltothits int `json:"sacltothits,omitempty"`
+	 */
+	Clearstats  string `json:"clearstats,omitempty"`
+	Sacltothits int    `json:"sacltothits,omitempty"`
 	/**
 	* Packets matching a SimpleACL.
-	*/
-	Saclhitsrate float64 `json:"saclhitsrate,omitempty"`
-	Sacltotmisses int `json:"sacltotmisses,omitempty"`
+	 */
+	Saclhitsrate  float64 `json:"saclhitsrate,omitempty"`
+	Sacltotmisses int     `json:"sacltotmisses,omitempty"`
 	/**
 	* Packets not matching any SimpleACL.
-	*/
-	Saclmissesrate float64 `json:"saclmissesrate,omitempty"`
-	Saclscount int `json:"saclscount,omitempty"`
-	Sacltotpktsallowed int `json:"sacltotpktsallowed,omitempty"`
+	 */
+	Saclmissesrate     float64 `json:"saclmissesrate,omitempty"`
+	Saclscount         int     `json:"saclscount,omitempty"`
+	Sacltotpktsallowed int     `json:"sacltotpktsallowed,omitempty"`
 	/**
 	* Total packets that matched a SimpleACL with action ALLOW and got consumed by Citrix ADC.
-	*/
+	 */
 	Saclpktsallowedrate float64 `json:"saclpktsallowedrate,omitempty"`
-	Sacltotpktsbridged int `json:"sacltotpktsbridged,omitempty"`
+	Sacltotpktsbridged  int     `json:"sacltotpktsbridged,omitempty"`
 	/**
 	* Total packets that matched a SimpleACL with action BRIDGE and got bridged by Citrix ADC.
-	*/
+	 */
 	Saclpktsbridgedrate float64 `json:"saclpktsbridgedrate,omitempty"`
-	Sacltotpktsdenied int `json:"sacltotpktsdenied,omitempty"`
+	Sacltotpktsdenied   int     `json:"sacltotpktsdenied,omitempty"`
 	/**
 	* Packets dropped because they match SimpleACL (Access Control List) with processing mode set to DENY.
-	*/
+	 */
 	Saclpktsdeniedrate float64 `json:"saclpktsdeniedrate,omitempty"`
-
 }

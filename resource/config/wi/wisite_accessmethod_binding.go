@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package wi
 
 /**
 * Binding class showing the accessmethod that can be bound to wisite.
-*/
+ */
 type Wisiteaccessmethodbinding struct {
 	/**
 	* Secure access method to be applied to the IPv4 or network address of the client specified by the Client IP Address parameter.
@@ -27,16 +27,14 @@ type Wisiteaccessmethodbinding struct {
 	Accessmethod string `json:"accessmethod,omitempty"`
 	/**
 	* IPv4 or network address of the client for which you want to associate an access method.
-	*/
+	 */
 	Clientipaddress string `json:"clientipaddress,omitempty"`
 	/**
 	* Subnet mask associated with the IPv4 or network address specified by the Client IP Address parameter.
-	*/
+	 */
 	Clientnetmask string `json:"clientnetmask,omitempty"`
 	/**
 	* Path to the Web Interface site.
-	*/
+	 */
 	Sitepath string `json:"sitepath,omitempty"`
-
-
 }

@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the sslcipher that can be bound to sslvserver.
-*/
+ */
 type Sslvserversslcipherbinding struct {
 	/**
 	* The name of the cipher group/alias/individual cipheri bindings.
-	*/
+	 */
 	Cipheraliasname string `json:"cipheraliasname,omitempty"`
 	/**
 	* The cipher suite description.
-	*/
+	 */
 	Description string `json:"description,omitempty"`
 	/**
 	* Name of the SSL virtual server.
-	*/
+	 */
 	Vservername string `json:"vservername,omitempty"`
 	/**
 	* Name of the individual cipher, user-defined cipher group, or predefined (built-in) cipher alias.
-	*/
+	 */
 	Ciphername string `json:"ciphername,omitempty"`
-
-
 }

@@ -12,26 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the sslpolicy that can be bound to sslglobal.
-*/
+ */
 type Sslglobalsslpolicybinding struct {
 	/**
 	* The name for the SSL policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Global bind point to which the policy is bound.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* The priority of the policy binding.
-	*/
-	Priority int `json:"priority,omitempty"`
+	 */
+	Priority       int    `json:"priority,omitempty"`
 	Globalbindtype string `json:"globalbindtype,omitempty"`
 	/**
 	* Expression or other value specifying the next policy to be evaluated if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -51,16 +51,14 @@ type Sslglobalsslpolicybinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Invoke policies bound to a virtual server, service, or policy label. After the invoked policies are evaluated, the flow returns to the policy with the next priority.
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of policy label to invoke. Specify virtual server for a policy label associated with a virtual server, or policy label for a user-defined policy label.
-	*/
+	 */
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the virtual server or user-defined policy label to invoke if the policy evaluates to TRUE.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

@@ -12,31 +12,30 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Configuration for active ica connections resource.
-*/
+ */
 type Vpnicadtlsconnection struct {
 	/**
 	* User name for which to display connections.
-	*/
+	 */
 	Username string `json:"username,omitempty"`
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Domain string `json:"domain,omitempty"`
-	Srcip string `json:"srcip,omitempty"`
-	Srcport string `json:"srcport,omitempty"`
-	Destip string `json:"destip,omitempty"`
-	Destport string `json:"destport,omitempty"`
+	Domain        string `json:"domain,omitempty"`
+	Srcip         string `json:"srcip,omitempty"`
+	Srcport       string `json:"srcport,omitempty"`
+	Destip        string `json:"destip,omitempty"`
+	Destport      string `json:"destport,omitempty"`
 	Channelnumber string `json:"channelnumber,omitempty"`
-	Peid string `json:"peid,omitempty"`
-
+	Peid          string `json:"peid,omitempty"`
 }

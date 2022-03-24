@@ -12,35 +12,34 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Configuration for Application firewall transaction record resource.
-*/
+ */
 type Appfwtransactionrecords struct {
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Httptransactionid string `json:"httptransactionid,omitempty"`
-	Packetengineid string `json:"packetengineid,omitempty"`
-	Appfwsessionid string `json:"appfwsessionid,omitempty"`
-	Profilename string `json:"profilename,omitempty"`
-	Url string `json:"url,omitempty"`
-	Clientip string `json:"clientip,omitempty"`
-	Destip string `json:"destip,omitempty"`
-	Starttime string `json:"starttime,omitempty"`
-	Endtime string `json:"endtime,omitempty"`
-	Requestcontentlength string `json:"requestcontentlength,omitempty"`
-	Requestyields string `json:"requestyields,omitempty"`
-	Requestmaxprocessingtime string `json:"requestmaxprocessingtime,omitempty"`
-	Responsecontentlength string `json:"responsecontentlength,omitempty"`
-	Responseyields string `json:"responseyields,omitempty"`
+	Httptransactionid         string `json:"httptransactionid,omitempty"`
+	Packetengineid            string `json:"packetengineid,omitempty"`
+	Appfwsessionid            string `json:"appfwsessionid,omitempty"`
+	Profilename               string `json:"profilename,omitempty"`
+	Url                       string `json:"url,omitempty"`
+	Clientip                  string `json:"clientip,omitempty"`
+	Destip                    string `json:"destip,omitempty"`
+	Starttime                 string `json:"starttime,omitempty"`
+	Endtime                   string `json:"endtime,omitempty"`
+	Requestcontentlength      string `json:"requestcontentlength,omitempty"`
+	Requestyields             string `json:"requestyields,omitempty"`
+	Requestmaxprocessingtime  string `json:"requestmaxprocessingtime,omitempty"`
+	Responsecontentlength     string `json:"responsecontentlength,omitempty"`
+	Responseyields            string `json:"responseyields,omitempty"`
 	Responsemaxprocessingtime string `json:"responsemaxprocessingtime,omitempty"`
-
 }

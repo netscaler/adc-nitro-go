@@ -12,24 +12,22 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package tm
 
 /**
 * Binding class showing the aaauser that can be bound to tmsessionpolicy.
-*/
+ */
 type Tmsessionpolicyaaauserbinding struct {
 	/**
 	* The entity name to which policy is bound
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority int `json:"priority,omitempty"`
-	Activepolicy int `json:"activepolicy,omitempty"`
+	 */
+	Boundto      string `json:"boundto,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+	Activepolicy int    `json:"activepolicy,omitempty"`
 	/**
 	* Name of the session policy for which to display detailed information.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

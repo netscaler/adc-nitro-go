@@ -92,7 +92,7 @@ func constructQueryMapString(prefix string, queryMap map[string]string) string {
 	var queryBuilder strings.Builder
 	queryBuilder.WriteString(prefix)
 	keys := make([]string, 0, len(queryMap))
-	for k, _ := range queryMap {
+	for k := range queryMap {
 		keys = append(keys, k)
 	}
 	// Make it deterministic for testing's sake

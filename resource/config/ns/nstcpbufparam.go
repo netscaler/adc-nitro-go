@@ -12,26 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for tcp buffer parameter resource.
-*/
+ */
 type Nstcpbufparam struct {
 	/**
 	* TCP buffering size per connection, in kilobytes.
-	*/
+	 */
 	Size int `json:"size,omitempty"`
 	/**
 	* Maximum memory, in megabytes, that can be used for buffering.
-	*/
+	 */
 	Memlimit int `json:"memlimit,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

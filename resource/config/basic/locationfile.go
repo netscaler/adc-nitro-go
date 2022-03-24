@@ -12,26 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package basic
 
 /**
 * Configuration for location file resource.
-*/
+ */
 type Locationfile struct {
 	/**
 	* Name of the location file, with or without absolute path. If the path is not included, the default path (/var/netscaler/locdb) is assumed. In a high availability setup, the static database must be stored in the same location on both Citrix ADCs.
-	*/
+	 */
 	Locationfile string `json:"Locationfile,omitempty"`
 	/**
 	* Format of the location file. Required for the Citrix ADC to identify how to read the location file.
-	*/
+	 */
 	Format string `json:"format,omitempty"`
 	/**
 	* URL \(protocol, host, path, and file name\) from where the location file will be imported.
 		NOTE: The import fails if the object to be imported is on an HTTPS server that requires client certificate authentication for access.
 	*/
 	Src string `json:"src,omitempty"`
-
 }

@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
 * Binding class showing the gslbservicegroup that can be bound to gslbdomain.
-*/
+ */
 type Gslbdomaingslbservicegroupbinding struct {
 	/**
 	* The GSLB service group name bound to the selected GSLB virtual server.
-	*/
+	 */
 	Servicegroupname string `json:"servicegroupname,omitempty"`
 	/**
 	* Name of the Domain
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

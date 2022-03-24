@@ -12,32 +12,31 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package feo
 
 /**
 * Configuration for Front end optimization policy resource.
-*/
+ */
 type Feopolicy struct {
 	/**
 	* The name of the front end optimization policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* The rule associated with the front end optimization policy.
-	*/
+	 */
 	Rule string `json:"rule,omitempty"`
 	/**
 	* The front end optimization action that has to be performed when the rule matches.
-	*/
+	 */
 	Action string `json:"action,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-	Hits string `json:"hits,omitempty"`
+	Builtin   string `json:"builtin,omitempty"`
+	Feature   string `json:"feature,omitempty"`
+	Hits      string `json:"hits,omitempty"`
 	Undefhits string `json:"undefhits,omitempty"`
-
 }

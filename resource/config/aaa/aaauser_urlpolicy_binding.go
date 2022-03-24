@@ -12,30 +12,30 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Binding class showing the urlpolicy that can be bound to aaauser.
-*/
+ */
 type Aaauserurlpolicybinding struct {
 	/**
 	* The policy Name.
-	*/
+	 */
 	Policy string `json:"policy,omitempty"`
 	/**
-	* Integer specifying the priority of the policy.  A lower number indicates a higher priority. Policies are evaluated in the order of their priority numbers. Maximum value for default syntax policies is 2147483647 and for classic policies max priority is 64000. 
-	*/
+	* Integer specifying the priority of the policy.  A lower number indicates a higher priority. Policies are evaluated in the order of their priority numbers. Maximum value for default syntax policies is 2147483647 and for classic policies max priority is 64000.
+	 */
 	Priority uint32 `json:"priority,omitempty"`
-	Acttype uint32 `json:"acttype,omitempty"`
+	Acttype  uint32 `json:"acttype,omitempty"`
 	/**
 	* User account to which to bind the policy.
-	*/
+	 */
 	Username string `json:"username,omitempty"`
 	/**
 	* Bindpoint to which the policy is bound.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Expression or other value specifying the next policy to evaluate if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -53,6 +53,4 @@ type Aaauserurlpolicybinding struct {
 		* The expression evaluates to a priority number that is between the current policy's priority number (say, 30) and the highest priority number (say, 100), but does not match any configured priority number (for example, the expression evaluates to the number 85). This example assumes that the priority number increments by 10 for every successive policy, and therefore a priority number of 85 does not exist in the policy label.
 	*/
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-
-
 }

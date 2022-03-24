@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
-* Binding object which returns the resources bound to lbvserver_binding. 
-*/
+* Binding object which returns the resources bound to lbvserver_binding.
+ */
 type Lbvserverbinding struct {
 	/**
-	* Name of the virtual server. If no name is provided, statistical data of all configured virtual servers is displayed.<br/>Minimum value =  
-	*/
+	* Name of the virtual server. If no name is provided, statistical data of all configured virtual servers is displayed.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

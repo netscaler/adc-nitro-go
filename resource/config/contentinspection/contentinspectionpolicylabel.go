@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package contentinspection
 
 /**
 * Configuration for ContentInspection policy label resource.
-*/
+ */
 type Contentinspectionpolicylabel struct {
 	/**
 	* Name for the contentInspection policy label. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Cannot be changed after the contentInspection policy label is added.
@@ -28,11 +28,11 @@ type Contentinspectionpolicylabel struct {
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* Type of packets (request or response packets) against which to match the policies bound to this policy label.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Any comments to preserve information about this contentInspection policy label.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* New name for the contentInspection policy label.
@@ -44,13 +44,12 @@ type Contentinspectionpolicylabel struct {
 
 	//------- Read only Parameter ---------;
 
-	Numpol string `json:"numpol,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Priority string `json:"priority,omitempty"`
+	Numpol                 string `json:"numpol,omitempty"`
+	Hits                   string `json:"hits,omitempty"`
+	Priority               string `json:"priority,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Labeltype string `json:"labeltype,omitempty"`
-	Invokelabelname string `json:"invoke_labelname,omitempty"`
-	Flowtype string `json:"flowtype,omitempty"`
-	Isdefault string `json:"isdefault,omitempty"`
-
+	Labeltype              string `json:"labeltype,omitempty"`
+	Invokelabelname        string `json:"invoke_labelname,omitempty"`
+	Flowtype               string `json:"flowtype,omitempty"`
+	Isdefault              string `json:"isdefault,omitempty"`
 }

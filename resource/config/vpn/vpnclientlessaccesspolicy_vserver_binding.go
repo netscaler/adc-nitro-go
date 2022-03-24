@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Binding class showing the vserver that can be bound to vpnclientlessaccesspolicy.
-*/
+ */
 type Vpnclientlessaccesspolicyvserverbinding struct {
 	/**
 	* Location where policy is bound.
-	*/
+	 */
 	Boundto string `json:"boundto,omitempty"`
 	/**
 	* Specifies the priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Indicates whether policy is bound or not.
-	*/
+	 */
 	Activepolicy int32 `json:"activepolicy,omitempty"`
 	/**
 	* Name of the clientless access policy to display.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

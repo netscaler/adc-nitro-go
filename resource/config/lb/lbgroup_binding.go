@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
-* Binding object which returns the resources bound to lbgroup_binding. 
-*/
+* Binding object which returns the resources bound to lbgroup_binding.
+ */
 type Lbgroupbinding struct {
 	/**
-	* Name of the load balancing virtual server group.<br/>Minimum value =  
-	*/
+	* Name of the load balancing virtual server group.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

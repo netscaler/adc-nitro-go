@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Configuration for XML schema resource.
-*/
+ */
 type Appfwxmlschema struct {
 	/**
 	* Name of the XML Schema object to remove.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* URL (protocol, host, path, and file name) for the location at which to store the imported XML Schema.
@@ -31,15 +31,14 @@ type Appfwxmlschema struct {
 	Src string `json:"src,omitempty"`
 	/**
 	* Any comments to preserve information about the XML Schema object.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Overwrite any existing XML Schema object of the same name.
-	*/
+	 */
 	Overwrite bool `json:"overwrite,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

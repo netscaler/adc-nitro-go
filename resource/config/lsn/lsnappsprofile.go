@@ -12,21 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
 * Configuration for LSN Application Profile resource.
-*/
+ */
 type Lsnappsprofile struct {
 	/**
 	* Name for the LSN application profile. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the LSN application profile is created. The following requirement applies only to the Citrix ADC CLI: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "lsn application profile1" or 'lsn application profile1').
-	*/
+	 */
 	Appsprofilename string `json:"appsprofilename,omitempty"`
 	/**
 	* Name of the protocol for which the parameters of this LSN application profile applies.
-	*/
+	 */
 	Transportprotocol string `json:"transportprotocol,omitempty"`
 	/**
 	* NAT IP address allocation options for sessions associated with the same subscriber.
@@ -39,8 +39,8 @@ type Lsnappsprofile struct {
 	/**
 	* Type of LSN mapping to apply to subsequent packets originating from the same subscriber IP address and port.
 		Consider an example of an LSN mapping that includes the mapping of the subscriber IP:port (X:x), NAT IP:port (N:n), and external host IP:port (Y:y).
-		Available options function as follows: 
-		* ENDPOINT-INDEPENDENT - Reuse the LSN mapping for subsequent packets sent from the same subscriber IP address and port (X:x) to any external IP address and port. 
+		Available options function as follows:
+		* ENDPOINT-INDEPENDENT - Reuse the LSN mapping for subsequent packets sent from the same subscriber IP address and port (X:x) to any external IP address and port.
 		* ADDRESS-DEPENDENT - Reuse the LSN mapping for subsequent packets sent from the same subscriber IP address and port (X:x) to the same external IP address (Y), regardless of the external port.
 		* ADDRESS-PORT-DEPENDENT - Reuse the LSN mapping for subsequent packets sent from the same internal IP address and port (X:x) to the same external IP address and port (Y:y) while the mapping is still active.
 	*/
@@ -56,16 +56,15 @@ type Lsnappsprofile struct {
 	Filtering string `json:"filtering,omitempty"`
 	/**
 	* Enable TCP proxy, which enables the Citrix ADC to optimize the  TCP traffic by using Layer 4 features.
-	*/
+	 */
 	Tcpproxy string `json:"tcpproxy,omitempty"`
 	/**
-	* ID of the traffic domain through which the Citrix ADC sends the outbound traffic after performing LSN. 
+	* ID of the traffic domain through which the Citrix ADC sends the outbound traffic after performing LSN.
 		If you do not specify an ID, the ADC sends the outbound traffic through the default traffic domain, which has an ID of 0.
 	*/
 	Td int `json:"td,omitempty"`
 	/**
 	* Enable l2info by creating natpcbs for LSN, which enables the Citrix ADC to use L2CONN/MBF with LSN.
-	*/
+	 */
 	L2info string `json:"l2info,omitempty"`
-
 }

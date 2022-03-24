@@ -12,20 +12,19 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cloud
 
 /**
 * Configuration for Cloud autoscalegroup resource.
-*/
+ */
 type Cloudautoscalegroup struct {
 	Name string `json:"name,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Azcount string `json:"azcount,omitempty"`
-	Aznames string `json:"aznames,omitempty"`
+	Azcount  string `json:"azcount,omitempty"`
+	Aznames  string `json:"aznames,omitempty"`
 	Graceful string `json:"graceful,omitempty"`
-
 }

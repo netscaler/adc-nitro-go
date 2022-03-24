@@ -12,38 +12,36 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the nsip that can be bound to bridgegroup.
-*/
+ */
 type Bridgegroupnsipbinding struct {
 	/**
 	* The IP address assigned to the  bridge group.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Integer value that uniquely identifies the traffic domain in which you want to configure the entity. If you do not specify an ID, the entity becomes part of the default traffic domain, which has an ID of 0.
-	*/
+	 */
 	Td int `json:"td,omitempty"`
 	/**
 	* The network mask for the subnet defined for the bridge group.
-	*/
+	 */
 	Netmask string `json:"netmask,omitempty"`
 	/**
 	* Temporary flag used for internal purpose.
-	*/
+	 */
 	Rnat bool `json:"rnat,omitempty"`
 	/**
 	* The owner node group in a Cluster for this vlan.
-	*/
+	 */
 	Ownergroup string `json:"ownergroup,omitempty"`
 	/**
 	* The integer that uniquely identifies the bridge group.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
 * Binding class showing the appsprofile that can be bound to lsngroup.
-*/
+ */
 type Lsngroupappsprofilebinding struct {
 	/**
 	* Name of the LSN application profile to bind to the specified LSN group. For each set of destination ports, bind a profile for each protocol for which you want to specify settings.
@@ -28,8 +28,6 @@ type Lsngroupappsprofilebinding struct {
 	Appsprofilename string `json:"appsprofilename,omitempty"`
 	/**
 	* Name for the LSN group. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the LSN group is created. The following requirement applies only to the Citrix ADC CLI: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "lsn group1" or 'lsn group1').
-	*/
+	 */
 	Groupname string `json:"groupname,omitempty"`
-
-
 }

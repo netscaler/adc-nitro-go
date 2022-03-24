@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
-* Binding object which returns the resources bound to clusternodegroup_binding. 
-*/
+* Binding object which returns the resources bound to clusternodegroup_binding.
+ */
 type Clusternodegroupbinding struct {
 	/**
-	* Name of the nodegroup to be displayed. If a name is not provided, information about all nodegroups is displayed.<br/>Minimum value =  
-	*/
+	* Name of the nodegroup to be displayed. If a name is not provided, information about all nodegroups is displayed.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
-* Binding object which returns the resources bound to authenticationlocalpolicy_binding. 
-*/
+* Binding object which returns the resources bound to authenticationlocalpolicy_binding.
+ */
 type Authenticationlocalpolicybinding struct {
 	/**
 	* Name of the local authentication policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }
