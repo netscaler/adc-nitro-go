@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Configuration for authentication policy label resource.
-*/
+ */
 type Authenticationpolicylabel struct {
 	/**
 	* Name for the new authentication policy label.
@@ -29,29 +29,28 @@ type Authenticationpolicylabel struct {
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* Type of feature (aaatm or rba) against which to match the policies bound to this policy label.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Any comments to preserve information about this authentication policy label.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Login schema associated with authentication policy label. Login schema defines the UI rendering by providing customization option of the fields. If user intervention is not needed for a given factor such as group extraction, a loginSchema whose authentication schema is "noschema" should be used.
-	*/
+	 */
 	Loginschema string `json:"loginschema,omitempty"`
 	/**
 	* The new name of the auth policy label
-	*/
+	 */
 	Newname string `json:"newname,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Numpol string `json:"numpol,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Policyname string `json:"policyname,omitempty"`
-	Priority string `json:"priority,omitempty"`
+	Numpol                 string `json:"numpol,omitempty"`
+	Hits                   string `json:"hits,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               string `json:"priority,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Flowtype string `json:"flowtype,omitempty"`
-	Description string `json:"description,omitempty"`
-
+	Flowtype               string `json:"flowtype,omitempty"`
+	Description            string `json:"description,omitempty"`
 }

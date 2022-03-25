@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appflow
 
 /**
-* Binding object which returns the resources bound to appflowpolicylabel_binding. 
-*/
+* Binding object which returns the resources bound to appflowpolicylabel_binding.
+ */
 type Appflowpolicylabelbinding struct {
 	/**
-	* Name of the policy label about which to display detailed information.<br/>Minimum value =  
-	*/
+	* Name of the policy label about which to display detailed information.<br/>Minimum value =
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

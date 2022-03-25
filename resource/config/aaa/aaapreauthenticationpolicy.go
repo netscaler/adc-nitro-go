@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Configuration for pre authentication policy resource.
-*/
+ */
 type Aaapreauthenticationpolicy struct {
 	/**
 	* Name for the preauthentication policy. Must begin with a letter, number, or the underscore character (_), and must consist only of letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at sign (@), equals (=), colon (:), and underscore characters. Cannot be changed after the preauthentication policy is created.
@@ -28,17 +28,16 @@ type Aaapreauthenticationpolicy struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of the Citrix ADC named rule, or an expression, defining connections that match the policy.
-	*/
+	 */
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Name of the action that the policy is to invoke when a connection matches the policy.
-	*/
+	 */
 	Reqaction string `json:"reqaction,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Hits string `json:"hits,omitempty"`
+	Hits    string `json:"hits,omitempty"`
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

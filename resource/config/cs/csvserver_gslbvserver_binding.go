@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cs
 
 /**
 * Binding class showing the gslbvserver that can be bound to csvserver.
-*/
+ */
 type Csvservergslbvserverbinding struct {
 	/**
 	* Name of the default gslb or vpn vserver bound to CS vserver of type GSLB/VPN. For Example: bind cs vserver cs1 -vserver gslb1 or bind cs vserver cs1 -vserver vpn1
-	*/
+	 */
 	Vserver string `json:"vserver,omitempty"`
 	/**
 	* Number of hits.
-	*/
+	 */
 	Hits int `json:"hits,omitempty"`
 	/**
 	* Name of the content switching virtual server to which the content switching policy applies.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

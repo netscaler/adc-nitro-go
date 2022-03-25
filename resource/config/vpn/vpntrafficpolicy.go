@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Configuration for VPN traffic policy resource.
-*/
+ */
 type Vpntrafficpolicy struct {
 	/**
 	* Name for the traffic policy. Must begin with an ASCII alphabetic or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the policy is created.
@@ -30,18 +30,17 @@ type Vpntrafficpolicy struct {
 	* Expression, or name of a named expression, against which traffic is evaluated.
 		The following requirements apply only to the Citrix ADC CLI:
 		* If the expression includes one or more spaces, enclose the entire expression in double quotation marks.
-		* If the expression itself includes double quotation marks, escape the quotations by using the \ character. 
+		* If the expression itself includes double quotation marks, escape the quotations by using the \ character.
 		* Alternatively, you can use single quotation marks to enclose the rule, in which case you do not have to escape the double quotation marks.
 	*/
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Action to apply to traffic that matches the policy.
-	*/
+	 */
 	Action string `json:"action,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Expressiontype string `json:"expressiontype,omitempty"`
-	Hits string `json:"hits,omitempty"`
-
+	Hits           string `json:"hits,omitempty"`
 }

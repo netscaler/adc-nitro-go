@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
-* Binding object which returns the resources bound to clusterinstance_binding. 
-*/
+* Binding object which returns the resources bound to clusterinstance_binding.
+ */
 type Clusterinstancebinding struct {
 	/**
 	* Unique number that identifies the cluster.<br/>Minimum value =  1<br/>Maximum value =  16
-	*/
+	 */
 	Clid int `json:"clid,omitempty"`
-
-
 }

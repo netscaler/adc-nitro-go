@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package videooptimization
 
 /**
 * Configuration for VideoOptimization parameter resource.
-*/
+ */
 type Videooptimizationparameter struct {
 	/**
 	* Random Sampling Percentage.
-	*/
+	 */
 	Randomsamplingpercentage float64 `json:"randomsamplingpercentage,omitempty"`
 	/**
 	* QUIC Video Pacing Rate (Kbps).
-	*/
+	 */
 	Quicpacingrate int `json:"quicpacingrate,omitempty"`
-
 }

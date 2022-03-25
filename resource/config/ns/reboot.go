@@ -12,10 +12,9 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
-
 
 type Reboot struct {
 	/**
@@ -23,5 +22,4 @@ type Reboot struct {
 		Note: This argument is required only for nCore appliances. Classic appliances ignore this argument.
 	*/
 	Warm bool `json:"warm,omitempty"`
-
 }

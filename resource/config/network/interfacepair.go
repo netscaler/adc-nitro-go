@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Configuration for "Interface Pair" resource.
-*/
+ */
 type Interfacepair struct {
 	/**
 	* The Interface pair id
-	*/
+	 */
 	Id int `json:"id,omitempty"`
 	/**
 	* The constituent interfaces in the interface pair
-	*/
+	 */
 	Ifnum []string `json:"ifnum,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Ifaces string `json:"ifaces,omitempty"`
-
 }

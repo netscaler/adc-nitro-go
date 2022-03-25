@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Configuration for no authentication action resource.
-*/
+ */
 type Authenticationnoauthaction struct {
 	/**
 	* Name for the new no-authentication action. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after an action is created.
@@ -28,7 +28,6 @@ type Authenticationnoauthaction struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* This is the group that is added to user sessions that match current policy.
-	*/
+	 */
 	Defaultauthenticationgroup string `json:"defaultauthenticationgroup,omitempty"`
-
 }

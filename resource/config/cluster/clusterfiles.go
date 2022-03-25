@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
 * Configuration for files resource.
-*/
+ */
 type Clusterfiles struct {
 	/**
 	* The directories and files to be synchronized. The available settings function as follows:
@@ -62,5 +62,4 @@ type Clusterfiles struct {
 		Default value: all
 	*/
 	Mode []string `json:"mode,omitempty"`
-
 }

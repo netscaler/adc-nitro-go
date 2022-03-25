@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Configuration for VPN url policy resource.
-*/
+ */
 type Vpnurlpolicy struct {
 	/**
 	* Name for the new urlPolicy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Expression, or name of a named expression, specifying the traffic that matches the policy.
@@ -34,15 +34,15 @@ type Vpnurlpolicy struct {
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Action to be applied by the new urlPolicy if the rule criteria are met.
-	*/
+	 */
 	Action string `json:"action,omitempty"`
 	/**
 	* Any comments to preserve information about this policy.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Name of messagelog action to use when a request matches this policy.
-	*/
+	 */
 	Logaction string `json:"logaction,omitempty"`
 	/**
 	* New name for the vpn urlPolicy.
@@ -54,7 +54,6 @@ type Vpnurlpolicy struct {
 
 	//------- Read only Parameter ---------;
 
-	Builtin string `json:"builtin,omitempty"`
+	Builtin   string `json:"builtin,omitempty"`
 	Undefhits string `json:"undefhits,omitempty"`
-
 }

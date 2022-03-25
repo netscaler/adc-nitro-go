@@ -12,33 +12,33 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the vserver that can be bound to sslcertkey.
-*/
+ */
 type Sslcertkeyvserverbinding struct {
 	/**
 	* Vserver name to which the certificate key pair is bound.
-	*/
+	 */
 	Servername string `json:"servername,omitempty"`
 	/**
 	* Vserver Id
-	*/
+	 */
 	Data uint32 `json:"data,omitempty"`
 	/**
 	* Version.
-	*/
+	 */
 	Version int32 `json:"version,omitempty"`
 	/**
 	* Name of the certificate-key pair.
-	*/
+	 */
 	Certkey string `json:"certkey,omitempty"`
 	/**
 	* The name of the SSL virtual server name to which the certificate-key pair needs to be bound.
-	*/
+	 */
 	Vservername string `json:"vservername,omitempty"`
 	/**
 	* Specify this option to bind the certificate to an SSL virtual server.
@@ -47,8 +47,6 @@ type Sslcertkeyvserverbinding struct {
 	Vserver bool `json:"vserver,omitempty"`
 	/**
 	* The certificate-key pair being unbound is a Certificate Authority (CA) certificate. If you choose this option, the certificate-key pair is unbound from the list of CA certificates that were bound to the specified SSL virtual server or SSL service.
-	*/
+	 */
 	Ca bool `json:"ca,omitempty"`
-
-
 }

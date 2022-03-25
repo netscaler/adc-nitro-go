@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for command policy resource.
-*/
+ */
 type Systemcmdpolicy struct {
 	/**
 	* Name for a command policy. Must begin with a letter, number, or the underscore (_) character, and must contain only alphanumeric, hyphen (-), period (.), hash (#), space ( ), at (@), equal (=), colon (:), and underscore characters. Cannot be changed after the policy is created.
@@ -27,16 +27,15 @@ type Systemcmdpolicy struct {
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Action to perform when a request matches the policy.
-	*/
+	 */
 	Action string `json:"action,omitempty"`
 	/**
 	* Regular expression specifying the data that matches the policy.
-	*/
+	 */
 	Cmdspec string `json:"cmdspec,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

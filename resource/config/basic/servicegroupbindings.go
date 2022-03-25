@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package basic
 
 /**
 * Configuration for servicegroupbind resource.
-*/
+ */
 type Servicegroupbindings struct {
 	/**
 	* The name of the service.
-	*/
+	 */
 	Servicegroupname string `json:"servicegroupname,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Ipaddress string `json:"ipaddress,omitempty"`
-	Port string `json:"port,omitempty"`
-	State string `json:"state,omitempty"`
-	Svrstate string `json:"svrstate,omitempty"`
+	Ipaddress   string `json:"ipaddress,omitempty"`
+	Port        string `json:"port,omitempty"`
+	State       string `json:"state,omitempty"`
+	Svrstate    string `json:"svrstate,omitempty"`
 	Vservername string `json:"vservername,omitempty"`
-
 }

@@ -12,22 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Configuration for portaltheme resource.
-*/
+ */
 type Vpnportaltheme struct {
 	/**
 	* Name of the uitheme
-	*/
-	Name string `json:"name,omitempty"`
+	 */
+	Name      string `json:"name,omitempty"`
 	Basetheme string `json:"basetheme,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Feature string `json:"feature,omitempty"`
-
 }

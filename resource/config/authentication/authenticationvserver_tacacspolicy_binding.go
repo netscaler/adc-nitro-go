@@ -12,23 +12,23 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Binding class showing the tacacspolicy that can be bound to authenticationvserver.
-*/
+ */
 type Authenticationvservertacacspolicybinding struct {
 	/**
 	* The name of the policy, if any, bound to the authentication vserver.
-	*/
+	 */
 	Policy string `json:"policy,omitempty"`
 	/**
 	* The priority, if any, of the vpn vserver policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
-	Acttype uint32 `json:"acttype,omitempty"`
+	Acttype  uint32 `json:"acttype,omitempty"`
 	/**
 	* Bind the authentication policy to the secondary chain.
 		Provides for multifactor authentication in which a user must authenticate via both a primary authentication method and, afterward, via a secondary authentication method.
@@ -37,15 +37,15 @@ type Authenticationvservertacacspolicybinding struct {
 	Secondary bool `json:"secondary,omitempty"`
 	/**
 	* Name of the authentication virtual server to which to bind the policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Applicable only while bindind classic authentication policy as advance authentication policy use nFactor
-	*/
+	 */
 	Groupextraction bool `json:"groupextraction,omitempty"`
 	/**
 	* Applicable only while binding advance authentication policy as classic authentication policy does not support nFactor
-	*/
+	 */
 	Nextfactor string `json:"nextfactor,omitempty"`
 	/**
 	* Applicable only to advance authentication policy. Expression or other value specifying the next policy to be evaluated if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -65,8 +65,6 @@ type Authenticationvservertacacspolicybinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Bind point to which to bind the policy. Applies only to rewrite and cache policies. If you do not set this parameter, the policy is bound to REQ_DEFAULT or RES_DEFAULT, depending on whether the policy rule is a response-time or a request-time expression.
-	*/
+	 */
 	Bindpoint string `json:"bindpoint,omitempty"`
-
-
 }

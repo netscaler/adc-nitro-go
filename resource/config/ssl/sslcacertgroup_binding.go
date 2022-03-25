@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
-* Binding object which returns the resources bound to sslcacertgroup_binding. 
-*/
+* Binding object which returns the resources bound to sslcacertgroup_binding.
+ */
 type Sslcacertgroupbinding struct {
 	/**
-	* Name of the CA certificate group for which to show detailed information.<br/>Minimum value =  
-	*/
+	* Name of the CA certificate group for which to show detailed information.<br/>Minimum value =
+	 */
 	Cacertgroupname string `json:"cacertgroupname,omitempty"`
-
-
 }

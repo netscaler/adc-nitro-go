@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
 * Binding class showing the vserver that can be bound to lbwlm.
-*/
+ */
 type Lbwlmvserverbinding struct {
 	/**
 	* Name of the virtual server which is to be bound to the WLM.
-	*/
+	 */
 	Vservername string `json:"vservername,omitempty"`
 	/**
 	* The name of the Work Load Manager.
-	*/
+	 */
 	Wlmname string `json:"wlmname,omitempty"`
-
-
 }

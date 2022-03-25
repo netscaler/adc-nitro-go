@@ -12,20 +12,19 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for Source IP Mac Cache Table. resource.
-*/
+ */
 type Nssourceroutecachetable struct {
 
 	//------- Read only Parameter ---------;
 
-	Sourceip string `json:"sourceip,omitempty"`
+	Sourceip  string `json:"sourceip,omitempty"`
 	Sourcemac string `json:"sourcemac,omitempty"`
-	Vlan string `json:"vlan,omitempty"`
+	Vlan      string `json:"vlan,omitempty"`
 	Interface string `json:"Interface,omitempty"`
-
 }

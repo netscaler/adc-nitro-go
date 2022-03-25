@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Configuration for MAP-T Map Domain resource.
-*/
+ */
 type Mapdomain struct {
 	/**
 	* Name for the MAP Domain. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the  MAP Domain is created . The following requirement applies only to the Citrix ADC CLI: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "add network MapDomain map1").
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Default Mapping rule name.
-	*/
+	 */
 	Mapdmrname string `json:"mapdmrname,omitempty"`
-
 }

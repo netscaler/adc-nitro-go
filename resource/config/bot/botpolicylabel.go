@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package bot
 
 /**
 * Configuration for Bot policy label resource.
-*/
+ */
 type Botpolicylabel struct {
 	/**
 	* Name for the bot policy label. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Cannot be changed after the responder policy label is added.
@@ -28,16 +28,15 @@ type Botpolicylabel struct {
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* Any comments to preserve information about this bot policy label.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* New name for the bot policy label. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters.
-	*/
+	 */
 	Newname string `json:"newname,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Numpol string `json:"numpol,omitempty"`
-	Hits string `json:"hits,omitempty"`
-
+	Hits   string `json:"hits,omitempty"`
 }

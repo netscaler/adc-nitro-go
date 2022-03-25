@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ha
 
 /**
-* Binding object which returns the resources bound to hanode_binding. 
-*/
+* Binding object which returns the resources bound to hanode_binding.
+ */
 type Hanodebinding struct {
 	/**
 	* ID of the node whose HA settings you want to display. (The ID of the local node is always 0.).<br/>Minimum value =  0<br/>Maximum value =  64
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

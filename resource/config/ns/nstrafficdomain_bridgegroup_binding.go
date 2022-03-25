@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Binding class showing the bridgegroup that can be bound to nstrafficdomain.
-*/
+ */
 type Nstrafficdomainbridgegroupbinding struct {
 	/**
 	* ID of the configured bridge to bind to this traffic domain. More than one bridge group can be bound to a traffic domain, but the same bridge group cannot be a part of multiple traffic domains.
-	*/
+	 */
 	Bridgegroup int `json:"bridgegroup,omitempty"`
 	/**
 	* Integer value that uniquely identifies a traffic domain.
-	*/
+	 */
 	Td int `json:"td,omitempty"`
-
-
 }

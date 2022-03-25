@@ -12,22 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for version resource.
-*/
+ */
 type Nsversion struct {
 	/**
 	* Installed version
-	*/
+	 */
 	Installedversion bool `json:"installedversion,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Version string `json:"version,omitempty"`
-	Mode string `json:"mode,omitempty"`
-
+	Mode    string `json:"mode,omitempty"`
 }

@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package protocol
 
 /**
 * Configuration for HTTP request/response band resource.
-*/
+ */
 type Protocolhttpband struct {
 	/**
 	* Band size, in bytes, for HTTP request band statistics. For example, if you specify a band size of 100 bytes, statistics will be maintained and displayed for the following size ranges:
@@ -36,25 +36,24 @@ type Protocolhttpband struct {
 	Respbandsize int `json:"respbandsize,omitempty"`
 	/**
 	* Type of statistics to display.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Bandrange string `json:"bandrange,omitempty"`
-	Numberofbands string `json:"numberofbands,omitempty"`
-	Totalbandsize string `json:"totalbandsize,omitempty"`
-	Avgbandsize string `json:"avgbandsize,omitempty"`
+	Bandrange      string `json:"bandrange,omitempty"`
+	Numberofbands  string `json:"numberofbands,omitempty"`
+	Totalbandsize  string `json:"totalbandsize,omitempty"`
+	Avgbandsize    string `json:"avgbandsize,omitempty"`
 	Avgbandsizenew string `json:"avgbandsizenew,omitempty"`
-	Banddata string `json:"banddata,omitempty"`
-	Banddatanew string `json:"banddatanew,omitempty"`
-	Accesscount string `json:"accesscount,omitempty"`
-	Accessratio string `json:"accessratio,omitempty"`
+	Banddata       string `json:"banddata,omitempty"`
+	Banddatanew    string `json:"banddatanew,omitempty"`
+	Accesscount    string `json:"accesscount,omitempty"`
+	Accessratio    string `json:"accessratio,omitempty"`
 	Accessrationew string `json:"accessrationew,omitempty"`
-	Totals string `json:"totals,omitempty"`
-
+	Totals         string `json:"totals,omitempty"`
 }

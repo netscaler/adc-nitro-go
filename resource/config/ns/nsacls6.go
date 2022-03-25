@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for ACL6 entry resource.
-*/
+ */
 type Nsacls6 struct {
 	/**
 	*  Type of the acl ,default will be CLASSIC.
@@ -27,5 +27,4 @@ type Nsacls6 struct {
 		* DFD - cluster specific acls,specifies hashmethod for steering of the packet in cluster .
 	*/
 	Type string `json:"type,omitempty"`
-
 }

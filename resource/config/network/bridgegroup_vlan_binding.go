@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the vlan that can be bound to bridgegroup.
-*/
+ */
 type Bridgegroupvlanbinding struct {
 	/**
 	* Names of all member VLANs.
-	*/
+	 */
 	Vlan int `json:"vlan,omitempty"`
 	/**
 	* Temporary flag used for internal purpose.
-	*/
+	 */
 	Rnat bool `json:"rnat,omitempty"`
 	/**
 	* The integer that uniquely identifies the bridge group.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

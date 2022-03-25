@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package user
 
 /**
 * Configuration for user protocol resource.
-*/
+ */
 type Userprotocol struct {
 	/**
 	* Unique name for the user protocol. Not case sensitive. Must begin with an ASCII letter or underscore (_) character, and must consist only of ASCII alphanumeric or underscore characters.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Transport layer's protocol.
-	*/
+	 */
 	Transport string `json:"transport,omitempty"`
 	/**
 	* Name of the extension to add parsing and runtime handling of the protocol packets.
-	*/
+	 */
 	Extension string `json:"extension,omitempty"`
 	/**
 	* Any comments associated with the protocol.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
-
 }

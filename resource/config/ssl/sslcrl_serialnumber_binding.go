@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the serialnumber that can be bound to sslcrl.
-*/
+ */
 type Sslcrlserialnumberbinding struct {
 	/**
 	* Certificate Serial number.
-	*/
+	 */
 	Number string `json:"number,omitempty"`
 	/**
 	* Certificate Revocation date
-	*/
+	 */
 	Date string `json:"date,omitempty"`
 	/**
 	* Name of the CRL for which to show detailed information.
-	*/
+	 */
 	Crlname string `json:"crlname,omitempty"`
-
-
 }

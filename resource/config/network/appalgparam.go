@@ -12,17 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Configuration for AppAlg Param resource.
-*/
+ */
 type Appalgparam struct {
 	/**
 	* Interval in sec, after which data sessions of PPTP GRE is cleared.
-	*/
+	 */
 	Pptpgreidletimeout int `json:"pptpgreidletimeout,omitempty"`
-
 }

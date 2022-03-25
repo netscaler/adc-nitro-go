@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Configuration for epa action resource.
-*/
+ */
 type Authenticationepaaction struct {
 	/**
 	* Name for the epa action. Must begin with a
@@ -30,24 +30,23 @@ type Authenticationepaaction struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* it holds the ClientSecurityExpression to be sent to the client
-	*/
+	 */
 	Csecexpr string `json:"csecexpr,omitempty"`
 	/**
 	* String specifying the name of a process to be terminated by the endpoint analysis (EPA) tool. Multiple processes to be delimited by comma
-	*/
+	 */
 	Killprocess string `json:"killprocess,omitempty"`
 	/**
 	* String specifying the path(s) and name(s) of the files to be deleted by the endpoint analysis (EPA) tool. Multiple files to be delimited by comma
-	*/
+	 */
 	Deletefiles string `json:"deletefiles,omitempty"`
 	/**
 	* This is the default group that is chosen when the EPA check succeeds.
-	*/
+	 */
 	Defaultepagroup string `json:"defaultepagroup,omitempty"`
 	/**
 	* This is the quarantine group that is chosen when the EPA check fails
 		if configured.
 	*/
 	Quarantinegroup string `json:"quarantinegroup,omitempty"`
-
 }

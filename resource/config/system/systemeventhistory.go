@@ -12,37 +12,36 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for event history resource.
-*/
+ */
 type Systemeventhistory struct {
 	/**
 	* Specify start time in mmddyyyyhhmm to start collecting values from that timestamp.
-	*/
+	 */
 	Starttime string `json:"starttime,omitempty"`
 	/**
 	* Specify end time in mmddyyyyhhmm upto which values have to be collected.
-	*/
+	 */
 	Endtime string `json:"endtime,omitempty"`
 	/**
 	* Last is literal way of saying a certain time period from the current moment. Example: -last 1 hour, -last 1 day, et cetera.
-	*/
+	 */
 	Last int `json:"last,omitempty"`
 	/**
 	* Specify the time period from current moment. Example 1 x where x = hours/ days/ years.
-	*/
+	 */
 	Unit string `json:"unit,omitempty"`
 	/**
 	* Specifies the source which contains all the stored counter values.
-	*/
+	 */
 	Datasource string `json:"datasource,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

@@ -12,33 +12,32 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Statistics for Global system memory stats resource.
-*/
+ */
 
 type Systemmemorystats struct {
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
+	 */
+	Clearstats            string  `json:"clearstats,omitempty"`
 	Cacmemmaxmemlimitpcnt float64 `json:"cacmemmaxmemlimitpcnt,omitempty"`
-	Cacmemmaxmemlimit int `json:"cacmemmaxmemlimit,omitempty"`
-	Shmemerrallocfailed int `json:"shmemerrallocfailed,omitempty"`
-	Shmemallocpcnt float64 `json:"shmemallocpcnt,omitempty"`
-	Shmemallocinmb int `json:"shmemallocinmb,omitempty"`
-	Shmemtotinmb int `json:"shmemtotinmb,omitempty"`
-	Memtotallocfailed int `json:"memtotallocfailed,omitempty"`
-	Memtotfree int `json:"memtotfree,omitempty"`
-	Memusagepcnt float64 `json:"memusagepcnt,omitempty"`
-	Memtotuseinmb int `json:"memtotuseinmb,omitempty"`
-	Memtotallocpcnt float64 `json:"memtotallocpcnt,omitempty"`
-	Memtotallocmb int `json:"memtotallocmb,omitempty"`
-	Memtotinmb int `json:"memtotinmb,omitempty"`
-	Memtotavail int `json:"memtotavail,omitempty"`
-	Cacmemmaxsyslimitmb int `json:"cacmemmaxsyslimitmb,omitempty"`
-
+	Cacmemmaxmemlimit     int     `json:"cacmemmaxmemlimit,omitempty"`
+	Shmemerrallocfailed   int     `json:"shmemerrallocfailed,omitempty"`
+	Shmemallocpcnt        float64 `json:"shmemallocpcnt,omitempty"`
+	Shmemallocinmb        int     `json:"shmemallocinmb,omitempty"`
+	Shmemtotinmb          int     `json:"shmemtotinmb,omitempty"`
+	Memtotallocfailed     int     `json:"memtotallocfailed,omitempty"`
+	Memtotfree            int     `json:"memtotfree,omitempty"`
+	Memusagepcnt          float64 `json:"memusagepcnt,omitempty"`
+	Memtotuseinmb         int     `json:"memtotuseinmb,omitempty"`
+	Memtotallocpcnt       float64 `json:"memtotallocpcnt,omitempty"`
+	Memtotallocmb         int     `json:"memtotallocmb,omitempty"`
+	Memtotinmb            int     `json:"memtotinmb,omitempty"`
+	Memtotavail           int     `json:"memtotavail,omitempty"`
+	Cacmemmaxsyslimitmb   int     `json:"cacmemmaxsyslimitmb,omitempty"`
 }

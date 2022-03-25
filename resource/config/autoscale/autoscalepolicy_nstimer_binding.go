@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package autoscale
 
 /**
 * Binding class showing the nstimer that can be bound to autoscalepolicy.
-*/
+ */
 type Autoscalepolicynstimerbinding struct {
 	/**
 	* Location where policy is bound
-	*/
+	 */
 	Boundto string `json:"boundto,omitempty"`
 	/**
 	* Specifies the priority of the policy.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* The name of the autoscale policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

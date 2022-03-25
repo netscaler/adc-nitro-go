@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for dh Parameter resource.
-*/
+ */
 type Ssldhparam struct {
 	/**
 	* Name of and, optionally, path to the DH key file. /nsconfig/ssl/ is the default path.
-	*/
+	 */
 	Dhfile string `json:"dhfile,omitempty"`
 	/**
 	* Size, in bits, of the DH key being generated.
-	*/
+	 */
 	Bits int `json:"bits,omitempty"`
 	/**
 	* Random number required for generating the DH key. Required as part of the DH key generation algorithm.
-	*/
+	 */
 	Gen string `json:"gen,omitempty"`
-
 }

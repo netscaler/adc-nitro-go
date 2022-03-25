@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package rewrite
 
 /**
 * Configuration for rewrite policy resource.
-*/
+ */
 type Rewritepolicy struct {
 	/**
 	* Name for the rewrite policy. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Can be changed after the rewrite policy is added.
@@ -30,7 +30,7 @@ type Rewritepolicy struct {
 	* Expression against which traffic is evaluated.
 		The following requirements apply only to the Citrix ADC CLI:
 		* If the expression includes one or more spaces, enclose the entire expression in double quotation marks.
-		* If the expression itself includes double quotation marks, escape the quotations by using the \ character. 
+		* If the expression itself includes double quotation marks, escape the quotations by using the \ character.
 		* Alternatively, you can use single quotation marks to enclose the rule, in which case you do not have to escape the double quotation marks.
 	*/
 	Rule string `json:"rule,omitempty"`
@@ -44,18 +44,18 @@ type Rewritepolicy struct {
 	Action string `json:"action,omitempty"`
 	/**
 	* Action to perform if the result of policy evaluation is undefined (UNDEF). An UNDEF event indicates an internal error condition. Only the above built-in actions can be used.
-	*/
+	 */
 	Undefaction string `json:"undefaction,omitempty"`
 	/**
 	* Any comments to preserve information about this rewrite policy.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Name of messagelog action to use when a request matches this policy.
-	*/
+	 */
 	Logaction string `json:"logaction,omitempty"`
 	/**
-	* New name for the rewrite policy. 
+	* New name for the rewrite policy.
 		Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters.
 		The following requirement applies only to the Citrix ADC CLI:
 		If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my rewrite policy" or 'my rewrite policy').
@@ -64,11 +64,10 @@ type Rewritepolicy struct {
 
 	//------- Read only Parameter ---------;
 
-	Hits string `json:"hits,omitempty"`
-	Undefhits string `json:"undefhits,omitempty"`
+	Hits        string `json:"hits,omitempty"`
+	Undefhits   string `json:"undefhits,omitempty"`
 	Description string `json:"description,omitempty"`
-	Isdefault string `json:"isdefault,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Isdefault   string `json:"isdefault,omitempty"`
+	Builtin     string `json:"builtin,omitempty"`
+	Feature     string `json:"feature,omitempty"`
 }

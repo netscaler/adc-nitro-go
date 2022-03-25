@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the sslcipher that can be bound to sslservice.
-*/
+ */
 type Sslservicesslcipherbinding struct {
 	/**
 	* The cipher group/alias/individual cipher configuration.
-	*/
+	 */
 	Cipheraliasname string `json:"cipheraliasname,omitempty"`
 	/**
 	* The cipher suite description.
-	*/
+	 */
 	Description string `json:"description,omitempty"`
 	/**
 	* Name of the SSL service for which to set advanced configuration.
-	*/
+	 */
 	Servicename string `json:"servicename,omitempty"`
 	/**
 	* Name of the individual cipher, user-defined cipher group, or predefined (built-in) cipher alias.
-	*/
+	 */
 	Ciphername string `json:"ciphername,omitempty"`
-
-
 }

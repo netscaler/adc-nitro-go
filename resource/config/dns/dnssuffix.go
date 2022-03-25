@@ -12,17 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
 
 /**
 * Configuration for DNS suffix resource.
-*/
+ */
 type Dnssuffix struct {
 	/**
 	* Suffix to be appended when resolving domain names that are not fully qualified.
-	*/
+	 */
 	Dnssuffix string `json:"Dnssuffix,omitempty"`
-
 }

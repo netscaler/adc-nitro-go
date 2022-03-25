@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package feo
 
 /**
-* Binding object which returns the resources bound to feopolicy_binding. 
-*/
+* Binding object which returns the resources bound to feopolicy_binding.
+ */
 type Feopolicybinding struct {
 	/**
-	* The name of the front end optimization policy.<br/>Minimum value =  
-	*/
+	* The name of the front end optimization policy.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

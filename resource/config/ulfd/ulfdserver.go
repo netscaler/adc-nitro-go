@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ulfd
 
 /**
 * Configuration for ulfd server resource.
-*/
+ */
 type Ulfdserver struct {
 	/**
 	* IP address of the server where ulfd service is running.
-	*/
+	 */
 	Loggerip string `json:"loggerip,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	State string `json:"state,omitempty"`
-
 }

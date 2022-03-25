@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the nsip6 that can be bound to ipset.
-*/
+ */
 type Ipsetnsip6binding struct {
 	/**
 	* One or more IP addresses bound to the IP set.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Name of the IP set to which to bind IP addresses.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

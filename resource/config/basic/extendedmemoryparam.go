@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package basic
 
 /**
 * Configuration for Parameter for extended memory used by LSN and Subscriber Store resource.
-*/
+ */
 type Extendedmemoryparam struct {
 	/**
 	* Amount of Citrix ADC memory to reserve for the memory used by LSN and Subscriber Session Store feature, in multiples of 2MB.
@@ -28,8 +28,7 @@ type Extendedmemoryparam struct {
 
 	//------- Read only Parameter ---------;
 
-	Memlimitactive string `json:"memlimitactive,omitempty"`
-	Maxmemlimit string `json:"maxmemlimit,omitempty"`
+	Memlimitactive    string `json:"memlimitactive,omitempty"`
+	Maxmemlimit       string `json:"maxmemlimit,omitempty"`
 	Minrequiredmemory string `json:"minrequiredmemory,omitempty"`
-
 }

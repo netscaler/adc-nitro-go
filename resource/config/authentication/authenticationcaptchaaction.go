@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Configuration for Captcha Action resource.
-*/
+ */
 type Authenticationcaptchaaction struct {
 	/**
 	* Name for the new captcha action. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after an action is created.
@@ -28,19 +28,18 @@ type Authenticationcaptchaaction struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* This is the endpoint at which captcha response is validated.
-	*/
+	 */
 	Serverurl string `json:"serverurl,omitempty"`
 	/**
 	* Secret of gateway as established at the captcha source.
-	*/
+	 */
 	Secretkey string `json:"secretkey,omitempty"`
 	/**
 	* Sitekey to identify gateway fqdn while loading captcha.
-	*/
+	 */
 	Sitekey string `json:"sitekey,omitempty"`
 	/**
 	* This is the group that is added to user sessions that match current policy.
-	*/
+	 */
 	Defaultauthenticationgroup string `json:"defaultauthenticationgroup,omitempty"`
-
 }

@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package rewrite
 
 /**
 * Configuration for rewrite parameter resource.
-*/
+ */
 type Rewriteparam struct {
 	/**
 	* Action to perform if the result of policy evaluation is undefined (UNDEF). An UNDEF event indicates an error condition in evaluating the expression.
@@ -30,7 +30,6 @@ type Rewriteparam struct {
 	Undefaction string `json:"undefaction,omitempty"`
 	/**
 	* Maximum time in milliseconds to allow for processing all the policies and their selected actions without interruption. If the timeout is reached then the evaluation causes an UNDEF to be raised and no further processing is performed. Note that some rewrites may have already been performed.
-	*/
+	 */
 	Timeout int `json:"timeout,omitempty"`
-
 }

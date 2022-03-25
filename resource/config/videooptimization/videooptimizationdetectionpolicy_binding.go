@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package videooptimization
 
 /**
-* Binding object which returns the resources bound to videooptimizationdetectionpolicy_binding. 
-*/
+* Binding object which returns the resources bound to videooptimizationdetectionpolicy_binding.
+ */
 type Videooptimizationdetectionpolicybinding struct {
 	/**
 	* Name of the videooptimization detection policy for which to display settings.Must provide policy name.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

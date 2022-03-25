@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package urlfiltering
 
 /**
 * Configuration for Categories resource.
-*/
+ */
 type Urlfilteringcategories struct {
 	/**
 	* URL Filtering SDK Category per Group.
-	*/
+	 */
 	Group string `json:"group,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Categories string `json:"categories,omitempty"`
-
 }

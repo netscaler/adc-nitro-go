@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Binding class showing the systemcmdpolicy that can be bound to systemuser.
-*/
+ */
 type Systemusersystemcmdpolicybinding struct {
 	/**
 	* The name of command policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* The priority of the policy.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* Name of the system-user entry to which to bind the command policy.
-	*/
+	 */
 	Username string `json:"username,omitempty"`
-
-
 }

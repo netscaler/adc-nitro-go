@@ -12,17 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for last saved configuration resource.
-*/
+ */
 type Nssavedconfig struct {
 
 	//------- Read only Parameter ---------;
 
 	Textblob string `json:"textblob,omitempty"`
-
 }

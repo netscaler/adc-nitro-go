@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for "VPX" resource.
-*/
+ */
 type Nsvpxparam struct {
 	/**
 	* This setting applicable in virtual appliances, to move master clock source cpu from management cpu cpu0 to cpu1 ie PE0.
@@ -42,15 +42,14 @@ type Nsvpxparam struct {
 	Cpuyield string `json:"cpuyield,omitempty"`
 	/**
 	* ID of the cluster node for which you are setting the cpuyield. It can be configured only through the cluster IP address.
-	*/
+	 */
 	Ownernode int `json:"ownernode,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Vpxenvironment string `json:"vpxenvironment,omitempty"`
-	Memorystatus string `json:"memorystatus,omitempty"`
-	Cloudproductcode string `json:"cloudproductcode,omitempty"`
-	Vpxoemcode string `json:"vpxoemcode,omitempty"`
+	Vpxenvironment      string `json:"vpxenvironment,omitempty"`
+	Memorystatus        string `json:"memorystatus,omitempty"`
+	Cloudproductcode    string `json:"cloudproductcode,omitempty"`
+	Vpxoemcode          string `json:"vpxoemcode,omitempty"`
 	Technicalsupportpin string `json:"technicalsupportpin,omitempty"`
-
 }

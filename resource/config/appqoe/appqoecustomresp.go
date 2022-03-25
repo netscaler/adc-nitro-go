@@ -12,18 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appqoe
 
 /**
 * Configuration for AppQoE custom response page resource.
-*/
+ */
 type Appqoecustomresp struct {
 	Src string `json:"src,omitempty"`
 	/**
 	* Indicates name of the custom response HTML page to import/update.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
 }

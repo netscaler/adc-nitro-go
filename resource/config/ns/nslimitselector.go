@@ -12,15 +12,14 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for limit selector resource.
-*/
+ */
 type Nslimitselector struct {
-	Selectorname string `json:"selectorname,omitempty"`
-	Rule []string `json:"rule,omitempty"`
-
+	Selectorname string   `json:"selectorname,omitempty"`
+	Rule         []string `json:"rule,omitempty"`
 }

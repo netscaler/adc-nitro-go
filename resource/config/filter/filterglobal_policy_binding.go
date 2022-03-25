@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package filter
 
 /**
 * Binding class showing the policy that can be bound to filterglobal.
-*/
+ */
 type Filterglobalpolicybinding struct {
 	/**
 	* The name of the filter policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* The priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* State of the binding.
-	*/
+	 */
 	State string `json:"state,omitempty"`
-
-
 }

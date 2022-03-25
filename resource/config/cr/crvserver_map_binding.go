@@ -12,29 +12,29 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cr
 
 /**
 * Binding class showing the map that can be bound to crvserver.
-*/
+ */
 type Crvservermapbinding struct {
 	/**
 	* Policies bound to this vserver.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* The CSW target server names.
-	*/
+	 */
 	Targetvserver string `json:"targetvserver,omitempty"`
 	/**
 	* Name of the cache redirection virtual server to which to bind the cache redirection policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* An unsigned integer that determines the priority of the policy relative to other policies bound to this cache redirection virtual server. The lower the value, higher the priority. Note: This option is available only when binding content switching, filtering, and compression policies to a cache redirection virtual server.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Expression or other value specifying the next policy to be evaluated if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -66,12 +66,10 @@ type Crvservermapbinding struct {
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of label to be invoked.
-	*/
+	 */
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the label to be invoked.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cloud
 
 /**
 * Configuration for cloud paramInternal resource.
-*/
+ */
 type Cloudparaminternal struct {
 	/**
 	* Indicates if GUI in in FTU mode or not
-	*/
+	 */
 	Nonftumode string `json:"nonftumode,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Iamperm string `json:"iamperm,omitempty"`
-
 }

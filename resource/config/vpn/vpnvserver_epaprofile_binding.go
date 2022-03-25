@@ -12,27 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Binding class showing the epaprofile that can be bound to vpnvserver.
-*/
+ */
 type Vpnvserverepaprofilebinding struct {
 	/**
 	* Advanced EPA profile to bind
-	*/
+	 */
 	Epaprofile string `json:"epaprofile,omitempty"`
-	Acttype uint32 `json:"acttype,omitempty"`
+	Acttype    uint32 `json:"acttype,omitempty"`
 	/**
 	* Name of the virtual server.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Mark the EPA profile optional for preauthentication EPA profile. User would be shown a logon page even if the EPA profile fails to evaluate.
-	*/
+	 */
 	Epaprofileoptional bool `json:"epaprofileoptional,omitempty"`
-
-
 }

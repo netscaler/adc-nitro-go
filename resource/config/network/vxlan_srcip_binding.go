@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the srcip that can be bound to vxlan.
-*/
+ */
 type Vxlansrcipbinding struct {
 	/**
 	* The source IP address to use in outgoing vxlan packets.
-	*/
+	 */
 	Srcip string `json:"srcip,omitempty"`
 	/**
 	* A positive integer, which is also called VXLAN Network Identifier (VNI), that uniquely identifies a VXLAN.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

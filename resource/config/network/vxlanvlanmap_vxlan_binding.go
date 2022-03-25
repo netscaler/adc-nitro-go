@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the vxlan that can be bound to vxlanvlanmap.
-*/
+ */
 type Vxlanvlanmapvxlanbinding struct {
 	/**
 	* The VXLAN assigned to the vlan inside the cloud.
-	*/
+	 */
 	Vxlan int `json:"vxlan,omitempty"`
 	/**
 	* The vlan id or the range of vlan ids in the on-premise network.
-	*/
+	 */
 	Vlan []string `json:"vlan,omitempty"`
 	/**
 	* Name of the mapping table.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

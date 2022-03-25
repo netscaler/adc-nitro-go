@@ -12,25 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the profile that can be bound to sslcipher.
-*/
+ */
 type Sslcipherprofilebinding struct {
 	/**
 	* Name of the profile to which cipher is attached.
-	*/
+	 */
 	Sslprofile string `json:"sslprofile,omitempty"`
 	/**
 	* Cipher suite description.
-	*/
+	 */
 	Description string `json:"description,omitempty"`
 	/**
 	* Name of the user-defined cipher group.
-	*/
+	 */
 	Ciphergroupname string `json:"ciphergroupname,omitempty"`
 	/**
 	* The operation that is performed when adding the cipher-suite.
@@ -42,12 +42,10 @@ type Sslcipherprofilebinding struct {
 	Cipheroperation string `json:"cipheroperation,omitempty"`
 	/**
 	* A cipher-suite can consist of an individual cipher name, the system predefined cipher-alias name, or user defined cipher-group name.
-	*/
+	 */
 	Ciphgrpals string `json:"ciphgrpals,omitempty"`
 	/**
 	* Priority of the cipher to be added
-	*/
+	 */
 	Cipherpriority uint32 `json:"cipherpriority,omitempty"`
-
-
 }

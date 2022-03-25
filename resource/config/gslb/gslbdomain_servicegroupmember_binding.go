@@ -12,46 +12,44 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
 * Binding class showing the servicegroupmember that can be bound to gslbdomain.
-*/
+ */
 type Gslbdomainservicegroupmemberbinding struct {
 	/**
 	* The GSLB service group name bound to the selected GSLB virtual server.
-	*/
+	 */
 	Servicegroupname string `json:"servicegroupname,omitempty"`
 	/**
 	* The Ip address of the service
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Port Number
-	*/
+	 */
 	Port int32 `json:"port,omitempty"`
 	/**
 	* The type GSLB service
-	*/
+	 */
 	Servicetype string `json:"servicetype,omitempty"`
 	/**
 	* weight assigned
-	*/
+	 */
 	Weight uint32 `json:"weight,omitempty"`
 	/**
 	* GSLB server state
-	*/
+	 */
 	Svreffgslbstate string `json:"svreffgslbstate,omitempty"`
 	/**
 	* The threshold value of the service
-	*/
+	 */
 	Gslbthreshold int32 `json:"gslbthreshold,omitempty"`
 	/**
 	* Name of the Domain
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

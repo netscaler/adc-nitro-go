@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
 
 /**
 * Configuration for DNS view resource.
-*/
+ */
 type Dnsview struct {
 	/**
 	* Name for the DNS view.
-	*/
+	 */
 	Viewname string `json:"viewname,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Flags string `json:"flags,omitempty"`
-
 }

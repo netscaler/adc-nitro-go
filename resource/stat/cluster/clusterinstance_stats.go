@@ -12,42 +12,41 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
 * Statistics for cluster instance resource.
-*/
+ */
 
 type Clusterinstancestats struct {
 	/**
 	* ID of the cluster instance for which to display statistics.
-	*/
+	 */
 	Clid int `json:"clid,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Clbkplanetx int `json:"clbkplanetx,omitempty"`
+	 */
+	Clearstats  string `json:"clearstats,omitempty"`
+	Clbkplanetx int    `json:"clbkplanetx,omitempty"`
 	/**
 	* Traffic transmitted from backplane (in mbits)
-	*/
+	 */
 	Clbkplanetxrate float64 `json:"clbkplanetxrate,omitempty"`
-	Clbkplanerx int `json:"clbkplanerx,omitempty"`
+	Clbkplanerx     int     `json:"clbkplanerx,omitempty"`
 	/**
 	* Traffic received on backplane (in mbits)
-	*/
+	 */
 	Clbkplanerxrate float64 `json:"clbkplanerxrate,omitempty"`
-	Clnumnodes int `json:"clnumnodes,omitempty"`
-	Clcurstatus string `json:"clcurstatus,omitempty"`
-	Clviewleader string `json:"clviewleader,omitempty"`
-	Totsteeredpkts int `json:"totsteeredpkts,omitempty"`
+	Clnumnodes      int     `json:"clnumnodes,omitempty"`
+	Clcurstatus     string  `json:"clcurstatus,omitempty"`
+	Clviewleader    string  `json:"clviewleader,omitempty"`
+	Totsteeredpkts  int     `json:"totsteeredpkts,omitempty"`
 	/**
 	* Total number of packets steered on the cluster backplane.
-	*/
-	Steeredpktsrate float64 `json:"steeredpktsrate,omitempty"`
-	Numdfddroppkts int `json:"numdfddroppkts,omitempty"`
-	Totpropagationtimeout int `json:"totpropagationtimeout,omitempty"`
-
+	 */
+	Steeredpktsrate       float64 `json:"steeredpktsrate,omitempty"`
+	Numdfddroppkts        int     `json:"numdfddroppkts,omitempty"`
+	Totpropagationtimeout int     `json:"totpropagationtimeout,omitempty"`
 }

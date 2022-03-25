@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package bot
 
 /**
 * Binding class showing the ipreputation that can be bound to botprofile.
-*/
+ */
 type Botprofileipreputationbinding struct {
 	/**
 	* IP reputation binding. For each category, only one binding is allowed. To update the values of an existing binding, user has to first unbind that binding, and then needs to bind again with the new values.
-	*/
+	 */
 	Botipreputation bool `json:"bot_ipreputation,omitempty"`
 	/**
 	* IP Repuation category. Following IP Reuputation categories are allowed:
@@ -40,19 +40,19 @@ type Botprofileipreputationbinding struct {
 	Category string `json:"category,omitempty"`
 	/**
 	* Enabled or disabled IP-repuation binding.
-	*/
+	 */
 	Botiprepenabled string `json:"bot_iprep_enabled,omitempty"`
 	/**
 	* One or more actions to be taken if bot is detected based on this IP Reputation binding. Only LOG action can be combinded with DROP, RESET, REDIRECT or MITIGATION action.
-	*/
+	 */
 	Botiprepaction []string `json:"bot_iprep_action,omitempty"`
 	/**
 	* Message to be logged for this binding.
-	*/
+	 */
 	Logmessage string `json:"logmessage,omitempty"`
 	/**
 	* Any comments about this binding.
-	*/
+	 */
 	Botbindcomment string `json:"bot_bind_comment,omitempty"`
 	/**
 	* Name for the profile. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.), pound (#), space ( ), at (@), equals (=), colon (:), and underscore (_) characters. Cannot be changed after the profile is added.
@@ -60,6 +60,4 @@ type Botprofileipreputationbinding struct {
 		If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my profile" or 'my profile').
 	*/
 	Name string `json:"name,omitempty"`
-
-
 }

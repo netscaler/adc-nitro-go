@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
 
 /**
-* Binding object which returns the resources bound to dnsview_binding. 
-*/
+* Binding object which returns the resources bound to dnsview_binding.
+ */
 type Dnsviewbinding struct {
 	/**
-	* Name of the view to display.<br/>Minimum value =  
-	*/
+	* Name of the view to display.<br/>Minimum value =
+	 */
 	Viewname string `json:"viewname,omitempty"`
-
-
 }

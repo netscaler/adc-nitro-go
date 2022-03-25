@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Configuration for Global arp parameters resource.
-*/
+ */
 type Arpparam struct {
 	/**
 	* Time-out value (aging time) for the dynamically learned ARP entries, in seconds. The new value applies only to ARP entries that are dynamically learned after the new value is set. Previously existing ARP entries expire after the previously configured aging time.
-	*/
+	 */
 	Timeout int `json:"timeout,omitempty"`
 	/**
 	* enable/disable arp spoofing validation
-	*/
+	 */
 	Spoofvalidation string `json:"spoofvalidation,omitempty"`
-
 }

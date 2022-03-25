@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package bot
 
 /**
-* Binding object which returns the resources bound to botpolicy_binding. 
-*/
+* Binding object which returns the resources bound to botpolicy_binding.
+ */
 type Botpolicybinding struct {
 	/**
 	* Name of the bot policy for which to display settings.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

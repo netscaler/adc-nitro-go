@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for historical datasource resource.
-*/
+ */
 type Systemdatasource struct {
 	/**
 	* Specifies the source which contains all the stored counter values.
-	*/
+	 */
 	Datasource string `json:"datasource,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

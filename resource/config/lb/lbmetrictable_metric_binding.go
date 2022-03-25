@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
 * Binding class showing the metric that can be bound to lbmetrictable.
-*/
+ */
 type Lbmetrictablemetricbinding struct {
 	/**
 	* Name of the metric for which to change the SNMP OID.
-	*/
+	 */
 	Metric string `json:"metric,omitempty"`
 	/**
 	* New SNMP OID of the metric.
-	*/
+	 */
 	Snmpoid string `json:"Snmpoid,omitempty"`
 	/**
 	* Indication if it is a configured or internal
-	*/
+	 */
 	Metrictype string `json:"metrictype,omitempty"`
 	/**
 	* Name of the metric table.
-	*/
+	 */
 	Metrictable string `json:"metrictable,omitempty"`
-
-
 }

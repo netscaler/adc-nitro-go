@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the ciphersuite that can be bound to sslservice.
-*/
+ */
 type Sslserviceciphersuitebinding struct {
 	/**
 	* The cipher group/alias/individual cipher configuration
-	*/
+	 */
 	Ciphername string `json:"ciphername,omitempty"`
 	/**
 	* The cipher suite description.
-	*/
+	 */
 	Description string `json:"description,omitempty"`
 	/**
 	* Name of the SSL service for which to set advanced configuration.
-	*/
+	 */
 	Servicename string `json:"servicename,omitempty"`
-
-
 }

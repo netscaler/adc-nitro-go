@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package snmp
 
 /**
 * Configuration for SNMP mib resource.
-*/
+ */
 type Snmpmib struct {
 	/**
 	* Name of the administrator for this Citrix ADC. Along with the name, you can include information on how to contact this person, such as a phone number or an email address. Can consist of 1 to 127 characters that include uppercase and  lowercase letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at sign (@), equals (=), colon (:), and underscore (_) characters.
@@ -46,14 +46,13 @@ type Snmpmib struct {
 	Customid string `json:"customid,omitempty"`
 	/**
 	* ID of the cluster node for which we are setting the mib. This is a mandatory argument to set snmp mib on CLIP.
-	*/
+	 */
 	Ownernode int `json:"ownernode,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Sysdesc string `json:"sysdesc,omitempty"`
-	Sysuptime string `json:"sysuptime,omitempty"`
+	Sysdesc     string `json:"sysdesc,omitempty"`
+	Sysuptime   string `json:"sysuptime,omitempty"`
 	Sysservices string `json:"sysservices,omitempty"`
-	Sysoid string `json:"sysoid,omitempty"`
-
+	Sysoid      string `json:"sysoid,omitempty"`
 }

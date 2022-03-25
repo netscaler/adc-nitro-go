@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dos
-
 
 type Dosstats struct {
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Dostotconditiontriggered int `json:"dostotconditiontriggered,omitempty"`
+	 */
+	Clearstats               string `json:"clearstats,omitempty"`
+	Dostotconditiontriggered int    `json:"dostotconditiontriggered,omitempty"`
 	/**
 	* Number of times the Citrix ADC triggered the DOS JavaScript due to a condition match.
-	*/
+	 */
 	Dosconditiontriggeredrate float64 `json:"dosconditiontriggeredrate,omitempty"`
-	Dostotvalidcookies int `json:"dostotvalidcookies,omitempty"`
+	Dostotvalidcookies        int     `json:"dostotvalidcookies,omitempty"`
 	/**
 	* Number of clients from whom the Citrix ADC received a valid DOS cookie.
-	*/
-	Dosvalidcookiesrate float64 `json:"dosvalidcookiesrate,omitempty"`
-	Dostotdospriorityclients int `json:"dostotdospriorityclients,omitempty"`
+	 */
+	Dosvalidcookiesrate      float64 `json:"dosvalidcookiesrate,omitempty"`
+	Dostotdospriorityclients int     `json:"dostotdospriorityclients,omitempty"`
 	/**
 	* Number of valid clients that were given DOS priority.
-	*/
+	 */
 	Dosdospriorityclientsrate float64 `json:"dosdospriorityclientsrate,omitempty"`
-
 }

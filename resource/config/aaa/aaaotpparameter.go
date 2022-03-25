@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Configuration for AAA otpparameter resource.
-*/
+ */
 type Aaaotpparameter struct {
 	/**
 	* To encrypt otp secret in AD or not. Default value is OFF
-	*/
+	 */
 	Encryption string `json:"encryption,omitempty"`
 	/**
 	* Maximum number of otp devices user can register. Default value is 4. Max value is 255
-	*/
+	 */
 	Maxotpdevices int `json:"maxotpdevices,omitempty"`
-
 }

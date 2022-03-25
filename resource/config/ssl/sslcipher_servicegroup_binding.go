@@ -12,33 +12,33 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the servicegroup that can be bound to sslcipher.
-*/
+ */
 type Sslcipherservicegroupbinding struct {
 	/**
 	* Name of the user-defined cipher group.
-	*/
+	 */
 	Ciphergroupname string `json:"ciphergroupname,omitempty"`
 	/**
 	* The name of the SSL service name to which the cipher-suite is to be bound.
-	*/
+	 */
 	Servicename string `json:"servicename,omitempty"`
 	/**
 	* Indicates that the cipher operation is to be performed on the named SSL service or service group.
-	*/
+	 */
 	Service bool `json:"service,omitempty"`
 	/**
 	* The name of the SSL service name to which the cipher-suite is to be bound.
-	*/
+	 */
 	Servicegroupname string `json:"servicegroupname,omitempty"`
 	/**
 	* Indicates that the cipher operation is to be performed on the named SSL service or service group.
-	*/
+	 */
 	Servicegroup bool `json:"servicegroup,omitempty"`
 	/**
 	* The operation that is performed when adding the cipher-suite.
@@ -50,12 +50,10 @@ type Sslcipherservicegroupbinding struct {
 	Cipheroperation string `json:"cipheroperation,omitempty"`
 	/**
 	* A cipher-suite can consist of an individual cipher name, the system predefined cipher-alias name, or user defined cipher-group name.
-	*/
+	 */
 	Ciphgrpals string `json:"ciphgrpals,omitempty"`
 	/**
 	* Priority of the cipher to be added
-	*/
+	 */
 	Cipherpriority int `json:"cipherpriority,omitempty"`
-
-
 }

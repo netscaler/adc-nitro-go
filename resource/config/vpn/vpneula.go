@@ -12,17 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Configuration for EULA for vservers resource.
-*/
+ */
 type Vpneula struct {
 	/**
 	* Name for the eula
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
 }

@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package subscriber
 
 /**
 * Configuration for Subscriber Params resource.
-*/
+ */
 type Subscriberparam struct {
 	/**
 	* Type of subscriber key type IP or IPANDVLAN. IPANDVLAN option can be used only when the interfaceType is set to gxOnly.
@@ -35,25 +35,24 @@ type Subscriberparam struct {
 	*/
 	Interfacetype string `json:"interfacetype,omitempty"`
 	/**
-	* q!Idle Timeout, in seconds, after which Citrix ADC will take an idleAction on a subscriber session (refer to 'idleAction' arguement in 'set subscriber param' for more details on idleAction). Any data-plane or control plane activity updates the idleTimeout on subscriber session. idleAction could be to 'just delete the session' or 'delete and CCR-T' (if PCRF is configured) or 'do not delete but send a CCR-U'. 
+	* q!Idle Timeout, in seconds, after which Citrix ADC will take an idleAction on a subscriber session (refer to 'idleAction' arguement in 'set subscriber param' for more details on idleAction). Any data-plane or control plane activity updates the idleTimeout on subscriber session. idleAction could be to 'just delete the session' or 'delete and CCR-T' (if PCRF is configured) or 'do not delete but send a CCR-U'.
 		Zero value disables the idle timeout. !
 	*/
 	Idlettl int `json:"idlettl,omitempty"`
 	/**
 	* q!Once idleTTL exprires on a subscriber session, Citrix ADC will take an idle action on that session. idleAction could be chosen from one of these ==>
-		1. ccrTerminate: (default) send CCR-T to inform PCRF about session termination and delete the session.  
+		1. ccrTerminate: (default) send CCR-T to inform PCRF about session termination and delete the session.
 		2. delete: Just delete the subscriber session without informing PCRF.
 		3. ccrUpdate: Do not delete the session and instead send a CCR-U to PCRF requesting for an updated session. !
 	*/
 	Idleaction string `json:"idleaction,omitempty"`
 	/**
 	*  The ipv6PrefixLookupList should consist of all the ipv6 prefix lengths assigned to the UE's'
-	*/
+	 */
 	Ipv6prefixlookuplist []int `json:"ipv6prefixlookuplist,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

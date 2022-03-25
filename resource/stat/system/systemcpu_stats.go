@@ -12,23 +12,22 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Statistics for cpu resource.
-*/
+ */
 
 type Systemcpustats struct {
 	/**
 	* ID of the CPU for which to display statistics.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
+	 */
 	Clearstats string `json:"clearstats,omitempty"`
-	Percpuuse int `json:"percpuuse,omitempty"`
-
+	Percpuuse  int    `json:"percpuuse,omitempty"`
 }

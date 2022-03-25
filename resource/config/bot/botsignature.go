@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package bot
 
 /**
 * Configuration for bot signatures resource.
-*/
+ */
 type Botsignature struct {
 	/**
 	* Local path to and name of, or URL (protocol, host, path, and file name) for, the file in which to store the imported signature file.
@@ -27,19 +27,18 @@ type Botsignature struct {
 	Src string `json:"src,omitempty"`
 	/**
 	* Name to assign to the bot signature file object on the Citrix ADC.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Any comments to preserve information about the signature file object.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Overwrites the existing file
-	*/
+	 */
 	Overwrite bool `json:"overwrite,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

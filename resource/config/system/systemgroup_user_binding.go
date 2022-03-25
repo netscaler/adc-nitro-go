@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Binding class showing the user that can be bound to systemgroup.
-*/
+ */
 type Systemgroupuserbinding struct {
 	/**
 	* The system user.
-	*/
+	 */
 	Username string `json:"username,omitempty"`
 	/**
 	* Name of the system group.
-	*/
+	 */
 	Groupname string `json:"groupname,omitempty"`
-
-
 }

@@ -12,38 +12,37 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Statistics for nat64 config resource.
-*/
+ */
 
 type Nat64stats struct {
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Nat64tottcpsessions int `json:"nat64tottcpsessions,omitempty"`
+	 */
+	Clearstats          string `json:"clearstats,omitempty"`
+	Nat64tottcpsessions int    `json:"nat64tottcpsessions,omitempty"`
 	/**
 	* Total number of TCP sessions created by NAT64.
-	*/
+	 */
 	Nat64tcpsessionsrate float64 `json:"nat64tcpsessionsrate,omitempty"`
-	Nat64totudpsessions int `json:"nat64totudpsessions,omitempty"`
+	Nat64totudpsessions  int     `json:"nat64totudpsessions,omitempty"`
 	/**
 	* Total number of UDP sessions created by NAT64.
-	*/
+	 */
 	Nat64udpsessionsrate float64 `json:"nat64udpsessionsrate,omitempty"`
-	Nat64toticmpsessions int `json:"nat64toticmpsessions,omitempty"`
+	Nat64toticmpsessions int     `json:"nat64toticmpsessions,omitempty"`
 	/**
 	* Total number of ICMP sessions created by NAT64.
-	*/
+	 */
 	Nat64icmpsessionsrate float64 `json:"nat64icmpsessionsrate,omitempty"`
-	Nat64totsessions int `json:"nat64totsessions,omitempty"`
+	Nat64totsessions      int     `json:"nat64totsessions,omitempty"`
 	/**
 	* Total number of sessions created by NAT64.
-	*/
+	 */
 	Nat64sessionsrate float64 `json:"nat64sessionsrate,omitempty"`
-
 }

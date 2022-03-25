@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package responder
 
 /**
 * Configuration for Responder HTML page resource.
-*/
+ */
 type Responderhtmlpage struct {
 	/**
 	* Local path to and name of, or URL \(protocol, host, path, and file name\) for, the file in which to store the imported HTML page.
@@ -27,23 +27,22 @@ type Responderhtmlpage struct {
 	Src string `json:"src,omitempty"`
 	/**
 	* Name to assign to the HTML page object on the Citrix ADC.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Any comments to preserve information about the HTML page object.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Overwrites the existing file
-	*/
+	 */
 	Overwrite bool `json:"overwrite,omitempty"`
 	/**
 	* CA certificate file name which will be used to verify the peer's certificate. The certificate should be imported using "import ssl certfile" CLI command or equivalent in API or GUI. If certificate name is not configured, then default root CA certificates are used for peer's certificate verification.
-	*/
+	 */
 	Cacertfile string `json:"cacertfile,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dos
 
 /**
 * Configuration for DoS policy resource.
-*/
+ */
 type Dospolicy struct {
 	/**
 	* Name for the HTTP DoS protection policy. Must begin with a letter, number, or the underscore character (_). Other characters allowed, after the first character, are the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), and colon (:) characters.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Queue depth. The queue size (the number of outstanding service requests on the system) before DoS protection is activated on the service to which the DoS protection policy is bound.
-	*/
+	 */
 	Qdepth int `json:"qdepth,omitempty"`
 	/**
 	* Client detect rate. Integer representing the percentage of traffic to which the HTTP DoS policy is to be applied after the queue depth condition is satisfied.
-	*/
+	 */
 	Cltdetectrate int `json:"cltdetectrate,omitempty"`
-
 }

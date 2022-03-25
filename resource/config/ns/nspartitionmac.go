@@ -12,18 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for partition MACs resource.
-*/
+ */
 type Nspartitionmac struct {
 
 	//------- Read only Parameter ---------;
 
-	Partitionmac string `json:"partitionmac,omitempty"`
+	Partitionmac  string `json:"partitionmac,omitempty"`
 	Partitionname string `json:"partitionname,omitempty"`
-
 }

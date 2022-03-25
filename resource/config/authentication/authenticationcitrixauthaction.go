@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Configuration for Citrix Authentication action resource.
-*/
+ */
 type Authenticationcitrixauthaction struct {
 	/**
 	* Name for the new Citrix Authentication action. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after an action is created.
@@ -28,11 +28,10 @@ type Authenticationcitrixauthaction struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Type of the Citrix Authentication implementation. Default implementation uses Citrix Cloud Connector.
-	*/
+	 */
 	Authenticationtype string `json:"authenticationtype,omitempty"`
 	/**
 	* Authentication needs to be disabled for searching user object without performing authentication.
-	*/
+	 */
 	Authentication string `json:"authentication,omitempty"`
-
 }

@@ -12,25 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
 * Configuration for LSN Transport Profile resource.
-*/
+ */
 type Lsntransportprofile struct {
 	/**
 	* Name for the LSN transport profile. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the LSN transport profile is created. The following requirement applies only to the Citrix ADC CLI: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "lsn transport profile1" or 'lsn transport profile1').
-	*/
+	 */
 	Transportprofilename string `json:"transportprofilename,omitempty"`
 	/**
 	* Protocol for which to set the LSN transport profile parameters.
-	*/
+	 */
 	Transportprotocol string `json:"transportprotocol,omitempty"`
 	/**
 	* Timeout, in seconds, for an idle LSN session. If an LSN session is idle for a time that exceeds this value, the Citrix ADC removes the session.
-		This timeout does not apply for a TCP LSN session when a FIN or RST message is received from either of the endpoints. 
+		This timeout does not apply for a TCP LSN session when a FIN or RST message is received from either of the endpoints.
 	*/
 	Sessiontimeout int `json:"sessiontimeout,omitempty"`
 	/**
@@ -41,27 +41,27 @@ type Lsntransportprofile struct {
 	Finrsttimeout int `json:"finrsttimeout,omitempty"`
 	/**
 	* STUN protocol timeout
-	*/
+	 */
 	Stuntimeout int `json:"stuntimeout,omitempty"`
 	/**
 	* SYN Idle timeout
-	*/
+	 */
 	Synidletimeout int `json:"synidletimeout,omitempty"`
 	/**
 	* Maximum number of LSN NAT ports to be used at a time by each subscriber for the specified protocol. For example, each subscriber can be limited to a maximum of 500 TCP NAT ports. When the LSN NAT mappings for a subscriber reach the limit, the Citrix ADC does not allocate additional NAT ports for that subscriber.
-	*/
+	 */
 	Portquota int `json:"portquota,omitempty"`
 	/**
-	* Maximum number of concurrent LSN sessions allowed for each subscriber for the specified protocol. 
+	* Maximum number of concurrent LSN sessions allowed for each subscriber for the specified protocol.
 		When the number of LSN sessions reaches the limit for a subscriber, the Citrix ADC does not allow the subscriber to open additional sessions.
 	*/
 	Sessionquota int `json:"sessionquota,omitempty"`
 	/**
 	* Maximum number of concurrent LSN sessions(for the specified protocol) allowed for all subscriber of a group to which this profile has bound. This limit will get split across the Citrix ADCs packet engines and rounded down. When the number of LSN sessions reaches the limit for a group in packet engine, the Citrix ADC does not allow the subscriber of that group to open additional sessions through that packet engine.
-	*/
+	 */
 	Groupsessionlimit int `json:"groupsessionlimit,omitempty"`
 	/**
-	* Enable port parity between a subscriber port and its mapped LSN NAT port. For example, if a subscriber initiates a connection from an odd numbered port, the Citrix ADC allocates an odd numbered LSN NAT port for this connection. 
+	* Enable port parity between a subscriber port and its mapped LSN NAT port. For example, if a subscriber initiates a connection from an odd numbered port, the Citrix ADC allocates an odd numbered LSN NAT port for this connection.
 		You must set this parameter for proper functioning of protocols that require the source port to be even or odd numbered, for example, in peer-to-peer applications that use RTP or RTCP protocol.
 	*/
 	Portpreserveparity string `json:"portpreserveparity,omitempty"`
@@ -72,12 +72,11 @@ type Lsntransportprofile struct {
 	*/
 	Portpreserverange string `json:"portpreserverange,omitempty"`
 	/**
-	* Silently drop any non-SYN packets for connections for which there is no LSN-NAT session present on the Citrix ADC. 
-		If you disable this parameter, the Citrix ADC accepts any non-SYN packets and creates a new LSN session entry for this connection. 
+	* Silently drop any non-SYN packets for connections for which there is no LSN-NAT session present on the Citrix ADC.
+		If you disable this parameter, the Citrix ADC accepts any non-SYN packets and creates a new LSN session entry for this connection.
 		Following are some reasons for the Citrix ADC to receive such packets:
 		* LSN session for a connection existed but the Citrix ADC removed this session because the LSN session was idle for a time that exceeded the configured session timeout.
 		* Such packets can be a part of a DoS attack.
 	*/
 	Syncheck string `json:"syncheck,omitempty"`
-
 }

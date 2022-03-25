@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the vlan that can be bound to netbridge.
-*/
+ */
 type Netbridgevlanbinding struct {
 	/**
 	* The VLAN that is extended by this network bridge.
-	*/
+	 */
 	Vlan int `json:"vlan,omitempty"`
 	/**
 	* The name of the network bridge.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

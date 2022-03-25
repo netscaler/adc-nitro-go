@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
-* Binding object which returns the resources bound to nspartition_binding. 
-*/
+* Binding object which returns the resources bound to nspartition_binding.
+ */
 type Nspartitionbinding struct {
 	/**
-	* Name of partition for which to display parameters.<br/>Minimum value =  
-	*/
+	* Name of partition for which to display parameters.<br/>Minimum value =
+	 */
 	Partitionname string `json:"partitionname,omitempty"`
-
-
 }

@@ -12,48 +12,47 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package protocol
 
 /**
 * Statistics for QUIC Bridge protocol resource.
-*/
+ */
 
 type Protocolquicbridgestats struct {
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Quicbridgeconn int `json:"quicbridgeconn,omitempty"`
+	 */
+	Clearstats     string `json:"clearstats,omitempty"`
+	Quicbridgeconn int    `json:"quicbridgeconn,omitempty"`
 	/**
 	* Total number of QUIC Bridge connections
-	*/
-	Quicbridgeconnrate float64 `json:"quicbridgeconnrate,omitempty"`
-	Quicbridgemigratedconn int `json:"quicbridgemigratedconn,omitempty"`
+	 */
+	Quicbridgeconnrate     float64 `json:"quicbridgeconnrate,omitempty"`
+	Quicbridgemigratedconn int     `json:"quicbridgemigratedconn,omitempty"`
 	/**
 	* Total number of migrated QUIC Bridge connections
-	*/
+	 */
 	Quicbridgemigratedconnrate float64 `json:"quicbridgemigratedconnrate,omitempty"`
-	Quicbridgeqci int `json:"quicbridgeqci,omitempty"`
+	Quicbridgeqci              int     `json:"quicbridgeqci,omitempty"`
 	/**
 	* Current number of QUIC Bridge connection infos
-	*/
+	 */
 	Quicbridgeqcirate float64 `json:"quicbridgeqcirate,omitempty"`
-	Quicbridgeqpi int `json:"quicbridgeqpi,omitempty"`
+	Quicbridgeqpi     int     `json:"quicbridgeqpi,omitempty"`
 	/**
 	* Current number of QUIC Bridge peer infos
-	*/
-	Quicbridgeqpirate float64 `json:"quicbridgeqpirate,omitempty"`
-	Quicbridgeqpialcfail int `json:"quicbridgeqpialcfail,omitempty"`
+	 */
+	Quicbridgeqpirate    float64 `json:"quicbridgeqpirate,omitempty"`
+	Quicbridgeqpialcfail int     `json:"quicbridgeqpialcfail,omitempty"`
 	/**
 	* Number of QUIC Bridge peer info allocation failures
-	*/
+	 */
 	Quicbridgeqpialcfailrate float64 `json:"quicbridgeqpialcfailrate,omitempty"`
-	Quicbridgeqcialcfail int `json:"quicbridgeqcialcfail,omitempty"`
+	Quicbridgeqcialcfail     int     `json:"quicbridgeqcialcfail,omitempty"`
 	/**
 	* Number of QUIC Bridge connection info allocation failures
-	*/
+	 */
 	Quicbridgeqcialcfailrate float64 `json:"quicbridgeqcialcfailrate,omitempty"`
-
 }

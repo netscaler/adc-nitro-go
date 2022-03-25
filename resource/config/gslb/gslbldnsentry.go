@@ -12,17 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
 * Configuration for LDNS entry resource.
-*/
+ */
 type Gslbldnsentry struct {
 	/**
 	* IP address of the LDNS server.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
-
 }

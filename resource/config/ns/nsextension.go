@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for Extension resource.
-*/
+ */
 type Nsextension struct {
 	/**
 	* Local path to and name of, or URL (protocol, host, path, and file name) for, the file in which to store the imported extension.
@@ -27,15 +27,15 @@ type Nsextension struct {
 	Src string `json:"src,omitempty"`
 	/**
 	* Name to assign to the extension object on the Citrix ADC.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Any comments to preserve information about the extension object.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Overwrites the existing file
-	*/
+	 */
 	Overwrite bool `json:"overwrite,omitempty"`
 	/**
 	* Enables tracing to the NS log file of extension execution:
@@ -49,22 +49,21 @@ type Nsextension struct {
 	Trace string `json:"trace,omitempty"`
 	/**
 	* Comma-separated list of extension functions to trace. By default, all extension functions are traced.
-	*/
+	 */
 	Tracefunctions string `json:"tracefunctions,omitempty"`
 	/**
 	* Comma-separated list of variables (in traced extension functions) to trace. By default, all variables are traced.
-	*/
+	 */
 	Tracevariables string `json:"tracevariables,omitempty"`
 	/**
 	* Show detail for extension function.
-	*/
+	 */
 	Detail string `json:"detail,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Type string `json:"type,omitempty"`
-	Functionhits string `json:"functionhits,omitempty"`
+	Type              string `json:"type,omitempty"`
+	Functionhits      string `json:"functionhits,omitempty"`
 	Functionundefhits string `json:"functionundefhits,omitempty"`
 	Functionhaltcount string `json:"functionhaltcount,omitempty"`
-
 }

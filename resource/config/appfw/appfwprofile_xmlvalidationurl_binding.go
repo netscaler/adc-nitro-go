@@ -12,29 +12,29 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Binding class showing the xmlvalidationurl that can be bound to appfwprofile.
-*/
+ */
 type Appfwprofilexmlvalidationurlbinding struct {
 	/**
 	* XML Validation URL regular expression.
-	*/
+	 */
 	Xmlvalidationurl string `json:"xmlvalidationurl,omitempty"`
 	/**
 	* Validate response message.
-	*/
+	 */
 	Xmlvalidateresponse string `json:"xmlvalidateresponse,omitempty"`
 	/**
 	* WSDL object for soap request validation.
-	*/
+	 */
 	Xmlwsdl string `json:"xmlwsdl,omitempty"`
 	/**
 	* Allow addtional soap headers.
-	*/
+	 */
 	Xmladditionalsoapheaders string `json:"xmladditionalsoapheaders,omitempty"`
 	/**
 	* Modifies the behaviour of the Request URL validation w.r.t. the Service URL.
@@ -46,44 +46,42 @@ type Appfwprofilexmlvalidationurlbinding struct {
 	Xmlendpointcheck string `json:"xmlendpointcheck,omitempty"`
 	/**
 	* XML Schema object for request validation .
-	*/
+	 */
 	Xmlrequestschema string `json:"xmlrequestschema,omitempty"`
 	/**
 	* XML Schema object for response validation.
-	*/
+	 */
 	Xmlresponseschema string `json:"xmlresponseschema,omitempty"`
 	/**
 	* Validate SOAP Evelope only.
-	*/
+	 */
 	Xmlvalidatesoapenvelope string `json:"xmlvalidatesoapenvelope,omitempty"`
 	/**
 	* Enabled.
-	*/
+	 */
 	State string `json:"state,omitempty"`
 	/**
 	* Any comments about the purpose of profile, or other useful information about the profile.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Is the rule auto deployed by dynamic profile ?
-	*/
+	 */
 	Isautodeployed string `json:"isautodeployed,omitempty"`
 	/**
 	* Send SNMP alert?
-	*/
+	 */
 	Alertonly string `json:"alertonly,omitempty"`
 	/**
 	* Name of the profile to which to bind an exemption or rule.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* A "id" that identifies the rule.
-	*/
+	 */
 	Resourceid string `json:"resourceid,omitempty"`
 	/**
 	* Specifies rule type of binding
-	*/
+	 */
 	Ruletype string `json:"ruletype,omitempty"`
-
-
 }

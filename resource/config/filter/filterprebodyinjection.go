@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package filter
 
 /**
 * Configuration for HTML Injection prebody resource.
-*/
+ */
 type Filterprebodyinjection struct {
 	/**
 	* Name of file whose contents are to be inserted before the response body.
-	*/
+	 */
 	Prebody string `json:"prebody,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Systemiid string `json:"systemiid,omitempty"`
-
 }

@@ -12,33 +12,33 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cr
 
 /**
 * Binding class showing the filterpolicy that can be bound to crvserver.
-*/
+ */
 type Crvserverfilterpolicybinding struct {
 	/**
 	* Policies bound to this vserver.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* The priority for the policy.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* On State describes that policy bound is inherited from global binding.
-	*/
+	 */
 	Inherited string `json:"inherited,omitempty"`
 	/**
 	* Name of the cache redirection virtual server to which to bind the cache redirection policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of the virtual server to which content is forwarded. Applicable only if the policy is a map policy and the cache redirection virtual server is of type REVERSE.
-	*/
+	 */
 	Targetvserver string `json:"targetvserver,omitempty"`
 	/**
 	* Expression or other value specifying the next policy to be evaluated if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -70,12 +70,10 @@ type Crvserverfilterpolicybinding struct {
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of label to be invoked.
-	*/
+	 */
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the label to be invoked.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

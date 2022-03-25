@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
-* Binding object which returns the resources bound to netbridge_binding. 
-*/
+* Binding object which returns the resources bound to netbridge_binding.
+ */
 type Netbridgebinding struct {
 	/**
 	* The name of the network bridge.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

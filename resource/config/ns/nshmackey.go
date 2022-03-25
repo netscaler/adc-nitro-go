@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for HMAC key resource.
-*/
+ */
 type Nshmackey struct {
 	/**
 	* Key name.  This follows the same syntax rules as other expression entity names:
@@ -31,7 +31,7 @@ type Nshmackey struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Digest (hash) function to be used in the HMAC computation.
-	*/
+	 */
 	Digest string `json:"digest,omitempty"`
 	/**
 	* The hex-encoded key to be used in the HMAC computation. The key can be any length (up to a Citrix ADC-imposed maximum of 255 bytes). If the length is less than the digest block size, it will be zero padded up to the block size. If it is greater than the block size, it will be hashed using the digest function to the block size. The block size for each digest is:
@@ -50,7 +50,6 @@ type Nshmackey struct {
 	Keyvalue string `json:"keyvalue,omitempty"`
 	/**
 	* Comments associated with this encryption key.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
-
 }

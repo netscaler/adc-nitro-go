@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package policy
 
 /**
-* Binding object which returns the resources bound to policypatset_binding. 
-*/
+* Binding object which returns the resources bound to policypatset_binding.
+ */
 type Policypatsetbinding struct {
 	/**
-	* Name of the pattern set for which to display the detailed information. If a name is not provided, a list of all pattern sets configured on the appliance is shown.<br/>Minimum value =  
-	*/
+	* Name of the pattern set for which to display the detailed information. If a name is not provided, a list of all pattern sets configured on the appliance is shown.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

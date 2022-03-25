@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
-* Binding object which returns the resources bound to authenticationpolicylabel_binding. 
-*/
+* Binding object which returns the resources bound to authenticationpolicylabel_binding.
+ */
 type Authenticationpolicylabelbinding struct {
 	/**
 	* Name of the authorization policy label.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

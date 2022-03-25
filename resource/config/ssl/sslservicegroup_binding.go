@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
-* Binding object which returns the resources bound to sslservicegroup_binding. 
-*/
+* Binding object which returns the resources bound to sslservicegroup_binding.
+ */
 type Sslservicegroupbinding struct {
 	/**
-	* Name of the SSL service group for which to show detailed information.<br/>Minimum value =  
-	*/
+	* Name of the SSL service group for which to show detailed information.<br/>Minimum value =
+	 */
 	Servicegroupname string `json:"servicegroupname,omitempty"`
-
-
 }

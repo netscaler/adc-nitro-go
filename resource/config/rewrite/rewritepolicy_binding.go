@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package rewrite
 
 /**
-* Binding object which returns the resources bound to rewritepolicy_binding. 
-*/
+* Binding object which returns the resources bound to rewritepolicy_binding.
+ */
 type Rewritepolicybinding struct {
 	/**
 	* Name of the rewrite policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

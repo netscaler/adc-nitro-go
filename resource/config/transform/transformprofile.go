@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package transform
 
 /**
 * Configuration for URL Transformation profile resource.
-*/
+ */
 type Transformprofile struct {
 	/**
 	* Name for the URL transformation profile. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at (@), equals (=), colon (:), and underscore characters. Cannot be changed after the URL transformation profile is added.
@@ -28,24 +28,23 @@ type Transformprofile struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Type of transformation. Always URL for URL Transformation profiles.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* In the HTTP body, transform only absolute URLs. Relative URLs are ignored.
-	*/
+	 */
 	Onlytransformabsurlinbody string `json:"onlytransformabsurlinbody,omitempty"`
 	/**
 	* Any comments to preserve information about this URL Transformation profile.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Regexforfindingurlinjavascript string `json:"regexforfindingurlinjavascript,omitempty"`
-	Regexforfindingurlincss string `json:"regexforfindingurlincss,omitempty"`
+	Regexforfindingurlincss        string `json:"regexforfindingurlincss,omitempty"`
 	Regexforfindingurlinxcomponent string `json:"regexforfindingurlinxcomponent,omitempty"`
-	Regexforfindingurlinxml string `json:"regexforfindingurlinxml,omitempty"`
-	Additionalreqheaderslist string `json:"additionalreqheaderslist,omitempty"`
-	Additionalrespheaderslist string `json:"additionalrespheaderslist,omitempty"`
-
+	Regexforfindingurlinxml        string `json:"regexforfindingurlinxml,omitempty"`
+	Additionalreqheaderslist       string `json:"additionalreqheaderslist,omitempty"`
+	Additionalrespheaderslist      string `json:"additionalrespheaderslist,omitempty"`
 }

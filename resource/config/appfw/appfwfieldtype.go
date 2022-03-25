@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Configuration for application firewall form field type resource.
-*/
+ */
 type Appfwfieldtype struct {
 	/**
 	* Name for the field type.
@@ -29,24 +29,23 @@ type Appfwfieldtype struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* PCRE - format regular expression defining the characters and length allowed for this field type.
-	*/
+	 */
 	Regex string `json:"regex,omitempty"`
 	/**
 	* Positive integer specifying the priority of the field type. A lower number specifies a higher priority. Field types are checked in the order of their priority numbers.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* Comment describing the type of field that this field type is intended to match.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* will not show internal field types added as part of FieldFormat learn rules deployment
-	*/
+	 */
 	Nocharmaps bool `json:"nocharmaps,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

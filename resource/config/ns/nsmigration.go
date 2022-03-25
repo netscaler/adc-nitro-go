@@ -12,20 +12,19 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for Migration operation resource.
-*/
+ */
 type Nsmigration struct {
 
 	//------- Read only Parameter ---------;
 
-	Migrationstatus string `json:"migrationstatus,omitempty"`
-	Migrationstarttime string `json:"migrationstarttime,omitempty"`
-	Migrationendtime string `json:"migrationendtime,omitempty"`
+	Migrationstatus            string `json:"migrationstatus,omitempty"`
+	Migrationstarttime         string `json:"migrationstarttime,omitempty"`
+	Migrationendtime           string `json:"migrationendtime,omitempty"`
 	Migrationrollbackstarttime string `json:"migrationrollbackstarttime,omitempty"`
-
 }

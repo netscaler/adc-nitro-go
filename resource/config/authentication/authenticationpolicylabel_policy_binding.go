@@ -12,34 +12,32 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Binding class showing the policy that can be bound to authenticationpolicylabel.
-*/
+ */
 type Authenticationpolicylabelpolicybinding struct {
 	/**
 	* Name of the authentication policy to bind to the policy label.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Specifies the priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* On success invoke label.
-	*/
+	 */
 	Nextfactor string `json:"nextfactor,omitempty"`
 	/**
 	* Name of the authentication policy label to which to bind the policy.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

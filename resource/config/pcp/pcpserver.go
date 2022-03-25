@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package pcp
 
 /**
 * Configuration for server resource.
-*/
+ */
 type Pcpserver struct {
 	/**
 	* Name for the PCP server. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore CLI Users: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my pcpServer" or my pcpServer).
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* The IP address of the PCP server.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Port number for the PCP server.
-	*/
+	 */
 	Port int `json:"port,omitempty"`
 	/**
 	* pcp profile name
-	*/
+	 */
 	Pcpprofile string `json:"pcpprofile,omitempty"`
-
 }

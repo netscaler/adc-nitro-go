@@ -12,28 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package tunnel
 
 /**
 * Binding class showing the global that can be bound to tunneltrafficpolicy.
-*/
+ */
 type Tunneltrafficpolicyglobalbinding struct {
 	/**
 	* The entity name to which policy is bound
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority uint32 `json:"priority,omitempty"`
+	 */
+	Boundto      string `json:"boundto,omitempty"`
+	Priority     uint32 `json:"priority,omitempty"`
 	Activepolicy uint32 `json:"activepolicy,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Name of the tunnel traffic policy for which to show detailed information.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

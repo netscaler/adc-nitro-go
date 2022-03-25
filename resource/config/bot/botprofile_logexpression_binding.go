@@ -12,33 +12,33 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package bot
 
 /**
 * Binding class showing the logexpression that can be bound to botprofile.
-*/
+ */
 type Botprofilelogexpressionbinding struct {
 	/**
 	* Log expression binding.
-	*/
+	 */
 	Logexpression bool `json:"logexpression,omitempty"`
 	/**
 	* Name of the log expression object.
-	*/
+	 */
 	Botlogexpressionname string `json:"bot_log_expression_name,omitempty"`
 	/**
 	* Expression whose result to be logged when violation happened on the bot profile.
-	*/
+	 */
 	Botlogexpressionvalue string `json:"bot_log_expression_value,omitempty"`
 	/**
 	* Enable or disable the log expression binding.
-	*/
+	 */
 	Botlogexpressionenabled string `json:"bot_log_expression_enabled,omitempty"`
 	/**
 	* Any comments about this binding.
-	*/
+	 */
 	Botbindcomment string `json:"bot_bind_comment,omitempty"`
 	/**
 	* Name for the profile. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.), pound (#), space ( ), at (@), equals (=), colon (:), and underscore (_) characters. Cannot be changed after the profile is added.
@@ -48,8 +48,6 @@ type Botprofilelogexpressionbinding struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Message to be logged for this binding.
-	*/
+	 */
 	Logmessage string `json:"logmessage,omitempty"`
-
-
 }

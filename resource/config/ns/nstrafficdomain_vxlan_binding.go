@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Binding class showing the vxlan that can be bound to nstrafficdomain.
-*/
+ */
 type Nstrafficdomainvxlanbinding struct {
 	/**
 	* ID of the VXLAN to bind to this traffic domain. More than one VXLAN can be bound to a traffic domain, but the same VXLAN cannot be a part of multiple traffic domains.
-	*/
+	 */
 	Vxlan int `json:"vxlan,omitempty"`
 	/**
 	* Integer value that uniquely identifies a traffic domain.
-	*/
+	 */
 	Td int `json:"td,omitempty"`
-
-
 }
