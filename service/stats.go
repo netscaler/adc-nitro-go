@@ -17,9 +17,9 @@ limitations under the License.
 package service
 
 import (
-	"log"
-	"fmt"
 	"encoding/json"
+	"fmt"
+	"log"
 )
 
 //FindStats returns the statistics of the supplied resource type if it exists. Use when the resource to be returned is an array

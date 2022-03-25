@@ -17,8 +17,8 @@ package service
 
 import (
 	"os"
-	"testing"
 	"strings"
+	"testing"
 )
 
 func TestClientCreate(t *testing.T) {
