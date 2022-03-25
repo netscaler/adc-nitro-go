@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
 * Binding class showing the spilloverpolicy that can be bound to gslbvserver.
-*/
+ */
 type Gslbvserverspilloverpolicybinding struct {
 	/**
 	* Name of the policy bound to the GSLB vserver.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
@@ -40,16 +40,14 @@ type Gslbvserverspilloverpolicybinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* The bindpoint to which the policy is bound
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Priority.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* Name of the virtual server on which to perform the binding operation.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

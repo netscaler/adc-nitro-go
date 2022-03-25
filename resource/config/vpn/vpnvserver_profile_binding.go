@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Binding class showing the profile that can be bound to vpnvserver.
-*/
+ */
 type Vpnvserverprofilebinding struct {
 	/**
 	* Name of the analytics profile bound to the VPN Vserver
-	*/
+	 */
 	Analyticsprofile string `json:"analyticsprofile,omitempty"`
 	/**
 	* Name of the virtual server.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

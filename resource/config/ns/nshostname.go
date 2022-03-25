@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for host name resource.
-*/
+ */
 type Nshostname struct {
 	/**
 	* Host name for the Citrix ADC.
-	*/
+	 */
 	Hostname string `json:"hostname,omitempty"`
 	/**
 	* ID of the cluster node for which you are setting the hostname. Can be configured only through the cluster IP address.
-	*/
+	 */
 	Ownernode int `json:"ownernode,omitempty"`
-
 }

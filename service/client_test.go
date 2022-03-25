@@ -16,19 +16,65 @@ limitations under the License.
 package service
 
 import (
+	"crypto/tls"
+	"fmt"
+	"net/http"
+	"net/http/httptest"
 	"os"
-	"testing"
+	"path/filepath"
+	"reflect"
+	"runtime"
 	"strings"
+	"testing"
+
+	"github.com/citrix/adc-nitro-go/service/internal/testcert"
 )
+
+// equals fails the test if exp is not equal to act.
+func equals(tb testing.TB, exp, act interface{}) {
+	if !reflect.DeepEqual(exp, act) {
+		_, file, line, _ := runtime.Caller(1)
+		fmt.Printf("\033[31m%s:%d:\n\n\texp: %#v\n\n\tgot: %#v\033[39m\n\n", filepath.Base(file), line, exp, act)
+		tb.FailNow()
+	}
+}
+
+func newTLSTestServer(t *testing.T, handler http.Handler) *httptest.Server {
+	// Start a local HTTP server
+	server := httptest.NewUnstartedServer(handler)
+
+	serverCert, err := tls.X509KeyPair(testcert.LocalhostCert, testcert.LocalhostKey)
+	if err != nil {
+		t.Error(err)
+	}
+
+	server.TLS = &tls.Config{
+		Certificates: []tls.Certificate{serverCert},
+	}
+
+	server.StartTLS()
+
+	return server
+}
+
+func SaveAndRestore(name string) func() {
+	old, ok := os.LookupEnv(name)
+	if ok {
+		os.Unsetenv(name)
+		return func() {
+			os.Setenv(name, old)
+		}
+	}
+
+	return func() {}
+
+}
 
 func TestClientCreate(t *testing.T) {
 	t.Log("Create client from environment variables and supplied params")
-	oldURL := os.Getenv("NS_URL")
-	oldLogin := os.Getenv("NS_LOGIN")
-	oldPwd := os.Getenv("NS_PASSWORD")
-	os.Unsetenv("NS_URL")
-	os.Unsetenv("NS_LOGIN")
-	os.Unsetenv("NS_PASSWORD")
+	defer SaveAndRestore("NS_URL")()
+	defer SaveAndRestore("NS_LOGIN")()
+	defer SaveAndRestore("NS_PASSWORD")()
 
 	_, err := NewNitroClientFromEnv()
 	if err == nil {
@@ -64,18 +110,15 @@ func TestClientCreate(t *testing.T) {
 		t.Error("Didnt expect to fail in creating client with SSL verify option")
 	}
 
-	os.Setenv("NS_URL", oldURL)
-	os.Setenv("NS_LOGIN", oldLogin)
-	os.Setenv("NS_PASSWORD", oldPwd)
 }
 
 func TestClientCreateFromParams(t *testing.T) {
 	t.Log("Create client from supplied params")
 
 	params := NitroParams{
-		Url:      os.Getenv("NS_URL"),
-		Username: os.Getenv("NS_LOGIN"),
-		Password: os.Getenv("NS_PASSWORD"),
+		Url:      "http://127.0.0.1",
+		Username: "user",
+		Password: "pass",
 	}
 	client, err := NewNitroClientFromParams(params)
 	if client == nil {
@@ -103,5 +146,113 @@ func TestClientCreateFromParams(t *testing.T) {
 	client, err = NewNitroClientFromParams(params)
 	if client == nil {
 		t.Error("Expected to succeed in creating client")
+	}
+}
+
+func Test_newHttpClient(t *testing.T) {
+	type args struct {
+		params NitroParams
+	}
+	tests := []struct {
+		name    string
+		args    args
+		wantErr bool
+	}{
+		{
+			name: "NoSslVerify",
+			args: args{
+				params: NitroParams{
+					SslVerify: false,
+				},
+			},
+			wantErr: false,
+		},
+		{
+			name: "SslVerify",
+			args: args{
+				params: NitroParams{
+					SslVerify: true,
+				},
+			},
+			wantErr: true,
+		},
+		{
+			name: "WithRootCA",
+			args: args{
+				params: NitroParams{
+					SslVerify: true,
+					RootCAs: [][]byte{
+						testcert.LocalcaCert,
+					},
+				},
+			},
+			wantErr: false,
+		},
+		{
+			name: "WithInvalidRootCa",
+			args: args{
+				params: NitroParams{
+					SslVerify: true,
+					RootCAs: [][]byte{
+						testcert.InvalidLocalcaCert,
+					},
+				},
+			},
+			wantErr: true,
+		},
+		{
+			name: "WithHostCert",
+			args: args{
+				params: NitroParams{
+					SslVerify: true,
+					RootCAs: [][]byte{
+						testcert.LocalhostCert,
+					},
+				},
+			},
+			wantErr: false,
+		},
+		{
+			name: "WithInvalidHostCert",
+			args: args{
+				params: NitroParams{
+					SslVerify: true,
+					RootCAs: [][]byte{
+						testcert.InvalidLocalhostCert,
+					},
+				},
+			},
+			wantErr: true,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+
+			// Start a local HTTP server
+			server := newTLSTestServer(t, http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
+				// Test request parameters
+				equals(t, req.URL.String(), "/some/path")
+				// Send response to be tested
+				rw.Write([]byte(`OK`))
+			}))
+
+			// Close the server when test finishes
+			defer server.Close()
+
+			// Get the certificate used
+
+			client, err := newHttpClient(tt.args.params)
+			if err != nil {
+				t.Error(err)
+			}
+
+			_, err = client.Get(server.URL + "/some/path")
+
+			if (err != nil) != tt.wantErr {
+				t.Errorf("newHttpClient() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+
+		})
 	}
 }

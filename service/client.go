@@ -41,6 +41,7 @@ type NitroParams struct {
 	SslVerify     bool
 	Timeout       int
 	RootCAPath    string
+	RootCAs       [][]byte
 	ServerName    string
 	Headers       map[string]string
 	LogLevel      string
@@ -78,6 +79,46 @@ func NewNitroClient(url string, username string, password string) *NitroClient {
 	return c
 }
 
+func newHttpClient(params NitroParams) (*http.Client, error) {
+	transport := http.DefaultTransport.(*http.Transport).Clone()
+
+	if !params.SslVerify {
+		transport.TLSClientConfig = &tls.Config{
+			InsecureSkipVerify: true,
+		}
+	} else {
+		if len(params.RootCAPath) > 0 || len(params.RootCAs) > 0 {
+			caCertPool := x509.NewCertPool()
+
+			if len(params.RootCAPath) > 0 {
+				caCert, err := ioutil.ReadFile(params.RootCAPath)
+				if err != nil {
+					return nil, fmt.Errorf("Unable to read certificate file: %v", err)
+				}
+
+				if ok := caCertPool.AppendCertsFromPEM(caCert); !ok {
+					return nil, fmt.Errorf("Could not Append CA certificate from file.")
+				}
+			}
+
+			for i, ca := range params.RootCAs {
+				if ok := caCertPool.AppendCertsFromPEM(ca); !ok {
+					return nil, fmt.Errorf("Could not Append CA certificate #%d.", i)
+				}
+			}
+
+			transport.TLSClientConfig = &tls.Config{
+				RootCAs:    caCertPool,
+				ServerName: params.ServerName,
+			}
+		}
+	}
+
+	return &http.Client{
+		Transport: transport,
+	}, nil
+}
+
 //NewNitroClientFromParams returns a usable NitroClient. Does not check validity of supplied parameters
 func NewNitroClientFromParams(params NitroParams) (*NitroClient, error) {
 	u, err := url.Parse(params.Url)
@@ -96,36 +137,12 @@ func NewNitroClientFromParams(params NitroParams) (*NitroClient, error) {
 	c.proxiedNs = params.ProxiedNs
 	c.sessionid = ""
 	c.timeout = params.Timeout
-	if params.SslVerify {
-		if len(params.RootCAPath) > 0 {
-			caCert, err := ioutil.ReadFile(params.RootCAPath)
-			if err != nil {
-				return nil, fmt.Errorf("Unable to read certificate file: %v", err)
-			}
-			caCertPool := x509.NewCertPool()
-			if ok := caCertPool.AppendCertsFromPEM(caCert); !ok {
-				return nil, fmt.Errorf("Could not Append CA certificate.")
-			}
-			tr := &http.Transport{
-				TLSClientConfig: &tls.Config{
-					RootCAs:    caCertPool,
-					ServerName: params.ServerName,
-				},
-				Proxy: http.ProxyFromEnvironment,
-			}
-			c.client = &http.Client{Transport: tr}
-		} else {
-			c.client = &http.Client{}
-		}
-	} else {
-		tr := &http.Transport{
-			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: true,
-			},
-			Proxy: http.ProxyFromEnvironment,
-		}
-		c.client = &http.Client{Transport: tr}
+
+	c.client, err = newHttpClient(params)
+	if err != nil {
+		return nil, err
 	}
+
 	level := hclog.LevelFromString(params.LogLevel)
 	if level == hclog.NoLevel {
 		level = hclog.Off

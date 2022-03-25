@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package responder
 
 /**
 * Configuration for responser parameter resource.
-*/
+ */
 type Responderparam struct {
 	/**
 	* Action to perform when policy evaluation creates an UNDEF condition. Available settings function as follows:
@@ -29,7 +29,6 @@ type Responderparam struct {
 	Undefaction string `json:"undefaction,omitempty"`
 	/**
 	* Maximum time in milliseconds to allow for processing all the policies and their selected actions without interruption. If the timeout is reached then the evaluation causes an UNDEF to be raised and no further processing is performed.
-	*/
+	 */
 	Timeout int `json:"timeout,omitempty"`
-
 }

@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cr
 
 /**
-* Binding object which returns the resources bound to crvserver_binding. 
-*/
+* Binding object which returns the resources bound to crvserver_binding.
+ */
 type Crvserverbinding struct {
 	/**
-	* Name of a cache redirection virtual server about which to display detailed information.<br/>Minimum value =  
-	*/
+	* Name of a cache redirection virtual server about which to display detailed information.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

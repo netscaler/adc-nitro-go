@@ -12,30 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the sslvserver that can be bound to sslprofile.
-*/
+ */
 type Sslprofilesslvserverbinding struct {
 	/**
 	* Service name.
-	*/
+	 */
 	Servicename string `json:"servicename,omitempty"`
 	/**
 	* The cipher suite description.
-	*/
+	 */
 	Description string `json:"description,omitempty"`
 	/**
 	* Name of the SSL profile.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Priority of the cipher binding
-	*/
+	 */
 	Cipherpriority int `json:"cipherpriority,omitempty"`
-
-
 }

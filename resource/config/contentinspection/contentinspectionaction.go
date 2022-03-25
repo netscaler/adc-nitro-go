@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package contentinspection
 
 /**
 * Configuration for Content Inspection action resource.
-*/
+ */
 type Contentinspectionaction struct {
 	/**
 	* Name of the remote service action. Must begin with an ASCII alphabetic or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Type of operation this action is going to perform. following actions are available to configure:
@@ -35,19 +35,19 @@ type Contentinspectionaction struct {
 	Type string `json:"type,omitempty"`
 	/**
 	* Name of the LB vserver or service
-	*/
+	 */
 	Servername string `json:"servername,omitempty"`
 	/**
 	* IP address of remoteService
-	*/
+	 */
 	Serverip string `json:"serverip,omitempty"`
 	/**
 	* Port of remoteService
-	*/
+	 */
 	Serverport int `json:"serverport,omitempty"`
 	/**
 	* Name of the ICAP profile to be attached to the contentInspection action.
-	*/
+	 */
 	Icapprofilename string `json:"icapprofilename,omitempty"`
 	/**
 	* Name of the action to perform if the Vserver representing the remote service is not UP. This is not supported for NOINSPECTION Type. The Supported actions are:
@@ -59,12 +59,11 @@ type Contentinspectionaction struct {
 
 	//------- Read only Parameter ---------;
 
-	Reqtimeout string `json:"reqtimeout,omitempty"`
+	Reqtimeout       string `json:"reqtimeout,omitempty"`
 	Reqtimeoutaction string `json:"reqtimeoutaction,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Referencecount string `json:"referencecount,omitempty"`
-	Undefhits string `json:"undefhits,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Hits             string `json:"hits,omitempty"`
+	Referencecount   string `json:"referencecount,omitempty"`
+	Undefhits        string `json:"undefhits,omitempty"`
+	Builtin          string `json:"builtin,omitempty"`
+	Feature          string `json:"feature,omitempty"`
 }

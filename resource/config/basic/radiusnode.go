@@ -12,22 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package basic
 
 /**
 * Configuration for RADIUS Node resource.
-*/
+ */
 type Radiusnode struct {
 	/**
 	* IP address/IP prefix of radius node in CIDR format
-	*/
+	 */
 	Nodeprefix string `json:"nodeprefix,omitempty"`
 	/**
 	* The key shared between the RADIUS server and clients.
 		Required for Citrix ADC to communicate with the RADIUS nodes.
 	*/
 	Radkey string `json:"radkey,omitempty"`
-
 }

@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package tm
 
 /**
-* Binding object which returns the resources bound to tmsessionpolicy_binding. 
-*/
+* Binding object which returns the resources bound to tmsessionpolicy_binding.
+ */
 type Tmsessionpolicybinding struct {
 	/**
-	* Name of the session policy for which to display detailed information.<br/>Minimum value =  
-	*/
+	* Name of the session policy for which to display detailed information.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

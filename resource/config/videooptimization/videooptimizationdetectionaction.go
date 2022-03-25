@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package videooptimization
 
 /**
 * Configuration for videooptimization detectionaction resource.
-*/
+ */
 type Videooptimizationdetectionaction struct {
 	/**
 	* Name for the video optimization detection action. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Type of video optimization action. Available settings function as follows:
@@ -35,7 +35,7 @@ type Videooptimizationdetectionaction struct {
 	Type string `json:"type,omitempty"`
 	/**
 	* Comment. Any type of information about this video optimization detection action.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* New name for the videooptimization detection action.
@@ -45,10 +45,9 @@ type Videooptimizationdetectionaction struct {
 
 	//------- Read only Parameter ---------;
 
-	Hits string `json:"hits,omitempty"`
+	Hits           string `json:"hits,omitempty"`
 	Referencecount string `json:"referencecount,omitempty"`
-	Undefhits string `json:"undefhits,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Undefhits      string `json:"undefhits,omitempty"`
+	Builtin        string `json:"builtin,omitempty"`
+	Feature        string `json:"feature,omitempty"`
 }

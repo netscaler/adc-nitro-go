@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appflow
 
 /**
-* Binding object which returns the resources bound to appflowpolicy_binding. 
-*/
+* Binding object which returns the resources bound to appflowpolicy_binding.
+ */
 type Appflowpolicybinding struct {
 	/**
 	* Name of the policy about which to display detailed information.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

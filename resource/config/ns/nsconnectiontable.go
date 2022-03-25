@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for TCP/IP connection table resource.
-*/
+ */
 type Nsconnectiontable struct {
 	/**
 	* The maximum length of filter expression is 255 and it can be of following format:
@@ -156,11 +156,11 @@ type Nsconnectiontable struct {
 	Filterexpression string `json:"filterexpression,omitempty"`
 	/**
 	* Display link information if available
-	*/
+	 */
 	Link bool `json:"link,omitempty"`
 	/**
 	* Display name instead of IP for local entities
-	*/
+	 */
 	Filtername bool `json:"filtername,omitempty"`
 	/**
 	* Specify display options for the connection table.
@@ -172,130 +172,129 @@ type Nsconnectiontable struct {
 	Detail []string `json:"detail,omitempty"`
 	/**
 	* Display listening services only
-	*/
+	 */
 	Listen bool `json:"listen,omitempty"`
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Sourceip string `json:"sourceip,omitempty"`
-	Sourceport string `json:"sourceport,omitempty"`
-	Destip string `json:"destip,omitempty"`
-	Destport string `json:"destport,omitempty"`
-	Svctype string `json:"svctype,omitempty"`
-	Idletime string `json:"idletime,omitempty"`
-	State string `json:"state,omitempty"`
-	Linksourceip string `json:"linksourceip,omitempty"`
-	Linksourceport string `json:"linksourceport,omitempty"`
-	Linkdestip string `json:"linkdestip,omitempty"`
-	Linkdestport string `json:"linkdestport,omitempty"`
-	Linkservicetype string `json:"linkservicetype,omitempty"`
-	Linkidletime string `json:"linkidletime,omitempty"`
-	Linkstate string `json:"linkstate,omitempty"`
-	Entityname string `json:"entityname,omitempty"`
-	Linkentityname string `json:"linkentityname,omitempty"`
-	Connid string `json:"connid,omitempty"`
-	Linkconnid string `json:"linkconnid,omitempty"`
-	Connproperties string `json:"connproperties,omitempty"`
-	Optionflags string `json:"optionflags,omitempty"`
-	Nswsvalue string `json:"nswsvalue,omitempty"`
-	Peerwsvalue string `json:"peerwsvalue,omitempty"`
-	Mss string `json:"mss,omitempty"`
-	Retxretrycnt string `json:"retxretrycnt,omitempty"`
-	Rcvwnd string `json:"rcvwnd,omitempty"`
-	Advwnd string `json:"advwnd,omitempty"`
-	Sndcwnd string `json:"sndcwnd,omitempty"`
-	Iss string `json:"iss,omitempty"`
-	Irs string `json:"irs,omitempty"`
-	Rcvnxt string `json:"rcvnxt,omitempty"`
-	Maxack string `json:"maxack,omitempty"`
-	Sndnxt string `json:"sndnxt,omitempty"`
-	Sndunack string `json:"sndunack,omitempty"`
-	Httpendseq string `json:"httpendseq,omitempty"`
-	Httpstate string `json:"httpstate,omitempty"`
-	Trcount string `json:"trcount,omitempty"`
-	Priority string `json:"priority,omitempty"`
-	Httpreqver string `json:"httpreqver,omitempty"`
-	Httprequest string `json:"httprequest,omitempty"`
-	Httprspcode string `json:"httprspcode,omitempty"`
-	Rttsmoothed string `json:"rttsmoothed,omitempty"`
-	Rttvariance string `json:"rttvariance,omitempty"`
-	Outoforderpkts string `json:"outoforderpkts,omitempty"`
-	Linkoptionflag string `json:"linkoptionflag,omitempty"`
-	Linknswsvalue string `json:"linknswsvalue,omitempty"`
-	Linkpeerwsvalue string `json:"linkpeerwsvalue,omitempty"`
-	Targetnodeidnnm string `json:"targetnodeidnnm,omitempty"`
-	Sourcenodeidnnm string `json:"sourcenodeidnnm,omitempty"`
-	Channelidnnm string `json:"channelidnnm,omitempty"`
-	Msgversionnnm string `json:"msgversionnnm,omitempty"`
-	Td string `json:"td,omitempty"`
-	Maxrcvbuf string `json:"maxrcvbuf,omitempty"`
-	Linkmaxrcvbuf string `json:"linkmaxrcvbuf,omitempty"`
-	Rxqsize string `json:"rxqsize,omitempty"`
-	Linkrxqsize string `json:"linkrxqsize,omitempty"`
-	Maxsndbuf string `json:"maxsndbuf,omitempty"`
-	Linkmaxsndbuf string `json:"linkmaxsndbuf,omitempty"`
-	Txqsize string `json:"txqsize,omitempty"`
-	Linktxqsize string `json:"linktxqsize,omitempty"`
-	Flavor string `json:"flavor,omitempty"`
-	Linkflavor string `json:"linkflavor,omitempty"`
-	Bwestimate string `json:"bwestimate,omitempty"`
-	Linkbwestimate string `json:"linkbwestimate,omitempty"`
-	Rttmin string `json:"rttmin,omitempty"`
-	Linkrttmin string `json:"linkrttmin,omitempty"`
-	Name string `json:"name,omitempty"`
-	Linkname string `json:"linkname,omitempty"`
-	Tcpmode string `json:"tcpmode,omitempty"`
-	Linktcpmode string `json:"linktcpmode,omitempty"`
-	Realtimertt string `json:"realtimertt,omitempty"`
-	Linkrealtimertt string `json:"linkrealtimertt,omitempty"`
-	Sndbuf string `json:"sndbuf,omitempty"`
-	Linksndbuf string `json:"linksndbuf,omitempty"`
-	Nsbtcpwaitq string `json:"nsbtcpwaitq,omitempty"`
-	Linknsbtcpwaitq string `json:"linknsbtcpwaitq,omitempty"`
-	Nsbretxq string `json:"nsbretxq,omitempty"`
-	Linknsbretxq string `json:"linknsbretxq,omitempty"`
-	Sackblocks string `json:"sackblocks,omitempty"`
-	Linksackblocks string `json:"linksackblocks,omitempty"`
-	Congstate string `json:"congstate,omitempty"`
-	Linkcongstate string `json:"linkcongstate,omitempty"`
-	Sndrecoverle string `json:"sndrecoverle,omitempty"`
-	Linksndrecoverle string `json:"linksndrecoverle,omitempty"`
-	Creditsinbytes string `json:"creditsinbytes,omitempty"`
-	Linkcredits string `json:"linkcredits,omitempty"`
-	Rateinbytes string `json:"rateinbytes,omitempty"`
-	Linkrateinbytes string `json:"linkrateinbytes,omitempty"`
-	Rateschedulerqueue string `json:"rateschedulerqueue,omitempty"`
+	Sourceip               string `json:"sourceip,omitempty"`
+	Sourceport             string `json:"sourceport,omitempty"`
+	Destip                 string `json:"destip,omitempty"`
+	Destport               string `json:"destport,omitempty"`
+	Svctype                string `json:"svctype,omitempty"`
+	Idletime               string `json:"idletime,omitempty"`
+	State                  string `json:"state,omitempty"`
+	Linksourceip           string `json:"linksourceip,omitempty"`
+	Linksourceport         string `json:"linksourceport,omitempty"`
+	Linkdestip             string `json:"linkdestip,omitempty"`
+	Linkdestport           string `json:"linkdestport,omitempty"`
+	Linkservicetype        string `json:"linkservicetype,omitempty"`
+	Linkidletime           string `json:"linkidletime,omitempty"`
+	Linkstate              string `json:"linkstate,omitempty"`
+	Entityname             string `json:"entityname,omitempty"`
+	Linkentityname         string `json:"linkentityname,omitempty"`
+	Connid                 string `json:"connid,omitempty"`
+	Linkconnid             string `json:"linkconnid,omitempty"`
+	Connproperties         string `json:"connproperties,omitempty"`
+	Optionflags            string `json:"optionflags,omitempty"`
+	Nswsvalue              string `json:"nswsvalue,omitempty"`
+	Peerwsvalue            string `json:"peerwsvalue,omitempty"`
+	Mss                    string `json:"mss,omitempty"`
+	Retxretrycnt           string `json:"retxretrycnt,omitempty"`
+	Rcvwnd                 string `json:"rcvwnd,omitempty"`
+	Advwnd                 string `json:"advwnd,omitempty"`
+	Sndcwnd                string `json:"sndcwnd,omitempty"`
+	Iss                    string `json:"iss,omitempty"`
+	Irs                    string `json:"irs,omitempty"`
+	Rcvnxt                 string `json:"rcvnxt,omitempty"`
+	Maxack                 string `json:"maxack,omitempty"`
+	Sndnxt                 string `json:"sndnxt,omitempty"`
+	Sndunack               string `json:"sndunack,omitempty"`
+	Httpendseq             string `json:"httpendseq,omitempty"`
+	Httpstate              string `json:"httpstate,omitempty"`
+	Trcount                string `json:"trcount,omitempty"`
+	Priority               string `json:"priority,omitempty"`
+	Httpreqver             string `json:"httpreqver,omitempty"`
+	Httprequest            string `json:"httprequest,omitempty"`
+	Httprspcode            string `json:"httprspcode,omitempty"`
+	Rttsmoothed            string `json:"rttsmoothed,omitempty"`
+	Rttvariance            string `json:"rttvariance,omitempty"`
+	Outoforderpkts         string `json:"outoforderpkts,omitempty"`
+	Linkoptionflag         string `json:"linkoptionflag,omitempty"`
+	Linknswsvalue          string `json:"linknswsvalue,omitempty"`
+	Linkpeerwsvalue        string `json:"linkpeerwsvalue,omitempty"`
+	Targetnodeidnnm        string `json:"targetnodeidnnm,omitempty"`
+	Sourcenodeidnnm        string `json:"sourcenodeidnnm,omitempty"`
+	Channelidnnm           string `json:"channelidnnm,omitempty"`
+	Msgversionnnm          string `json:"msgversionnnm,omitempty"`
+	Td                     string `json:"td,omitempty"`
+	Maxrcvbuf              string `json:"maxrcvbuf,omitempty"`
+	Linkmaxrcvbuf          string `json:"linkmaxrcvbuf,omitempty"`
+	Rxqsize                string `json:"rxqsize,omitempty"`
+	Linkrxqsize            string `json:"linkrxqsize,omitempty"`
+	Maxsndbuf              string `json:"maxsndbuf,omitempty"`
+	Linkmaxsndbuf          string `json:"linkmaxsndbuf,omitempty"`
+	Txqsize                string `json:"txqsize,omitempty"`
+	Linktxqsize            string `json:"linktxqsize,omitempty"`
+	Flavor                 string `json:"flavor,omitempty"`
+	Linkflavor             string `json:"linkflavor,omitempty"`
+	Bwestimate             string `json:"bwestimate,omitempty"`
+	Linkbwestimate         string `json:"linkbwestimate,omitempty"`
+	Rttmin                 string `json:"rttmin,omitempty"`
+	Linkrttmin             string `json:"linkrttmin,omitempty"`
+	Name                   string `json:"name,omitempty"`
+	Linkname               string `json:"linkname,omitempty"`
+	Tcpmode                string `json:"tcpmode,omitempty"`
+	Linktcpmode            string `json:"linktcpmode,omitempty"`
+	Realtimertt            string `json:"realtimertt,omitempty"`
+	Linkrealtimertt        string `json:"linkrealtimertt,omitempty"`
+	Sndbuf                 string `json:"sndbuf,omitempty"`
+	Linksndbuf             string `json:"linksndbuf,omitempty"`
+	Nsbtcpwaitq            string `json:"nsbtcpwaitq,omitempty"`
+	Linknsbtcpwaitq        string `json:"linknsbtcpwaitq,omitempty"`
+	Nsbretxq               string `json:"nsbretxq,omitempty"`
+	Linknsbretxq           string `json:"linknsbretxq,omitempty"`
+	Sackblocks             string `json:"sackblocks,omitempty"`
+	Linksackblocks         string `json:"linksackblocks,omitempty"`
+	Congstate              string `json:"congstate,omitempty"`
+	Linkcongstate          string `json:"linkcongstate,omitempty"`
+	Sndrecoverle           string `json:"sndrecoverle,omitempty"`
+	Linksndrecoverle       string `json:"linksndrecoverle,omitempty"`
+	Creditsinbytes         string `json:"creditsinbytes,omitempty"`
+	Linkcredits            string `json:"linkcredits,omitempty"`
+	Rateinbytes            string `json:"rateinbytes,omitempty"`
+	Linkrateinbytes        string `json:"linkrateinbytes,omitempty"`
+	Rateschedulerqueue     string `json:"rateschedulerqueue,omitempty"`
 	Linkrateschedulerqueue string `json:"linkrateschedulerqueue,omitempty"`
-	Burstratecontrol string `json:"burstratecontrol,omitempty"`
-	Linkburstratecontrol string `json:"linkburstratecontrol,omitempty"`
-	Cqabifavg string `json:"cqabifavg,omitempty"`
-	Cqathruputavg string `json:"cqathruputavg,omitempty"`
-	Cqarcvwndavg string `json:"cqarcvwndavg,omitempty"`
-	Cqaiai1mspct string `json:"cqaiai1mspct,omitempty"`
-	Cqaiai2mspct string `json:"cqaiai2mspct,omitempty"`
-	Cqasamples string `json:"cqasamples,omitempty"`
-	Cqaiaisamples string `json:"cqaiaisamples,omitempty"`
-	Cqanetclass string `json:"cqanetclass,omitempty"`
-	Cqaccl string `json:"cqaccl,omitempty"`
-	Cqacsq string `json:"cqacsq,omitempty"`
-	Cqaiaiavg string `json:"cqaiaiavg,omitempty"`
-	Cqaisiavg string `json:"cqaisiavg,omitempty"`
-	Cqarcvwndmin string `json:"cqarcvwndmin,omitempty"`
-	Cqaretxcorr string `json:"cqaretxcorr,omitempty"`
-	Cqaretxcong string `json:"cqaretxcong,omitempty"`
-	Cqaretxpackets string `json:"cqaretxpackets,omitempty"`
-	Cqaloaddelayavg string `json:"cqaloaddelayavg,omitempty"`
-	Cqanoisedelayavg string `json:"cqanoisedelayavg,omitempty"`
-	Cqarttmax string `json:"cqarttmax,omitempty"`
-	Cqarttmin string `json:"cqarttmin,omitempty"`
-	Cqarttavg string `json:"cqarttavg,omitempty"`
-	Adaptivetcpprofname string `json:"adaptivetcpprofname,omitempty"`
-	Outoforderblocks string `json:"outoforderblocks,omitempty"`
+	Burstratecontrol       string `json:"burstratecontrol,omitempty"`
+	Linkburstratecontrol   string `json:"linkburstratecontrol,omitempty"`
+	Cqabifavg              string `json:"cqabifavg,omitempty"`
+	Cqathruputavg          string `json:"cqathruputavg,omitempty"`
+	Cqarcvwndavg           string `json:"cqarcvwndavg,omitempty"`
+	Cqaiai1mspct           string `json:"cqaiai1mspct,omitempty"`
+	Cqaiai2mspct           string `json:"cqaiai2mspct,omitempty"`
+	Cqasamples             string `json:"cqasamples,omitempty"`
+	Cqaiaisamples          string `json:"cqaiaisamples,omitempty"`
+	Cqanetclass            string `json:"cqanetclass,omitempty"`
+	Cqaccl                 string `json:"cqaccl,omitempty"`
+	Cqacsq                 string `json:"cqacsq,omitempty"`
+	Cqaiaiavg              string `json:"cqaiaiavg,omitempty"`
+	Cqaisiavg              string `json:"cqaisiavg,omitempty"`
+	Cqarcvwndmin           string `json:"cqarcvwndmin,omitempty"`
+	Cqaretxcorr            string `json:"cqaretxcorr,omitempty"`
+	Cqaretxcong            string `json:"cqaretxcong,omitempty"`
+	Cqaretxpackets         string `json:"cqaretxpackets,omitempty"`
+	Cqaloaddelayavg        string `json:"cqaloaddelayavg,omitempty"`
+	Cqanoisedelayavg       string `json:"cqanoisedelayavg,omitempty"`
+	Cqarttmax              string `json:"cqarttmax,omitempty"`
+	Cqarttmin              string `json:"cqarttmin,omitempty"`
+	Cqarttavg              string `json:"cqarttavg,omitempty"`
+	Adaptivetcpprofname    string `json:"adaptivetcpprofname,omitempty"`
+	Outoforderblocks       string `json:"outoforderblocks,omitempty"`
 	Outoforderflushedcount string `json:"outoforderflushedcount,omitempty"`
-	Outoforderbytes string `json:"outoforderbytes,omitempty"`
-
+	Outoforderbytes        string `json:"outoforderbytes,omitempty"`
 }

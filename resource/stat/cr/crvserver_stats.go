@@ -12,63 +12,62 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cr
 
 /**
 * Statistics for CR virtual server resource.
-*/
+ */
 
 type Crvserverstats struct {
 	/**
 	* Name of a specific cache redirection virtual server.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
+	 */
+	Clearstats       string `json:"clearstats,omitempty"`
 	Primaryipaddress string `json:"primaryipaddress,omitempty"`
-	Primaryport int `json:"primaryport,omitempty"`
-	Type string `json:"type,omitempty"`
-	State string `json:"state,omitempty"`
-	Tothits int `json:"tothits,omitempty"`
+	Primaryport      int    `json:"primaryport,omitempty"`
+	Type             string `json:"type,omitempty"`
+	State            string `json:"state,omitempty"`
+	Tothits          int    `json:"tothits,omitempty"`
 	/**
 	* Total vserver hits
-	*/
-	Hitsrate float64 `json:"hitsrate,omitempty"`
-	Totalrequests int `json:"totalrequests,omitempty"`
+	 */
+	Hitsrate      float64 `json:"hitsrate,omitempty"`
+	Totalrequests int     `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
-	*/
-	Requestsrate float64 `json:"requestsrate,omitempty"`
-	Totalresponses int `json:"totalresponses,omitempty"`
+	 */
+	Requestsrate   float64 `json:"requestsrate,omitempty"`
+	Totalresponses int     `json:"totalresponses,omitempty"`
 	/**
 	* Number of responses received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
-	*/
-	Responsesrate float64 `json:"responsesrate,omitempty"`
-	Totalrequestbytes int `json:"totalrequestbytes,omitempty"`
+	 */
+	Responsesrate     float64 `json:"responsesrate,omitempty"`
+	Totalrequestbytes int     `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
-	*/
-	Requestbytesrate float64 `json:"requestbytesrate,omitempty"`
-	Totalresponsebytes int `json:"totalresponsebytes,omitempty"`
+	 */
+	Requestbytesrate   float64 `json:"requestbytesrate,omitempty"`
+	Totalresponsebytes int     `json:"totalresponsebytes,omitempty"`
 	/**
 	* Number of response bytes received by this service or virtual server.
-	*/
+	 */
 	Responsebytesrate float64 `json:"responsebytesrate,omitempty"`
-	Totalpktsrecvd int `json:"totalpktsrecvd,omitempty"`
+	Totalpktsrecvd    int     `json:"totalpktsrecvd,omitempty"`
 	/**
 	* Total number of packets received by this service or virtual server.
-	*/
+	 */
 	Pktsrecvdrate float64 `json:"pktsrecvdrate,omitempty"`
-	Totalpktssent int `json:"totalpktssent,omitempty"`
+	Totalpktssent int     `json:"totalpktssent,omitempty"`
 	/**
 	* Total number of packets sent.
-	*/
-	Pktssentrate float64 `json:"pktssentrate,omitempty"`
-	Invalidrequestresponse int `json:"invalidrequestresponse,omitempty"`
-	Invalidrequestresponsedropped int `json:"invalidrequestresponsedropped,omitempty"`
-
+	 */
+	Pktssentrate                  float64 `json:"pktssentrate,omitempty"`
+	Invalidrequestresponse        int     `json:"invalidrequestresponse,omitempty"`
+	Invalidrequestresponsedropped int     `json:"invalidrequestresponsedropped,omitempty"`
 }

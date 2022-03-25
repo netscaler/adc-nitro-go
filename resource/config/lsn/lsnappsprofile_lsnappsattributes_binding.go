@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
 * Binding class showing the lsnappsattributes that can be bound to lsnappsprofile.
-*/
+ */
 type Lsnappsprofilelsnappsattributesbinding struct {
 	/**
 	* Name of the LSN application port ATTRIBUTES command to bind to the specified LSN Appsprofile. Properties of the Appsprofile will be applicable to this APPSATTRIBUTES
-	*/
+	 */
 	Appsattributesname string `json:"appsattributesname,omitempty"`
 	/**
 	* Name for the LSN application profile. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the LSN application profile is created. The following requirement applies only to the Citrix ADC CLI: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "lsn application profile1" or 'lsn application profile1').
-	*/
+	 */
 	Appsprofilename string `json:"appsprofilename,omitempty"`
-
-
 }

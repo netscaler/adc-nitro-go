@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package responder
 
 /**
-* Binding object which returns the resources bound to responderpolicy_binding. 
-*/
+* Binding object which returns the resources bound to responderpolicy_binding.
+ */
 type Responderpolicybinding struct {
 	/**
 	* Name of the responder policy for which to display settings.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

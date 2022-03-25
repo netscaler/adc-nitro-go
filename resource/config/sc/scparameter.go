@@ -12,26 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package sc
 
 /**
 * Configuration for SC parameter resource.
-*/
+ */
 type Scparameter struct {
 	/**
 	* Time, in seconds, between the first time and the next time the SureConnect alternative content window is displayed. The alternative content window is displayed only once during a session for the same browser accessing a configured URL, so this parameter determines the length of a session.
-	*/
+	 */
 	Sessionlife int `json:"sessionlife,omitempty"`
 	/**
 	* File containing the customized response to be displayed when the ACTION in the SureConnect policy is set to NS.
-	*/
+	 */
 	Vsr string `json:"vsr,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

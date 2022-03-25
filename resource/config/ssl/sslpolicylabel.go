@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for SSL policy label resource.
-*/
+ */
 type Sslpolicylabel struct {
 	/**
 	* Name for the SSL policy label.  Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after the policy label is created.
@@ -28,20 +28,19 @@ type Sslpolicylabel struct {
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* Type of policies that the policy label can contain.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Numpol string `json:"numpol,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Policyname string `json:"policyname,omitempty"`
-	Priority string `json:"priority,omitempty"`
+	Numpol                 string `json:"numpol,omitempty"`
+	Hits                   string `json:"hits,omitempty"`
+	Policyname             string `json:"policyname,omitempty"`
+	Priority               string `json:"priority,omitempty"`
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-	Invoke string `json:"invoke,omitempty"`
-	Labeltype string `json:"labeltype,omitempty"`
-	Invokelabelname string `json:"invoke_labelname,omitempty"`
-	Flowtype string `json:"flowtype,omitempty"`
-	Description string `json:"description,omitempty"`
-
+	Invoke                 string `json:"invoke,omitempty"`
+	Labeltype              string `json:"labeltype,omitempty"`
+	Invokelabelname        string `json:"invoke_labelname,omitempty"`
+	Flowtype               string `json:"flowtype,omitempty"`
+	Description            string `json:"description,omitempty"`
 }

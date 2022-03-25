@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
-* Binding object which returns the resources bound to vpnvserver_binding. 
-*/
+* Binding object which returns the resources bound to vpnvserver_binding.
+ */
 type Vpnvserverbinding struct {
 	/**
-	* Name of the Citrix Gateway virtual server for which to show detailed information.<br/>Minimum value =  
-	*/
+	* Name of the Citrix Gateway virtual server for which to show detailed information.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

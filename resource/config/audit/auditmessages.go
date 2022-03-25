@@ -12,16 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package audit
 
 /**
 * Configuration for audit message resource.
-*/
+ */
 type Auditmessages struct {
 	/**
-	* Audit log level filter, which specifies the types of events to display. 
+	* Audit log level filter, which specifies the types of events to display.
 		The following loglevels are valid:
 		* ALL - All events.
 		* EMERGENCY - Events that indicate an immediate crisis on the server.
@@ -36,11 +36,10 @@ type Auditmessages struct {
 	Loglevel []string `json:"loglevel,omitempty"`
 	/**
 	* Number of log messages to be displayed.
-	*/
+	 */
 	Numofmesgs int `json:"numofmesgs,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Value string `json:"value,omitempty"`
-
 }

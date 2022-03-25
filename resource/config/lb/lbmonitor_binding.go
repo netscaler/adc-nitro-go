@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
-* Binding object which returns the resources bound to lbmonitor_binding. 
-*/
+* Binding object which returns the resources bound to lbmonitor_binding.
+ */
 type Lbmonitorbinding struct {
 	/**
-	* Name of the monitor.<br/>Minimum value =  
-	*/
+	* Name of the monitor.<br/>Minimum value =
+	 */
 	Monitorname string `json:"monitorname,omitempty"`
-
-
 }

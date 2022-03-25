@@ -12,16 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package audit
 
 /**
 * Configuration for system log policy resource.
-*/
+ */
 type Auditsyslogpolicy struct {
 	/**
-	* Name for the policy. 
+	* Name for the policy.
 		Must begin with a letter, number, or the underscore character (_), and must consist only of letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at sign (@), equals (=), colon (:), and underscore characters. Cannot be changed after the syslog policy is added.
 		The following requirement applies only to the Citrix ADC CLI:
 		If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my syslog policy" or 'my syslog policy').
@@ -29,7 +29,7 @@ type Auditsyslogpolicy struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of the Citrix ADC named rule, or an expression, that defines the messages to be logged to the syslog server.
-	*/
+	 */
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Syslog server action to perform when this policy matches traffic.
@@ -39,8 +39,7 @@ type Auditsyslogpolicy struct {
 
 	//------- Read only Parameter ---------;
 
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
+	Builtin        string `json:"builtin,omitempty"`
+	Feature        string `json:"feature,omitempty"`
 	Expressiontype string `json:"expressiontype,omitempty"`
-
 }

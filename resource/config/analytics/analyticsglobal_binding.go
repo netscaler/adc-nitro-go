@@ -12,14 +12,12 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package analytics
 
 /**
-* Binding object which returns the resources bound to analyticsglobal_binding. 
-*/
+* Binding object which returns the resources bound to analyticsglobal_binding.
+ */
 type Analyticsglobalbinding struct {
-
-
 }

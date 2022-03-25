@@ -12,20 +12,18 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
-
 
 type Systemextramgmtcpu struct {
 	/**
 	* Unique number that identifies the cluster node.
-	*/
+	 */
 	Nodeid int `json:"nodeid,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Configuredstate string `json:"configuredstate,omitempty"`
-	Effectivestate string `json:"effectivestate,omitempty"`
-
+	Effectivestate  string `json:"effectivestate,omitempty"`
 }

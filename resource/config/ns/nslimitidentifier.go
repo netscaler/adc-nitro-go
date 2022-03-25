@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for limit Indetifier resource.
-*/
+ */
 type Nslimitidentifier struct {
 	/**
 	* Name for a rate limit identifier. Must begin with an ASCII letter or underscore (_) character, and must consist only of ASCII alphanumeric or underscore characters. Reserved words must not be used.
-	*/
+	 */
 	Limitidentifier string `json:"limitidentifier,omitempty"`
 	/**
 	* Maximum number of requests that are allowed in the given timeslice when requests (mode is set as REQUEST_RATE) are tracked per timeslice.
@@ -31,7 +31,7 @@ type Nslimitidentifier struct {
 	Threshold int `json:"threshold,omitempty"`
 	/**
 	* Time interval, in milliseconds, specified in multiples of 10, during which requests are tracked to check if they cross the threshold. This argument is needed only when the mode is set to REQUEST_RATE.
-	*/
+	 */
 	Timeslice int `json:"timeslice,omitempty"`
 	/**
 	* Defines the type of traffic to be tracked.
@@ -59,27 +59,26 @@ type Nslimitidentifier struct {
 	Limittype string `json:"limittype,omitempty"`
 	/**
 	* Name of the rate limit selector. If this argument is NULL, rate limiting will be applied on all traffic received by the virtual server or the Citrix ADC (depending on whether the limit identifier is bound to a virtual server or globally) without any filtering.
-	*/
+	 */
 	Selectorname string `json:"selectorname,omitempty"`
 	/**
 	* Maximum bandwidth permitted, in kbps.
-	*/
+	 */
 	Maxbandwidth int `json:"maxbandwidth,omitempty"`
 	/**
 	* Number of traps to be sent in the timeslice configured. A value of 0 indicates that traps are disabled.
-	*/
+	 */
 	Trapsintimeslice int `json:"trapsintimeslice,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Ngname string `json:"ngname,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Drop string `json:"drop,omitempty"`
-	Rule string `json:"rule,omitempty"`
-	Time string `json:"time,omitempty"`
-	Total string `json:"total,omitempty"`
+	Ngname                   string `json:"ngname,omitempty"`
+	Hits                     string `json:"hits,omitempty"`
+	Drop                     string `json:"drop,omitempty"`
+	Rule                     string `json:"rule,omitempty"`
+	Time                     string `json:"time,omitempty"`
+	Total                    string `json:"total,omitempty"`
 	Trapscomputedintimeslice string `json:"trapscomputedintimeslice,omitempty"`
-	Computedtraptimeslice string `json:"computedtraptimeslice,omitempty"`
-	Referencecount string `json:"referencecount,omitempty"`
-
+	Computedtraptimeslice    string `json:"computedtraptimeslice,omitempty"`
+	Referencecount           string `json:"referencecount,omitempty"`
 }

@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the channel that can be bound to linkset.
-*/
+ */
 type Linksetchannelbinding struct {
 	/**
 	* The interfaces to be bound to the linkset.
-	*/
+	 */
 	Ifnum string `json:"ifnum,omitempty"`
 	/**
 	* ID of the linkset to which to bind the interfaces.
-	*/
+	 */
 	Id string `json:"id,omitempty"`
-
-
 }

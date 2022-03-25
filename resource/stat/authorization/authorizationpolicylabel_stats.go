@@ -12,27 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authorization
 
 /**
 * Statistics for authorization policy label resource.
-*/
+ */
 
 type Authorizationpolicylabelstats struct {
 	/**
 	* Name of the authorization policy label.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Pipolicylabelhits int `json:"pipolicylabelhits,omitempty"`
+	 */
+	Clearstats        string `json:"clearstats,omitempty"`
+	Pipolicylabelhits int    `json:"pipolicylabelhits,omitempty"`
 	/**
-	* Number of times policy label was invoked. 
-	*/
+	* Number of times policy label was invoked.
+	 */
 	Pipolicylabelhitsrate float64 `json:"pipolicylabelhitsrate,omitempty"`
-
 }

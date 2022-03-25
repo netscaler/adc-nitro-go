@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package snmp
 
 /**
 * Configuration for community resource.
-*/
+ */
 type Snmpcommunity struct {
 	/**
 	* The SNMP community string. Can consist of 1 to 31 characters that include uppercase and lowercase letters,numbers and special characters.
@@ -28,7 +28,6 @@ type Snmpcommunity struct {
 	Communityname string `json:"communityname,omitempty"`
 	/**
 	* The SNMP V1 or V2 query-type privilege that you want to associate with this SNMP community.
-	*/
+	 */
 	Permissions string `json:"permissions,omitempty"`
-
 }

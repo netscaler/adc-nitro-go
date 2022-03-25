@@ -12,21 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for cerificate resource.
-*/
+ */
 type Sslcert struct {
 	/**
 	* Name for and, optionally, path to the generated certificate file. /nsconfig/ssl/ is the default path.
-	*/
+	 */
 	Certfile string `json:"certfile,omitempty"`
 	/**
 	* Name for and, optionally, path to the certificate-signing request (CSR). /nsconfig/ssl/ is the default path.
-	*/
+	 */
 	Reqfile string `json:"reqfile,omitempty"`
 	/**
 	* Type of certificate to generate. Specify one of the following:
@@ -43,12 +43,12 @@ type Sslcert struct {
 	Keyfile string `json:"keyfile,omitempty"`
 	/**
 	* Format in which the key is stored on the appliance.
-	*/
-	Keyform string `json:"keyform,omitempty"`
+	 */
+	Keyform       string `json:"keyform,omitempty"`
 	Pempassphrase string `json:"pempassphrase,omitempty"`
 	/**
 	* Number of days for which the certificate will be valid, beginning with the time and day (system time) of creation.
-	*/
+	 */
 	Days int `json:"days,omitempty"`
 	/**
 	* Subject Alternative Name (SAN) is an extension to X.509 that allows various values to be associated with a security certificate using a subjectAltName field. These values are called "Subject Alternative Names" (SAN). Names include:
@@ -61,27 +61,26 @@ type Sslcert struct {
 	Subjectaltname string `json:"subjectaltname,omitempty"`
 	/**
 	* Format in which the certificate is stored on the appliance.
-	*/
+	 */
 	Certform string `json:"certform,omitempty"`
 	/**
 	* Name of the CA certificate file that issues and signs the Intermediate-CA certificate or the end-user client and server certificates.
-	*/
+	 */
 	Cacert string `json:"cacert,omitempty"`
 	/**
 	* Format of the CA certificate.
-	*/
+	 */
 	Cacertform string `json:"cacertform,omitempty"`
 	/**
 	* Private key, associated with the CA certificate that is used to sign the Intermediate-CA certificate or the end-user client and server certificate. If the CA key file is password protected, the user is prompted to enter the pass phrase that was used to encrypt the key.
-	*/
+	 */
 	Cakey string `json:"cakey,omitempty"`
 	/**
 	* Format for the CA certificate.
-	*/
+	 */
 	Cakeyform string `json:"cakeyform,omitempty"`
 	/**
 	* Serial number file maintained for the CA certificate. This file contains the serial number of the next certificate to be issued or signed by the CA. If the specified file does not exist, a new file is created, with /nsconfig/ssl/ as the default path. If you do not specify a proper path for the existing serial file, a new serial file is created. This might change the certificate serial numbers assigned by the CA certificate to each of the certificates it signs.
-	*/
+	 */
 	Caserial string `json:"caserial,omitempty"`
-
 }

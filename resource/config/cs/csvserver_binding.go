@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cs
 
 /**
-* Binding object which returns the resources bound to csvserver_binding. 
-*/
+* Binding object which returns the resources bound to csvserver_binding.
+ */
 type Csvserverbinding struct {
 	/**
-	* Name of a content switching virtual server for which to display information, including the policies bound to the virtual server. To display a list of all configured Content Switching virtual servers, do not specify a value for this parameter.<br/>Minimum value =  
-	*/
+	* Name of a content switching virtual server for which to display information, including the policies bound to the virtual server. To display a list of all configured Content Switching virtual servers, do not specify a value for this parameter.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

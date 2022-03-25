@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for XML namespace resource.
-*/
+ */
 type Nsxmlnamespace struct {
 	/**
 	* XML prefix.
-	*/
+	 */
 	Prefix string `json:"prefix,omitempty"`
 	/**
 	* Expanded namespace for which the XML prefix is provided.
-	*/
+	 */
 	Namespace string `json:"Namespace,omitempty"`
 	/**
 	* Description for the prefix.
-	*/
+	 */
 	Description string `json:"description,omitempty"`
-
 }

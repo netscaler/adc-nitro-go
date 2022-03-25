@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for variable resource.
-*/
+ */
 type Nsvariable struct {
 	/**
 	* Variable name.  This follows the same syntax rules as other expression entity names:
@@ -76,19 +76,18 @@ type Nsvariable struct {
 	Ifnovalue string `json:"ifnovalue,omitempty"`
 	/**
 	* Initialization value for this variable, to which a singleton variable or map entry will be set if it is referenced before an assignment action has assigned it a value. If the singleton variable or map entry already has been assigned a value, setting this parameter will have no effect on that variable value. Default: 0 for ulong, NULL for text
-	*/
+	 */
 	Init string `json:"init,omitempty"`
 	/**
 	* Value expiration in seconds. If the value is not referenced within the expiration period it will be deleted. 0 (the default) means no expiration.
-	*/
+	 */
 	Expires int `json:"expires,omitempty"`
 	/**
 	* Comments associated with this variable.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Referencecount string `json:"referencecount,omitempty"`
-
 }

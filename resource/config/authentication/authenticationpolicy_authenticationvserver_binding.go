@@ -12,32 +12,30 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Binding class showing the authenticationvserver that can be bound to authenticationpolicy.
-*/
+ */
 type Authenticationpolicyauthenticationvserverbinding struct {
 	/**
 	* The entity name to which policy is bound
-	*/
-	Boundto string `json:"boundto,omitempty"`
-	Priority int `json:"priority,omitempty"`
-	Activepolicy int `json:"activepolicy,omitempty"`
+	 */
+	Boundto      string `json:"boundto,omitempty"`
+	Priority     int    `json:"priority,omitempty"`
+	Activepolicy int    `json:"activepolicy,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* On success invoke label.
-	*/
+	 */
 	Nextfactor string `json:"nextfactor,omitempty"`
 	/**
 	* Name of the advance authentication policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

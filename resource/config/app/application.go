@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package app
 
 /**
 * Configuration for application resource.
-*/
+ */
 type Application struct {
 	/**
 	* Name of the AppExpert application template file.
-	*/
+	 */
 	Apptemplatefilename string `json:"apptemplatefilename,omitempty"`
 	/**
 	* Name to assign to the application on the Citrix ADC. If you do not provide a name, the appliance assigns the application the name of the template file.
-	*/
+	 */
 	Appname string `json:"appname,omitempty"`
 	/**
 	* Name of the deployment file.
-	*/
+	 */
 	Deploymentfilename string `json:"deploymentfilename,omitempty"`
-
 }

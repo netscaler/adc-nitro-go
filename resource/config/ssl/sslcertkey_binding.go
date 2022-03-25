@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
-* Binding object which returns the resources bound to sslcertkey_binding. 
-*/
+* Binding object which returns the resources bound to sslcertkey_binding.
+ */
 type Sslcertkeybinding struct {
 	/**
-	* Name of the certificate-key pair for which to show detailed information.<br/>Minimum value =  
-	*/
+	* Name of the certificate-key pair for which to show detailed information.<br/>Minimum value =
+	 */
 	Certkey string `json:"certkey,omitempty"`
-
-
 }

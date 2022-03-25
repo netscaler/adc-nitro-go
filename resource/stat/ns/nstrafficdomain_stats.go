@@ -12,37 +12,36 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Statistics for Traffic Domain resource.
-*/
+ */
 
 type Nstrafficdomainstats struct {
 	/**
 	* An integer specifying the Traffic Domain ID. Possible values: 1 through 4094.
-	*/
+	 */
 	Td int `json:"td,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Nstdtotrxpkts int `json:"nstdtotrxpkts,omitempty"`
+	 */
+	Clearstats    string `json:"clearstats,omitempty"`
+	Nstdtotrxpkts int    `json:"nstdtotrxpkts,omitempty"`
 	/**
 	* Packets received on this TD.
-	*/
+	 */
 	Nstdrxpktsrate float64 `json:"nstdrxpktsrate,omitempty"`
-	Nstdtottxpkts int `json:"nstdtottxpkts,omitempty"`
+	Nstdtottxpkts  int     `json:"nstdtottxpkts,omitempty"`
 	/**
 	* Packets transmitted from this TD.
-	*/
-	Nstdtxpktsrate float64 `json:"nstdtxpktsrate,omitempty"`
-	Nstdtotdroppedpkts int `json:"nstdtotdroppedpkts,omitempty"`
+	 */
+	Nstdtxpktsrate     float64 `json:"nstdtxpktsrate,omitempty"`
+	Nstdtotdroppedpkts int     `json:"nstdtotdroppedpkts,omitempty"`
 	/**
 	* Inbound packets dropped on this TD by reception.
-	*/
+	 */
 	Nstddroppedpktsrate float64 `json:"nstddroppedpktsrate,omitempty"`
-
 }

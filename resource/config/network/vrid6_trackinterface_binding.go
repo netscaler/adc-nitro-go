@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the trackinterface that can be bound to vrid6.
-*/
+ */
 type Vrid6trackinterfacebinding struct {
 	/**
 	* Interfaces which need to be tracked for this vrID.
-	*/
+	 */
 	Trackifnum string `json:"trackifnum,omitempty"`
 	/**
 	* Flags.
-	*/
+	 */
 	Flags int `json:"flags,omitempty"`
 	/**
 	* Integer value that uniquely identifies a VMAC6 address.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

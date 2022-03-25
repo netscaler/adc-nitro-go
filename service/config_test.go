@@ -52,14 +52,39 @@ func randomIP() string {
 func init() {
 	rand.Seed(time.Now().UnixNano())
 	var err error
-	client, err = NewNitroClientFromEnv()
+
+	url, ok := os.LookupEnv("NS_URL")
+	if !ok {
+		url = "http://127.0.0.1"
+	}
+
+	user, ok := os.LookupEnv("NS_LOGIN")
+	if !ok {
+		user = "user"
+	}
+
+	pwd, ok := os.LookupEnv("NS_PASSWORD")
+	if !ok {
+		pwd = "pass"
+	}
+
+	level, ok := os.LookupEnv("NS_LOG")
+	if !ok {
+		level = "INFO"
+	}
+
+	params := NitroParams{
+		Url:      url,
+		Username: user,
+		Password: pwd,
+		LogLevel: level,
+	}
+
+	client, err = NewNitroClientFromParams(params)
 	if err != nil {
 		log.Fatal("Could not create a client: ", err)
 	}
-	_, ok := os.LookupEnv("NS_LOG") //if NS_LOG has been set then let the client get it from the environment
-	if !ok {
-		client.SetLogLevel("INFO")
-	}
+
 }
 
 func TestMain(m *testing.M) {

@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package subscriber
 
 /**
 * Configuration for RADIUS interface Parameters resource.
-*/
+ */
 type Subscriberradiusinterface struct {
 	/**
 	* Name of RADIUS LISTENING service that will process RADIUS accounting requests.
-	*/
+	 */
 	Listeningservice string `json:"listeningservice,omitempty"`
 	/**
 	* Treat radius interim message as start radius messages.
-	*/
+	 */
 	Radiusinterimasstart string `json:"radiusinterimasstart,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Svrstate string `json:"svrstate,omitempty"`
-
 }

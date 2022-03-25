@@ -12,30 +12,30 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Binding class showing the syslogpolicy that can be bound to appfwglobal.
-*/
+ */
 type Appfwglobalsyslogpolicybinding struct {
 	/**
 	* Name of the policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* The priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Enable or disable the binding to activate or deactivate the policy. This is applicable to classic policies only.
-	*/
+	 */
 	State string `json:"state,omitempty"`
 	/**
 	* Bind point to which to policy is bound.
-	*/
-	Type string `json:"type,omitempty"`
+	 */
+	Type       string `json:"type,omitempty"`
 	Policytype string `json:"policytype,omitempty"`
 	/**
 	* Expression or other value specifying the next policy to evaluate if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -55,7 +55,7 @@ type Appfwglobalsyslogpolicybinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* If the current policy evaluates to TRUE, terminate evaluation of policies bound to the current policy label, and then forward the request to the specified virtual server or evaluate the specified policy label.
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of policy label to invoke if the current policy evaluates to TRUE and the invoke parameter is set. Available settings function as follows:
@@ -65,8 +65,6 @@ type Appfwglobalsyslogpolicybinding struct {
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the policy label to invoke if the current policy evaluates to TRUE, the invoke parameter is set, and Label Type is set to Policy Label.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

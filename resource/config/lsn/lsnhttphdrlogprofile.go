@@ -12,33 +12,32 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
 * Configuration for LSN HTTP header logging Profile resource.
-*/
+ */
 type Lsnhttphdrlogprofile struct {
 	/**
 	* The name of the HTTP header logging Profile.
-	*/
+	 */
 	Httphdrlogprofilename string `json:"httphdrlogprofilename,omitempty"`
 	/**
 	* URL information is logged if option is enabled.
-	*/
+	 */
 	Logurl string `json:"logurl,omitempty"`
 	/**
 	* HTTP method information is logged if option is enabled.
-	*/
+	 */
 	Logmethod string `json:"logmethod,omitempty"`
 	/**
 	* Version information is logged if option is enabled.
-	*/
+	 */
 	Logversion string `json:"logversion,omitempty"`
 	/**
 	* Host information is logged if option is enabled.
-	*/
+	 */
 	Loghost string `json:"loghost,omitempty"`
-
 }

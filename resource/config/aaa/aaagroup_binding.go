@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
-* Binding object which returns the resources bound to aaagroup_binding. 
-*/
+* Binding object which returns the resources bound to aaagroup_binding.
+ */
 type Aaagroupbinding struct {
 	/**
-	* Name of the group.<br/>Minimum value =  
-	*/
+	* Name of the group.<br/>Minimum value =
+	 */
 	Groupname string `json:"groupname,omitempty"`
-
-
 }

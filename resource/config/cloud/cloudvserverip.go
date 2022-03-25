@@ -12,17 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cloud
 
 /**
 * Configuration for Cloud virtual server IPs resource.
-*/
+ */
 type Cloudvserverip struct {
 
 	//------- Read only Parameter ---------;
 
 	Ipaddress string `json:"ipaddress,omitempty"`
-
 }

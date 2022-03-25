@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package videooptimization
 
 /**
 * Configuration for videooptimization pacingpolicy resource.
-*/
+ */
 type Videooptimizationpacingpolicy struct {
 	/**
 	* Name for the videooptimization pacing policy. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at (@), equals (=), colon (:), and underscore characters.Can be modified, removed or renamed.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Expression that determines which request or response match the video optimization pacing policy.
@@ -34,30 +34,29 @@ type Videooptimizationpacingpolicy struct {
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Name of the videooptimization pacing action to perform if the request matches this videooptimization pacing policy.
-	*/
+	 */
 	Action string `json:"action,omitempty"`
 	/**
 	* Action to perform if the result of policy evaluation is undefined (UNDEF). An UNDEF event indicates an internal error condition. Only the above built-in actions can be used.
-	*/
+	 */
 	Undefaction string `json:"undefaction,omitempty"`
 	/**
 	* Any type of information about this videooptimization pacing policy.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Name of the messagelog action to use for requests that match this policy.
-	*/
+	 */
 	Logaction string `json:"logaction,omitempty"`
 	/**
 	* New name for the videooptimization pacing policy. Must begin with a letter, number, or the underscore character (_), and must contain only letters, numbers, and the hyphen (-), period (.) hash (#), space ( ), at (@), equals (=), colon (:), and underscore characters.
-	*/
+	 */
 	Newname string `json:"newname,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Hits string `json:"hits,omitempty"`
+	Hits      string `json:"hits,omitempty"`
 	Undefhits string `json:"undefhits,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Builtin   string `json:"builtin,omitempty"`
+	Feature   string `json:"feature,omitempty"`
 }

@@ -12,50 +12,48 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Binding class showing the csrftag that can be bound to appfwprofile.
-*/
+ */
 type Appfwprofilecsrftagbinding struct {
 	/**
 	* The web form originating URL.
-	*/
+	 */
 	Csrftag string `json:"csrftag,omitempty"`
 	/**
 	* The web form action URL.
-	*/
+	 */
 	Csrfformactionurl string `json:"csrfformactionurl,omitempty"`
 	/**
 	* Enabled.
-	*/
+	 */
 	State string `json:"state,omitempty"`
 	/**
 	* Any comments about the purpose of profile, or other useful information about the profile.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Is the rule auto deployed by dynamic profile ?
-	*/
+	 */
 	Isautodeployed string `json:"isautodeployed,omitempty"`
 	/**
 	* Send SNMP alert?
-	*/
+	 */
 	Alertonly string `json:"alertonly,omitempty"`
 	/**
 	* A "id" that identifies the rule.
-	*/
+	 */
 	Resourceid string `json:"resourceid,omitempty"`
 	/**
 	* Name of the profile to which to bind an exemption or rule.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Specifies rule type of binding
-	*/
+	 */
 	Ruletype string `json:"ruletype,omitempty"`
-
-
 }

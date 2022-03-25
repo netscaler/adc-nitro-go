@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
-* Binding object which returns the resources bound to gslbsite_binding. 
-*/
+* Binding object which returns the resources bound to gslbsite_binding.
+ */
 type Gslbsitebinding struct {
 	/**
-	* Name of the GSLB site. If you specify a site name, details of all the site's constituent services are also displayed.<br/>Minimum value =  
-	*/
+	* Name of the GSLB site. If you specify a site name, details of all the site's constituent services are also displayed.<br/>Minimum value =
+	 */
 	Sitename string `json:"sitename,omitempty"`
-
-
 }

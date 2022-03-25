@@ -12,27 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cache
 
 /**
 * Configuration for cache selector resource.
-*/
+ */
 type Cacheselector struct {
 	/**
 	* Name for the selector.  Must begin with an ASCII alphabetic or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters.
-	*/
+	 */
 	Selectorname string `json:"selectorname,omitempty"`
 	/**
 	* One or multiple PIXL expressions for evaluating an HTTP request or response.
-	*/
+	 */
 	Rule []string `json:"rule,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Flags string `json:"flags,omitempty"`
+	Flags   string `json:"flags,omitempty"`
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

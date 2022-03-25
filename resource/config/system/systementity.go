@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package system
 
 /**
 * Configuration for entity resource.
-*/
+ */
 type Systementity struct {
 	/**
 	* Specify the entity type.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Specifies the source which contains all the stored counter values.
-	*/
+	 */
 	Datasource string `json:"datasource,omitempty"`
 	/**
 	* Specify core ID of the PE in nCore.
-	*/
+	 */
 	Core int `json:"core,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

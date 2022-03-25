@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package reputation
 
 /**
 * Configuration for Reputation service settings resource.
-*/
+ */
 type Reputationsettings struct {
 	/**
 	* Proxy server IP to get Reputation data.
-	*/
+	 */
 	Proxyserver string `json:"proxyserver,omitempty"`
 	/**
 	* Proxy server port.
-	*/
+	 */
 	Proxyport int `json:"proxyport,omitempty"`
-
 }

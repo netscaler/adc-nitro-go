@@ -12,27 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package pq
 
 /**
 * Configuration for PQ bindings resource.
-*/
+ */
 type Pqbinding struct {
 	/**
 	* Name of the load balancing virtual server for which to display the priority queuing policy.
-	*/
+	 */
 	Vservername string `json:"vservername,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Policyname string `json:"policyname,omitempty"`
-	Rule string `json:"rule,omitempty"`
-	Priority string `json:"priority,omitempty"`
-	Weight string `json:"weight,omitempty"`
-	Qdepth string `json:"qdepth,omitempty"`
-	Polqdepth string `json:"polqdepth,omitempty"`
-	Hits string `json:"hits,omitempty"`
-
+	Rule       string `json:"rule,omitempty"`
+	Priority   string `json:"priority,omitempty"`
+	Weight     string `json:"weight,omitempty"`
+	Qdepth     string `json:"qdepth,omitempty"`
+	Polqdepth  string `json:"polqdepth,omitempty"`
+	Hits       string `json:"hits,omitempty"`
 }

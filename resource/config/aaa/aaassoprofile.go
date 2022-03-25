@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Configuration for aaa sso profile resource.
-*/
+ */
 type Aaassoprofile struct {
 	/**
 	* Name for the SSO Profile. Must begin with an ASCII alphabetic or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters. Cannot be changed after a SSO Profile is created.
@@ -33,7 +33,6 @@ type Aaassoprofile struct {
 	Username string `json:"username,omitempty"`
 	/**
 	* Password with which the user logs on. Required for Single sign on to  external server.
-	*/
+	 */
 	Password string `json:"password,omitempty"`
-
 }

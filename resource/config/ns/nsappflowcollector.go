@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for appflowCollector resource.
-*/
+ */
 type Nsappflowcollector struct {
 	/**
 	* Name of the AppFlow collector.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* The IPv4 address of the AppFlow collector.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* The UDP port on which the AppFlow collector is listening.
-	*/
+	 */
 	Port int `json:"port,omitempty"`
-
 }

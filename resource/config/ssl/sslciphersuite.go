@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for ciphersuite resource.
-*/
+ */
 type Sslciphersuite struct {
 	/**
 	* Name of the cipher suite for which to show detailed information.
-	*/
+	 */
 	Ciphername string `json:"ciphername,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Description string `json:"description,omitempty"`
-
 }

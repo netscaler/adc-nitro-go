@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package transform
 
 /**
 * Binding class showing the policy that can be bound to transformglobal.
-*/
+ */
 type Transformglobalpolicybinding struct {
 	/**
 	* Name of the transform policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Specifies the bind point to which to bind the policy. Available settings function as follows:
@@ -34,15 +34,15 @@ type Transformglobalpolicybinding struct {
 	Type string `json:"type,omitempty"`
 	/**
 	* Specifies the priority of the policy.
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* If the current policy evaluates to TRUE, terminate evaluation of policies bound to the current policy label, and then forwards the request or response to the specified virtual server or evaluates the specified policy label.
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of invocation. Available settings function as follows:
@@ -53,17 +53,15 @@ type Transformglobalpolicybinding struct {
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the policy label to invoke if the current policy evaluates to TRUE, the invoke parameter is set, and the label type is Policy Label.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* The number of policies bound to the bindpoint.
-	*/
+	 */
 	Numpol uint32 `json:"numpol,omitempty"`
 	/**
 	* flowtype of the bound transform policy.
-	*/
-	Flowtype uint32 `json:"flowtype,omitempty"`
+	 */
+	Flowtype       uint32 `json:"flowtype,omitempty"`
 	Globalbindtype string `json:"globalbindtype,omitempty"`
-
-
 }

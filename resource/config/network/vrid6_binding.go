@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
-* Binding object which returns the resources bound to vrid6_binding. 
-*/
+* Binding object which returns the resources bound to vrid6_binding.
+ */
 type Vrid6binding struct {
 	/**
 	* Integer value that uniquely identifies a VMAC6 address.<br/>Minimum value =  1<br/>Maximum value =  255
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

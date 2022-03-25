@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Binding class showing the vlan that can be bound to nspartition.
-*/
+ */
 type Nspartitionvlanbinding struct {
 	/**
 	* Identifier of the vlan that is assigned to this partition.
-	*/
+	 */
 	Vlan int `json:"vlan,omitempty"`
 	/**
 	* Name of the Partition. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), equals (=), and hyphen (-) characters.
-	*/
+	 */
 	Partitionname string `json:"partitionname,omitempty"`
-
-
 }

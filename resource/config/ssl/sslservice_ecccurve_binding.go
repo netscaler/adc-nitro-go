@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the ecccurve that can be bound to sslservice.
-*/
+ */
 type Sslserviceecccurvebinding struct {
 	/**
 	* Named ECC curve bound to service/vserver.
-	*/
+	 */
 	Ecccurvename string `json:"ecccurvename,omitempty"`
 	/**
 	* Name of the SSL service for which to set advanced configuration.
-	*/
+	 */
 	Servicename string `json:"servicename,omitempty"`
-
-
 }

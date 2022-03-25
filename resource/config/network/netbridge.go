@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Configuration for network bridge resource.
-*/
+ */
 type Netbridge struct {
 	/**
 	* The name of the network bridge.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* The vlan to vxlan mapping to be applied to this netbridge.
-	*/
+	 */
 	Vxlanvlanmap string `json:"vxlanvlanmap,omitempty"`
-
 }

@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package filter
 
 /**
-* Binding object which returns the resources bound to filterpolicy_binding. 
-*/
+* Binding object which returns the resources bound to filterpolicy_binding.
+ */
 type Filterpolicybinding struct {
 	/**
-	* Name of the filter policy to be displayed. If a name is not provided, information about all the filter policies is shown.<br/>Minimum value =  
-	*/
+	* Name of the filter policy to be displayed. If a name is not provided, information about all the filter policies is shown.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

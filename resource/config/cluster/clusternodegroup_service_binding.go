@@ -12,22 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cluster
 
 /**
 * Binding class showing the service that can be bound to clusternodegroup.
-*/
+ */
 type Clusternodegroupservicebinding struct {
 	/**
 	* name of the service bound to this nodegroup.
-	*/
+	 */
 	Service string `json:"service,omitempty"`
 	/**
 	* Name of the nodegroup. The name uniquely identifies the nodegroup on the cluster.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

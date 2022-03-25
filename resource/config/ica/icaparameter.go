@@ -12,25 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ica
 
 /**
 * Configuration for Config Parameters for NS ICA resource.
-*/
+ */
 type Icaparameter struct {
 	/**
 	* Enable/Disable Session Reliability on HA failover. The default value is No
-	*/
+	 */
 	Enablesronhafailover string `json:"enablesronhafailover,omitempty"`
 	/**
 	* Enable/Disable HDXInsight for Non NSAP ICA Sessions. The default value is Yes
-	*/
+	 */
 	Hdxinsightnonnsap string `json:"hdxinsightnonnsap,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
-
 }

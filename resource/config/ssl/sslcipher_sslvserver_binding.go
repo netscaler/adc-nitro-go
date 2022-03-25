@@ -12,21 +12,21 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Binding class showing the sslvserver that can be bound to sslcipher.
-*/
+ */
 type Sslciphersslvserverbinding struct {
 	/**
 	* Name of the user-defined cipher group.
-	*/
+	 */
 	Ciphergroupname string `json:"ciphergroupname,omitempty"`
 	/**
 	* The name of the SSL virtual server to which the cipher-suite is to be bound.
-	*/
+	 */
 	Vservername string `json:"vservername,omitempty"`
 	/**
 	* Select the -vServer flag when the cipher
@@ -44,12 +44,10 @@ type Sslciphersslvserverbinding struct {
 	Cipheroperation string `json:"cipheroperation,omitempty"`
 	/**
 	* A cipher-suite can consist of an individual cipher name, the system predefined cipher-alias name, or user defined cipher-group name.
-	*/
+	 */
 	Ciphgrpals string `json:"ciphgrpals,omitempty"`
 	/**
 	* Priority of the cipher to be added
-	*/
+	 */
 	Cipherpriority int `json:"cipherpriority,omitempty"`
-
-
 }

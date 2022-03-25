@@ -12,25 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package aaa
 
 /**
 * Binding class showing the intranetip that can be bound to aaauser.
-*/
+ */
 type Aaauserintranetipbinding struct {
 	/**
 	* The Intranet IP bound to the user
-	*/
+	 */
 	Intranetip string `json:"intranetip,omitempty"`
 	/**
 	* The netmask for the Intranet IP
-	*/
+	 */
 	Netmask string `json:"netmask,omitempty"`
 	/**
 	* User account to which to bind the policy.
-	*/
+	 */
 	Username string `json:"username,omitempty"`
 	/**
 	* Expression or other value specifying the next policy to evaluate if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -48,6 +48,4 @@ type Aaauserintranetipbinding struct {
 		* The expression evaluates to a priority number that is between the current policy's priority number (say, 30) and the highest priority number (say, 100), but does not match any configured priority number (for example, the expression evaluates to the number 85). This example assumes that the priority number increments by 10 for every successive policy, and therefore a priority number of 85 does not exist in the policy label.
 	*/
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
-
-
 }

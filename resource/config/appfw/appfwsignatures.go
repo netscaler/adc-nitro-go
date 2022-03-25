@@ -12,17 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Configuration for application firewall signatures XML configuration resource.
-*/
+ */
 type Appfwsignatures struct {
 	/**
 	* Name of the signature object.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* URL (protocol, host, path, and file name) for the location at which to store the imported signatures object.
@@ -31,39 +31,38 @@ type Appfwsignatures struct {
 	Src string `json:"src,omitempty"`
 	/**
 	* XSLT file source.
-	*/
+	 */
 	Xslt string `json:"xslt,omitempty"`
 	/**
 	* Any comments to preserve information about the signatures object.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Overwrite any existing signatures object of the same name.
-	*/
+	 */
 	Overwrite bool `json:"overwrite,omitempty"`
 	/**
 	* Merges the existing Signature with new signature rules
-	*/
+	 */
 	Merge bool `json:"merge,omitempty"`
 	/**
 	* preserves def actions of signature rules
-	*/
+	 */
 	Preservedefactions bool `json:"preservedefactions,omitempty"`
 	/**
 	* File path for sha1 file to validate signature file
-	*/
+	 */
 	Sha1 string `json:"sha1,omitempty"`
 	/**
 	* Third party vendor type for which WAF signatures has to be generated.
-	*/
+	 */
 	Vendortype string `json:"vendortype,omitempty"`
 	/**
 	* Merges signature file with default signature file.
-	*/
+	 */
 	Mergedefault bool `json:"mergedefault,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Response string `json:"response,omitempty"`
-
 }

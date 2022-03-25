@@ -12,26 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
 * Configuration for Multipart form content type resource.
-*/
+ */
 type Appfwmultipartformcontenttype struct {
 	/**
 	* Content type to be classified as multipart form
-	*/
+	 */
 	Multipartformcontenttypevalue string `json:"multipartformcontenttypevalue,omitempty"`
 	/**
 	* Is multipart_form content type a regular expression?
-	*/
+	 */
 	Isregex string `json:"isregex,omitempty"`
 
 	//------- Read only Parameter ---------;
 
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

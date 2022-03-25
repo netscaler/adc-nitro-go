@@ -12,13 +12,13 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package tunnel
 
 /**
 * Configuration for tunnel policy resource.
-*/
+ */
 type Tunneltrafficpolicy struct {
 	/**
 	* Name for the tunnel traffic policy.
@@ -31,21 +31,21 @@ type Tunneltrafficpolicy struct {
 	* Expression, against which traffic is evaluated.
 		The following requirements apply only to the Citrix ADC CLI:
 		*  If the expression includes blank spaces, the entire expression must be enclosed in double quotation marks.
-		*  If the expression itself includes double quotation marks, you must escape the quotations by using the \ character. 
+		*  If the expression itself includes double quotation marks, you must escape the quotations by using the \ character.
 		*  Alternatively, you can use single quotation marks to enclose the rule, in which case you do not have to escape the double quotation marks.
 	*/
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Name of the built-in compression action to associate with the policy.
-	*/
+	 */
 	Action string `json:"action,omitempty"`
 	/**
 	* Any comments to preserve information about this policy.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* Name of the messagelog action to use for requests that match this policy.
-	*/
+	 */
 	Logaction string `json:"logaction,omitempty"`
 	/**
 	* New name for the tunnel traffic policy. Must begin with an ASCII alphabetic or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at (@), e
@@ -58,17 +58,16 @@ type Tunneltrafficpolicy struct {
 
 	//------- Read only Parameter ---------;
 
-	Expressiontype string `json:"expressiontype,omitempty"`
-	Hits string `json:"hits,omitempty"`
-	Undefhits string `json:"undefhits,omitempty"`
-	Txbytes string `json:"txbytes,omitempty"`
-	Rxbytes string `json:"rxbytes,omitempty"`
-	Clientttlb string `json:"clientttlb,omitempty"`
+	Expressiontype     string `json:"expressiontype,omitempty"`
+	Hits               string `json:"hits,omitempty"`
+	Undefhits          string `json:"undefhits,omitempty"`
+	Txbytes            string `json:"txbytes,omitempty"`
+	Rxbytes            string `json:"rxbytes,omitempty"`
+	Clientttlb         string `json:"clientttlb,omitempty"`
 	Clienttransactions string `json:"clienttransactions,omitempty"`
-	Serverttlb string `json:"serverttlb,omitempty"`
+	Serverttlb         string `json:"serverttlb,omitempty"`
 	Servertransactions string `json:"servertransactions,omitempty"`
-	Isdefault string `json:"isdefault,omitempty"`
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
-
+	Isdefault          string `json:"isdefault,omitempty"`
+	Builtin            string `json:"builtin,omitempty"`
+	Feature            string `json:"feature,omitempty"`
 }

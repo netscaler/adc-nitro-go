@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package gslb
 
 /**
-* Binding object which returns the resources bound to gslbservice_binding. 
-*/
+* Binding object which returns the resources bound to gslbservice_binding.
+ */
 type Gslbservicebinding struct {
 	/**
-	* Name of the GSLB service.<br/>Minimum value =  
-	*/
+	* Name of the GSLB service.<br/>Minimum value =
+	 */
 	Servicename string `json:"servicename,omitempty"`
-
-
 }

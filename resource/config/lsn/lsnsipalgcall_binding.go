@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lsn
 
 /**
-* Binding object which returns the resources bound to lsnsipalgcall_binding. 
-*/
+* Binding object which returns the resources bound to lsnsipalgcall_binding.
+ */
 type Lsnsipalgcallbinding struct {
 	/**
 	* Call ID for the SIP call.
-	*/
+	 */
 	Callid string `json:"callid,omitempty"`
-
-
 }

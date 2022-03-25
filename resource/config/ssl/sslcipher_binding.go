@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
-* Binding object which returns the resources bound to sslcipher_binding. 
-*/
+* Binding object which returns the resources bound to sslcipher_binding.
+ */
 type Sslcipherbinding struct {
 	/**
-	* Name of the cipher group for which to show detailed information.<br/>Minimum value =  
-	*/
+	* Name of the cipher group for which to show detailed information.<br/>Minimum value =
+	 */
 	Ciphergroupname string `json:"ciphergroupname,omitempty"`
-
-
 }

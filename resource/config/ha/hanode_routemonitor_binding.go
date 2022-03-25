@@ -12,34 +12,32 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ha
 
 /**
 * Binding class showing the routemonitor that can be bound to hanode.
-*/
+ */
 type Hanoderoutemonitorbinding struct {
 	/**
 	* The IP address (IPv4 or IPv6).
-	*/
+	 */
 	Routemonitor string `json:"routemonitor,omitempty"`
 	/**
 	* The netmask.
-	*/
+	 */
 	Netmask string `json:"netmask,omitempty"`
 	/**
 	* The flags for this entry.
-	*/
+	 */
 	Flags int `json:"flags,omitempty"`
 	/**
 	* State for route monitor
-	*/
+	 */
 	Routemonitorstate string `json:"routemonitorstate,omitempty"`
 	/**
 	* Number that uniquely identifies the local node. The ID of the local node is always 0.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

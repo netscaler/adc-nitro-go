@@ -12,21 +12,20 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package cache
 
 /**
 * Configuration for forward proxy resource.
-*/
+ */
 type Cacheforwardproxy struct {
 	/**
 	* IP address of the Citrix ADC or a cache server for which the cache acts as a proxy. Requests coming to the Citrix ADC with the configured IP address are forwarded to the particular address, without involving the Integrated Cache in any way.
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Port on the Citrix ADC or a server for which the cache acts as a proxy
-	*/
+	 */
 	Port int `json:"port,omitempty"`
-
 }

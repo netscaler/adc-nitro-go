@@ -12,25 +12,25 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package dns
 
 /**
 * Binding class showing the policy that can be bound to dnsglobal.
-*/
+ */
 type Dnsglobalpolicybinding struct {
 	/**
 	* Name of the dns policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* Type of global bind point for which to show bound policies.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Specifies the priority of the policy with which it is bound. Maximum allowed priority should be less than 65535
-	*/
+	 */
 	Priority uint32 `json:"priority,omitempty"`
 	/**
 	* Expression or other value specifying the next policy to be evaluated if the current policy evaluates to TRUE.  Specify one of the following values:
@@ -50,25 +50,23 @@ type Dnsglobalpolicybinding struct {
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Invoke flag.
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of policy label invocation.
-	*/
+	 */
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
 	* Name of the label to invoke if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* The number of policies bound to the bindpoint.
-	*/
+	 */
 	Numpol uint32 `json:"numpol,omitempty"`
 	/**
 	* flowtype of the bound rewrite policy.
-	*/
-	Flowtype uint32 `json:"flowtype,omitempty"`
+	 */
+	Flowtype       uint32 `json:"flowtype,omitempty"`
 	Globalbindtype string `json:"globalbindtype,omitempty"`
-
-
 }

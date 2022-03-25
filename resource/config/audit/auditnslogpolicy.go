@@ -12,16 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package audit
 
 /**
 * Configuration for ns log policy resource.
-*/
+ */
 type Auditnslogpolicy struct {
 	/**
-	* Name for the policy. 
+	* Name for the policy.
 		Must begin with a letter, number, or the underscore character (_), and must consist only of letters, numbers, and the hyphen (-), period (.) pound (#), space ( ), at sign (@), equals (=), colon (:), and underscore characters. Cannot be changed after the nslog policy is added.
 		The following requirement applies only to the Citrix ADC CLI:
 		If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my nslog policy" or 'my nslog policy').
@@ -29,7 +29,7 @@ type Auditnslogpolicy struct {
 	Name string `json:"name,omitempty"`
 	/**
 	* Name of the Citrix ADC named rule, or an expression, that defines the messages to be logged to the nslog server.
-	*/
+	 */
 	Rule string `json:"rule,omitempty"`
 	/**
 	* Nslog server action that is performed when this policy matches.
@@ -39,8 +39,7 @@ type Auditnslogpolicy struct {
 
 	//------- Read only Parameter ---------;
 
-	Builtin string `json:"builtin,omitempty"`
-	Feature string `json:"feature,omitempty"`
+	Builtin        string `json:"builtin,omitempty"`
+	Feature        string `json:"feature,omitempty"`
 	Expressiontype string `json:"expressiontype,omitempty"`
-
 }

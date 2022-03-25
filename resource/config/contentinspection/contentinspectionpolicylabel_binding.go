@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package contentinspection
 
 /**
-* Binding object which returns the resources bound to contentinspectionpolicylabel_binding. 
-*/
+* Binding object which returns the resources bound to contentinspectionpolicylabel_binding.
+ */
 type Contentinspectionpolicylabelbinding struct {
 	/**
 	* Name of the contentInspection policy label.
-	*/
+	 */
 	Labelname string `json:"labelname,omitempty"`
-
-
 }

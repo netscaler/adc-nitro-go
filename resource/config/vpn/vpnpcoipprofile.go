@@ -12,29 +12,28 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package vpn
 
 /**
 * Configuration for PCoIP session profile resource.
-*/
+ */
 type Vpnpcoipprofile struct {
 	/**
 	* name of PCoIP profile
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Connection server URL
-	*/
+	 */
 	Conserverurl string `json:"conserverurl,omitempty"`
 	/**
 	* ICV verification for PCOIP transport packets.
-	*/
+	 */
 	Icvverification string `json:"icvverification,omitempty"`
 	/**
 	* PCOIP Idle Session timeout
-	*/
+	 */
 	Sessionidletimeout int `json:"sessionidletimeout,omitempty"`
-
 }

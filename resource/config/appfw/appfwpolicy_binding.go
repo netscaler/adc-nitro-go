@@ -12,18 +12,16 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package appfw
 
 /**
-* Binding object which returns the resources bound to appfwpolicy_binding. 
-*/
+* Binding object which returns the resources bound to appfwpolicy_binding.
+ */
 type Appfwpolicybinding struct {
 	/**
-	* Name of the policy.<br/>Minimum value =  
-	*/
+	* Name of the policy.<br/>Minimum value =
+	 */
 	Name string `json:"name,omitempty"`
-
-
 }

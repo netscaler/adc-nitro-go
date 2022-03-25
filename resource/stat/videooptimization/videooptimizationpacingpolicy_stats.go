@@ -12,32 +12,31 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package videooptimization
 
 /**
 * Statistics for videooptimization pacingpolicy resource.
-*/
+ */
 
 type Videooptimizationpacingpolicystats struct {
 	/**
 	* Name of the Video Optimization Pacing policy for which to show detailed statistics.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Clear the statsistics / counters
-	*/
-	Clearstats string `json:"clearstats,omitempty"`
-	Pipolicyhits int `json:"pipolicyhits,omitempty"`
+	 */
+	Clearstats   string `json:"clearstats,omitempty"`
+	Pipolicyhits int    `json:"pipolicyhits,omitempty"`
 	/**
 	* Number of hits on the policy
-	*/
-	Pipolicyhitsrate float64 `json:"pipolicyhitsrate,omitempty"`
-	Pipolicyundefhits int `json:"pipolicyundefhits,omitempty"`
+	 */
+	Pipolicyhitsrate  float64 `json:"pipolicyhitsrate,omitempty"`
+	Pipolicyundefhits int     `json:"pipolicyundefhits,omitempty"`
 	/**
 	* Number of undef hits on the policy
-	*/
+	 */
 	Pipolicyundefhitsrate float64 `json:"pipolicyundefhitsrate,omitempty"`
-
 }

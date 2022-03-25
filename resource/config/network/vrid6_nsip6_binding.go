@@ -12,26 +12,24 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package network
 
 /**
 * Binding class showing the nsip6 that can be bound to vrid6.
-*/
+ */
 type Vrid6nsip6binding struct {
 	/**
 	* The IP address bound to the VRID6
-	*/
+	 */
 	Ipaddress string `json:"ipaddress,omitempty"`
 	/**
 	* Flags.
-	*/
+	 */
 	Flags int `json:"flags,omitempty"`
 	/**
 	* Integer value that uniquely identifies a VMAC6 address.
-	*/
+	 */
 	Id int `json:"id,omitempty"`
-
-
 }

@@ -12,27 +12,26 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for Surge Protection parameter resource.
-*/
+ */
 type Nsspparams struct {
 	/**
 	* Maximum number of server connections that can be opened before surge protection is activated.
-	*/
+	 */
 	Basethreshold int `json:"basethreshold,omitempty"`
 	/**
 	* Rate at which the system opens connections to the server.
-	*/
+	 */
 	Throttle string `json:"throttle,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Table0 string `json:"table0,omitempty"`
+	Table0  string `json:"table0,omitempty"`
 	Builtin string `json:"builtin,omitempty"`
 	Feature string `json:"feature,omitempty"`
-
 }

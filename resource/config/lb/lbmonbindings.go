@@ -12,23 +12,22 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package lb
 
 /**
 * Configuration for monitro bindings resource.
-*/
+ */
 type Lbmonbindings struct {
 	/**
 	* The name of the monitor.
-	*/
+	 */
 	Monitorname string `json:"monitorname,omitempty"`
 
 	//------- Read only Parameter ---------;
 
-	Type string `json:"type,omitempty"`
-	State string `json:"state,omitempty"`
+	Type                      string `json:"type,omitempty"`
+	State                     string `json:"state,omitempty"`
 	Boundservicegroupsvrstate string `json:"boundservicegroupsvrstate,omitempty"`
-
 }

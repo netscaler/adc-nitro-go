@@ -12,33 +12,32 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ns
 
 /**
 * Configuration for Timer resource.
-*/
+ */
 type Nstimer struct {
 	/**
 	* Timer name.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* The frequency at which the policies bound to this timer are invoked. The minimum value is 20 msec. The maximum value is 20940 in seconds and 349 in minutes
-	*/
+	 */
 	Interval int `json:"interval,omitempty"`
 	/**
 	* Timer interval unit
-	*/
+	 */
 	Unit string `json:"unit,omitempty"`
 	/**
 	* Comments associated with this timer.
-	*/
+	 */
 	Comment string `json:"comment,omitempty"`
 	/**
 	* The new name of the timer.
-	*/
+	 */
 	Newname string `json:"newname,omitempty"`
-
 }

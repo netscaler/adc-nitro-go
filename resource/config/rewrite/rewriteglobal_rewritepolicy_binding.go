@@ -12,33 +12,33 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package rewrite
 
 /**
 * Binding class showing the rewritepolicy that can be bound to rewriteglobal.
-*/
+ */
 type Rewriteglobalrewritepolicybinding struct {
 	/**
 	* Name of the rewrite policy.
-	*/
+	 */
 	Policyname string `json:"policyname,omitempty"`
 	/**
 	* The bindpoint to which to policy is bound.
-	*/
+	 */
 	Type string `json:"type,omitempty"`
 	/**
 	* Specifies the priority of the policy.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Terminate evaluation of policies bound to the current policy label, and then forward the request to the specified virtual server or evaluate the specified policy label.
-	*/
+	 */
 	Invoke bool `json:"invoke,omitempty"`
 	/**
 	* Type of invocation. Available settings function as follows:
@@ -48,19 +48,17 @@ type Rewriteglobalrewritepolicybinding struct {
 	*/
 	Labeltype string `json:"labeltype,omitempty"`
 	/**
-	* * If labelType is policylabel, name of the policy label to invoke. 
+	* * If labelType is policylabel, name of the policy label to invoke.
 		* If labelType is reqvserver or resvserver, name of the virtual server to which to forward the request of response.
 	*/
 	Labelname string `json:"labelname,omitempty"`
 	/**
 	* The number of policies bound to the bindpoint.
-	*/
+	 */
 	Numpol int `json:"numpol,omitempty"`
 	/**
 	* flowtype of the bound rewrite policy.
-	*/
-	Flowtype int `json:"flowtype,omitempty"`
+	 */
+	Flowtype       int    `json:"flowtype,omitempty"`
 	Globalbindtype string `json:"globalbindtype,omitempty"`
-
-
 }

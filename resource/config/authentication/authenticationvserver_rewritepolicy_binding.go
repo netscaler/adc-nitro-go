@@ -12,46 +12,44 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package authentication
 
 /**
 * Binding class showing the rewritepolicy that can be bound to authenticationvserver.
-*/
+ */
 type Authenticationvserverrewritepolicybinding struct {
 	/**
 	* The name of the policy, if any, bound to the authentication vserver.
-	*/
+	 */
 	Policy string `json:"policy,omitempty"`
 	/**
 	* The priority, if any, of the vpn vserver policy.
-	*/
+	 */
 	Priority int `json:"priority,omitempty"`
 	/**
 	* Expression specifying the priority of the next policy which will get evaluated if the current policy rule evaluates to TRUE.
-	*/
+	 */
 	Gotopriorityexpression string `json:"gotopriorityexpression,omitempty"`
 	/**
 	* Bindpoint to which the policy is bound.
-	*/
+	 */
 	Bindpoint string `json:"bindpoint,omitempty"`
 	/**
 	* Name of the authentication virtual server to which to bind the policy.
-	*/
+	 */
 	Name string `json:"name,omitempty"`
 	/**
 	* Applicable only while bindind classic authentication policy as advance authentication policy use nFactor
-	*/
+	 */
 	Secondary bool `json:"secondary,omitempty"`
 	/**
 	* Applicable only while bindind classic authentication policy as advance authentication policy use nFactor
-	*/
+	 */
 	Groupextraction bool `json:"groupextraction,omitempty"`
 	/**
 	* Applicable only while binding advance authentication policy as classic authentication policy does not support nFactor
-	*/
+	 */
 	Nextfactor string `json:"nextfactor,omitempty"`
-
-
 }
