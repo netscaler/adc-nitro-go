@@ -49,6 +49,7 @@ var idempotentInvalidResources = []string{
 	"vpnnexthopserver",
 	"sslcertificatechain",
 	"appfwurlencodedformcontenttype",
+	"bridgetable",
 }
 
 // HTTP Headers to be masked and not shown in logs
