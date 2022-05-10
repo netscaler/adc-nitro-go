@@ -50,6 +50,7 @@ var idempotentInvalidResources = []string{
 	"sslcertificatechain",
 	"appfwurlencodedformcontenttype",
 	"bridgetable",
+	"appfwmultipartformcontenttype",
 }
 
 // HTTP Headers to be masked and not shown in logs
