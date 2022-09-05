@@ -31,7 +31,7 @@ type Feoaction struct {
 	/**
 	* Maxage for cache extension.
 	*/
-	Cachemaxage int `json:"cachemaxage,omitempty"`
+	Cachemaxage int `json:"cachemaxage"`
 	/**
 	* Shrink image dimensions as per the height and width attributes specified in the <img> tag.
 	*/
