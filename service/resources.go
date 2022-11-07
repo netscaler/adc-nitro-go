@@ -494,6 +494,7 @@ const (
 	Gslbservice_binding
 	Gslbservice_dnsview_binding
 	Gslbservice_lbmonitor_binding
+	Gslbservicegroup_gslbservicegroupmember_binding
 	Gslbsite
 	Gslbsite_binding
 	Gslbsite_gslbservice_binding
@@ -1527,6 +1528,7 @@ var resources = []string{
 	"gslbservice_binding",
 	"gslbservice_dnsview_binding",
 	"gslbservice_lbmonitor_binding",
+	"gslbservicegroup_gslbservicegroupmember_binding",
 	"gslbsite",
 	"gslbsite_binding",
 	"gslbsite_gslbservice_binding",
