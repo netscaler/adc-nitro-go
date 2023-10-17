@@ -21,6 +21,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"net/url"
 	"sort"
 	"strings"
 
@@ -181,7 +182,7 @@ func (c *NitroClient) Logout() error {
 	return err
 }
 
-//AddResourceReturnBody adds a resource of supplied type and name and returns http response body
+// AddResourceReturnBody adds a resource of supplied type and name and returns http response body
 func (c *NitroClient) AddResourceReturnBody(resourceType string, name string, resourceStruct interface{}) ([]byte, error) {
 
 	nsResource := make(map[string]interface{})
@@ -200,7 +201,7 @@ func (c *NitroClient) AddResourceReturnBody(resourceType string, name string, re
 	return body, nil
 }
 
-//AddResource adds a resource of supplied type and name
+// AddResource adds a resource of supplied type and name
 func (c *NitroClient) AddResource(resourceType string, name string, resourceStruct interface{}) (string, error) {
 
 	nsResource := make(map[string]interface{})
@@ -258,7 +259,7 @@ func (c *NitroClient) ActOnResource(resourceType string, resourceStruct interfac
 	return nil
 }
 
-//UpdateResource updates a resource of supplied type and name
+// UpdateResource updates a resource of supplied type and name
 func (c *NitroClient) UpdateResource(resourceType string, name string, resourceStruct interface{}) (string, error) {
 
 	if c.ResourceExists(resourceType, name) == true {
@@ -278,7 +279,7 @@ func (c *NitroClient) UpdateResource(resourceType string, name string, resourceS
 	return name, nil
 }
 
-//UpdateUnnamedResource updates a resource of supplied type , which doesn't have a name. E.g., rnat rule
+// UpdateUnnamedResource updates a resource of supplied type , which doesn't have a name. E.g., rnat rule
 func (c *NitroClient) UpdateUnnamedResource(resourceType string, resourceStruct interface{}) error {
 
 	nsResource := make(map[string]interface{})
@@ -296,7 +297,7 @@ func (c *NitroClient) UpdateUnnamedResource(resourceType string, resourceStruct 
 	return nil
 }
 
-//ChangeResource updates a resource of supplied type and name (used for SSL objects)
+// ChangeResource updates a resource of supplied type and name (used for SSL objects)
 func (c *NitroClient) ChangeResource(resourceType string, name string, resourceStruct interface{}) (string, error) {
 
 	if c.ResourceExists(resourceType, name) == true {
@@ -316,7 +317,7 @@ func (c *NitroClient) ChangeResource(resourceType string, name string, resourceS
 	return name, nil
 }
 
-//DeleteResource deletes a resource of supplied type and name
+// DeleteResource deletes a resource of supplied type and name
 func (c *NitroClient) DeleteResource(resourceType string, resourceName string) error {
 
 	_, err := c.listResource(resourceType, resourceName)
@@ -333,10 +334,16 @@ func (c *NitroClient) DeleteResource(resourceType string, resourceName string) e
 	return nil
 }
 
-//DeleteResourceWithArgs deletes a resource of supplied type and name. Args are supplied as an array of strings
-//Each array entry is formatted as "key:value"
+// DeleteResourceWithArgs deletes a resource of supplied type and name. Args are supplied as an array of strings
+// Each array entry is formatted as "key:value"
 func (c *NitroClient) DeleteResourceWithArgs(resourceType string, resourceName string, args []string) error {
 	var err error
+
+	// Escape URL characters from args
+	for i, arg := range args {
+		args[i] = url.QueryEscape(arg)
+	}
+
 	if resourceType == "snmptrap_snmpuser_binding" {
 		//Remove unwanted argument (username) for listing but keep it for delete operation
 		argsWithoutUsername := make([]string, 0)
@@ -365,7 +372,7 @@ func (c *NitroClient) DeleteResourceWithArgs(resourceType string, resourceName s
 	return nil
 }
 
-//DeleteResourceWithArgsMap deletes a resource of supplied type and name. Args are supplied as map of key value
+// DeleteResourceWithArgsMap deletes a resource of supplied type and name. Args are supplied as map of key value
 func (c *NitroClient) DeleteResourceWithArgsMap(resourceType string, resourceName string, args map[string]string) error {
 
 	_, err := c.listResourceWithArgsMap(resourceType, resourceName, args)
@@ -384,7 +391,7 @@ func (c *NitroClient) DeleteResourceWithArgsMap(resourceType string, resourceNam
 	return nil
 }
 
-//BindResource binds the 'bindingResourceName' to the 'bindToResourceName'.
+// BindResource binds the 'bindingResourceName' to the 'bindToResourceName'.
 func (c *NitroClient) BindResource(bindToResourceType string, bindToResourceName string, bindingResourceType string, bindingResourceName string, bindingStruct interface{}) error {
 	if !c.ResourceExists(bindToResourceType, bindToResourceName) {
 		return fmt.Errorf("[ERROR] nitro-go: BindTo Resource %s of type %s does not exist", bindToResourceType, bindToResourceName)
@@ -407,7 +414,7 @@ func (c *NitroClient) BindResource(bindToResourceType string, bindToResourceName
 	return nil
 }
 
-//UnbindResource unbinds 'boundResourceName' from 'boundToResource'
+// UnbindResource unbinds 'boundResourceName' from 'boundToResource'
 func (c *NitroClient) UnbindResource(boundToResourceType string, boundToResourceName string, boundResourceType string, boundResourceName string, bindingFilterName string) error {
 
 	if !c.ResourceExists(boundToResourceType, boundToResourceName) {
@@ -428,7 +435,7 @@ func (c *NitroClient) UnbindResource(boundToResourceType string, boundToResource
 	return nil
 }
 
-//ResourceExists returns true if supplied resource name and type exists
+// ResourceExists returns true if supplied resource name and type exists
 func (c *NitroClient) ResourceExists(resourceType string, resourceName string) bool {
 	_, err := c.listResource(resourceType, resourceName)
 	if err != nil {
@@ -439,7 +446,7 @@ func (c *NitroClient) ResourceExists(resourceType string, resourceName string) b
 	return true
 }
 
-//FindResourceArray returns the config of the supplied resource name and type if it exists. Use when the resource to be returned is an array
+// FindResourceArray returns the config of the supplied resource name and type if it exists. Use when the resource to be returned is an array
 func (c *NitroClient) FindResourceArray(resourceType string, resourceName string) ([]map[string]interface{}, error) {
 	var data map[string]interface{}
 	result, err := c.listResource(resourceType, resourceName)
@@ -464,7 +471,7 @@ func (c *NitroClient) FindResourceArray(resourceType string, resourceName string
 	return ret, nil
 }
 
-//FindFilteredResourceArray returns the config of the supplied resource type, filtered with given filter
+// FindFilteredResourceArray returns the config of the supplied resource type, filtered with given filter
 func (c *NitroClient) FindFilteredResourceArray(resourceType string, filter map[string]string) ([]map[string]interface{}, error) {
 	var data map[string]interface{}
 	result, err := c.listFilteredResource(resourceType, filter)
@@ -489,7 +496,7 @@ func (c *NitroClient) FindFilteredResourceArray(resourceType string, filter map[
 	return ret, nil
 }
 
-//FindResource returns the config of the supplied resource name and type if it exists
+// FindResource returns the config of the supplied resource name and type if it exists
 func (c *NitroClient) FindResource(resourceType string, resourceName string) (map[string]interface{}, error) {
 	var data map[string]interface{}
 	result, err := c.listResource(resourceType, resourceName)
@@ -628,7 +635,7 @@ func (c *NitroClient) FindResourceArrayWithParams(findParams FindParams) ([]map[
 
 }
 
-//FindAllResources finds all config objects of the supplied resource type and returns them in an array
+// FindAllResources finds all config objects of the supplied resource type and returns them in an array
 func (c *NitroClient) FindAllResources(resourceType string) ([]map[string]interface{}, error) {
 	var data map[string]interface{}
 	result, err := c.listResource(resourceType, "")
@@ -655,7 +662,7 @@ func (c *NitroClient) FindAllResources(resourceType string) ([]map[string]interf
 	return ret, nil
 }
 
-//ResourceBindingExists returns true if the supplied binding exists
+// ResourceBindingExists returns true if the supplied binding exists
 func (c *NitroClient) ResourceBindingExists(resourceType string, resourceName string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) bool {
 	result, err := c.listBoundResources(resourceName, resourceType, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
 	if err != nil {
@@ -678,7 +685,7 @@ func (c *NitroClient) ResourceBindingExists(resourceType string, resourceName st
 	return true
 }
 
-//FindBoundResource finds a bound resource if it exists
+// FindBoundResource finds a bound resource if it exists
 func (c *NitroClient) FindBoundResource(resourceType string, resourceName string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) (map[string]interface{}, error) {
 	result, err := c.listBoundResources(resourceName, resourceType, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
 	if err != nil {
@@ -702,7 +709,7 @@ func (c *NitroClient) FindBoundResource(resourceType string, resourceName string
 
 }
 
-//FindAllBoundResources returns an array of bound config objects of the type specified that are bound to the resource specified
+// FindAllBoundResources returns an array of bound config objects of the type specified that are bound to the resource specified
 func (c *NitroClient) FindAllBoundResources(resourceType string, resourceName string, boundResourceType string) ([]map[string]interface{}, error) {
 	result, err := c.listBoundResources(resourceName, resourceType, boundResourceType, "", "")
 	if err != nil {
@@ -729,8 +736,8 @@ func (c *NitroClient) FindAllBoundResources(resourceType string, resourceName st
 	return ret, nil
 }
 
-//EnableFeatures enables the provided list of features. Depending on the licensing of the NetScaler, not all supplied features may actually
-//enabled
+// EnableFeatures enables the provided list of features. Depending on the licensing of the NetScaler, not all supplied features may actually
+// enabled
 func (c *NitroClient) EnableFeatures(featureNames []string) error {
 	/* construct this:
 	{
@@ -783,7 +790,7 @@ func (c *NitroClient) DisableFeatures(featureNames []string) error {
 	return nil
 }
 
-//ListEnabledFeatures returns a string array of the list of features enabled on the NetScaler appliance
+// ListEnabledFeatures returns a string array of the list of features enabled on the NetScaler appliance
 func (c *NitroClient) ListEnabledFeatures() ([]string, error) {
 
 	bytes, err := c.listEnabledFeatures()
@@ -815,7 +822,7 @@ func (c *NitroClient) ListEnabledFeatures() ([]string, error) {
 	return flist, nil
 }
 
-//EnableModes enables the provided list of Citrix ADC modes.
+// EnableModes enables the provided list of Citrix ADC modes.
 func (c *NitroClient) EnableModes(modeNames []string) error {
 	/* construct this:
 	{
@@ -842,7 +849,7 @@ func (c *NitroClient) EnableModes(modeNames []string) error {
 	return nil
 }
 
-//ListEnabledModes returns a string array of the list of modes enabled on the Citrix ADC appliance
+// ListEnabledModes returns a string array of the list of modes enabled on the Citrix ADC appliance
 func (c *NitroClient) ListEnabledModes() ([]string, error) {
 
 	bytes, err := c.listEnabledModes()
@@ -874,7 +881,7 @@ func (c *NitroClient) ListEnabledModes() ([]string, error) {
 	return mlist, nil
 }
 
-//SaveConfig persists the config on the NetScaler to the NetScaler's persistent storage. This could take a few seconds
+// SaveConfig persists the config on the NetScaler to the NetScaler's persistent storage. This could take a few seconds
 func (c *NitroClient) SaveConfig() error {
 	/* construct this:
 	{
@@ -898,7 +905,7 @@ func (c *NitroClient) SaveConfig() error {
 	return nil
 }
 
-//ClearConfig deletes the config on the NetScaler
+// ClearConfig deletes the config on the NetScaler
 func (c *NitroClient) ClearConfig() error {
 	/* construct this:
 	{
