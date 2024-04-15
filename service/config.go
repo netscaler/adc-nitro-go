@@ -350,7 +350,7 @@ func (c *NitroClient) DeleteResourceWithArgs(resourceType string, resourceName s
 		//Cacheforwardproxy supports only GET(all) Request
 		_, err = c.listResource(resourceType, "")
 	} else if resourceType == "analyticsglobal_analyticsprofile_binding" {
-		//analyticsglobal_analyticsprofile_binding has defferent GET implememtation
+		// analyticsglobal_analyticsprofile_binding has different GET implementation
 		_, err = c.listResource("analyticsglobal", "")
 	} else {
 		_, err = c.listResourceWithArgs(resourceType, resourceName, args)
