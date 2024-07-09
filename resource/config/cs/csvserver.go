@@ -336,7 +336,7 @@ type Csvserver struct {
 	/**
 	* URL to which all HTTP traffic received on the port specified in the -redirectFromPort parameter is redirected.
 	*/
-	Httpsredirecturl int `json:"httpsredirecturl,omitempty"`
+	Httpsredirecturl string `json:"httpsredirecturl,omitempty"`
 	Ttl int `json:"ttl,omitempty"`
 	Backupip string `json:"backupip,omitempty"`
 	Cookiedomain string `json:"cookiedomain,omitempty"`
