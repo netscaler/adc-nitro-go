@@ -12,18 +12,17 @@
 *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
-*/
+ */
 
 package ssl
 
 /**
 * Configuration for linked certificate resource.
-*/
+ */
 type Sslcertlink struct {
 
 	//------- Read only Parameter ---------;
 
-	Certkeyname string `json:"certkeyname,omitempty"`
+	Certkey         string `json:"certkey,omitempty"` // api doc shows as certkeyname, but fails
 	Linkcertkeyname string `json:"linkcertkeyname,omitempty"`
-
 }
