@@ -929,6 +929,14 @@ func TestConstructQueryString(t *testing.T) {
 
 	expected := "?args=bye:hello,hello:bye&filter=bye:hello,hello:bye&attrs=bye:hello,hello:bye"
 	t.Run("CASE=8", generateTestCase(findParams, expected))
+
+	findParams = FindParams{
+		FilterMap: map[string]string{"bye": "hello"},
+		ArgsMap:   map[string]string{"bye": "hello"},
+		AttrsMap:  map[string]string{"bye": "hello"},
+		QueryMap:  map[string]string{"bye": "hello"}}
+
+	t.Run("CASE=9", generateTestCase(findParams, "?args=bye:hello&filter=bye:hello&attrs=bye:hello&bye=hello"))
 }
 
 func TestConstructUrlPathString(t *testing.T) {
