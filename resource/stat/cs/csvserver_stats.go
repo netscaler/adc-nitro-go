@@ -90,6 +90,7 @@ type Csvserverstats struct {
 	Curmptcpsessions int `json:"curmptcpsessions,omitempty"`
 	Cursubflowconn int `json:"cursubflowconn,omitempty"`
 	Httpmaxhdrszpkts int `json:"httpmaxhdrszpkts,omitempty"`
+	Httpmaxhdrfldlenpkts int `json:"httpmaxhdrfldlenpkts,omitempty"`
 	Tcpmaxooopkts int `json:"tcpmaxooopkts,omitempty"`
 	Totcltttlbtransactions int `json:"totcltttlbtransactions,omitempty"`
 	Toleratingttlbtransactions int `json:"toleratingttlbtransactions,omitempty"`

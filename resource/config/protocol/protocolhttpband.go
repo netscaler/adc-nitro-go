@@ -56,5 +56,6 @@ type Protocolhttpband struct {
 	Accessratio string `json:"accessratio,omitempty"`
 	Accessrationew string `json:"accessrationew,omitempty"`
 	Totals string `json:"totals,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

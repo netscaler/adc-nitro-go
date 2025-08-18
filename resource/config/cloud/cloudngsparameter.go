@@ -28,5 +28,17 @@ type Cloudngsparameter struct {
 	* Enables the required UDT version to EDT connections in the CGS deployment
 	*/
 	Allowedudtversion string `json:"allowedudtversion,omitempty"`
+	/**
+	* Enables Decoupling CSVSERVER state from Ticketing Service state in the CGS deployment
+	*/
+	Csvserverticketingdecouple string `json:"csvserverticketingdecouple,omitempty"`
+	/**
+	* Enables DTLS1.2 for client connections on CGS
+	*/
+	Allowdtls12 string `json:"allowdtls12,omitempty"`
+
+	//------- Read only Parameter ---------;
+
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

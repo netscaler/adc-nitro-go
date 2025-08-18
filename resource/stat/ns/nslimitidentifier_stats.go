@@ -17,7 +17,7 @@
 package ns
 
 /**
-* Statistics for limit Indetifier resource.
+* Statistics for limit Identifier resource.
 */
 
 type Nslimitidentifierstats struct {

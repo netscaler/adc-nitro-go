@@ -184,6 +184,11 @@ type Botprofilestats struct {
 	* Number of rate limiting violations requests redirected by the Bot profile to a different Web page or web server.
 	*/
 	Botviolratelimitredirectprofilerate float64 `json:"botviolratelimitredirectprofilerate,omitempty"`
+	Botviolratelimitexceededresponseprofile int `json:"botviolratelimitexceededresponseprofile,omitempty"`
+	/**
+	* Number of rate limiting violations requests responded resulted in too many requests response by the Bot profile.
+	*/
+	Botviolratelimitexceededresponseprofilerate float64 `json:"botviolratelimitexceededresponseprofilerate,omitempty"`
 	Botviolratelimitresetprofile int `json:"botviolratelimitresetprofile,omitempty"`
 	/**
 	* Number of rate limiting violations reset by the Bot profile.
@@ -294,5 +299,14 @@ type Botprofilestats struct {
 	* Number of trap violations reset by the Bot profile.
 	*/
 	Botvioltrapresetprofilerate float64 `json:"botvioltrapresetprofilerate,omitempty"`
+	Botcfgwhitelistprofile int `json:"botcfgwhitelistprofile,omitempty"`
+	Botcfgblacklistprofile int `json:"botcfgblacklistprofile,omitempty"`
+	Botcfgiprepprofile int `json:"botcfgiprepprofile,omitempty"`
+	Botcfgratelimitprofile int `json:"botcfgratelimitprofile,omitempty"`
+	Botcfgsignatureprofile int `json:"botcfgsignatureprofile,omitempty"`
+	Botcfgdfpprofile int `json:"botcfgdfpprofile,omitempty"`
+	Botcfgtpsprofile int `json:"botcfgtpsprofile,omitempty"`
+	Botcfgtrapprofile int `json:"botcfgtrapprofile,omitempty"`
+	Botcfgkmdetectionprofile int `json:"botcfgkmdetectionprofile,omitempty"`
 
 }

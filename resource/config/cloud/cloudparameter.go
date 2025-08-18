@@ -56,5 +56,6 @@ type Cloudparameter struct {
 	//------- Read only Parameter ---------;
 
 	Controlconnectionstatus string `json:"controlconnectionstatus,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }
