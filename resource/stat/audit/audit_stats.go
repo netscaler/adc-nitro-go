@@ -37,6 +37,26 @@ type Auditstats struct {
 	* Syslog messages sent to the syslog server(s) over TCP.
 	*/
 	Auditsyslogmsgsenttcprate float64 `json:"auditsyslogmsgsenttcprate,omitempty"`
+	Auditjsonobjcreated int `json:"auditjsonobjcreated,omitempty"`
+	/**
+	* Total number of JSON objects created for HTTP based syslog servers
+	*/
+	Auditjsonobjcreatedrate float64 `json:"auditjsonobjcreatedrate,omitempty"`
+	Auditjsonbufexported int `json:"auditjsonbufexported,omitempty"`
+	/**
+	* Total number of JSON buffers exported for HTTP based syslog servers
+	*/
+	Auditjsonbufexportedrate float64 `json:"auditjsonbufexportedrate,omitempty"`
+	Auditjson2xxresp int `json:"auditjson2xxresp,omitempty"`
+	/**
+	* Total number of 2xx responses received for HTTP based syslog servers
+	*/
+	Auditjson2xxresprate float64 `json:"auditjson2xxresprate,omitempty"`
+	Auditjsonnon2xxresp int `json:"auditjsonnon2xxresp,omitempty"`
+	/**
+	* Total number of non 2xx responses received for HTTP based syslog servers
+	*/
+	Auditjsonnon2xxresprate float64 `json:"auditjsonnon2xxresprate,omitempty"`
 	Auditnsballocfail int `json:"auditnsballocfail,omitempty"`
 	/**
 	* NAT allocation failed.
@@ -98,5 +118,15 @@ type Auditstats struct {
 	* Total number of log messages dropped by Citrix ADC when NSBQ length is less than TX min NSBs
 	*/
 	Logsdroppedtxminnsbsrate float64 `json:"logsdroppedtxminnsbsrate,omitempty"`
+	Auditjsonobjcreateerr int `json:"auditjsonobjcreateerr,omitempty"`
+	/**
+	* Total number of JSON objects creation error for HTTP based syslog servers
+	*/
+	Auditjsonobjcreateerrrate float64 `json:"auditjsonobjcreateerrrate,omitempty"`
+	Auditjsonbufexporterr int `json:"auditjsonbufexporterr,omitempty"`
+	/**
+	* Total number of JSON buffers export error for HTTP based syslog servers
+	*/
+	Auditjsonbufexporterrrate float64 `json:"auditjsonbufexporterrrate,omitempty"`
 
 }

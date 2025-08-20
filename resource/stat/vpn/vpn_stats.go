@@ -65,6 +65,11 @@ type Vpnstats struct {
 	*/
 	Fsrequestrate float64 `json:"fsrequestrate,omitempty"`
 	Vpnlicensefail int `json:"vpnlicensefail,omitempty"`
+	Svpnhttpdtotalrequests int `json:"svpnhttpdtotalrequests,omitempty"`
+	Svpnhttpdtotalresponses int `json:"svpnhttpdtotalresponses,omitempty"`
+	Svpnhttpdtotalrequestscachehits int `json:"svpnhttpdtotalrequestscachehits,omitempty"`
+	Svpnhttpdcurserverconnectionsopen int `json:"svpnhttpdcurserverconnectionsopen,omitempty"`
+	Svpnreqwaftotblock int `json:"svpnreqwaftotblock,omitempty"`
 	Iipdisabledmipused int `json:"iipdisabledmipused,omitempty"`
 	/**
 	* Number of times SNIP is used as IIP is disabled.
@@ -210,5 +215,145 @@ type Vpnstats struct {
 	* Total number of STA server lookup failures for auth-id in redundant ticket
 	*/
 	Csgrtktvalidatenotstartedrate float64 `json:"csgrtktvalidatenotstartedrate,omitempty"`
+	Totalsbprequest int `json:"totalsbprequest,omitempty"`
+	/**
+	* Number of securebrowse requests received
+	*/
+	Sbprequestrate float64 `json:"sbprequestrate,omitempty"`
+	Totalsbpsaasrequest int `json:"totalsbpsaasrequest,omitempty"`
+	/**
+	* Number of securebrowse requests received for saas apps
+	*/
+	Sbpsaasrequestrate float64 `json:"sbpsaasrequestrate,omitempty"`
+	Totalsbpwebrequest int `json:"totalsbpwebrequest,omitempty"`
+	/**
+	* Number of securebrowse requests received for web apps
+	*/
+	Sbpwebrequestrate float64 `json:"sbpwebrequestrate,omitempty"`
+	Totalsbprequestsuccess int `json:"totalsbprequestsuccess,omitempty"`
+	/**
+	* Number of securebrowse requests succeeded
+	*/
+	Sbprequestsuccessrate float64 `json:"sbprequestsuccessrate,omitempty"`
+	Totalsbpsaasrequestsuccess int `json:"totalsbpsaasrequestsuccess,omitempty"`
+	/**
+	* Number of securebrowse requests succeeded for saas apps
+	*/
+	Sbpsaasrequestsuccessrate float64 `json:"sbpsaasrequestsuccessrate,omitempty"`
+	Totalsbpwebrequestsuccess int `json:"totalsbpwebrequestsuccess,omitempty"`
+	/**
+	* Number of securebrowse requests succeeded for web apps
+	*/
+	Sbpwebrequestsuccessrate float64 `json:"sbpwebrequestsuccessrate,omitempty"`
+	Totalsbprequestfailure int `json:"totalsbprequestfailure,omitempty"`
+	/**
+	* Number of securebrowse requests failed
+	*/
+	Sbprequestfailurerate float64 `json:"sbprequestfailurerate,omitempty"`
+	Totalsbpsaasrequestfailure int `json:"totalsbpsaasrequestfailure,omitempty"`
+	/**
+	* Number of securebrowse requests failed for saas apps
+	*/
+	Sbpsaasrequestfailurerate float64 `json:"sbpsaasrequestfailurerate,omitempty"`
+	Totalsbpwebrequestfailure int `json:"totalsbpwebrequestfailure,omitempty"`
+	/**
+	* Number of securebrowse requests failed for web apps
+	*/
+	Sbpwebrequestfailurerate float64 `json:"sbpwebrequestfailurerate,omitempty"`
+	Totalsbpdnsrequestfailure int `json:"totalsbpdnsrequestfailure,omitempty"`
+	/**
+	* Number of DNS failures while using securebrowse protocol
+	*/
+	Sbpdnsrequestfailurerate float64 `json:"sbpdnsrequestfailurerate,omitempty"`
+	Totalsbpbackendconnectionfailure int `json:"totalsbpbackendconnectionfailure,omitempty"`
+	/**
+	* Number of backend connection failure while using securebrowse requests
+	*/
+	Sbpbackendconnectionfailurerate float64 `json:"sbpbackendconnectionfailurerate,omitempty"`
+	Totalsbpconnectorfailure int `json:"totalsbpconnectorfailure,omitempty"`
+	/**
+	* Number of times not able to reach connector using securebrowse protocol
+	*/
+	Sbpconnectorfailurerate float64 `json:"sbpconnectorfailurerate,omitempty"`
+	Totalcvpnrequest int `json:"totalcvpnrequest,omitempty"`
+	/**
+	* Number of cvpn requests received
+	*/
+	Cvpnrequestrate float64 `json:"cvpnrequestrate,omitempty"`
+	Totalcvpnsaasrequest int `json:"totalcvpnsaasrequest,omitempty"`
+	/**
+	* Number of cvpn requests received for saas apps
+	*/
+	Cvpnsaasrequestrate float64 `json:"cvpnsaasrequestrate,omitempty"`
+	Totalcvpnwebrequest int `json:"totalcvpnwebrequest,omitempty"`
+	/**
+	* Number of cvpn requests received for web apps
+	*/
+	Cvpnwebrequestrate float64 `json:"cvpnwebrequestrate,omitempty"`
+	Totalcvpnrequestsuccess int `json:"totalcvpnrequestsuccess,omitempty"`
+	/**
+	* Number of cvpn requests succeeded
+	*/
+	Cvpnrequestsuccessrate float64 `json:"cvpnrequestsuccessrate,omitempty"`
+	Totalcvpnsaasrequestsuccess int `json:"totalcvpnsaasrequestsuccess,omitempty"`
+	/**
+	* Number of cvpn requests succeeded for saas apps
+	*/
+	Cvpnsaasrequestsuccessrate float64 `json:"cvpnsaasrequestsuccessrate,omitempty"`
+	Totalcvpnwebrequestsuccess int `json:"totalcvpnwebrequestsuccess,omitempty"`
+	/**
+	* Number of cvpn requests succeeded for web apps
+	*/
+	Cvpnwebrequestsuccessrate float64 `json:"cvpnwebrequestsuccessrate,omitempty"`
+	Totalcvpnrequestfailure int `json:"totalcvpnrequestfailure,omitempty"`
+	/**
+	* Number of cvpn requests failed
+	*/
+	Cvpnrequestfailurerate float64 `json:"cvpnrequestfailurerate,omitempty"`
+	Totalcvpnsaasrequestfailure int `json:"totalcvpnsaasrequestfailure,omitempty"`
+	/**
+	* Number of cvpn requests failed for saas apps
+	*/
+	Cvpnsaasrequestfailurerate float64 `json:"cvpnsaasrequestfailurerate,omitempty"`
+	Totalcvpnwebrequestfailure int `json:"totalcvpnwebrequestfailure,omitempty"`
+	/**
+	* Number of cvpn requests failed for web apps
+	*/
+	Cvpnwebrequestfailurerate float64 `json:"cvpnwebrequestfailurerate,omitempty"`
+	Totalcvpndnsrequestfailure int `json:"totalcvpndnsrequestfailure,omitempty"`
+	/**
+	* Number of DNS failures while using cvpn
+	*/
+	Cvpndnsrequestfailurerate float64 `json:"cvpndnsrequestfailurerate,omitempty"`
+	Totalcvpnbackendconnectionfailure int `json:"totalcvpnbackendconnectionfailure,omitempty"`
+	/**
+	* Number of backend connection failure while using cvpn
+	*/
+	Cvpnbackendconnectionfailurerate float64 `json:"cvpnbackendconnectionfailurerate,omitempty"`
+	Totalcvpnconnectorfailure int `json:"totalcvpnconnectorfailure,omitempty"`
+	/**
+	* Number of times not able to reach connector using cvpn
+	*/
+	Cvpnconnectorfailurerate float64 `json:"cvpnconnectorfailurerate,omitempty"`
+	Totaldirectaccessrequest int `json:"totaldirectaccessrequest,omitempty"`
+	/**
+	* Number of directaccess requests received
+	*/
+	Directaccessrequestrate float64 `json:"directaccessrequestrate,omitempty"`
+	Totaldirectaccessrequestsuccess int `json:"totaldirectaccessrequestsuccess,omitempty"`
+	/**
+	* Number of directaccess requests succeeded
+	*/
+	Directaccessrequestsuccessrate float64 `json:"directaccessrequestsuccessrate,omitempty"`
+	Totaldirectaccessrequestfailure int `json:"totaldirectaccessrequestfailure,omitempty"`
+	/**
+	* Number of directaccess requests failed
+	*/
+	Directaccessrequestfailurerate float64 `json:"directaccessrequestfailurerate,omitempty"`
+	Totaldirectaccessconnectorfailure int `json:"totaldirectaccessconnectorfailure,omitempty"`
+	/**
+	* Number of times not able to reach connector using Directaccess
+	*/
+	Directaccessconnectorfailurerate float64 `json:"directaccessconnectorfailurerate,omitempty"`
 
 }

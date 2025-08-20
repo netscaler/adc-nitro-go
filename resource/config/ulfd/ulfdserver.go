@@ -28,5 +28,6 @@ type Ulfdserver struct {
 	//------- Read only Parameter ---------;
 
 	State string `json:"state,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

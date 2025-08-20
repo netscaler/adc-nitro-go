@@ -50,5 +50,6 @@ type Bfdsession struct {
 	Originalownerpe string `json:"originalownerpe,omitempty"`
 	Currentownerpe string `json:"currentownerpe,omitempty"`
 	Ownernode string `json:"ownernode,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

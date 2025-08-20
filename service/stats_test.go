@@ -18,8 +18,8 @@ package service
 
 import (
 	"log"
-	"testing"
 	"strconv"
+	"testing"
 
 	"github.com/citrix/adc-nitro-go/resource/config/basic"
 	"github.com/citrix/adc-nitro-go/resource/config/lb"

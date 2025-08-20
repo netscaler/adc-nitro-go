@@ -46,6 +46,7 @@ type Gslbservicegroupmemberstats struct {
 	Primaryport int `json:"primaryport,omitempty"`
 	Servicetype string `json:"servicetype,omitempty"`
 	State string `json:"state,omitempty"`
+	Svcgrpmemberbindingorder int `json:"svcgrpmemberbindingorder,omitempty"`
 	Totalrequestbytes int `json:"totalrequestbytes,omitempty"`
 	/**
 	* Total number of request bytes received on this service or virtual server.
@@ -69,5 +70,6 @@ type Gslbservicegroupmemberstats struct {
 	Responsesrate float64 `json:"responsesrate,omitempty"`
 	Curclntconnections int `json:"curclntconnections,omitempty"`
 	Cursrvrconnections int `json:"cursrvrconnections,omitempty"`
+	Serviceorder int `json:"serviceorder,omitempty"`
 
 }

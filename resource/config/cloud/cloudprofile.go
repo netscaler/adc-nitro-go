@@ -78,4 +78,8 @@ type Cloudprofile struct {
 	*/
 	Azurepollperiod int `json:"azurepollperiod,omitempty"`
 
+	//------- Read only Parameter ---------;
+
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+
 }

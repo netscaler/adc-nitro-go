@@ -42,6 +42,23 @@ type Sslstats struct {
 	* Number of bytes encrypted on the front-end in hardware on secondary card.
 	*/
 	Sslhwencfesecondaryrate float64 `json:"sslhwencfesecondaryrate,omitempty"`
+	Sslecdsap521cryptoutilizationstat float64 `json:"sslecdsap521cryptoutilizationstat,omitempty"`
+	Sslecdsap384cryptoutilizationstat float64 `json:"sslecdsap384cryptoutilizationstat,omitempty"`
+	Sslecdsap256cryptoutilizationstat float64 `json:"sslecdsap256cryptoutilizationstat,omitempty"`
+	Sslecdsap224cryptoutilizationstat float64 `json:"sslecdsap224cryptoutilizationstat,omitempty"`
+	Sslasymecdsacryptoutilizationstat float64 `json:"sslasymecdsacryptoutilizationstat,omitempty"`
+	Sslecdhx25519cryptoutilizationstat float64 `json:"sslecdhx25519cryptoutilizationstat,omitempty"`
+	Sslecdhp521cryptoutilizationstat float64 `json:"sslecdhp521cryptoutilizationstat,omitempty"`
+	Sslecdhp384cryptoutilizationstat float64 `json:"sslecdhp384cryptoutilizationstat,omitempty"`
+	Sslecdhp256cryptoutilizationstat float64 `json:"sslecdhp256cryptoutilizationstat,omitempty"`
+	Sslecdhp224cryptoutilizationstat float64 `json:"sslecdhp224cryptoutilizationstat,omitempty"`
+	Sslasymecdhcryptoutilizationstat float64 `json:"sslasymecdhcryptoutilizationstat,omitempty"`
+	Sslasymdhcryptoutilizationstat float64 `json:"sslasymdhcryptoutilizationstat,omitempty"`
+	Sslasymrsaotherscryptoutilizationstat float64 `json:"sslasymrsaotherscryptoutilizationstat,omitempty"`
+	Sslasymrsa1kcryptoutilizationstat float64 `json:"sslasymrsa1kcryptoutilizationstat,omitempty"`
+	Sslasymrsa2kcryptoutilizationstat float64 `json:"sslasymrsa2kcryptoutilizationstat,omitempty"`
+	Sslasymrsa4kcryptoutilizationstat float64 `json:"sslasymrsa4kcryptoutilizationstat,omitempty"`
+	Sslasymrsacryptoutilizationstat float64 `json:"sslasymrsacryptoutilizationstat,omitempty"`
 	Ssltotdechwsecondary int `json:"ssltotdechwsecondary,omitempty"`
 	/**
 	* Number of bytes decrypted in hardware on secondary card.
@@ -52,6 +69,8 @@ type Sslstats struct {
 	* Number of bytes encrypted in hardware on secondary card.
 	*/
 	Sslenchwsecondaryrate float64 `json:"sslenchwsecondaryrate,omitempty"`
+	Sslsymcryptoutilizationstat float64 `json:"sslsymcryptoutilizationstat,omitempty"`
+	Sslasymcryptoutilizationstat float64 `json:"sslasymcryptoutilizationstat,omitempty"`
 	Sslcryptoutilizationsymmstat int `json:"sslcryptoutilizationsymmstat,omitempty"`
 	Sslcryptoutilizationasymstat int `json:"sslcryptoutilizationasymstat,omitempty"`
 	Sslcryptoutilizationstat2nd float64 `json:"sslcryptoutilizationstat2nd,omitempty"`
@@ -72,11 +91,6 @@ type Sslstats struct {
 	* Number of SSL transactions on the Citrix ADC
 	*/
 	Ssltransactionsrate float64 `json:"ssltransactionsrate,omitempty"`
-	Ssltotsslv2transactions int `json:"ssltotsslv2transactions,omitempty"`
-	/**
-	* Number of SSLv2 transactions on the Citrix ADC.
-	*/
-	Sslsslv2transactionsrate float64 `json:"sslsslv2transactionsrate,omitempty"`
 	Ssltotsslv3transactions int `json:"ssltotsslv3transactions,omitempty"`
 	/**
 	* Total number of SSLv3 transactions on the Citrix ADC.
@@ -112,11 +126,6 @@ type Sslstats struct {
 	* Number of DTLSv1.2 transactions on the Citrix ADC.
 	*/
 	Ssldtlsv12transactionsrate float64 `json:"ssldtlsv12transactionsrate,omitempty"`
-	Ssltotsslv2sessions int `json:"ssltotsslv2sessions,omitempty"`
-	/**
-	* Number of SSLv2 sessions on the Citrix ADC.
-	*/
-	Sslsslv2sessionsrate float64 `json:"sslsslv2sessionsrate,omitempty"`
 	Ssltotsslv3sessions int `json:"ssltotsslv3sessions,omitempty"`
 	/**
 	* Number of SSLv3 sessions on the Citrix ADC.
@@ -192,11 +201,21 @@ type Sslstats struct {
 	* Number of back-end TLSv1.2 sessions on the Citrix ADC.
 	*/
 	Sslbetlsv12sessionsrate float64 `json:"sslbetlsv12sessionsrate,omitempty"`
+	Sslbetottlsv13sessions int `json:"sslbetottlsv13sessions,omitempty"`
+	/**
+	* Number of back-end TLSv1.3 sessions on the Citrix ADC.
+	*/
+	Sslbetlsv13sessionsrate float64 `json:"sslbetlsv13sessionsrate,omitempty"`
 	Sslbetotdtlsv1sessions int `json:"sslbetotdtlsv1sessions,omitempty"`
 	/**
 	* Number of back-end DTLSv1 sessions on the Citrix ADC.
 	*/
 	Sslbedtlsv1sessionsrate float64 `json:"sslbedtlsv1sessionsrate,omitempty"`
+	Sslbetotdtlsv12sessions int `json:"sslbetotdtlsv12sessions,omitempty"`
+	/**
+	* Number of back-end DTLSv1.2 sessions on the Citrix ADC.
+	*/
+	Sslbedtlsv12sessionsrate float64 `json:"sslbedtlsv12sessionsrate,omitempty"`
 	Sslbetotsessionmultiplexattempts int `json:"sslbetotsessionmultiplexattempts,omitempty"`
 	/**
 	* Number of back-end SSL session multiplex attempts on the Citrix ADC.
@@ -302,11 +321,21 @@ type Sslstats struct {
 	* Number of Diffie-Helman 2048-bit key exchanges on the Citrix ADC.
 	*/
 	Ssldh2048keyexchangesrate float64 `json:"ssldh2048keyexchangesrate,omitempty"`
+	Ssltotdh3072keyexchanges int `json:"ssltotdh3072keyexchanges,omitempty"`
+	/**
+	* Number of Diffie-Helman 3072-bit key exchanges on the Citrix ADC.
+	*/
+	Ssldh3072keyexchangesrate float64 `json:"ssldh3072keyexchangesrate,omitempty"`
 	Ssltotdh4096keyexchanges int `json:"ssltotdh4096keyexchanges,omitempty"`
 	/**
 	* Number of Diffie-Helman 4096-bit key exchanges on the Citrix ADC.
 	*/
 	Ssldh4096keyexchangesrate float64 `json:"ssldh4096keyexchangesrate,omitempty"`
+	Ssltotpqcx25519mlkem768keyexchanges int `json:"ssltotpqcx25519mlkem768keyexchanges,omitempty"`
+	/**
+	* Number of Post Quantum Crypto Key Exchanges Using X25519MLKEM768 Group on the Citrix ADC.
+	*/
+	Sslpqcx25519mlkem768keyexchangesrate float64 `json:"sslpqcx25519mlkem768keyexchangesrate,omitempty"`
 	Ssltotecdhe521keyexchanges int `json:"ssltotecdhe521keyexchanges,omitempty"`
 	/**
 	* Number of 521 Elliptical Curve Diffie-Helman on the Citrix ADC.
@@ -327,6 +356,11 @@ type Sslstats struct {
 	* Number of 224 Elliptical Curve Diffie-Helman on the Citrix ADC.
 	*/
 	Sslecdhe224keyexchangesrate float64 `json:"sslecdhe224keyexchangesrate,omitempty"`
+	Ssltotecdhe25519keyexchanges int `json:"ssltotecdhe25519keyexchanges,omitempty"`
+	/**
+	* Number of 25519 Elliptical Curve Diffie-Helman on the Citrix ADC.
+	*/
+	Sslecdhe25519keyexchangesrate float64 `json:"sslecdhe25519keyexchangesrate,omitempty"`
 	Ssltotecdhetransactions int `json:"ssltotecdhetransactions,omitempty"`
 	/**
 	* Total ECDHE Transactions on Citrix ADC.
@@ -427,11 +461,6 @@ type Sslstats struct {
 	* Number of SHA384 hashes on the Citrix ADC.
 	*/
 	Sslsha384macrate float64 `json:"sslsha384macrate,omitempty"`
-	Ssltotsslv2handshakes int `json:"ssltotsslv2handshakes,omitempty"`
-	/**
-	* Number of handshakes on SSLv2 on the Citrix ADC.
-	*/
-	Sslsslv2handshakesrate float64 `json:"sslsslv2handshakesrate,omitempty"`
 	Ssltotsslv3handshakes int `json:"ssltotsslv3handshakes,omitempty"`
 	/**
 	* Number of handshakes on SSLv3 on the Citrix ADC.
@@ -467,11 +496,6 @@ type Sslstats struct {
 	* Number of SSL handshakes on DTLSv1.2 on the Citrix ADC.
 	*/
 	Ssldtlsv12handshakesrate float64 `json:"ssldtlsv12handshakesrate,omitempty"`
-	Ssltotsslv2clientauthentications int `json:"ssltotsslv2clientauthentications,omitempty"`
-	/**
-	* Number of client authentications done on SSLv2.
-	*/
-	Sslsslv2clientauthenticationsrate float64 `json:"sslsslv2clientauthenticationsrate,omitempty"`
 	Ssltotsslv3clientauthentications int `json:"ssltotsslv3clientauthentications,omitempty"`
 	/**
 	* Number of client authentications done on SSLv3.
@@ -562,6 +586,11 @@ type Sslstats struct {
 	* Number of back-end DTLSv1 session renegotiations on the Citrix ADC.
 	*/
 	Sslbkenddtlsvlrenegorate float64 `json:"sslbkenddtlsvlrenegorate,omitempty"`
+	Ssltotbkenddtlsvl2renego int `json:"ssltotbkenddtlsvl2renego,omitempty"`
+	/**
+	* Number of back-end DTLSv1.2 session renegotiations on the Citrix ADC.
+	*/
+	Sslbkenddtlsvl2renegorate float64 `json:"sslbkenddtlsvl2renegorate,omitempty"`
 	Sslbetotrsa512keyexchanges int `json:"sslbetotrsa512keyexchanges,omitempty"`
 	/**
 	* Number of back-end RSA 512-bit key exchanges on the Citrix ADC.
@@ -602,6 +631,11 @@ type Sslstats struct {
 	* Number of back-end DH 2048-bit key exchanges on the Citrix ADC.
 	*/
 	Sslbedh2048keyexchangesrate float64 `json:"sslbedh2048keyexchangesrate,omitempty"`
+	Sslbetotdh3072keyexchanges int `json:"sslbetotdh3072keyexchanges,omitempty"`
+	/**
+	* Number of back-end DH 3072-bit key exchanges on the Citrix ADC.
+	*/
+	Sslbedh3072keyexchangesrate float64 `json:"sslbedh3072keyexchangesrate,omitempty"`
 	Sslbetotdh4096keyexchanges int `json:"sslbetotdh4096keyexchanges,omitempty"`
 	/**
 	* Number of back-end DH 4096-bit key exchanges on the Citrix ADC.
@@ -627,6 +661,11 @@ type Sslstats struct {
 	* Number of back-end ECDHE 224 curve Key exchanges  on the Citrix ADC.
 	*/
 	Sslbeecdhecurve224rate float64 `json:"sslbeecdhecurve224rate,omitempty"`
+	Sslbetotecdhecurve25519 int `json:"sslbetotecdhecurve25519,omitempty"`
+	/**
+	* Number of back-end ECDHE 25519 curve Key exchanges  on the Citrix ADC.
+	*/
+	Sslbeecdhecurve25519rate float64 `json:"sslbeecdhecurve25519rate,omitempty"`
 	Sslbetot40bitrc4ciphers int `json:"sslbetot40bitrc4ciphers,omitempty"`
 	/**
 	* Number of back-end RC4 40-bit cipher encryptions on the Citrix ADC.
@@ -742,11 +781,21 @@ type Sslstats struct {
 	* Number of back-end TLSv1.2 handshakes on the Citrix ADC.
 	*/
 	Sslbetlsv12handshakesrate float64 `json:"sslbetlsv12handshakesrate,omitempty"`
+	Sslbetottlsv13handshakes int `json:"sslbetottlsv13handshakes,omitempty"`
+	/**
+	* Number of back-end TLSv1.3 handshakes on the Citrix ADC.
+	*/
+	Sslbetlsv13handshakesrate float64 `json:"sslbetlsv13handshakesrate,omitempty"`
 	Sslbetotdtlsv1handshakes int `json:"sslbetotdtlsv1handshakes,omitempty"`
 	/**
 	* Number of back-end DTLSv1 handshakes on the Citrix ADC.
 	*/
 	Sslbedtlsv1handshakesrate float64 `json:"sslbedtlsv1handshakesrate,omitempty"`
+	Sslbetotdtlsv12handshakes int `json:"sslbetotdtlsv12handshakes,omitempty"`
+	/**
+	* Number of back-end DTLSv1.2 handshakes on the Citrix ADC.
+	*/
+	Sslbedtlsv12handshakesrate float64 `json:"sslbedtlsv12handshakesrate,omitempty"`
 	Sslbetotsslv3clientauthentications int `json:"sslbetotsslv3clientauthentications,omitempty"`
 	/**
 	* Number of back-end SSLv3 client authentications on the Citrix ADC.
@@ -767,11 +816,21 @@ type Sslstats struct {
 	* Number of back-end TLSv1.2 client authentications on the Citrix ADC.
 	*/
 	Sslbetlsv12clientauthenticationsrate float64 `json:"sslbetlsv12clientauthenticationsrate,omitempty"`
+	Sslbetottlsv13clientauthentications int `json:"sslbetottlsv13clientauthentications,omitempty"`
+	/**
+	* Number of back-end TLSv1.3 client authentications on the Citrix ADC.
+	*/
+	Sslbetlsv13clientauthenticationsrate float64 `json:"sslbetlsv13clientauthenticationsrate,omitempty"`
 	Sslbetotdtlsv1clientauthentications int `json:"sslbetotdtlsv1clientauthentications,omitempty"`
 	/**
 	* Number of back-end DTLSv1 client authentications on the Citrix ADC.
 	*/
 	Sslbedtlsv1clientauthenticationsrate float64 `json:"sslbedtlsv1clientauthenticationsrate,omitempty"`
+	Sslbetotdtlsv12clientauthentications int `json:"sslbetotdtlsv12clientauthentications,omitempty"`
+	/**
+	* Number of back-end DTLSv1.2 client authentications on the Citrix ADC.
+	*/
+	Sslbedtlsv12clientauthenticationsrate float64 `json:"sslbedtlsv12clientauthenticationsrate,omitempty"`
 	Sslbetotrsaauthorizations int `json:"sslbetotrsaauthorizations,omitempty"`
 	/**
 	* Number of back-end RSA authentications on the Citrix ADC.

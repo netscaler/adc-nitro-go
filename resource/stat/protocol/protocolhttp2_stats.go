@@ -262,7 +262,7 @@ type Protocolhttp2stats struct {
 	Http2errsetfloodrate float64 `json:"http2errsetfloodrate,omitempty"`
 	Http2errresfraflood int `json:"http2errresfraflood,omitempty"`
 	/**
-	* HTTP/2 number of reset frames received on connection is above rate limit
+	* HTTP/2 number of reset frames sent on connection is above rate limit
 	*/
 	Http2errresfrafloodrate float64 `json:"http2errresfrafloodrate,omitempty"`
 	Http2errempfraflood int `json:"http2errempfraflood,omitempty"`
@@ -270,5 +270,10 @@ type Protocolhttp2stats struct {
 	* HTTP/2 number of empty frames received on connection is above rate limit
 	*/
 	Http2errempfrafloodrate float64 `json:"http2errempfrafloodrate,omitempty"`
+	Http2errrxresfraflood int `json:"http2errrxresfraflood,omitempty"`
+	/**
+	* HTTP/2 number of reset frames received on connection is above rate limit
+	*/
+	Http2errrxresfrafloodrate float64 `json:"http2errrxresfrafloodrate,omitempty"`
 
 }

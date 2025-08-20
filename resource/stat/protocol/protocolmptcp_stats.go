@@ -30,12 +30,18 @@ type Protocolmptcpstats struct {
 	* MPTCP total sessions created
 	*/
 	Mptcpmpcapsessionrate float64 `json:"mptcpmpcapsessionrate,omitempty"`
+	Mptcptotv1mpcapsession int `json:"mptcptotv1mpcapsession,omitempty"`
+	/**
+	* MPTCP total V1 sessions created
+	*/
+	Mptcpv1mpcapsessionrate float64 `json:"mptcpv1mpcapsessionrate,omitempty"`
 	Mptcptotsfconn int `json:"mptcptotsfconn,omitempty"`
 	/**
 	* MPTCP total Subflow connections created
 	*/
 	Mptcpsfconnrate float64 `json:"mptcpsfconnrate,omitempty"`
 	Mptcpcurmpcapablesessions int `json:"mptcpcurmpcapablesessions,omitempty"`
+	Mptcpcurv1mpcapablesessions int `json:"mptcpcurv1mpcapablesessions,omitempty"`
 	Mptcpcursfconnections int `json:"mptcpcursfconnections,omitempty"`
 	Mptcpcurpendingjoin int `json:"mptcpcurpendingjoin,omitempty"`
 	Mptcpcursesswithoutsfs int `json:"mptcpcursesswithoutsfs,omitempty"`
@@ -44,6 +50,11 @@ type Protocolmptcpstats struct {
 	* MPTCP total MP_CAPABLE received
 	*/
 	Mptcpmpcapsynrate float64 `json:"mptcpmpcapsynrate,omitempty"`
+	Mptcptotv1mpcapsyn int `json:"mptcptotv1mpcapsyn,omitempty"`
+	/**
+	* MPTCP total Version1 MP_CAPABLE received
+	*/
+	Mptcpv1mpcapsynrate float64 `json:"mptcpv1mpcapsynrate,omitempty"`
 	Mptcptotmpcapsteered int `json:"mptcptotmpcapsteered,omitempty"`
 	/**
 	* Total MP_CAPABLE sessions steered
@@ -394,5 +405,10 @@ type Protocolmptcpstats struct {
 	* MPTCP output a packet without any subflow PCB.
 	*/
 	Mptcperrnosffreensbrate float64 `json:"mptcperrnosffreensbrate,omitempty"`
+	Mptcperrv1datarecvdpriortokey int `json:"mptcperrv1datarecvdpriortokey,omitempty"`
+	/**
+	* MPTCP V1 data received prior to key
+	*/
+	Mptcperrv1datarecvdpriortokeyrate float64 `json:"mptcperrv1datarecvdpriortokeyrate,omitempty"`
 
 }

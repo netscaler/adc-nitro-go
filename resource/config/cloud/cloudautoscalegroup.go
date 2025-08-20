@@ -27,5 +27,6 @@ type Cloudautoscalegroup struct {
 	Azcount string `json:"azcount,omitempty"`
 	Aznames string `json:"aznames,omitempty"`
 	Graceful string `json:"graceful,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

@@ -62,5 +62,6 @@ type Gslbservicestats struct {
 	* Number of times that the service has been provided.
 	*/
 	Vsvrservicehitsrate float64 `json:"vsvrservicehitsrate,omitempty"`
+	Serviceorder int `json:"serviceorder,omitempty"`
 
 }

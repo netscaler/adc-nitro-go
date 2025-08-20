@@ -22,7 +22,7 @@ package basic
 
 type Servicegroupmemberstats struct {
 	/**
-	* Displays statistics for the specified service group.Name of the service group. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at sign (@), equal sign (=), and hyphen (-) characters. 
+	* Displays statistics for the specified service group.Name of the service group. Must begin with an ASCII alphanumeric or underscore (_) character, and must contain only ASCII alphanumeric, underscore, hash (#), period (.), space, colon (:), at sign (@), equal sign (=), and hyphen (-) characters.
 		CLI Users: If the name includes one or more spaces, enclose the name in double or single quotation marks (for example, "my servicegroup" or 'my servicegroup').
 	*/
 	Servicegroupname string `json:"servicegroupname,omitempty"`
@@ -47,6 +47,7 @@ type Servicegroupmemberstats struct {
 	Primaryport int `json:"primaryport,omitempty"`
 	Servicetype string `json:"servicetype,omitempty"`
 	State string `json:"state,omitempty"`
+	Svcgrpmemberbindingorder int `json:"svcgrpmemberbindingorder,omitempty"`
 	Totalrequests int `json:"totalrequests,omitempty"`
 	/**
 	* Total number of requests received on this service or virtual server. (This applies to HTTP/SSL services and servers.)
@@ -80,6 +81,8 @@ type Servicegroupmemberstats struct {
 	Frustratingttlbtransactions int `json:"frustratingttlbtransactions,omitempty"`
 	Curload int `json:"curload,omitempty"`
 	Httpmaxhdrszpkts int `json:"httpmaxhdrszpkts,omitempty"`
+	Httpmaxhdrfldlenpkts int `json:"httpmaxhdrfldlenpkts,omitempty"`
 	Tcpmaxooopkts int `json:"tcpmaxooopkts,omitempty"`
+	Serviceorder int `json:"serviceorder,omitempty"`
 
 }

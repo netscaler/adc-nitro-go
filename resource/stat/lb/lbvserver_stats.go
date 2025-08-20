@@ -124,6 +124,7 @@ type Lbvserverstats struct {
 	Reqretrycount int `json:"reqretrycount,omitempty"`
 	Reqretrycountexceeded int `json:"reqretrycountexceeded,omitempty"`
 	Httpmaxhdrszpkts int `json:"httpmaxhdrszpkts,omitempty"`
+	Httpmaxhdrfldlenpkts int `json:"httpmaxhdrfldlenpkts,omitempty"`
 	Tcpmaxooopkts int `json:"tcpmaxooopkts,omitempty"`
 	Totcltttlbtransactions int `json:"totcltttlbtransactions,omitempty"`
 	Toleratingttlbtransactions int `json:"toleratingttlbtransactions,omitempty"`

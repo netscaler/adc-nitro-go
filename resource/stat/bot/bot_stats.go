@@ -177,6 +177,11 @@ type Botstats struct {
 	* Number of rate limiting violations requests redirected by the Bot Management to a different Web page or web server.
 	*/
 	Botviolratelimitredirectrate float64 `json:"botviolratelimitredirectrate,omitempty"`
+	Botviolratelimitexceededresponse int `json:"botviolratelimitexceededresponse,omitempty"`
+	/**
+	* Number of rate limiting violations requests resulted in too many requests response by the Bot Management.
+	*/
+	Botviolratelimitexceededresponserate float64 `json:"botviolratelimitexceededresponserate,omitempty"`
 	Botviolratelimitreset int `json:"botviolratelimitreset,omitempty"`
 	/**
 	* Number of rate limiting violations reset by the Bot Management.
@@ -287,5 +292,14 @@ type Botstats struct {
 	* Number of trap violations reset by the Bot Management.
 	*/
 	Botvioltrapresetrate float64 `json:"botvioltrapresetrate,omitempty"`
+	Botcfgwhitelist int `json:"botcfgwhitelist,omitempty"`
+	Botcfgblacklist int `json:"botcfgblacklist,omitempty"`
+	Botcfgiprep int `json:"botcfgiprep,omitempty"`
+	Botcfgratelimit int `json:"botcfgratelimit,omitempty"`
+	Botcfgsignature int `json:"botcfgsignature,omitempty"`
+	Botcfgdfp int `json:"botcfgdfp,omitempty"`
+	Botcfgtps int `json:"botcfgtps,omitempty"`
+	Botcfgtrap int `json:"botcfgtrap,omitempty"`
+	Botcfgkmdetection int `json:"botcfgkmdetection,omitempty"`
 
 }

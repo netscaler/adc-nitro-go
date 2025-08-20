@@ -22,7 +22,7 @@ package cmp
 
 type Cmppolicystats struct {
 	/**
-	* Name of the advanced compression policy for which to display statistics. If no name is specified, statistics for all advanced compression polices are shown.
+	* Name of the compression policy for which to display statistics. If no name is specified, statistics for all compression polices are shown.
 	*/
 	Name string `json:"name,omitempty"`
 	/**

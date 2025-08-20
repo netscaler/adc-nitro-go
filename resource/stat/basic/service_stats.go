@@ -69,6 +69,7 @@ type Servicestats struct {
 	Totalconnreassemblyqueue75 int `json:"totalconnreassemblyqueue75,omitempty"`
 	Totalconnreassemblyqueueflush int `json:"totalconnreassemblyqueueflush,omitempty"`
 	Httpmaxhdrszpkts int `json:"httpmaxhdrszpkts,omitempty"`
+	Httpmaxhdrfldlenpkts int `json:"httpmaxhdrfldlenpkts,omitempty"`
 	Tcpmaxooopkts int `json:"tcpmaxooopkts,omitempty"`
 	Curtflags int `json:"curtflags,omitempty"`
 	Totsvrttlbtransactions int `json:"totsvrttlbtransactions,omitempty"`
@@ -80,5 +81,6 @@ type Servicestats struct {
 	*/
 	Vsvrservicehitsrate float64 `json:"vsvrservicehitsrate,omitempty"`
 	Activetransactions int `json:"activetransactions,omitempty"`
+	Serviceorder int `json:"serviceorder,omitempty"`
 
 }

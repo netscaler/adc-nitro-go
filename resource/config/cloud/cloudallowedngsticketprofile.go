@@ -29,4 +29,8 @@ type Cloudallowedngsticketprofile struct {
 	*/
 	Creator string `json:"creator,omitempty"`
 
+	//------- Read only Parameter ---------;
+
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+
 }
