@@ -1,4 +1,4 @@
-module github.com/citrix/adc-nitro-go
+module github.com/citrix/adc-nitro-go-latest
 
 go 1.14
 
