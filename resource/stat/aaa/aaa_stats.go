@@ -92,5 +92,15 @@ type Aaastats struct {
 	* Count of all AAATM sessions.
 	*/
 	Aaatmsessionsrate float64 `json:"aaatmsessionsrate,omitempty"`
+	Aaatotwafblock int `json:"aaatotwafblock,omitempty"`
+	/**
+	* Total Number of Requests that are blocked as part of Appfw Validation for AAA
+	*/
+	Aaawafblockrate float64 `json:"aaawafblockrate,omitempty"`
+	Aaatmtotwafblock int `json:"aaatmtotwafblock,omitempty"`
+	/**
+	* Total Number of Requests that are blocked as part of Appfw Validation for AAATM
+	*/
+	Aaatmwafblockrate float64 `json:"aaatmwafblockrate,omitempty"`
 
 }

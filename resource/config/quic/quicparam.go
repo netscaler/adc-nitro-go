@@ -25,4 +25,8 @@ type Quicparam struct {
 	*/
 	Quicsecrettimeout int `json:"quicsecrettimeout,omitempty"`
 
+	//------- Read only Parameter ---------;
+
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+
 }

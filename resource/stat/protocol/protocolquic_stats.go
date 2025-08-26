@@ -60,6 +60,11 @@ type Protocolquicstats struct {
 	* Current QUIC local connection IDs allocated
 	*/
 	Quiclocalconnidrate float64 `json:"quiclocalconnidrate,omitempty"`
+	Quiccursavedcryptoctx int `json:"quiccursavedcryptoctx,omitempty"`
+	/**
+	* Current QUIC crypto contexts allocated
+	*/
+	Quiccursavedcryptoctxrate float64 `json:"quiccursavedcryptoctxrate,omitempty"`
 	Quictotclientconn int `json:"quictotclientconn,omitempty"`
 	/**
 	* Total QUIC client connections
@@ -100,6 +105,11 @@ type Protocolquicstats struct {
 	* Number of QUIC application no-error Connection Close packets sent
 	*/
 	Quicappconnclosepktsentrate float64 `json:"quicappconnclosepktsentrate,omitempty"`
+	Quicasyncdatagramssent int `json:"quicasyncdatagramssent,omitempty"`
+	/**
+	* Number of QUIC datagrams sent using async mode
+	*/
+	Quicasyncdatagramssentrate float64 `json:"quicasyncdatagramssentrate,omitempty"`
 	Quicconninfoalcfail int `json:"quicconninfoalcfail,omitempty"`
 	/**
 	* Quic session allocations failed

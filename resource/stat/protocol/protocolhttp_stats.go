@@ -25,11 +25,6 @@ type Protocolhttpstats struct {
 	* Clear the statsistics / counters
 	*/
 	Clearstats string `json:"clearstats,omitempty"`
-	Spdytotstreams int `json:"spdytotstreams,omitempty"`
-	/**
-	* Total number of requests received over SPDYv2 and SPDYv3
-	*/
-	Spdystreamsrate float64 `json:"spdystreamsrate,omitempty"`
 	Httptotrequests int `json:"httptotrequests,omitempty"`
 	/**
 	* Total number of HTTP requests received.
@@ -153,15 +148,6 @@ type Protocolhttpstats struct {
 	Httperrrfc7230desynctlente int `json:"httperrrfc7230desynctlente,omitempty"`
 	Httperrrfc7230desynmultictlen int `json:"httperrrfc7230desynmultictlen,omitempty"`
 	Httperrrfc7230desynidenticalctlen int `json:"httperrrfc7230desynidenticalctlen,omitempty"`
-	Spdyv2totstreams int `json:"spdyv2totstreams,omitempty"`
-	/**
-	* Total number of requests received over SPDYv2
-	*/
-	Spdyv2streamsrate float64 `json:"spdyv2streamsrate,omitempty"`
-	Spdyv3totstreams int `json:"spdyv3totstreams,omitempty"`
-	/**
-	* Total number of requests received over SPDYv3
-	*/
-	Spdyv3streamsrate float64 `json:"spdyv3streamsrate,omitempty"`
+	Httperrinvalidhostheader int `json:"httperrinvalidhostheader,omitempty"`
 
 }
