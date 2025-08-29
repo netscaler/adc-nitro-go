@@ -36,5 +36,6 @@ type Cloudcredential struct {
 	//------- Read only Parameter ---------;
 
 	Isset string `json:"isset,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

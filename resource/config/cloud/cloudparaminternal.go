@@ -28,5 +28,6 @@ type Cloudparaminternal struct {
 	//------- Read only Parameter ---------;
 
 	Iamperm string `json:"iamperm,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

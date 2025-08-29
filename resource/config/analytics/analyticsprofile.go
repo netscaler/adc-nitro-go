@@ -144,11 +144,11 @@ type Analyticsprofile struct {
 	*/
 	Auditlogs string `json:"auditlogs,omitempty"`
 	/**
-	* This option is for setting the mode of how data is provided.
+	* This option is for setting the mode of how data is provided
 	*/
 	Servemode string `json:"servemode,omitempty"`
 	/**
-	* This option is for configuring json schema file containing a list of counters to be exported by metricscollector.
+	* This option is for configuring json schema file containing a list of counters to be exported by metricscollector
 	*/
 	Schemafile string `json:"schemafile,omitempty"`
 	/**
@@ -187,8 +187,10 @@ type Analyticsprofile struct {
 	* By default, application/json content-type is used. If this needs to be overridden, specify the value.
 	*/
 	Analyticsendpointcontenttype string `json:"analyticsendpointcontenttype,omitempty"`
+
 	//------- Read only Parameter ---------;
 
 	Refcnt string `json:"refcnt,omitempty"`
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
 
 }

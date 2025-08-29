@@ -124,6 +124,31 @@ type Nsstats struct {
 	* HTTP/HTTPS requests redirected by the Application Firewall to a different Web page or web server. (HTTP 302)
 	*/
 	Appfirewallredirectsrate float64 `json:"appfirewallredirectsrate,omitempty"`
+	Enainbwlimitexceeded int `json:"enainbwlimitexceeded,omitempty"`
+	/**
+	* Inbound BW Limits Exceeded
+	*/
+	Enainbwlimitexceededrate float64 `json:"enainbwlimitexceededrate,omitempty"`
+	Enaoutbwlimitexceeded int `json:"enaoutbwlimitexceeded,omitempty"`
+	/**
+	* Outbound BW Limits Exceeded
+	*/
+	Enaoutbwlimitexceededrate float64 `json:"enaoutbwlimitexceededrate,omitempty"`
+	Enappslimitexceeded int `json:"enappslimitexceeded,omitempty"`
+	/**
+	* PPS Limits Exceeded
+	*/
+	Enappslimitexceededrate float64 `json:"enappslimitexceededrate,omitempty"`
+	Enaconntracklimitexceeded int `json:"enaconntracklimitexceeded,omitempty"`
+	/**
+	* Conn-Tracking Limits Exceeded
+	*/
+	Enaconntracklimitexceededrate float64 `json:"enaconntracklimitexceededrate,omitempty"`
+	Enalinklocallimitexceeded int `json:"enalinklocallimitexceeded,omitempty"`
+	/**
+	* Link-Local Limits Exceeded
+	*/
+	Enalinklocallimitexceededrate float64 `json:"enalinklocallimitexceededrate,omitempty"`
 	Misccounter0 int `json:"misccounter0,omitempty"`
 	Misccounter1 int `json:"misccounter1,omitempty"`
 	Numcpus int `json:"numcpus,omitempty"`

@@ -49,7 +49,7 @@ type Cachestats struct {
 	Cachepercentstoreablemiss int `json:"cachepercentstoreablemiss,omitempty"`
 	Cachetotfulltoconditionalrequest int `json:"cachetotfulltoconditionalrequest,omitempty"`
 	/**
-	* Number of user-agent requests for a cached  Poll Every Time (PET) response that were sent to the origin server as conditional requests. 
+	* Number of user-agent requests for a cached Poll Every Time (PET) response that were sent to the origin server as conditional requests.
 	*/
 	Cachefulltoconditionalrequestrate float64 `json:"cachefulltoconditionalrequestrate,omitempty"`
 	Cachetotsuccessfulrevalidation int `json:"cachetotsuccessfulrevalidation,omitempty"`

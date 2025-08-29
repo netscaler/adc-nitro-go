@@ -46,4 +46,8 @@ type Azureapplication struct {
 	*/
 	Tokenendpoint string `json:"tokenendpoint,omitempty"`
 
+	//------- Read only Parameter ---------;
+
+	Nextgenapiresource string `json:"_nextgenapiresource,omitempty"`
+
 }
