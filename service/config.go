@@ -40,6 +40,7 @@ type FindParams struct {
 	ArgsMap                  map[string]string
 	FilterMap                map[string]string
 	AttrsMap                 map[string]string
+	QueryMap                 map[string]string
 	ResourceType             string
 	ResourceName             string
 	ResourceMissingErrorCode int
@@ -80,6 +81,9 @@ func constructQueryString(findParams *FindParams) string {
 	concatQueryString(&queryBuilder, constructQueryMapString("args=", findParams.ArgsMap))
 	concatQueryString(&queryBuilder, constructQueryMapString("filter=", findParams.FilterMap))
 	concatQueryString(&queryBuilder, constructQueryMapString("attrs=", findParams.AttrsMap))
+	for k, v := range findParams.QueryMap {
+		concatQueryString(&queryBuilder, fmt.Sprintf("%s=%s", k, v))
+	}
 
 	return queryBuilder.String()
 }
