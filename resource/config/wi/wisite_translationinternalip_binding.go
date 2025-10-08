@@ -35,7 +35,7 @@ type Wisitetranslationinternalipbinding struct {
 	/**
 	* Port number of the server for which you want to associate an external port.  (Clients access the server through the associated external address and port.)
 	*/
-	Translationinternalport int `json:"translationinternalport,omitempty"`
+	Translationinternalport *int `json:"translationinternalport,omitempty"`
 	/**
 	* External IP address associated with server's IP address.
 	*/
@@ -43,7 +43,7 @@ type Wisitetranslationinternalipbinding struct {
 	/**
 	* External port number associated with the server's port number.
 	*/
-	Translationexternalport int `json:"translationexternalport,omitempty"`
+	Translationexternalport *int `json:"translationexternalport,omitempty"`
 	/**
 	* Path to the Web Interface site.
 	*/

@@ -40,11 +40,11 @@ type Scpolicy struct {
 	/**
 	* Delay threshold, in microseconds, for requests that match the policy's URL or rule. If the delay statistics gathered for the matching request exceed the specified delay, SureConnect is triggered for that request.
 	*/
-	Delay int `json:"delay,omitempty"`
+	Delay *int `json:"delay,omitempty"`
 	/**
 	* Maximum number of concurrent connections that can be open for requests that match the policy's URL or rule.
 	*/
-	Maxconn int `json:"maxconn,omitempty"`
+	Maxconn *int `json:"maxconn,omitempty"`
 	/**
 	* Action to be taken when the delay or maximum-connections threshold is reached. Available settings function as follows:
 		ACS - Serve content from an alternative content service.

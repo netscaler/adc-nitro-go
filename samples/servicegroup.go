@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-package main
+package samples
 
 import (
 	"log"
@@ -21,6 +21,11 @@ import (
 	"github.com/citrix/adc-nitro-go/resource/config/basic"
 	"github.com/citrix/adc-nitro-go/service"
 )
+
+// Helper function to create integer pointers
+func intPtr(i int) *int {
+	return &i
+}
 
 func example2() {
 	client, err := service.NewNitroClientFromEnv()
@@ -45,7 +50,7 @@ func example2() {
 	bindSvcGrpToServer := basic.Servicegroupservicegroupmemberbinding{
 		Servicegroupname: "test-svcgroup",
 		Servername:       "test-srvr",
-		Port:             22,
+		Port:             intPtr(22),
 	}
 
 	client.AddResource(service.Servicegroup_servicegroupmember_binding.Type(), "test-svcgroup", &bindSvcGrpToServer)
@@ -53,7 +58,7 @@ func example2() {
 	bindSvcGrpToServer2 := basic.Servicegroupservicegroupmemberbinding{
 		Servicegroupname: "test-svcgroup",
 		Ip:               "192.168.1.102",
-		Port:             22,
+		Port:             intPtr(22),
 	}
 	client.AddResource(service.Servicegroup_servicegroupmember_binding.Type(), "test-svcgroup", &bindSvcGrpToServer2)
 }

@@ -38,7 +38,7 @@ type Cloudtunnelvserver struct {
 	/**
 	* Integer specifying the priority of the listen policy. A higher number specifies a lower priority. If a request matches the listen policies of more than one virtual server, the virtual server whose listen policy has the highest priority (the lowest priority number) accepts the request.
 	*/
-	Listenpriority int `json:"listenpriority,omitempty"`
+	Listenpriority *int `json:"listenpriority,omitempty"`
 
 	//------- Read only Parameter ---------;
 

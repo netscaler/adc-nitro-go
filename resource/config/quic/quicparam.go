@@ -23,7 +23,7 @@ type Quicparam struct {
 	/**
 	* Rotation frequency, in seconds, for the secret used to generate address validation tokens that will be issued in QUIC Retry packets and QUIC NEW_TOKEN frames sent by the Citrix ADC. A value of 0 can be configured if secret rotation is not desired.
 	*/
-	Quicsecrettimeout int `json:"quicsecrettimeout,omitempty"`
+	Quicsecrettimeout *int `json:"quicsecrettimeout,omitempty"`
 
 	//------- Read only Parameter ---------;
 

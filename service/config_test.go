@@ -36,6 +36,11 @@ var client *NitroClient
 // Used to generate random config object names
 var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
+// Helper function to create integer pointers
+func intPtr(i int) *int {
+	return &i
+}
+
 func randomString(n int) string {
 	b := make([]rune, n)
 	for i := range b {
@@ -86,7 +91,7 @@ func TestAdd(t *testing.T) {
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName, &lb1)
 	if err != nil {
@@ -123,7 +128,7 @@ func TestAdd(t *testing.T) {
 	service1 := basic.Service{
 		Name:        svcName,
 		Ip:          rndIP2,
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 
@@ -144,7 +149,7 @@ func TestApply(t *testing.T) {
 		Srcipval:  "192.168.11.10",
 		Destip:    true,
 		Destipval: "192.183.83.11",
-		Priority:  1100,
+		Priority:  intPtr(1100),
 	}
 
 	_, err := client.AddResource(Nsacl.Type(), aclName, &acl1)
@@ -179,7 +184,7 @@ func TestUpdate(t *testing.T) {
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName, &lb1)
 	if err != nil {
@@ -226,7 +231,7 @@ func TestBindUnBind(t *testing.T) {
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName, &lb1)
 	if err != nil {
@@ -237,7 +242,7 @@ func TestBindUnBind(t *testing.T) {
 	service1 := basic.Service{
 		Name:        svcName,
 		Ip:          rndIP2,
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 
@@ -285,7 +290,7 @@ func TestFindBoundResource(t *testing.T) {
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName, &lb1)
 	if err != nil {
@@ -297,7 +302,7 @@ func TestFindBoundResource(t *testing.T) {
 	service1 := basic.Service{
 		Name:        svcName,
 		Ip:          randomIP(),
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 
@@ -342,7 +347,7 @@ func TestDelete(t *testing.T) {
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName, &lb1)
 	if err != nil {
@@ -368,9 +373,9 @@ func TestDeleteWithArgs(t *testing.T) {
 	lbmonitor := lb.Lbmonitor{
 		Monitorname:    monitorName,
 		Type:           "http",
-		Retries:        20,
-		Failureretries: 10,
-		Downtime:       60,
+		Retries:        intPtr(20),
+		Failureretries: intPtr(10),
+		Downtime:       intPtr(60),
 	}
 	_, err := client.AddResource(Lbmonitor.Type(), monitorName, &lbmonitor)
 	if err != nil {
@@ -457,14 +462,14 @@ func TestFindAllResources(t *testing.T) {
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	lb2 := lb.Lbvserver{
 		Name:        lbName2,
 		Ipv46:       randomIP(),
 		Lbmethod:    "LEASTCONNECTION",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName1, &lb1)
 	if err != nil {
@@ -508,7 +513,7 @@ func TestFindAllBoundResources(t *testing.T) {
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName1, &lb1)
 	if err != nil {
@@ -517,13 +522,13 @@ func TestFindAllBoundResources(t *testing.T) {
 	service1 := basic.Service{
 		Name:        svcName1,
 		Ip:          randomIP(),
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 	service2 := basic.Service{
 		Name:        svcName2,
 		Ip:          randomIP(),
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 
@@ -613,7 +618,7 @@ func TestAction(t *testing.T) {
 	bindSvcGrpToServer := basic.Servicegroupservicegroupmemberbinding{
 		Servicegroupname: svcGrpName,
 		Servername:       "test-srvr",
-		Port:             22,
+		Port:             intPtr(22),
 	}
 
 	_, err = client.AddResource(Servicegroup_servicegroupmember_binding.Type(), "test-svcgroup", &bindSvcGrpToServer)
@@ -626,7 +631,7 @@ func TestAction(t *testing.T) {
 	bindSvcGrpToServer2 := basic.Servicegroupservicegroupmemberbinding{
 		Servicegroupname: svcGrpName,
 		Ip:               "192.168.1.102",
-		Port:             22,
+		Port:             intPtr(22),
 	}
 
 	_, err = client.AddResource(Servicegroup_servicegroupmember_binding.Type(), "test-svcgroup", &bindSvcGrpToServer2)
@@ -638,8 +643,8 @@ func TestAction(t *testing.T) {
 	sg2 := basic.Servicegroup{
 		Servicegroupname: svcGrpName,
 		Servername:       "test-srvr",
-		Port:             22,
-		Delay:            100,
+		Port:             intPtr(22),
+		Delay:            intPtr(100),
 		Graceful:         "YES",
 	}
 
@@ -653,7 +658,7 @@ func TestAction(t *testing.T) {
 	sg3 := basic.Servicegroup{
 		Servicegroupname: svcGrpName,
 		Servername:       "test-srvr",
-		Port:             22,
+		Port:             intPtr(22),
 	}
 
 	err = client.ActOnResource(Servicegroup.Type(), &sg3, "enable")
@@ -751,15 +756,15 @@ func TestDesiredStateServicegroupAPI(t *testing.T) {
 	ipmembers := []basic.Members{
 		{
 			Ip:   "1.1.1.1",
-			Port: 80,
+			Port: intPtr(80),
 		},
 		{
 			Ip:   "2.2.2.2",
-			Port: 80,
+			Port: intPtr(80),
 		},
 		{
 			Ip:   "3.3.3.3",
-			Port: 80,
+			Port: intPtr(80),
 		},
 	}
 
@@ -811,7 +816,7 @@ func TestTokenBasedAuth(t *testing.T) {
 		Ipv46:       rndIP,
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err = client.AddResource(Lbvserver.Type(), lbName, &lb1)
 	if err != nil {

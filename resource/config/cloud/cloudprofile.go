@@ -44,7 +44,7 @@ type Cloudprofile struct {
 	/**
 	* Port number for the virtual server.
 	*/
-	Port int `json:"port,omitempty"`
+	Port *int `json:"port,omitempty"`
 	/**
 	* servicegroups bind to this server
 	*/
@@ -56,7 +56,7 @@ type Cloudprofile struct {
 	/**
 	* The port number to be used for the bound service.
 	*/
-	Vsvrbindsvcport int `json:"vsvrbindsvcport,omitempty"`
+	Vsvrbindsvcport *int `json:"vsvrbindsvcport,omitempty"`
 	/**
 	* Indicates graceful shutdown of the service. System will wait for all outstanding connections to this service to be closed before disabling the service.
 	*/
@@ -64,7 +64,7 @@ type Cloudprofile struct {
 	/**
 	* Time, in seconds, after which all the services configured on the server are disabled.
 	*/
-	Delay int `json:"delay,omitempty"`
+	Delay *int `json:"delay,omitempty"`
 	/**
 	* Azure tag name
 	*/
@@ -76,7 +76,7 @@ type Cloudprofile struct {
 	/**
 	* Azure polling period (in seconds)
 	*/
-	Azurepollperiod int `json:"azurepollperiod,omitempty"`
+	Azurepollperiod *int `json:"azurepollperiod,omitempty"`
 
 	//------- Read only Parameter ---------;
 

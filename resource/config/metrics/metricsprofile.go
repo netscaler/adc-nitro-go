@@ -48,7 +48,7 @@ type Metricsprofile struct {
 	/**
 	* This option is for configuring the metrics export frequency in seconds, frequency value must be in [30,300] seconds range
 	*/
-	Metricsexportfrequency int `json:"metricsexportfrequency,omitempty"`
+	Metricsexportfrequency *int `json:"metricsexportfrequency,omitempty"`
 	/**
 	* Token for authenticating with the endpoint. If the endpoint requires the Authorization header in a particular format, specify the complete format as the value to this parameter. For eg., in case of splunk, the Authorizaiton header is required to be of the form - Splunk <auth-token>.
 	*/

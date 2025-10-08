@@ -66,7 +66,7 @@ type Wisite struct {
 	/**
 	* Time-out, in minutes, for idle Web Interface browser sessions. If a client's session is idle for a time that exceeds the time-out value, the Citrix ADC terminates the connection.
 	*/
-	Websessiontimeout int `json:"websessiontimeout,omitempty"`
+	Websessiontimeout *int `json:"websessiontimeout,omitempty"`
 	/**
 	* Default access method for clients accessing the Web Interface site.
 		Note: Before you configure an access method based on the client IP address, you must enable USIP mode on the Web Interface service to make the client's IP address available with the Web Interface.

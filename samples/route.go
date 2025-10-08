@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-package main
+package samples
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ import (
 	"github.com/citrix/adc-nitro-go/service"
 )
 
-func main() {
+func example3() {
 	client, _ := service.NewNitroClientFromEnv()
 	route := network.Route{
 		Network: "192.168.15.0",

@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-package main
+package samples
 
 import (
 	"log"
@@ -23,7 +23,7 @@ import (
 	"github.com/citrix/adc-nitro-go/service"
 )
 
-func main() {
+func example1() {
 	client, err := service.NewNitroClientFromEnv()
 	if err != nil {
 		log.Fatal("Could not create a client: ", err)
@@ -35,7 +35,7 @@ func main() {
 		Ipv46:       "10.71.136.50",
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	client.AddResource(service.Lbvserver.Type(), "sample_lb", &lb1)
 
@@ -48,7 +48,7 @@ func main() {
 	service1 := basic.Service{
 		Name:        "sample_svc_1",
 		Ip:          "172.22.33.4",
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 

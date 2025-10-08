@@ -31,7 +31,7 @@ type Quicbridgeprofile struct {
 	/**
 	* Length of serverid to encode/decode server information
 	*/
-	Serveridlength int `json:"serveridlength,omitempty"`
+	Serveridlength *int `json:"serveridlength,omitempty"`
 
 	//------- Read only Parameter ---------;
 

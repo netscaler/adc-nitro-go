@@ -27,10 +27,10 @@ type Dospolicy struct {
 	/**
 	* Queue depth. The queue size (the number of outstanding service requests on the system) before DoS protection is activated on the service to which the DoS protection policy is bound.
 	*/
-	Qdepth int `json:"qdepth,omitempty"`
+	Qdepth *int `json:"qdepth,omitempty"`
 	/**
 	* Client detect rate. Integer representing the percentage of traffic to which the HTTP DoS policy is to be applied after the queue depth condition is satisfied.
 	*/
-	Cltdetectrate int `json:"cltdetectrate,omitempty"`
+	Cltdetectrate *int `json:"cltdetectrate,omitempty"`
 
 }
