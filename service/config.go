@@ -21,6 +21,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"net/url"
 	"sort"
 	"strings"
 
@@ -350,6 +351,12 @@ func (c *NitroClient) DeleteResource(resourceType string, resourceName string) e
 func (c *NitroClient) DeleteResourceWithArgs(resourceType string, resourceName string, args []string) error {
 
 	var err error
+
+	// Escape URL characters from args
+	for i, arg := range args {
+		args[i] = url.QueryEscape(arg)
+	}
+
 	if resourceType == "snmptrap_snmpuser_binding" {
 		//Remove unwanted argument (username) for listing but keep it for delete operation
 		argsWithoutUsername := make([]string, 0)
