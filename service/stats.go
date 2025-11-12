@@ -39,10 +39,17 @@ func (c *NitroClient) FindAllStats(resourceType string) ([]map[string]interface{
 		log.Printf("[WARN] nitro-go: FindStats No %s type found", resourceType)
 		return nil, fmt.Errorf("[INFO] nitro-go: FindStats: No type of %s found", resourceType)
 	}
-	resources := data[resourceType].([]interface{})
-	ret := make([]map[string]interface{}, len(resources), len(resources))
-	for i, v := range resources {
-		ret[i] = v.(map[string]interface{})
+	ret := make([]map[string]interface{}, 0)
+	switch data[resourceType].(type) {
+	case []interface{}:
+		resources := data[resourceType].([]interface{})
+		ret = make([]map[string]interface{}, len(resources), len(resources))
+		for i, v := range resources {
+			ret[i] = v.(map[string]interface{})
+		}
+	case map[string]interface{}:
+		resources := data[resourceType].(map[string]interface{})
+		ret = append(ret, resources)
 	}
 	return ret, nil
 }
