@@ -1028,6 +1028,7 @@ const (
 	Vpnvserver_aaapreauthenticationpolicy_binding
 	Vpnvserver_appcontroller_binding
 	Vpnvserver_appflowpolicy_binding
+	Vpnvserver_appfwpolicy_binding
 	Vpnvserver_auditnslogpolicy_binding
 	Vpnvserver_auditsyslogpolicy_binding
 	Vpnvserver_authenticationcertpolicy_binding
@@ -2061,6 +2062,7 @@ var resources = []string{
 	"vpnvserver_aaapreauthenticationpolicy_binding",
 	"vpnvserver_appcontroller_binding",
 	"vpnvserver_appflowpolicy_binding",
+	"vpnvserver_appfwpolicy_binding",
 	"vpnvserver_auditnslogpolicy_binding",
 	"vpnvserver_auditsyslogpolicy_binding",
 	"vpnvserver_authenticationcertpolicy_binding",
