@@ -123,7 +123,19 @@ func NewNitroClientFromParams(params NitroParams) (*NitroClient, error) {
 	} else {
 		tr := &http.Transport{
 			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: true,
+				InsecureSkipVerify: true, //nolint:gosec
+				// Include legacy RSA key-exchange cipher suites for compatibility with
+				// older NetScaler/ADC firmware. Go 1.22+ removed these from the default
+				// set (see https://go.dev/doc/go1.22#crypto/tls), which causes a TLS
+				// handshake failure against appliances that only support e.g. AES256-SHA.
+				CipherSuites: []uint16{
+					tls.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+					tls.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+					tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+					tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+					tls.TLS_RSA_WITH_AES_256_CBC_SHA,
+					tls.TLS_RSA_WITH_AES_128_CBC_SHA,
+				},
 			},
 			Proxy: http.ProxyFromEnvironment,
 		}
