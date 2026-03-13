@@ -737,14 +737,22 @@ func (c *NitroClient) FindAllResources(resourceType string) ([]map[string]interf
 		c.logger.Trace(" FindAllResources: resource not found", "resourceType", resourceType)
 		return make([]map[string]interface{}, 0, 0), nil
 	}
-	resources := data[resourceType].([]interface{})
-
-	ret := make([]map[string]interface{}, len(resources), len(resources))
-	for i, v := range resources {
-		ret[i] = v.(map[string]interface{})
+	// The NITRO API returns a JSON array for most resource types, but a few
+	// (e.g. nsversion) return a single JSON object. Guard against the panic
+	// that occurs when the type assertion to []interface{} fails.
+	switch v := rsrcs.(type) {
+	case []interface{}:
+		ret := make([]map[string]interface{}, len(v))
+		for i, item := range v {
+			ret[i] = item.(map[string]interface{})
+		}
+		return ret, nil
+	case map[string]interface{}:
+		return []map[string]interface{}{v}, nil
+	default:
+		c.logger.Warn("FindAllResources: unexpected response shape", "resourceType", resourceType)
+		return make([]map[string]interface{}, 0, 0), nil
 	}
-
-	return ret, nil
 }
 
 // ResourceBindingExists returns true if the supplied binding exists
