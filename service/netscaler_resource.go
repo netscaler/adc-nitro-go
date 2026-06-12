@@ -18,6 +18,7 @@ package service
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -150,7 +151,11 @@ func readResponseHandler(resp *http.Response, logger hclog.Logger) ([]byte, erro
 }
 
 func (c *NitroClient) createHTTPRequest(method string, urlstr string, buff *bytes.Buffer) (*http.Request, error) {
-	req, err := http.NewRequest(method, urlstr, buff)
+	return c.createHTTPRequestWithContext(context.Background(), method, urlstr, buff)
+}
+
+func (c *NitroClient) createHTTPRequestWithContext(ctx context.Context, method string, urlstr string, buff *bytes.Buffer) (*http.Request, error) {
+	req, err := http.NewRequestWithContext(ctx, method, urlstr, buff)
 	if err != nil {
 		return nil, err
 	}
@@ -217,7 +222,14 @@ func maskHeaders(headers http.Header) http.Header {
 }
 
 func (c *NitroClient) doHTTPRequest(method string, urlstr string, bytes *bytes.Buffer, respHandler responseHandlerFunc) ([]byte, error) {
-	req, err := c.createHTTPRequest(method, urlstr, bytes)
+	return c.doHTTPRequestWithContext(context.Background(), method, urlstr, bytes, respHandler)
+}
+
+func (c *NitroClient) doHTTPRequestWithContext(ctx context.Context, method string, urlstr string, bytes *bytes.Buffer, respHandler responseHandlerFunc) ([]byte, error) {
+	req, err := c.createHTTPRequestWithContext(ctx, method, urlstr, bytes)
+	if err != nil {
+		return []byte{}, err
+	}
 
 	maskedHeaders := maskHeaders(req.Header)
 	c.logger.Trace("doHTTPRequest HTTP method", "method", method, "url", urlstr, "headers", maskedHeaders)
@@ -249,6 +261,10 @@ func (c *NitroClient) doHTTPRequest(method string, urlstr string, bytes *bytes.B
 }
 
 func (c *NitroClient) createResource(resourceType string, resourceJSON []byte) ([]byte, error) {
+	return c.createResourceWithContext(context.Background(), resourceType, resourceJSON)
+}
+
+func (c *NitroClient) createResourceWithContext(ctx context.Context, resourceType string, resourceJSON []byte) ([]byte, error) {
 	c.logger.Trace("Creating ", "resourceType", resourceType)
 
 	url := c.url + resourceType
@@ -258,21 +274,29 @@ func (c *NitroClient) createResource(resourceType string, resourceJSON []byte) (
 	}
 	c.logger.Trace("createResource", "url", url)
 
-	return c.doHTTPRequest("POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) applyResource(resourceType string, resourceJSON []byte) ([]byte, error) {
+	return c.applyResourceWithContext(context.Background(), resourceType, resourceJSON)
+}
+
+func (c *NitroClient) applyResourceWithContext(ctx context.Context, resourceType string, resourceJSON []byte) ([]byte, error) {
 	c.logger.Trace("Applying", "resourceType", resourceType)
 
 	url := c.url + resourceType + "?action=apply"
 	c.logger.Trace("url is ", "url", url)
 
-	return c.doHTTPRequest("POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) actOnResource(resourceType string, resourceJSON []byte, action string) ([]byte, error) {
+	return c.actOnResourceWithContext(context.Background(), resourceType, resourceJSON, action)
+}
+
+func (c *NitroClient) actOnResourceWithContext(ctx context.Context, resourceType string, resourceJSON []byte, action string) ([]byte, error) {
 	c.logger.Trace("acting on resource", "resourceType", resourceType)
 
 	var url string
@@ -283,43 +307,59 @@ func (c *NitroClient) actOnResource(resourceType string, resourceJSON []byte, ac
 	}
 	c.logger.Trace("actOnResource ", "url", url)
 
-	return c.doHTTPRequest("POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) changeResource(resourceType string, resourceName string, resourceJSON []byte) ([]byte, error) {
+	return c.changeResourceWithContext(context.Background(), resourceType, resourceName, resourceJSON)
+}
+
+func (c *NitroClient) changeResourceWithContext(ctx context.Context, resourceType string, resourceName string, resourceJSON []byte) ([]byte, error) {
 	c.logger.Trace("changing resource", "resourceType", resourceType)
 
 	resourceNameEscaped := neturl.QueryEscape(neturl.QueryEscape(resourceName))
 	url := c.url + resourceType + "/" + resourceNameEscaped + "?action=update"
 	c.logger.Trace("changeResource", "url", url)
 
-	return c.doHTTPRequest("POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) updateResource(resourceType string, resourceName string, resourceJSON []byte) ([]byte, error) {
+	return c.updateResourceWithContext(context.Background(), resourceType, resourceName, resourceJSON)
+}
+
+func (c *NitroClient) updateResourceWithContext(ctx context.Context, resourceType string, resourceName string, resourceJSON []byte) ([]byte, error) {
 	c.logger.Trace("Updating resource ", "resourceType", resourceType)
 
 	resourceNameEscaped := neturl.QueryEscape(neturl.QueryEscape(resourceName))
 	url := c.url + resourceType + "/" + resourceNameEscaped
 	c.logger.Trace("updateResource ", "url", url)
 
-	return c.doHTTPRequest("PUT", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "PUT", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) updateUnnamedResource(resourceType string, resourceJSON []byte) ([]byte, error) {
+	return c.updateUnnamedResourceWithContext(context.Background(), resourceType, resourceJSON)
+}
+
+func (c *NitroClient) updateUnnamedResourceWithContext(ctx context.Context, resourceType string, resourceJSON []byte) ([]byte, error) {
 	c.logger.Trace("Updating unnamed resource", "resourceType", resourceType)
 
 	url := c.url + resourceType
 	c.logger.Trace("updateUnnamedResource", "url", url)
 
-	return c.doHTTPRequest("PUT", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "PUT", url, bytes.NewBuffer(resourceJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) deleteResource(resourceType string, resourceName string) ([]byte, error) {
+	return c.deleteResourceWithContext(context.Background(), resourceType, resourceName)
+}
+
+func (c *NitroClient) deleteResourceWithContext(ctx context.Context, resourceType string, resourceName string) ([]byte, error) {
 	c.logger.Trace("Deleting resource", "resourceType", resourceType)
 	var url string
 	if resourceName != "" {
@@ -330,11 +370,15 @@ func (c *NitroClient) deleteResource(resourceType string, resourceName string) (
 	}
 	c.logger.Trace("deleteResource", "url", url)
 
-	return c.doHTTPRequest("DELETE", url, bytes.NewBuffer([]byte{}), deleteResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "DELETE", url, bytes.NewBuffer([]byte{}), deleteResponseHandler)
 
 }
 
 func (c *NitroClient) deleteResourceWithArgs(resourceType string, resourceName string, args []string) ([]byte, error) {
+	return c.deleteResourceWithArgsWithContext(context.Background(), resourceType, resourceName, args)
+}
+
+func (c *NitroClient) deleteResourceWithArgsWithContext(ctx context.Context, resourceType string, resourceName string, args []string) ([]byte, error) {
 	c.logger.Trace("Deleting resource with args", "resourceType", resourceType, "args ", args)
 	var url string
 	if resourceName != "" {
@@ -346,33 +390,45 @@ func (c *NitroClient) deleteResourceWithArgs(resourceType string, resourceName s
 	url = url + strings.Join(args, ",")
 	c.logger.Trace("deleteResourceWithArgs ", "url", url)
 
-	return c.doHTTPRequest("DELETE", url, bytes.NewBuffer([]byte{}), deleteResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "DELETE", url, bytes.NewBuffer([]byte{}), deleteResponseHandler)
 
 }
 
 func (c *NitroClient) deleteResourceWithArgsMap(resourceType string, resourceName string, argsMap map[string]string) ([]byte, error) {
+	return c.deleteResourceWithArgsMapWithContext(context.Background(), resourceType, resourceName, argsMap)
+}
+
+func (c *NitroClient) deleteResourceWithArgsMapWithContext(ctx context.Context, resourceType string, resourceName string, argsMap map[string]string) ([]byte, error) {
 	args := make([]string, len(argsMap))
 	i := 0
 	for key, value := range argsMap {
 		args[i] = fmt.Sprintf("%s:%s", key, value)
 		i++
 	}
-	return c.deleteResourceWithArgs(resourceType, resourceName, args)
+	return c.deleteResourceWithArgsWithContext(ctx, resourceType, resourceName, args)
 
 }
 
 func (c *NitroClient) unbindResource(resourceType string, resourceName string, boundResourceType string, boundResource string, bindingFilterName string) ([]byte, error) {
+	return c.unbindResourceWithContext(context.Background(), resourceType, resourceName, boundResourceType, boundResource, bindingFilterName)
+}
+
+func (c *NitroClient) unbindResourceWithContext(ctx context.Context, resourceType string, resourceName string, boundResourceType string, boundResource string, bindingFilterName string) ([]byte, error) {
 	c.logger.Trace("Unbinding resource", "resourceType", resourceType, "resourceName", resourceName)
 	bindingName := resourceType + "_" + boundResourceType + "_binding"
 	resourceNameEscaped := neturl.QueryEscape(neturl.QueryEscape(resourceName))
 
 	url := c.url + "/" + bindingName + "/" + resourceNameEscaped + "?args=" + bindingFilterName + ":" + boundResource
 
-	return c.doHTTPRequest("DELETE", url, bytes.NewBuffer([]byte{}), deleteResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "DELETE", url, bytes.NewBuffer([]byte{}), deleteResponseHandler)
 
 }
 
 func (c *NitroClient) listBoundResources(resourceName string, resourceType string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) ([]byte, error) {
+	return c.listBoundResourcesWithContext(context.Background(), resourceName, resourceType, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
+}
+
+func (c *NitroClient) listBoundResourcesWithContext(ctx context.Context, resourceName string, resourceType string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) ([]byte, error) {
 	c.logger.Trace("listing bound resources of type ", "resourceType", resourceType, "resourceName", resourceName)
 	var url string
 	resourceNameEscaped := neturl.QueryEscape(neturl.QueryEscape(resourceName))
@@ -382,11 +438,15 @@ func (c *NitroClient) listBoundResources(resourceName string, resourceType strin
 		url = c.url + fmt.Sprintf("%s_%s_binding/%s?filter=%s:%s", resourceType, boundResourceType, resourceNameEscaped, boundResourceFilterName, boundResourceFilterValue)
 	}
 
-	return c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 
 }
 
 func (c *NitroClient) listFilteredResource(resourceType string, filter map[string]string) ([]byte, error) {
+	return c.listFilteredResourceWithContext(context.Background(), resourceType, filter)
+}
+
+func (c *NitroClient) listFilteredResourceWithContext(ctx context.Context, resourceType string, filter map[string]string) ([]byte, error) {
 	c.logger.Trace("listing filtered resource of type ", "resourceType", resourceType, "filter: ", filter)
 
 	var filter_strings []string
@@ -398,11 +458,15 @@ func (c *NitroClient) listFilteredResource(resourceType string, filter map[strin
 
 	url := c.url + fmt.Sprintf("%s?filter=%s", resourceType, filter_string)
 
-	return c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 
 }
 
 func (c *NitroClient) listResource(resourceType string, resourceName string) ([]byte, error) {
+	return c.listResourceWithContext(context.Background(), resourceType, resourceName)
+}
+
+func (c *NitroClient) listResourceWithContext(ctx context.Context, resourceType string, resourceName string) ([]byte, error) {
 	c.logger.Trace("listing resource of type ", "resourceType", resourceType, "name", resourceName)
 	url := c.url + resourceType
 
@@ -412,11 +476,15 @@ func (c *NitroClient) listResource(resourceType string, resourceName string) ([]
 	}
 	c.logger.Trace("listResource", "url", url)
 
-	return c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 
 }
 
 func (c *NitroClient) listResourceWithArgs(resourceType string, resourceName string, args []string) ([]byte, error) {
+	return c.listResourceWithArgsWithContext(context.Background(), resourceType, resourceName, args)
+}
+
+func (c *NitroClient) listResourceWithArgsWithContext(ctx context.Context, resourceType string, resourceName string, args []string) ([]byte, error) {
 	c.logger.Trace("listing resource with args ", "resourceType", resourceType, "name", resourceName, "args", args)
 	var url string
 
@@ -430,86 +498,126 @@ func (c *NitroClient) listResourceWithArgs(resourceType string, resourceName str
 	url2 := url + "?args=" + strArgs
 	c.logger.Trace("listResourceWithArgs", "url", url)
 
-	data, err := c.doHTTPRequest("GET", url2, bytes.NewBuffer([]byte{}), readResponseHandler)
+	data, err := c.doHTTPRequestWithContext(ctx, "GET", url2, bytes.NewBuffer([]byte{}), readResponseHandler)
 	if err != nil {
+		// DO NOT fallback for systemfile
+		if resourceType == "systemfile" {
+			return data, err
+		}
 		c.logger.Trace("listResourceWithArgs: error listing with args, trying filter", "error", err)
 		url2 = url + "?filter=" + strArgs
 		c.logger.Trace("listResourceWithArgs", "url2", url2)
-		return c.doHTTPRequest("GET", url2, bytes.NewBuffer([]byte{}), readResponseHandler)
+		return c.doHTTPRequestWithContext(ctx, "GET", url2, bytes.NewBuffer([]byte{}), readResponseHandler)
 	}
 	return data, err
 
 }
 
 func (c *NitroClient) listResourceWithArgsMap(resourceType string, resourceName string, argsMap map[string]string) ([]byte, error) {
+	return c.listResourceWithArgsMapWithContext(context.Background(), resourceType, resourceName, argsMap)
+}
+
+func (c *NitroClient) listResourceWithArgsMapWithContext(ctx context.Context, resourceType string, resourceName string, argsMap map[string]string) ([]byte, error) {
 	args := make([]string, len(argsMap))
 	i := 0
 	for key, value := range argsMap {
 		args[i] = fmt.Sprintf("%s:%s", key, value)
 		i++
 	}
-	return c.listResourceWithArgs(resourceType, resourceName, args)
+	return c.listResourceWithArgsWithContext(ctx, resourceType, resourceName, args)
 
 }
 
 func (c *NitroClient) enableFeatures(featureJSON []byte) ([]byte, error) {
+	return c.enableFeaturesWithContext(context.Background(), featureJSON)
+}
+
+func (c *NitroClient) enableFeaturesWithContext(ctx context.Context, featureJSON []byte) ([]byte, error) {
 	c.logger.Trace("Enabling features")
 	url := c.url + "nsfeature?action=enable"
 
-	return c.doHTTPRequest("POST", url, bytes.NewBuffer(featureJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(featureJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) disableFeatures(featureJSON []byte) ([]byte, error) {
+	return c.disableFeaturesWithContext(context.Background(), featureJSON)
+}
+
+func (c *NitroClient) disableFeaturesWithContext(ctx context.Context, featureJSON []byte) ([]byte, error) {
 	c.logger.Trace("Disabling features")
 	url := c.url + "nsfeature?action=disable"
 
-	return c.doHTTPRequest("POST", url, bytes.NewBuffer(featureJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(featureJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) listEnabledFeatures() ([]byte, error) {
+	return c.listEnabledFeaturesWithContext(context.Background())
+}
+
+func (c *NitroClient) listEnabledFeaturesWithContext(ctx context.Context) ([]byte, error) {
 	c.logger.Trace("listing features")
 	url := c.url + "nsfeature"
 
-	return c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 
 }
 
 func (c *NitroClient) enableModes(modeJSON []byte) ([]byte, error) {
+	return c.enableModesWithContext(context.Background(), modeJSON)
+}
+
+func (c *NitroClient) enableModesWithContext(ctx context.Context, modeJSON []byte) ([]byte, error) {
 	c.logger.Trace("Enabling modes")
 	url := c.url + "nsmode?action=enable"
 
-	return c.doHTTPRequest("POST", url, bytes.NewBuffer(modeJSON), createResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(modeJSON), createResponseHandler)
 
 }
 
 func (c *NitroClient) listEnabledModes() ([]byte, error) {
+	return c.listEnabledModesWithContext(context.Background())
+}
+
+func (c *NitroClient) listEnabledModesWithContext(ctx context.Context) ([]byte, error) {
 	c.logger.Trace("listing modes")
 	url := c.url + "nsmode"
 
-	return c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 
 }
 
 func (c *NitroClient) saveConfig(saveJSON []byte) error {
+	return c.saveConfigWithContext(context.Background(), saveJSON)
+}
+
+func (c *NitroClient) saveConfigWithContext(ctx context.Context, saveJSON []byte) error {
 	c.logger.Trace("Saving config")
 	url := c.url + "nsconfig?action=save"
 
-	_, err := c.doHTTPRequest("POST", url, bytes.NewBuffer(saveJSON), createResponseHandler)
+	_, err := c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(saveJSON), createResponseHandler)
 	return err
 
 }
 
 func (c *NitroClient) clearConfig(clearJSON []byte) error {
+	return c.clearConfigWithContext(context.Background(), clearJSON)
+}
+
+func (c *NitroClient) clearConfigWithContext(ctx context.Context, clearJSON []byte) error {
 	c.logger.Trace("Clearing config")
 	url := c.url + "nsconfig?action=clear"
 
-	_, err := c.doHTTPRequest("POST", url, bytes.NewBuffer(clearJSON), createResponseHandler)
+	_, err := c.doHTTPRequestWithContext(ctx, "POST", url, bytes.NewBuffer(clearJSON), createResponseHandler)
 	return err
 }
 
 func (c *NitroClient) listStat(resourceType, resourceName string) ([]byte, error) {
+	return c.listStatWithContext(context.Background(), resourceType, resourceName)
+}
+
+func (c *NitroClient) listStatWithContext(ctx context.Context, resourceType, resourceName string) ([]byte, error) {
 	c.logger.Trace("listing stat of type ", "resourceType", resourceType, "name", resourceName)
 	url := c.statsURL + resourceType
 
@@ -519,11 +627,15 @@ func (c *NitroClient) listStat(resourceType, resourceName string) ([]byte, error
 	}
 	c.logger.Trace("listStat", "url", url)
 
-	return c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 
 }
 
 func (c *NitroClient) listStatWithArgs(resourceType string, resourceName string, args []string) ([]byte, error) {
+	return c.listStatWithArgsWithContext(context.Background(), resourceType, resourceName, args)
+}
+
+func (c *NitroClient) listStatWithArgsWithContext(ctx context.Context, resourceType string, resourceName string, args []string) ([]byte, error) {
 	c.logger.Trace("listing stat ", "resourceType", resourceType, "name", resourceName, "args", args)
 	var url string
 
@@ -537,5 +649,5 @@ func (c *NitroClient) listStatWithArgs(resourceType string, resourceName string,
 	url = url + "?args=" + strArgs
 	c.logger.Trace("listStatWithArgs", "url", url)
 
-	return c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	return c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 }

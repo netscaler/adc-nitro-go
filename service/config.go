@@ -18,6 +18,7 @@ package service
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -156,6 +157,11 @@ func (c *NitroClient) IsLoggedIn() bool {
 
 // Login to netscaler and store the session
 func (c *NitroClient) Login() error {
+	return c.LoginWithContext(context.Background())
+}
+
+// LoginWithContext logs in to netscaler and stores the session
+func (c *NitroClient) LoginWithContext(ctx context.Context) error {
 	// Check if login is already done
 	if c.IsLoggedIn() {
 		return nil
@@ -170,7 +176,7 @@ func (c *NitroClient) Login() error {
 			ID:     c.username,
 			Secret: c.password,
 		}
-		body, err = c.AddResourceReturnBody(Login.Type(), "login", cloudLoginObj)
+		body, err = c.AddResourceReturnBodyWithContext(ctx, Login.Type(), "login", cloudLoginObj)
 	} else {
 		// Regular NetScaler uses username and password
 		loginObj := login{
@@ -178,7 +184,7 @@ func (c *NitroClient) Login() error {
 			Password: c.password,
 			Timeout:  c.timeout,
 		}
-		body, err = c.AddResourceReturnBody(Login.Type(), "login", loginObj)
+		body, err = c.AddResourceReturnBodyWithContext(ctx, Login.Type(), "login", loginObj)
 	}
 
 	if err != nil {
@@ -223,15 +229,24 @@ func (c *NitroClient) Login() error {
 
 // Logout from netscaler and clear the session
 func (c *NitroClient) Logout() error {
+	return c.LogoutWithContext(context.Background())
+}
+
+// LogoutWithContext logs out from netscaler and clears the session
+func (c *NitroClient) LogoutWithContext(ctx context.Context) error {
 	logoutObj := logout{}
-	_, err := c.AddResource(Logout.Type(), "logout", logoutObj)
+	_, err := c.AddResourceWithContext(ctx, Logout.Type(), "logout", logoutObj)
 	c.clearSessionid()
 	return err
 }
 
 // AddResourceReturnBody adds a resource of supplied type and name and returns http response body
 func (c *NitroClient) AddResourceReturnBody(resourceType string, name string, resourceStruct interface{}) ([]byte, error) {
+	return c.AddResourceReturnBodyWithContext(context.Background(), resourceType, name, resourceStruct)
+}
 
+// AddResourceReturnBodyWithContext adds a resource of supplied type and name and returns http response body
+func (c *NitroClient) AddResourceReturnBodyWithContext(ctx context.Context, resourceType string, name string, resourceStruct interface{}) ([]byte, error) {
 	nsResource := make(map[string]interface{})
 	nsResource[resourceType] = resourceStruct
 
@@ -241,7 +256,7 @@ func (c *NitroClient) AddResourceReturnBody(resourceType string, name string, re
 	if !contains(doNotPrintResources, resourceType) {
 		c.logger.Trace("AddResourceReturnBody", "resourceJSON", string(resourceJSON))
 	}
-	body, err := c.createResource(resourceType, resourceJSON)
+	body, err := c.createResourceWithContext(ctx, resourceType, resourceJSON)
 	if err != nil {
 		return body, fmt.Errorf("[ERROR] nitro-go: Failed to create resource of type %s, name=%s, err=%s", resourceType, name, err)
 	}
@@ -250,7 +265,11 @@ func (c *NitroClient) AddResourceReturnBody(resourceType string, name string, re
 
 // AddResource adds a resource of supplied type and name
 func (c *NitroClient) AddResource(resourceType string, name string, resourceStruct interface{}) (string, error) {
+	return c.AddResourceWithContext(context.Background(), resourceType, name, resourceStruct)
+}
 
+// AddResourceWithContext adds a resource of supplied type and name
+func (c *NitroClient) AddResourceWithContext(ctx context.Context, resourceType string, name string, resourceStruct interface{}) (string, error) {
 	nsResource := make(map[string]interface{})
 	nsResource[resourceType] = resourceStruct
 
@@ -260,7 +279,7 @@ func (c *NitroClient) AddResource(resourceType string, name string, resourceStru
 	if !contains(doNotPrintResources, resourceType) {
 		c.logger.Trace("AddResource", "resourceJSON", string(resourceJSON))
 	}
-	body, err := c.createResource(resourceType, resourceJSON)
+	body, err := c.createResourceWithContext(ctx, resourceType, resourceJSON)
 	if err != nil {
 		// Suppress error if body contains errorcode 1665 and message "Internal error while adding HSM key"
 		if resourceType == "sslhsmkey" && strings.Contains(err.Error(), "599 Netscaler specific error") {
@@ -282,7 +301,11 @@ func (c *NitroClient) AddResource(resourceType string, name string, resourceStru
 
 // ApplyResource applies the configured settings to for the supplied type
 func (c *NitroClient) ApplyResource(resourceType string, resourceStruct interface{}) error {
+	return c.ApplyResourceWithContext(context.Background(), resourceType, resourceStruct)
+}
 
+// ApplyResourceWithContext applies the configured settings to for the supplied type
+func (c *NitroClient) ApplyResourceWithContext(ctx context.Context, resourceType string, resourceStruct interface{}) error {
 	nsResource := make(map[string]interface{})
 	nsResource[resourceType] = resourceStruct
 
@@ -290,7 +313,7 @@ func (c *NitroClient) ApplyResource(resourceType string, resourceStruct interfac
 
 	c.logger.Trace("ApplyResource ", "resourceJSON", string(resourceJSON))
 
-	body, err := c.applyResource(resourceType, resourceJSON)
+	body, err := c.applyResourceWithContext(ctx, resourceType, resourceJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to apply resource of type %s,  err=%s", resourceType, err)
 	}
@@ -301,7 +324,11 @@ func (c *NitroClient) ApplyResource(resourceType string, resourceStruct interfac
 
 // ActOnResource applies the configured settings using the action (enable, disable, unset, apply, rename)
 func (c *NitroClient) ActOnResource(resourceType string, resourceStruct interface{}, action string) error {
+	return c.ActOnResourceWithContext(context.Background(), resourceType, resourceStruct, action)
+}
 
+// ActOnResourceWithContext applies the configured settings using the action (enable, disable, unset, apply, rename)
+func (c *NitroClient) ActOnResourceWithContext(ctx context.Context, resourceType string, resourceStruct interface{}, action string) error {
 	nsResource := make(map[string]interface{})
 	nsResource[resourceType] = resourceStruct
 
@@ -309,7 +336,7 @@ func (c *NitroClient) ActOnResource(resourceType string, resourceStruct interfac
 
 	c.logger.Trace("Resourcejson is ", "resourceJSON", string(resourceJSON))
 
-	_, err = c.actOnResource(resourceType, resourceJSON, action)
+	_, err = c.actOnResourceWithContext(ctx, resourceType, resourceJSON, action)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to apply action on resource of type %s,  action=%s err=%s", resourceType, action, err)
 	}
@@ -319,15 +346,20 @@ func (c *NitroClient) ActOnResource(resourceType string, resourceStruct interfac
 
 // UpdateResource updates a resource of supplied type and name
 func (c *NitroClient) UpdateResource(resourceType string, name string, resourceStruct interface{}) (string, error) {
+	return c.UpdateResourceWithContext(context.Background(), resourceType, name, resourceStruct)
+}
 
-	if c.ResourceExists(resourceType, name) == true {
+// UpdateResourceWithContext updates a resource of supplied type and name
+func (c *NitroClient) UpdateResourceWithContext(ctx context.Context, resourceType string, name string, resourceStruct interface{}) (string, error) {
+
+	if c.ResourceExistsWithContext(ctx, resourceType, name) == true {
 		nsResource := make(map[string]interface{})
 		nsResource[resourceType] = resourceStruct
 		resourceJSON, err := JSONMarshal(nsResource)
 
 		c.logger.Debug("UpdateResource", "resourceJSON", string(resourceJSON))
 
-		body, err := c.updateResource(resourceType, name, resourceJSON)
+		body, err := c.updateResourceWithContext(ctx, resourceType, name, resourceJSON)
 		if err != nil {
 			return "", fmt.Errorf("[ERROR] nitro-go: Failed to update resource of type %s, name=%s err=%s", resourceType, name, err)
 		}
@@ -339,14 +371,18 @@ func (c *NitroClient) UpdateResource(resourceType string, name string, resourceS
 
 // UpdateUnnamedResource updates a resource of supplied type , which doesn't have a name. E.g., rnat rule
 func (c *NitroClient) UpdateUnnamedResource(resourceType string, resourceStruct interface{}) error {
+	return c.UpdateUnnamedResourceWithContext(context.Background(), resourceType, resourceStruct)
+}
 
+// UpdateUnnamedResourceWithContext updates a resource of supplied type , which doesn't have a name. E.g., rnat rule
+func (c *NitroClient) UpdateUnnamedResourceWithContext(ctx context.Context, resourceType string, resourceStruct interface{}) error {
 	nsResource := make(map[string]interface{})
 	nsResource[resourceType] = resourceStruct
 	resourceJSON, err := JSONMarshal(nsResource)
 
 	c.logger.Trace("UpdateResource", "resourcejson", string(resourceJSON))
 
-	body, err := c.updateUnnamedResource(resourceType, resourceJSON)
+	body, err := c.updateUnnamedResourceWithContext(ctx, resourceType, resourceJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to update resource of type %s,  err=%s", resourceType, err)
 	}
@@ -357,15 +393,20 @@ func (c *NitroClient) UpdateUnnamedResource(resourceType string, resourceStruct 
 
 // ChangeResource updates a resource of supplied type and name (used for SSL objects)
 func (c *NitroClient) ChangeResource(resourceType string, name string, resourceStruct interface{}) (string, error) {
+	return c.ChangeResourceWithContext(context.Background(), resourceType, name, resourceStruct)
+}
 
-	if c.ResourceExists(resourceType, name) == true {
+// ChangeResourceWithContext updates a resource of supplied type and name (used for SSL objects)
+func (c *NitroClient) ChangeResourceWithContext(ctx context.Context, resourceType string, name string, resourceStruct interface{}) (string, error) {
+
+	if c.ResourceExistsWithContext(ctx, resourceType, name) == true {
 		nsResource := make(map[string]interface{})
 		nsResource[resourceType] = resourceStruct
 		resourceJSON, err := json.Marshal(nsResource)
 
 		c.logger.Trace("ChangeResource:", "resourcejson", string(resourceJSON))
 
-		body, err := c.changeResource(resourceType, name, resourceJSON)
+		body, err := c.changeResourceWithContext(ctx, resourceType, name, resourceJSON)
 		if err != nil {
 			return "", fmt.Errorf("[ERROR] nitro-go: Failed to change resource of type %s, name=%s err=%s", resourceType, name, err)
 		}
@@ -377,16 +418,20 @@ func (c *NitroClient) ChangeResource(resourceType string, name string, resourceS
 
 // DeleteResource deletes a resource of supplied type and name
 func (c *NitroClient) DeleteResource(resourceType string, resourceName string) error {
+	return c.DeleteResourceWithContext(context.Background(), resourceType, resourceName)
+}
 
+// DeleteResourceWithContext deletes a resource of supplied type and name
+func (c *NitroClient) DeleteResourceWithContext(ctx context.Context, resourceType string, resourceName string) error {
 	var err error
 	if resourceType == "appqoecustomresp" {
-		_, err = c.listResource(resourceType, "")
+		_, err = c.listResourceWithContext(ctx, resourceType, "")
 	} else {
-		_, err = c.listResource(resourceType, resourceName)
+		_, err = c.listResourceWithContext(ctx, resourceType, resourceName)
 	}
 	if err == nil { // resource exists
 		c.logger.Trace("DeleteResource Found resource ", "resourceType", resourceType, "resourceName", resourceName)
-		_, err = c.deleteResource(resourceType, resourceName)
+		_, err = c.deleteResourceWithContext(ctx, resourceType, resourceName)
 		if err != nil {
 			c.logger.Warn("Failed to delete resource", "resourceType", resourceType, "resourceName", resourceName, "error", err)
 			return err
@@ -400,7 +445,12 @@ func (c *NitroClient) DeleteResource(resourceType string, resourceName string) e
 // DeleteResourceWithArgs deletes a resource of supplied type and name. Args are supplied as an array of strings
 // Each array entry is formatted as "key:value"
 func (c *NitroClient) DeleteResourceWithArgs(resourceType string, resourceName string, args []string) error {
+	return c.DeleteResourceWithArgsWithContext(context.Background(), resourceType, resourceName, args)
+}
 
+// DeleteResourceWithArgsWithContext deletes a resource of supplied type and name. Args are supplied as an array of strings
+// Each array entry is formatted as "key:value"
+func (c *NitroClient) DeleteResourceWithArgsWithContext(ctx context.Context, resourceType string, resourceName string, args []string) error {
 	var err error
 	if resourceType == "snmptrap_snmpuser_binding" {
 		//Remove unwanted argument (username) for listing but keep it for delete operation
@@ -410,18 +460,18 @@ func (c *NitroClient) DeleteResourceWithArgs(resourceType string, resourceName s
 				argsWithoutUsername = append(argsWithoutUsername, args[i])
 			}
 		}
-		_, err = c.listResourceWithArgs(resourceType, resourceName, argsWithoutUsername)
+		_, err = c.listResourceWithArgsWithContext(ctx, resourceType, resourceName, argsWithoutUsername)
 	} else if resourceType == "cacheforwardproxy" {
-		_, err = c.listResource(resourceType, "")
+		_, err = c.listResourceWithContext(ctx, resourceType, "")
 	} else if resourceType == "analyticsglobal_analyticsprofile_binding" {
 		// analyticsglobal_analyticsprofile_binding has different GET implementation
-		_, err = c.listResource("analyticsglobal", "")
+		_, err = c.listResourceWithContext(ctx, "analyticsglobal", "")
 	} else {
-		_, err = c.listResourceWithArgs(resourceType, resourceName, args)
+		_, err = c.listResourceWithArgsWithContext(ctx, resourceType, resourceName, args)
 	}
 	if err == nil { // resource exists
 		c.logger.Trace("DeleteResource Found resource ", "resourceType", resourceType, "resourceName", resourceName)
-		_, err = c.deleteResourceWithArgs(resourceType, resourceName, args)
+		_, err = c.deleteResourceWithArgsWithContext(ctx, resourceType, resourceName, args)
 		if err != nil {
 			c.logger.Warn("Failed to delete resource", "resourceType", resourceType, "resourceName", resourceName, "error", err)
 			return err
@@ -434,18 +484,22 @@ func (c *NitroClient) DeleteResourceWithArgs(resourceType string, resourceName s
 
 // DeleteResourceWithArgsMap deletes a resource of supplied type and name. Args are supplied as map of key value
 func (c *NitroClient) DeleteResourceWithArgsMap(resourceType string, resourceName string, args map[string]string) error {
+	return c.DeleteResourceWithArgsMapWithContext(context.Background(), resourceType, resourceName, args)
+}
 
+// DeleteResourceWithArgsMapWithContext deletes a resource of supplied type and name. Args are supplied as map of key value
+func (c *NitroClient) DeleteResourceWithArgsMapWithContext(ctx context.Context, resourceType string, resourceName string, args map[string]string) error {
 	var err error = nil
 	var body []byte
 	if resourceType == "sslhsmkey" {
-		_, err = c.listResource(resourceType, resourceName)
+		_, err = c.listResourceWithContext(ctx, resourceType, resourceName)
 	} else {
-		_, err = c.listResourceWithArgsMap(resourceType, resourceName, args)
+		_, err = c.listResourceWithArgsMapWithContext(ctx, resourceType, resourceName, args)
 	}
 	if err == nil { // resource exists
 		c.logger.Trace("DeleteResource Found resource ", "resourceType", resourceType, "resourceName", resourceName)
 
-		body, err = c.deleteResourceWithArgsMap(resourceType, resourceName, args)
+		body, err = c.deleteResourceWithArgsMapWithContext(ctx, resourceType, resourceName, args)
 		if err != nil {
 			// Suppress error if body contains errorcode 1665 and message "Internal error while deleting HSM key"
 			if resourceType == "sslhsmkey" && strings.Contains(err.Error(), "599 Netscaler specific error") {
@@ -470,11 +524,16 @@ func (c *NitroClient) DeleteResourceWithArgsMap(resourceType string, resourceNam
 
 // BindResource binds the 'bindingResourceName' to the 'bindToResourceName'.
 func (c *NitroClient) BindResource(bindToResourceType string, bindToResourceName string, bindingResourceType string, bindingResourceName string, bindingStruct interface{}) error {
-	if !c.ResourceExists(bindToResourceType, bindToResourceName) {
+	return c.BindResourceWithContext(context.Background(), bindToResourceType, bindToResourceName, bindingResourceType, bindingResourceName, bindingStruct)
+}
+
+// BindResourceWithContext binds the 'bindingResourceName' to the 'bindToResourceName'.
+func (c *NitroClient) BindResourceWithContext(ctx context.Context, bindToResourceType string, bindToResourceName string, bindingResourceType string, bindingResourceName string, bindingStruct interface{}) error {
+	if !c.ResourceExistsWithContext(ctx, bindToResourceType, bindToResourceName) {
 		return fmt.Errorf("[ERROR] nitro-go: BindTo Resource %s of type %s does not exist", bindToResourceType, bindToResourceName)
 	}
 
-	if !c.ResourceExists(bindingResourceType, bindingResourceName) {
+	if !c.ResourceExistsWithContext(ctx, bindingResourceType, bindingResourceName) {
 		return fmt.Errorf("[ERROR] nitro-go: Binding Resource %s of type %s does not exist", bindingResourceType, bindingResourceName)
 	}
 	bindingName := bindToResourceType + "_" + bindingResourceType + "_binding"
@@ -483,7 +542,7 @@ func (c *NitroClient) BindResource(bindToResourceType string, bindToResourceName
 
 	resourceJSON, _ := JSONMarshal(nsBinding)
 
-	body, err := c.createResource(bindingName, resourceJSON)
+	body, err := c.createResourceWithContext(ctx, bindingName, resourceJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to bind resource %s to resource %s, err=%s", bindToResourceName, bindingResourceName, err)
 	}
@@ -493,18 +552,23 @@ func (c *NitroClient) BindResource(bindToResourceType string, bindToResourceName
 
 // UnbindResource unbinds 'boundResourceName' from 'boundToResource'
 func (c *NitroClient) UnbindResource(boundToResourceType string, boundToResourceName string, boundResourceType string, boundResourceName string, bindingFilterName string) error {
+	return c.UnbindResourceWithContext(context.Background(), boundToResourceType, boundToResourceName, boundResourceType, boundResourceName, bindingFilterName)
+}
 
-	if !c.ResourceExists(boundToResourceType, boundToResourceName) {
+// UnbindResourceWithContext unbinds 'boundResourceName' from 'boundToResource'
+func (c *NitroClient) UnbindResourceWithContext(ctx context.Context, boundToResourceType string, boundToResourceName string, boundResourceType string, boundResourceName string, bindingFilterName string) error {
+
+	if !c.ResourceExistsWithContext(ctx, boundToResourceType, boundToResourceName) {
 		c.logger.Info(" Unbind: BoundTo Resource  does not exist", "boundToResourceType", boundToResourceType, "boundToResourceName", boundToResourceName)
 		return nil
 	}
 
-	if !c.ResourceExists(boundResourceType, boundResourceName) {
+	if !c.ResourceExistsWithContext(ctx, boundResourceType, boundResourceName) {
 		c.logger.Info(" Unbind: Bound Resource  does not exist", "boundResourceType", boundResourceType, "boundResourceName", boundResourceName)
 		return nil
 	}
 
-	_, err := c.unbindResource(boundToResourceType, boundToResourceName, boundResourceType, boundResourceName, bindingFilterName)
+	_, err := c.unbindResourceWithContext(ctx, boundToResourceType, boundToResourceName, boundResourceType, boundResourceName, bindingFilterName)
 	if err != nil {
 		return fmt.Errorf("[ERROR] Failed to unbind  %s:%s from %s:%s, err=%s", boundResourceType, boundResourceName, boundToResourceType, boundToResourceName, err)
 	}
@@ -514,7 +578,12 @@ func (c *NitroClient) UnbindResource(boundToResourceType string, boundToResource
 
 // ResourceExists returns true if supplied resource name and type exists
 func (c *NitroClient) ResourceExists(resourceType string, resourceName string) bool {
-	_, err := c.listResource(resourceType, resourceName)
+	return c.ResourceExistsWithContext(context.Background(), resourceType, resourceName)
+}
+
+// ResourceExistsWithContext returns true if supplied resource name and type exists
+func (c *NitroClient) ResourceExistsWithContext(ctx context.Context, resourceType string, resourceName string) bool {
+	_, err := c.listResourceWithContext(ctx, resourceType, resourceName)
 	if err != nil {
 		c.logger.Debug("ResourceExists: No resource found", "resourceType", resourceType, "resourceName", resourceName)
 		return false
@@ -525,8 +594,13 @@ func (c *NitroClient) ResourceExists(resourceType string, resourceName string) b
 
 // FindResourceArray returns the config of the supplied resource name and type if it exists. Use when the resource to be returned is an array
 func (c *NitroClient) FindResourceArray(resourceType string, resourceName string) ([]map[string]interface{}, error) {
+	return c.FindResourceArrayWithContext(context.Background(), resourceType, resourceName)
+}
+
+// FindResourceArrayWithContext returns the config of the supplied resource name and type if it exists. Use when the resource to be returned is an array
+func (c *NitroClient) FindResourceArrayWithContext(ctx context.Context, resourceType string, resourceName string) ([]map[string]interface{}, error) {
 	var data map[string]interface{}
-	result, err := c.listResource(resourceType, resourceName)
+	result, err := c.listResourceWithContext(ctx, resourceType, resourceName)
 	if err != nil {
 		c.logger.Warn("FindResourceArray: No resources found", "resourceType", resourceType, "resourceName", resourceName)
 		return nil, fmt.Errorf("[INFO] nitro-go: FindResourceArray: No resource %s of type %s found", resourceName, resourceType)
@@ -550,8 +624,13 @@ func (c *NitroClient) FindResourceArray(resourceType string, resourceName string
 
 // FindFilteredResourceArray returns the config of the supplied resource type, filtered with given filter
 func (c *NitroClient) FindFilteredResourceArray(resourceType string, filter map[string]string) ([]map[string]interface{}, error) {
+	return c.FindFilteredResourceArrayWithContext(context.Background(), resourceType, filter)
+}
+
+// FindFilteredResourceArrayWithContext returns the config of the supplied resource type, filtered with given filter
+func (c *NitroClient) FindFilteredResourceArrayWithContext(ctx context.Context, resourceType string, filter map[string]string) ([]map[string]interface{}, error) {
 	var data map[string]interface{}
-	result, err := c.listFilteredResource(resourceType, filter)
+	result, err := c.listFilteredResourceWithContext(ctx, resourceType, filter)
 	if err != nil {
 		c.logger.Warn("FindFilteredResourceArray: No resource found matching filter", "resourceType", resourceType, "filter", filter)
 		return nil, fmt.Errorf("[INFO] nitro-go: FindFilteredResourceArray: No resource of type %s found matching filter %s", resourceType, filter)
@@ -575,8 +654,13 @@ func (c *NitroClient) FindFilteredResourceArray(resourceType string, filter map[
 
 // FindResource returns the config of the supplied resource name and type if it exists
 func (c *NitroClient) FindResource(resourceType string, resourceName string) (map[string]interface{}, error) {
+	return c.FindResourceWithContext(context.Background(), resourceType, resourceName)
+}
+
+// FindResourceWithContext returns the config of the supplied resource name and type if it exists
+func (c *NitroClient) FindResourceWithContext(ctx context.Context, resourceType string, resourceName string) (map[string]interface{}, error) {
 	var data map[string]interface{}
-	result, err := c.listResource(resourceType, resourceName)
+	result, err := c.listResourceWithContext(ctx, resourceType, resourceName)
 	if err != nil {
 		c.logger.Warn("FindResource: No resource found", "resourceType", resourceType, "resourceName", resourceName)
 		return nil, fmt.Errorf("[INFO] nitro-go: FindResource: No resource %s of type %s found", resourceName, resourceType)
@@ -611,6 +695,11 @@ func (c *NitroClient) FindResource(resourceType string, resourceName string) (ma
 // Multiple elements array means NITRO returned multiple results
 // It is left to the user to determine the sanity of the return value
 func (c *NitroClient) FindResourceArrayWithParams(findParams FindParams) ([]map[string]interface{}, error) {
+	return c.FindResourceArrayWithParamsWithContext(context.Background(), findParams)
+}
+
+// FindResourceArrayWithParamsWithContext is meant to be a generic and extendable function to implement all the possible GET methods NITRO will allow.
+func (c *NitroClient) FindResourceArrayWithParamsWithContext(ctx context.Context, findParams FindParams) ([]map[string]interface{}, error) {
 
 	// Construct the url
 	var urlBuilder strings.Builder
@@ -629,7 +718,7 @@ func (c *NitroClient) FindResourceArrayWithParams(findParams FindParams) ([]map[
 	url := urlBuilder.String()
 
 	c.logger.Trace("FindResourceArrayWithParams: url is", "url", url)
-	result, httpErr := c.doHTTPRequest("GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
+	result, httpErr := c.doHTTPRequestWithContext(ctx, "GET", url, bytes.NewBuffer([]byte{}), readResponseHandler)
 	c.logger.Trace("FindResourceArrayWithParams: HTTP GET result", "result", string(result), "error", httpErr)
 
 	// Ignore 404.
@@ -718,8 +807,13 @@ func (c *NitroClient) FindResourceArrayWithParams(findParams FindParams) ([]map[
 
 // FindAllResources finds all config objects of the supplied resource type and returns them in an array
 func (c *NitroClient) FindAllResources(resourceType string) ([]map[string]interface{}, error) {
+	return c.FindAllResourcesWithContext(context.Background(), resourceType)
+}
+
+// FindAllResourcesWithContext finds all config objects of the supplied resource type and returns them in an array
+func (c *NitroClient) FindAllResourcesWithContext(ctx context.Context, resourceType string) ([]map[string]interface{}, error) {
 	var data map[string]interface{}
-	result, err := c.listResource(resourceType, "")
+	result, err := c.listResourceWithContext(ctx, resourceType, "")
 	if err != nil {
 		c.logger.Trace(" FindAllResources: No objects found", "resourceType", resourceType)
 		return make([]map[string]interface{}, 0, 0), nil
@@ -749,7 +843,12 @@ func (c *NitroClient) FindAllResources(resourceType string) ([]map[string]interf
 
 // ResourceBindingExists returns true if the supplied binding exists
 func (c *NitroClient) ResourceBindingExists(resourceType string, resourceName string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) bool {
-	result, err := c.listBoundResources(resourceName, resourceType, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
+	return c.ResourceBindingExistsWithContext(context.Background(), resourceType, resourceName, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
+}
+
+// ResourceBindingExistsWithContext returns true if the supplied binding exists
+func (c *NitroClient) ResourceBindingExistsWithContext(ctx context.Context, resourceType string, resourceName string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) bool {
+	result, err := c.listBoundResourcesWithContext(ctx, resourceName, resourceType, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
 	if err != nil {
 		c.logger.Trace("ResourceBindingExists: No bound resource to found", "resourceType", resourceType, "name", resourceName, "boundResourceType", boundResourceType, "boundResourceFilterValue", boundResourceFilterValue)
 		return false
@@ -772,7 +871,12 @@ func (c *NitroClient) ResourceBindingExists(resourceType string, resourceName st
 
 // FindBoundResource finds a bound resource if it exists
 func (c *NitroClient) FindBoundResource(resourceType string, resourceName string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) (map[string]interface{}, error) {
-	result, err := c.listBoundResources(resourceName, resourceType, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
+	return c.FindBoundResourceWithContext(context.Background(), resourceType, resourceName, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
+}
+
+// FindBoundResourceWithContext finds a bound resource if it exists
+func (c *NitroClient) FindBoundResourceWithContext(ctx context.Context, resourceType string, resourceName string, boundResourceType string, boundResourceFilterName string, boundResourceFilterValue string) (map[string]interface{}, error) {
+	result, err := c.listBoundResourcesWithContext(ctx, resourceName, resourceType, boundResourceType, boundResourceFilterName, boundResourceFilterValue)
 	if err != nil {
 		c.logger.Info(" FindBoundResource: No binding found", "resourceType", resourceType, "resourceName", "resourceName", resourceName, "boundResourceType", boundResourceType, "boundResourceFilterValue", boundResourceFilterValue)
 		return nil, fmt.Errorf("[INFO] nitro-go: No %s %s to %s %s binding found, err=%s", resourceType, resourceName, boundResourceType, boundResourceFilterValue, err)
@@ -796,7 +900,12 @@ func (c *NitroClient) FindBoundResource(resourceType string, resourceName string
 
 // FindAllBoundResources returns an array of bound config objects of the type specified that are bound to the resource specified
 func (c *NitroClient) FindAllBoundResources(resourceType string, resourceName string, boundResourceType string) ([]map[string]interface{}, error) {
-	result, err := c.listBoundResources(resourceName, resourceType, boundResourceType, "", "")
+	return c.FindAllBoundResourcesWithContext(context.Background(), resourceType, resourceName, boundResourceType)
+}
+
+// FindAllBoundResourcesWithContext returns an array of bound config objects of the type specified that are bound to the resource specified
+func (c *NitroClient) FindAllBoundResourcesWithContext(ctx context.Context, resourceType string, resourceName string, boundResourceType string) ([]map[string]interface{}, error) {
+	result, err := c.listBoundResourcesWithContext(ctx, resourceName, resourceType, boundResourceType, "", "")
 	if err != nil {
 		c.logger.Info("FindAllBoundResources: No binding found", "resourceType", resourceType, "resourceName", "resourceName", resourceName, "boundResourceType", boundResourceType)
 		return nil, fmt.Errorf("[ERROR] nitro-go: No %s %s to %s binding found, err=%s", resourceType, resourceName, boundResourceType, err)
@@ -824,6 +933,12 @@ func (c *NitroClient) FindAllBoundResources(resourceType string, resourceName st
 // EnableFeatures enables the provided list of features. Depending on the licensing of the NetScaler, not all supplied features may actually
 // enabled
 func (c *NitroClient) EnableFeatures(featureNames []string) error {
+	return c.EnableFeaturesWithContext(context.Background(), featureNames)
+}
+
+// EnableFeaturesWithContext enables the provided list of features. Depending on the licensing of the NetScaler, not all supplied features may actually
+// enabled
+func (c *NitroClient) EnableFeaturesWithContext(ctx context.Context, featureNames []string) error {
 	/* construct this:
 	{
 	        "nsfeature":
@@ -842,7 +957,7 @@ func (c *NitroClient) EnableFeatures(featureNames []string) error {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to marshal features to JSON")
 	}
 
-	_, err = c.enableFeatures(featureJSON)
+	_, err = c.enableFeaturesWithContext(ctx, featureJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] Failed to enable feature %v", err)
 	}
@@ -850,6 +965,10 @@ func (c *NitroClient) EnableFeatures(featureNames []string) error {
 }
 
 func (c *NitroClient) DisableFeatures(featureNames []string) error {
+	return c.DisableFeaturesWithContext(context.Background(), featureNames)
+}
+
+func (c *NitroClient) DisableFeaturesWithContext(ctx context.Context, featureNames []string) error {
 	/* construct this:
 	{
 	        "nsfeature":
@@ -868,7 +987,7 @@ func (c *NitroClient) DisableFeatures(featureNames []string) error {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to marshal features to JSON")
 	}
 
-	_, err = c.disableFeatures(featureJSON)
+	_, err = c.disableFeaturesWithContext(ctx, featureJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to disable feature %v", err)
 	}
@@ -877,8 +996,13 @@ func (c *NitroClient) DisableFeatures(featureNames []string) error {
 
 // ListEnabledFeatures returns a string array of the list of features enabled on the NetScaler appliance
 func (c *NitroClient) ListEnabledFeatures() ([]string, error) {
+	return c.ListEnabledFeaturesWithContext(context.Background())
+}
 
-	bytes, err := c.listEnabledFeatures()
+// ListEnabledFeaturesWithContext returns a string array of the list of features enabled on the NetScaler appliance
+func (c *NitroClient) ListEnabledFeaturesWithContext(ctx context.Context) ([]string, error) {
+
+	bytes, err := c.listEnabledFeaturesWithContext(ctx)
 	if err != nil {
 		return []string{}, fmt.Errorf("[ERROR] nitro-go: Failed to list features %v", err)
 	}
@@ -909,6 +1033,11 @@ func (c *NitroClient) ListEnabledFeatures() ([]string, error) {
 
 // EnableModes enables the provided list of Citrix ADC modes.
 func (c *NitroClient) EnableModes(modeNames []string) error {
+	return c.EnableModesWithContext(context.Background(), modeNames)
+}
+
+// EnableModesWithContext enables the provided list of Citrix ADC modes.
+func (c *NitroClient) EnableModesWithContext(ctx context.Context, modeNames []string) error {
 	/* construct this:
 	{
 	        "nsmode":
@@ -927,7 +1056,7 @@ func (c *NitroClient) EnableModes(modeNames []string) error {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to marshal modes to JSON")
 	}
 
-	_, err = c.enableModes(modeJSON)
+	_, err = c.enableModesWithContext(ctx, modeJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to enable mode %v", err)
 	}
@@ -936,8 +1065,13 @@ func (c *NitroClient) EnableModes(modeNames []string) error {
 
 // ListEnabledModes returns a string array of the list of modes enabled on the Citrix ADC appliance
 func (c *NitroClient) ListEnabledModes() ([]string, error) {
+	return c.ListEnabledModesWithContext(context.Background())
+}
 
-	bytes, err := c.listEnabledModes()
+// ListEnabledModesWithContext returns a string array of the list of modes enabled on the Citrix ADC appliance
+func (c *NitroClient) ListEnabledModesWithContext(ctx context.Context) ([]string, error) {
+
+	bytes, err := c.listEnabledModesWithContext(ctx)
 	if err != nil {
 		return []string{}, fmt.Errorf("[ERROR] nitro-go: Failed to list modes %v", err)
 	}
@@ -968,6 +1102,11 @@ func (c *NitroClient) ListEnabledModes() ([]string, error) {
 
 // SaveConfig persists the config on the NetScaler to the NetScaler's persistent storage. This could take a few seconds
 func (c *NitroClient) SaveConfig() error {
+	return c.SaveConfigWithContext(context.Background())
+}
+
+// SaveConfigWithContext persists the config on the NetScaler to the NetScaler's persistent storage. This could take a few seconds
+func (c *NitroClient) SaveConfigWithContext(ctx context.Context) error {
 	/* construct this:
 	{
 	        "nsconfig": {}
@@ -983,7 +1122,7 @@ func (c *NitroClient) SaveConfig() error {
 	}
 	c.logger.Debug("saveJSON", "json", string(saveJSON))
 
-	err = c.saveConfig(saveJSON)
+	err = c.saveConfigWithContext(ctx, saveJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to save config %v", err)
 	}
@@ -992,6 +1131,11 @@ func (c *NitroClient) SaveConfig() error {
 
 // ClearConfig deletes the config on the NetScaler
 func (c *NitroClient) ClearConfig() error {
+	return c.ClearConfigWithContext(context.Background())
+}
+
+// ClearConfigWithContext deletes the config on the NetScaler
+func (c *NitroClient) ClearConfigWithContext(ctx context.Context) error {
 	/* construct this:
 	{
 	    "nsconfig": {"level": "basic"}
@@ -1009,7 +1153,7 @@ func (c *NitroClient) ClearConfig() error {
 	}
 	c.logger.Trace("clearJSON is ", "text", string(clearJSON))
 
-	err = c.clearConfig(clearJSON)
+	err = c.clearConfigWithContext(ctx, clearJSON)
 	if err != nil {
 		return fmt.Errorf("[ERROR] nitro-go: Failed to clear config %v", err)
 	}

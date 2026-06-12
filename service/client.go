@@ -32,7 +32,7 @@ import (
 	"github.com/hashicorp/go-hclog"
 )
 
-//NitroParams encapsulates options to create a NitroClient
+// NitroParams encapsulates options to create a NitroClient
 type NitroParams struct {
 	Url           string
 	Username      string
@@ -48,8 +48,8 @@ type NitroParams struct {
 	IsCloud       bool
 }
 
-//NitroClient has methods to configure the NetScaler
-//It abstracts the REST operations of the NITRO API
+// NitroClient has methods to configure the NetScaler
+// It abstracts the REST operations of the NITRO API
 type NitroClient struct {
 	url          string
 	statsURL     string
@@ -65,9 +65,9 @@ type NitroClient struct {
 	isCloud      bool
 }
 
-//NewNitroClient returns a usable NitroClient. Does not check validity of supplied parameters
-//This is for backwards compatibility.
-//Please use NewNitroClientFromParams
+// NewNitroClient returns a usable NitroClient. Does not check validity of supplied parameters
+// This is for backwards compatibility.
+// Please use NewNitroClientFromParams
 func NewNitroClient(url string, username string, password string) *NitroClient {
 	c := new(NitroClient)
 	c.url = strings.Trim(url, " /") + "/nitro/v1/config/"
@@ -80,7 +80,7 @@ func NewNitroClient(url string, username string, password string) *NitroClient {
 	return c
 }
 
-//NewNitroClientFromParams returns a usable NitroClient. Does not check validity of supplied parameters
+// NewNitroClientFromParams returns a usable NitroClient. Does not check validity of supplied parameters
 func NewNitroClientFromParams(params NitroParams) (*NitroClient, error) {
 	u, err := url.Parse(params.Url)
 	if err != nil {
@@ -122,8 +122,17 @@ func NewNitroClientFromParams(params NitroParams) (*NitroClient, error) {
 		}
 	} else {
 		tr := &http.Transport{
+			ForceAttemptHTTP2: false,
 			TLSClientConfig: &tls.Config{
 				InsecureSkipVerify: true,
+				MinVersion:         tls.VersionTLS10,
+				MaxVersion:         tls.VersionTLS12,
+				CipherSuites: []uint16{
+					tls.TLS_RSA_WITH_AES_128_CBC_SHA,
+					tls.TLS_RSA_WITH_AES_256_CBC_SHA,
+					tls.TLS_RSA_WITH_AES_128_GCM_SHA256,
+					tls.TLS_RSA_WITH_AES_256_GCM_SHA384,
+				},
 			},
 			Proxy: http.ProxyFromEnvironment,
 		}
@@ -153,9 +162,9 @@ func NewNitroClientFromParams(params NitroParams) (*NitroClient, error) {
 	return c, nil
 }
 
-//NewNitroClientFromEnv returns a usable NitroClient. Parameters url, username and password can be passed in
-//as the first three positional parameters. Otherwise, it tries to read these values from
-//environment variable NS_URL, NS_LOGIN and NS_PASSWORD
+// NewNitroClientFromEnv returns a usable NitroClient. Parameters url, username and password can be passed in
+// as the first three positional parameters. Otherwise, it tries to read these values from
+// environment variable NS_URL, NS_LOGIN and NS_PASSWORD
 func NewNitroClientFromEnv() (*NitroClient, error) {
 	url := os.Getenv("NS_URL")
 	username := os.Getenv("NS_LOGIN")

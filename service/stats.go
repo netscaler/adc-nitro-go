@@ -17,15 +17,21 @@ limitations under the License.
 package service
 
 import (
-	"log"
-	"fmt"
+	"context"
 	"encoding/json"
+	"fmt"
+	"log"
 )
 
-//FindStats returns the statistics of the supplied resource type if it exists. Use when the resource to be returned is an array
+// FindStats returns the statistics of the supplied resource type if it exists. Use when the resource to be returned is an array
 func (c *NitroClient) FindAllStats(resourceType string) ([]map[string]interface{}, error) {
+	return c.FindAllStatsWithContext(context.Background(), resourceType)
+}
+
+// FindAllStatsWithContext returns the statistics of the supplied resource type if it exists. Use when the resource to be returned is an array
+func (c *NitroClient) FindAllStatsWithContext(ctx context.Context, resourceType string) ([]map[string]interface{}, error) {
 	var data map[string]interface{}
-	result, err := c.listStat(resourceType, "")
+	result, err := c.listStatWithContext(ctx, resourceType, "")
 	if err != nil {
 		log.Printf("[WARN] nitro-go: FindStats: No %s found", resourceType)
 		return nil, fmt.Errorf("[INFO] nitro-go: FindStats: No type %s found", resourceType)
@@ -47,10 +53,15 @@ func (c *NitroClient) FindAllStats(resourceType string) ([]map[string]interface{
 	return ret, nil
 }
 
-//FindStat returns the config of the supplied resource name and type if it exists
+// FindStat returns the config of the supplied resource name and type if it exists
 func (c *NitroClient) FindStat(resourceType string, resourceName string) (map[string]interface{}, error) {
+	return c.FindStatWithContext(context.Background(), resourceType, resourceName)
+}
+
+// FindStatWithContext returns the config of the supplied resource name and type if it exists
+func (c *NitroClient) FindStatWithContext(ctx context.Context, resourceType string, resourceName string) (map[string]interface{}, error) {
 	var data map[string]interface{}
-	result, err := c.listStat(resourceType, resourceName)
+	result, err := c.listStatWithContext(ctx, resourceType, resourceName)
 	if err != nil {
 		log.Printf("[WARN] nitro-go: FindStat: No %s %s found", resourceType, resourceName)
 		return nil, fmt.Errorf("[INFO] nitro-go: FindStat: No resource %s of type %s found", resourceName, resourceType)
@@ -70,9 +81,12 @@ func (c *NitroClient) FindStat(resourceType string, resourceName string) (map[st
 }
 
 func (c *NitroClient) FindStatWithArgs(resourceType string, resourceName string, args []string) (map[string]interface{}, error) {
+	return c.FindStatWithArgsWithContext(context.Background(), resourceType, resourceName, args)
+}
 
+func (c *NitroClient) FindStatWithArgsWithContext(ctx context.Context, resourceType string, resourceName string, args []string) (map[string]interface{}, error) {
 	var data map[string]interface{}
-	result, err := c.listStatWithArgs(resourceType, resourceName, args)
+	result, err := c.listStatWithArgsWithContext(ctx, resourceType, resourceName, args)
 	if err != nil {
 		log.Printf("[WARN] nitro-go: FindStatWithArgs: No %s %s found", resourceType, resourceName)
 		return nil, fmt.Errorf("[INFO] nitro-go: FindStatWithArgs: No resource %s of type %s found", resourceName, resourceType)
