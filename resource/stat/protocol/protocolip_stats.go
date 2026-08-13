@@ -65,6 +65,11 @@ type Protocolipstats struct {
 	* Total routed Mbits
 	*/
 	Iproutedmbitsrate float64 `json:"iproutedmbitsrate,omitempty"`
+	Iptotroutedbytes int `json:"iptotroutedbytes,omitempty"`
+	/**
+	* Total routed IP bytes.
+	*/
+	Iproutedbytesrate float64 `json:"iproutedbytesrate,omitempty"`
 	Iptotfragments int `json:"iptotfragments,omitempty"`
 	Iptotsuccreassembly int `json:"iptotsuccreassembly,omitempty"`
 	Iptotreassemblyattempt int `json:"iptotreassemblyattempt,omitempty"`

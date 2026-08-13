@@ -57,6 +57,11 @@ type Auditstats struct {
 	* Total number of non 2xx responses received for HTTP based syslog servers
 	*/
 	Auditjsonnon2xxresprate float64 `json:"auditjsonnon2xxresprate,omitempty"`
+	Auditsyslogmsgsentexternal int `json:"auditsyslogmsgsentexternal,omitempty"`
+	/**
+	* Syslog messages sent to external syslog server(s) over UDP.
+	*/
+	Auditsyslogmsgsentexternalrate float64 `json:"auditsyslogmsgsentexternalrate,omitempty"`
 	Auditnsballocfail int `json:"auditnsballocfail,omitempty"`
 	/**
 	* NAT allocation failed.

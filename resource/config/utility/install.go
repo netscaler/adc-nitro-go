@@ -29,6 +29,12 @@ type Install struct {
 	*/
 	Url string `json:"url,omitempty"`
 	/**
+	* Use this flag to return the install id when the nitro api request is sent.
+		The id can be used later to track the installation progress via show ns job <id> command.
+		For the cli request of install the flag is by default set as false as the installation progress details can be tracked via cli
+	*/
+	Async bool `json:"Async,omitempty"`
+	/**
 	* Do not prompt for yes/no before rebooting.
 	*/
 	Y bool `json:"y,omitempty"`
@@ -41,19 +47,54 @@ type Install struct {
 	*/
 	A bool `json:"a,omitempty"`
 	/**
-	* Use this flag for upgrading from/to enhancement mode.
+	* Use this flag to perform FIPS installation.
 	*/
-	Enhancedupgrade bool `json:"enhancedupgrade,omitempty"`
+	Fipsinstall bool `json:"fipsinstall,omitempty"`
 	/**
-	* Use this flag to change swap size on ONLY 64bit nCore/MCNS/VMPE systems NON-VPX systems.
+	* Use this flag to answer yes to all prompts.
 	*/
-	Resizeswapvar bool `json:"resizeswapvar,omitempty"`
+	Answeryestoall bool `json:"answeryestoall,omitempty"`
 	/**
-	* Use this flag to return the install id when the nitro api request is sent.
-		The id can be used later to track the installation progress via show ns job <id> command.
-		For the cli request of install the flag is by default set as false as the installation progress details can be tracked via cli
+	* Use this flag to prevent reboot after installation when answerYesToAll is true.
 	*/
-	Async bool `json:"Async,omitempty"`
+	Dontreboot bool `json:"dontreboot,omitempty"`
+	/**
+	* Use this flag to skip ns.conf version equivalence check during downgrade.
+	*/
+	Dontchecknsconf bool `json:"dontchecknsconf,omitempty"`
+	/**
+	* Use this flag to delete all signature files and associated kernel images during installation.
+	*/
+	Deletesigfiles bool `json:"deletesigfiles,omitempty"`
+	/**
+	* Use this flag to ignore nsapimgr symbols not found error(s) during installation.
+	*/
+	Ignorensapimgrerrors bool `json:"ignorensapimgrerrors,omitempty"`
+	/**
+	* Use this flag to exit on license server connectivity errors.
+	*/
+	Exitonlicserverconnerror bool `json:"exitonlicserverconnerror,omitempty"`
+	/**
+	* Use this flag to run all installation pre-checks in a single step
+	*/
+	Precheck bool `json:"precheck,omitempty"`
+	/**
+	* Use this string to pass extra flags which are not yet supported.
+		Example: -flag1 -flag2 -flag3
+	*/
+	Advancedoptions string `json:"advancedoptions,omitempty"`
+	/**
+	* Use this flag to ignore unsaved config check during build update.
+	*/
+	Ignoreunsavedconfig bool `json:"ignoreunsavedconfig,omitempty"`
+	/**
+	* Use this flag to ignore unsynced HA config check during build update.
+	*/
+	Ignoreunsyncedconfig bool `json:"ignoreunsyncedconfig,omitempty"`
+	/**
+	* Use this flag to ignore certificate digest verification errors during build update.
+	*/
+	Ignorecertcheckerrors bool `json:"ignorecertcheckerrors,omitempty"`
 
 	//------- Read only Parameter ---------;
 
