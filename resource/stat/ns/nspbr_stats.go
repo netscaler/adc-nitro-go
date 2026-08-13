@@ -54,6 +54,8 @@ type Nspbrstats struct {
 	* Total packets that are dropped due to null nexthop
 	*/
 	Pbrnulldroprate float64 `json:"pbrnulldroprate,omitempty"`
+	Pbrcount int `json:"pbrcount,omitempty"`
+	Pbreffectivecount int `json:"pbreffectivecount,omitempty"`
 	Pbrperhits int `json:"pbrperhits,omitempty"`
 	/**
 	* Number of times the pbr was hit
