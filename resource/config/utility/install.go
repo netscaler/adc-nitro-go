@@ -47,6 +47,10 @@ type Install struct {
 	*/
 	A bool `json:"a,omitempty"`
 	/**
+	* Use this flag for upgrading from/to enhancement mode.
+	*/
+	Enhancedupgrade bool `json:"enhancedupgrade,omitempty"`
+	/**
 	* Use this flag to perform FIPS installation.
 	*/
 	Fipsinstall bool `json:"fipsinstall,omitempty"`
@@ -95,6 +99,10 @@ type Install struct {
 	* Use this flag to ignore certificate digest verification errors during build update.
 	*/
 	Ignorecertcheckerrors bool `json:"ignorecertcheckerrors,omitempty"`
+	/**
+	* Use this flag to change swap size on ONLY 64bit nCore/MCNS/VMPE systems NON-VPX systems.
+	*/
+	Resizeswapvar bool `json:"resizeswapvar,omitempty"`
 
 	//------- Read only Parameter ---------;
 
