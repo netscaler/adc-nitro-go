@@ -46,6 +46,13 @@ type NitroParams struct {
 	LogLevel      string
 	JSONLogFormat bool
 	IsCloud       bool
+	// Transport, when non-nil, is used as the HTTP transport for every NITRO request
+	// and takes precedence over SslVerify/RootCAPath. It lets the caller supply a
+	// transport carrying its own TLS profile (cipher suites, protocol versions,
+	// certificate verification) and proxy configuration, which is required for ADC
+	// appliances that only offer legacy RSA key-exchange cipher suites no longer
+	// enabled by default in modern Go releases.
+	Transport http.RoundTripper
 }
 
 // NitroClient has methods to configure the NetScaler
@@ -99,7 +106,10 @@ func NewNitroClientFromParams(params NitroParams) (*NitroClient, error) {
 	c.sessionid = ""
 	c.timeout = params.Timeout
 	c.isCloud = params.IsCloud
-	if params.SslVerify {
+	if params.Transport != nil {
+		// Caller-supplied transport owns the TLS profile and proxy configuration.
+		c.client = &http.Client{Transport: params.Transport}
+	} else if params.SslVerify {
 		if len(params.RootCAPath) > 0 {
 			caCert, err := ioutil.ReadFile(params.RootCAPath)
 			if err != nil {

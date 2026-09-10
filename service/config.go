@@ -20,6 +20,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
 	"sort"
@@ -662,8 +663,10 @@ func (c *NitroClient) FindResourceWithContext(ctx context.Context, resourceType 
 	var data map[string]interface{}
 	result, err := c.listResourceWithContext(ctx, resourceType, resourceName)
 	if err != nil {
-		c.logger.Warn("FindResource: No resource found", "resourceType", resourceType, "resourceName", resourceName)
-		return nil, fmt.Errorf("[INFO] nitro-go: FindResource: No resource %s of type %s found", resourceName, resourceType)
+		c.logger.Warn("FindResource: request failed", "resourceType", resourceType, "resourceName", resourceName, "error", err)
+		// Preserve the underlying cause: a failure here is frequently a transport,
+		// TLS or authentication error rather than a genuinely missing resource.
+		return nil, fmt.Errorf("[INFO] nitro-go: FindResource: could not read resource %s of type %s: %w", resourceName, resourceType, err)
 	}
 	if err = json.Unmarshal(result, &data); err != nil {
 		c.logger.Error("FindResource: Failed to unmarshal Netscaler Response!")
@@ -815,8 +818,16 @@ func (c *NitroClient) FindAllResourcesWithContext(ctx context.Context, resourceT
 	var data map[string]interface{}
 	result, err := c.listResourceWithContext(ctx, resourceType, "")
 	if err != nil {
-		c.logger.Trace(" FindAllResources: No objects found", "resourceType", resourceType)
-		return make([]map[string]interface{}, 0, 0), nil
+		if errors.Is(err, ErrResourceNotFound) {
+			// The appliance genuinely has no such resource type configured or licensed.
+			c.logger.Trace(" FindAllResources: No objects found", "resourceType", resourceType)
+			return make([]map[string]interface{}, 0, 0), nil
+		}
+		// Transport, TLS or authentication failures must not be reported as an empty
+		// result set, otherwise callers silently observe a successful discovery with
+		// zero resources.
+		c.logger.Warn("FindAllResources: request failed", "resourceType", resourceType, "error", err)
+		return nil, fmt.Errorf("[ERROR] nitro-go: FindAllResources: could not list resources of type %s: %w", resourceType, err)
 	}
 	if err = json.Unmarshal(result, &data); err != nil {
 		c.logger.Error("FindAllResources: Failed to unmarshal Netscaler Response!")
