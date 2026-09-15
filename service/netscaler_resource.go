@@ -30,6 +30,12 @@ import (
 	"github.com/hashicorp/go-hclog"
 )
 
+// ErrResourceNotFound is returned when NITRO answers 404 for a resource. It lets
+// callers distinguish a resource that is genuinely absent (for example a vserver
+// type that is not configured or licensed on the appliance) from transport, TLS
+// and authentication failures, which must not be reported as "not found".
+var ErrResourceNotFound = errors.New("nitro-go: resource not found")
+
 // Idempotent flag can't be added for these resources
 var idempotentInvalidResources = []string{
 	"login",
@@ -135,7 +141,7 @@ func readResponseHandler(resp *http.Response, logger hclog.Logger) ([]byte, erro
 	case "404 Not Found":
 		body, _ := io.ReadAll(resp.Body)
 		logger.Debug("readResponseHandler: 404 not found")
-		return body, errors.New("read: 404 not found: ")
+		return body, fmt.Errorf("read: 404 not found: %w", ErrResourceNotFound)
 	case "400 Bad Request", "401 Unauthorized", "403 Forbidden",
 		"405 Method Not Allowed", "406 Not Acceptable",
 		"409 Conflict", "503 Service Unavailable", "599 Netscaler specific error":
