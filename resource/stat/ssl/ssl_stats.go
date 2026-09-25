@@ -71,8 +71,11 @@ type Sslstats struct {
 	Sslenchwsecondaryrate float64 `json:"sslenchwsecondaryrate,omitempty"`
 	Sslsymcryptoutilizationstat float64 `json:"sslsymcryptoutilizationstat,omitempty"`
 	Sslasymcryptoutilizationstat float64 `json:"sslasymcryptoutilizationstat,omitempty"`
-	Sslcryptoutilizationsymmstat int `json:"sslcryptoutilizationsymmstat,omitempty"`
-	Sslcryptoutilizationasymstat int `json:"sslcryptoutilizationasymstat,omitempty"`
+	Sslcryptoutilizationucs int `json:"sslcryptoutilizationucs,omitempty"`
+	Sslcryptoutilizationath int `json:"sslcryptoutilizationath,omitempty"`
+	Sslcryptoutilizationcph int `json:"sslcryptoutilizationcph,omitempty"`
+	Sslcryptoutilizationsymm int `json:"sslcryptoutilizationsymm,omitempty"`
+	Sslcryptoutilizationasym int `json:"sslcryptoutilizationasym,omitempty"`
 	Sslcryptoutilizationstat2nd float64 `json:"sslcryptoutilizationstat2nd,omitempty"`
 	Sslcryptoutilizationstat float64 `json:"sslcryptoutilizationstat,omitempty"`
 	Sslnumcardsupsecondary int `json:"sslnumcardsupsecondary,omitempty"`

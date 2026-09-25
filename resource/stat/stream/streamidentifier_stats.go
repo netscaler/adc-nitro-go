@@ -64,5 +64,6 @@ type Streamidentifierstats struct {
 	Streamobjpktcredits int `json:"streamobjpktcredits,omitempty"`
 	Streamobjpktspersecond int `json:"streamobjpktspersecond,omitempty"`
 	Streamobjdroppedconns int `json:"streamobjdroppedconns,omitempty"`
+	Streamobjtokens int `json:"streamobjtokens,omitempty"`
 
 }

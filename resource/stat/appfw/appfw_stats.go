@@ -65,6 +65,16 @@ type Appfwstats struct {
 	*/
 	Appfirewallredirectsrate float64 `json:"appfirewallredirectsrate,omitempty"`
 	Appfirewalltrapsdropped int `json:"appfirewalltrapsdropped,omitempty"`
+	Appfirewalldhtcursess int `json:"appfirewalldhtcursess,omitempty"`
+	/**
+	* Number of current appfw DHT Sessions.
+	*/
+	Appfirewalldhtcursessrate float64 `json:"appfirewalldhtcursessrate,omitempty"`
+	Appfirewalldhtmaxsess int `json:"appfirewalldhtmaxsess,omitempty"`
+	/**
+	* Maximum of current appfw DHT sessions across all packet engines.
+	*/
+	Appfirewalldhtmaxsessrate float64 `json:"appfirewalldhtmaxsessrate,omitempty"`
 	Appfirewallviolstarturl int `json:"appfirewallviolstarturl,omitempty"`
 	/**
 	* Number of Start URL security check violations seen by the Application Firewall.

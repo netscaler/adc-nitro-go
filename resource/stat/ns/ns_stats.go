@@ -149,6 +149,11 @@ type Nsstats struct {
 	* Link-Local Limits Exceeded
 	*/
 	Enalinklocallimitexceededrate float64 `json:"enalinklocallimitexceededrate,omitempty"`
+	Enaconntracklimitavailable int `json:"enaconntracklimitavailable,omitempty"`
+	/**
+	* Conn-Tracking Limits Available
+	*/
+	Enaconntracklimitavailablerate float64 `json:"enaconntracklimitavailablerate,omitempty"`
 	Misccounter0 int `json:"misccounter0,omitempty"`
 	Misccounter1 int `json:"misccounter1,omitempty"`
 	Numcpus int `json:"numcpus,omitempty"`
