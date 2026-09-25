@@ -378,11 +378,34 @@ func (c *NitroClient) ChangeResource(resourceType string, name string, resourceS
 // DeleteResource deletes a resource of supplied type and name
 func (c *NitroClient) DeleteResource(resourceType string, resourceName string) error {
 
+	// policypatsetfile: an imported patset file is NOT retrievable via the plain
+	// GET /policypatsetfile/<name> existence pre-check (it is only listed via
+	// GET /policypatsetfile?args=imported:true). Skipping the pre-check (like
+	// appfwarchive) and issuing the DELETE directly is the only way to remove it.
+	// The DELETE itself reports a spurious errorcode 258 "No such resource" but
+	// does remove the file, so that specific response is suppressed.
+	// policyurlset: same as policypatsetfile — an imported urlset is NOT
+	// retrievable via the plain GET /policyurlset/<name> existence pre-check (it
+	// is only listed via GET /policyurlset?args=imported:true). Skipping the
+	// pre-check and issuing the DELETE directly is the only way to remove it.
+	// The DELETE itself reports a spurious errorcode 258 "No such resource" but
+	// does remove the imported urlset, so that specific response is suppressed.
+	if resourceType == "policypatsetfile" || resourceType == "policyurlset" {
+		_, err := c.deleteResource(resourceType, resourceName)
+		if err != nil && !strings.Contains(err.Error(), "No such resource") {
+			c.logger.Warn("Failed to delete resource", "resourceType", resourceType, "resourceName", resourceName, "error", err)
+			return err
+		}
+		return nil
+	}
+
 	var err error
-	if resourceType == "appqoecustomresp" {
-		_, err = c.listResource(resourceType, "")
-	} else {
-		_, err = c.listResource(resourceType, resourceName)
+	if resourceType != "appfwarchive" {
+		if resourceType == "appqoecustomresp" {
+			_, err = c.listResource(resourceType, "")
+		} else {
+			_, err = c.listResource(resourceType, resourceName)
+		}
 	}
 	if err == nil { // resource exists
 		c.logger.Trace("DeleteResource Found resource ", "resourceType", resourceType, "resourceName", resourceName)
@@ -439,6 +462,19 @@ func (c *NitroClient) DeleteResourceWithArgsMap(resourceType string, resourceNam
 	var body []byte
 	if resourceType == "sslhsmkey" {
 		_, err = c.listResource(resourceType, resourceName)
+	} else if resourceType == "dnssvcbrec" {
+		// dnssvcbrec's GET only accepts svcbtype/type as key args; targetname and
+		// priority are valid on DELETE (to disambiguate records sharing a domain)
+		// but are rejected by GET with errorcode 278 "Invalid argument". Run the
+		// existence pre-check with only the GET-valid svcbtype key (domain is the
+		// URL positional), but keep the full args for the actual delete so the exact
+		// record is removed. Mirrors the snmptrap_snmpuser_binding pattern
+		// (different args for list vs delete).
+		listArgs := make(map[string]string)
+		if v, ok := args["svcbtype"]; ok {
+			listArgs["svcbtype"] = v
+		}
+		_, err = c.listResourceWithArgsMap(resourceType, resourceName, listArgs)
 	} else {
 		_, err = c.listResourceWithArgsMap(resourceType, resourceName, args)
 	}
