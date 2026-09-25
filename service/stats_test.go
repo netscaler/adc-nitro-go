@@ -33,14 +33,14 @@ func TestNitroClient_FindAllStats(t *testing.T) {
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	lb2 := lb.Lbvserver{
 		Name:        lbName2,
 		Ipv46:       randomIP(),
 		Lbmethod:    "LEASTCONNECTION",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 	_, err := client.AddResource(Lbvserver.Type(), lbName1, &lb1)
 	if err != nil {
@@ -67,7 +67,7 @@ func TestNitroClient_FindStats(t *testing.T) {
 		Ipv46:       randomIP(),
 		Lbmethod:    "ROUNDROBIN",
 		Servicetype: "HTTP",
-		Port:        8000,
+		Port:        intPtr(8000),
 	}
 
 	_, err := client.AddResource(Lbvserver.Type(), lbName1, &lb1)
@@ -82,13 +82,13 @@ func TestNitroClient_FindStats(t *testing.T) {
 	service1 := basic.Service{
 		Name:        svcName1,
 		Ip:          randomIP(),
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 	service2 := basic.Service{
 		Name:        svcName2,
 		Ip:          randomIP(),
-		Port:        80,
+		Port:        intPtr(80),
 		Servicetype: "HTTP",
 	}
 
